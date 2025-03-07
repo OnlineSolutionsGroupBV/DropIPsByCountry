@@ -1,21 +1,44 @@
 import requests
 import json
 import time
+import os
 
 # Bestand met IP's lezen en unieke IP's verzamelen
 unique_ips = set()
+existing_ips = set()
+new_ips = set()
+
 with open("output.txt", "r") as file:
     for line in file:
         ip = line.strip()
         if ip:
-            unique_ips.add(ip)
+            new_ips.add(ip)
 
 # Dictionary voor IP-gegevens
 ip_geo_data = {}
 
+geo_data_file = "geo_data.json"
+
 # IPInfo API-token
 TOKEN = ""
+
+
+# Lees het bestaande JSON-bestand als het bestaat
+if os.path.exists(geo_data_file):
+    with open(geo_data_file, "rb") as file:
+        try:
+            ip_geo_data = json.load(file)
+            existing_ips = set(ip_geo_data.keys())
+        except ValueError:  # JSON kan corrupt zijn
+            ip_geo_data = {}
+else:
+    ip_geo_data = {}
+
+# Stap 2: Filter de IP's die al gecontroleerd zijn
+unique_ips = set(new_ips) - existing_ips  # Alleen onbekende IP's overhouden
+
 import pdb;pdb.set_trace()
+print(len(unique_ips))
 # API opvragen voor elk uniek IP
 for ip in unique_ips:
     url = "http://ipinfo.io/" + ip + "?token=" + TOKEN
@@ -42,7 +65,7 @@ for ip in unique_ips:
         print("Fout bij ophalen van {ip}: {e}")
 
 # Opslaan in JSON-bestand
-with open("geo_data.json", "w") as json_file:
+with open(geo_data_file, "w") as json_file:
     json.dump(ip_geo_data, json_file, indent=4)
 
 print("\nGegevens opgeslagen in geo_data.json ({len(ip_geo_data)} IP's).")

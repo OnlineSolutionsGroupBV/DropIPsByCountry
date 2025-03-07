@@ -1,20 +1,38 @@
 import json
 import subprocess
+import os
 
 # Path to your geo_data.json file
 geo_data_file = "geo_data.json"
+blocked_ips_file = "blocked_cn_ips.txt"
 
-# Load the JSON file
-with open(geo_data_file, "rb") as file:  # Use "rb" mode for Python 2
-    geo_data = json.load(file)
 
-# Filter IPs with country "CN"
-cn_ips = [ip for ip, details in geo_data.items() if details.get("country") == "CN"]
+# Stap 1: Lees bestaande geo_data.json
+geo_data = {}
+if os.path.exists(geo_data_file):
+    with open(geo_data_file, "rb") as file:
+        try:
+            geo_data = json.load(file)
+        except ValueError:
+            geo_data = {}
 
-print(len(cn_ips))
+# Stap 2: Lees eerder geblokkeerde/verwerkte IPs
+blocked_ips = set()
+if os.path.exists(blocked_ips_file):
+    with open(blocked_ips_file, "r") as file:
+        blocked_ips = set(file.read().splitlines())
+
+
+# Stap 3: Filter Chinese IPs die nog niet in blocked_ips staan
+cn_ips = set(ip for ip, details in geo_data.items() if details.get("country") == "CN")
+new_cn_ips = cn_ips - blocked_ips  # Alleen nieuwe IP's
+
+
+print(len(new_cn_ips))
 import pdb;pdb.set_trace()
 # Apply UFW rules
-for ip in cn_ips:
+# Stap 4: Pas UFW regels toe
+for ip in new_cn_ips:
     try:
         command = "ufw deny from {}".format(ip)
         subprocess.call(command, shell=True)
@@ -24,8 +42,8 @@ for ip in cn_ips:
 
 print "Total {} Chinese IPs blocked.".format(len(cn_ips))
 
-# Save blocked IPs to a file
-with open("blocked_cn_ips.txt", "w") as f:
-    for ip in cn_ips:
-        f.write(ip + "\n")
 
+# Stap 5: Sla nieuw geblokkeerde IPs op
+with open(blocked_ips_file, "a") as f:
+    for ip in new_cn_ips:
+        f.write(ip + "\n")
