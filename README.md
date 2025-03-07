@@ -57,7 +57,8 @@ Sign up for a free API token at [ipinfo.io](https://ipinfo.io/signup) and replac
 The script reads logs from a file (e.g., Apache, Nginx) or an external source:
 
 ```bash
-python parse_ips.py input.txt
+vim input.txt or stream > string from any ... 
+python parse_ips.py 
 ```
 
 This extracts unique IPs from **`input.txt`** and saves them for further processing.  
@@ -69,7 +70,12 @@ This extracts unique IPs from **`input.txt`** and saves them for further process
 Run the geo-checking script to fetch country details from `ipinfo.io`:  
 
 ```bash
-python check_geo.py geo_data.json
+geo_data.json
+python get_ip_country.py
+
+..
+118.120.220.160 {'loc': u'30.6667,104.0667', 'country': u'CN', 'region': u'Sichuan', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Chengdu'}
+183.199.95.215 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS24547 Hebei Mobile Communication Company Limited', 'city': u'Shanghai'}
 ```
 
 This will:  
@@ -84,7 +90,8 @@ This will:
 To block all **China (`CN`) IPs** dynamically using **UFW**:  
 
 ```bash
-python block_cn_ips.py geo_data.json
+geo_data.json
+python block_cn_ips.py 
 ```
 
 This will:  
@@ -103,7 +110,7 @@ This will:
 ├── geo_data.json          # JSON file storing IP-country mapping
 ├── blocked_cn_ips.txt     # List of already blocked IPs
 ├── parse_ips.py           # Extracts unique IPs from logs
-├── check_geo.py           # Fetches country info from ipinfo.io
+├── get_ip_country.py      # Fetches country info from ipinfo.io
 ├── block_cn_ips.py        # Applies firewall rules for unwanted IPs
 └── README.md              # This documentation
 ```
@@ -121,7 +128,7 @@ crontab -e
 Add the following line to run the script every **hour**:  
 
 ```bash
-0 * * * * /usr/bin/python /path/to/block_cn_ips.py /path/to/geo_data.json
+0 * * * * /usr/bin/python /path/to/block_cn_ips.py 
 ```
 
 This will ensure **continuous monitoring and blocking** of unwanted traffic.  
@@ -131,9 +138,9 @@ This will ensure **continuous monitoring and blocking** of unwanted traffic.
 ## 🚀 Example: Running the Full Process  
 
 ```bash
-python parse_ips.py input.txt
-python check_geo.py geo_data.json
-python block_cn_ips.py geo_data.json
+python parse_ips.py 
+python get_ip_country.py 
+python block_cn_ips.py 
 ```
 
 ---
