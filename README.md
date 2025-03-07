@@ -156,3 +156,6 @@ Feel free to contribute or reach out for questions!
 
 https://ats.work/ 
 
+Blog post about it. 
+https://www.webdeveloper.today/2025/03/optimizing-server-resources-by-blocking.html 
+
