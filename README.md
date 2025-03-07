@@ -32,8 +32,8 @@ To **optimize server resources**, we implemented a **firewall-based filtering sy
 ### 1️⃣ Clone the Repository  
 
 ```bash
-git clone https://github.com/YourRepo/IP-Blocking-Automation.git
-cd IP-Blocking-Automation
+git clone https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry.git
+cd DropIPsByCountry
 ```
 
 ### 2️⃣ Install Dependencies  
