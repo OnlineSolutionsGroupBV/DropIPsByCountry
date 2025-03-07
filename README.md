@@ -1,4 +1,4 @@
-# DropIPsByCountry
+# Drop Crawler IPs By Country
 Recently, there's been an enormous amount of traffic from China, India, and similar countries on our job sites. In most cases, I'm 100% sure this is automated traffic. So, I'm trying to clean things up a bit and configure the UFW firewall to drop requests from those that are making too many requests to our servers.
 
 This way, you can allow regular users from India or China to visit your website while blocking crawlers that overload your site, scrape data, and engage in spam activities that most customers wouldn’t want. Clean traffic is crucial because it also reduces costs—otherwise, you’d end up buying extra servers for load balancing and horizontal scaling. With just a few scripts and some custom logic, you can filter out IP addresses that send excessive requests, redirect them, or issue warnings via the abuse@... mechanism.
