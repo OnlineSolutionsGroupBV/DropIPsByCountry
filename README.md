@@ -171,7 +171,26 @@ When calculating subnets, different prefix lengths affect the number of IP addre
 
 Compare blocked subnets with access of status logs
 
-sudo ufw status | grep "DENY" | awk '{print $3}' | sort -u > ufw_blocked_subnets.txt
+
+```bash
+ufw status | grep "DENY" | awk '{print $3}' | sort -u > ufw_blocked_subnets.txt
+python parse_ips.py 
+python compare_ips.py
+get_ip_country.py
+```
+
+Check that all crawlers from a particular country no longer appear in access logs or status logs.
+
+Frequently used commands
+```bash
+sudo ufw status numbered
+iptables -L -n -v | grep 27.186
+iptables -L -n --line-numbers
+ufw reload
+tcpdump -i any host 27.186.186.103
+netstat -an | grep 27.186
+ufw insert 1 deny from
+```
 
 ## 🛡️ Why This Matters  
 
