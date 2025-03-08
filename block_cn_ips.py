@@ -34,7 +34,7 @@ import pdb;pdb.set_trace()
 # Stap 4: Pas UFW regels toe
 for ip in new_cn_ips:
     try:
-        command = "ufw deny from {}".format(ip)
+        command = "ufw insert 1 deny from {}".format(ip)
         subprocess.call(command, shell=True)
         print "Blocked IP:", ip
     except Exception as e:
