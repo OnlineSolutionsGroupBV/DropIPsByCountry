@@ -42,6 +42,7 @@ Ensure you have Python 2.7 and required libraries installed:
 
 ```bash
 pip install requests
+pip install netaddr (if aggregate have to be used )
 ```
 
 ### 3️⃣ Get an IPInfo API Token  
