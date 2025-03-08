@@ -47,3 +47,5 @@ print "Total {} Chinese IPs blocked.".format(len(cn_ips))
 with open(blocked_ips_file, "a") as f:
     for ip in new_cn_ips:
         f.write(ip + "\n")
+
+subprocess.call("ufw reload", shell=True)
