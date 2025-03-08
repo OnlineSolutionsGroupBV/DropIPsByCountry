@@ -42,6 +42,7 @@ Ensure you have Python 2.7 and required libraries installed:
 
 ```bash
 pip install requests
+pip install netaddr (if aggregate have to be used )
 ```
 
 ### 3️⃣ Get an IPInfo API Token  
@@ -145,6 +146,25 @@ python block_cn_ips.py
 
 ---
 
+## CIDR Subnet Table
+
+When calculating subnets, different prefix lengths affect the number of IP addresses per subnet:
+
+| CIDR (subnet) | Number of IPs  | Increase Compared to /24  |
+|--------------|---------------|---------------------------|
+| `/24`        | 256 IPs       | Standard minimum subnet in IPv4 |
+| `/23`        | 512 IPs       | 2× larger than a `/24`    |
+| `/22`        | 1024 IPs      | 4× larger than a `/24`    |
+| `/21`        | 2048 IPs      | 8× larger than a `/24`    |
+| `/20`        | 4096 IPs      | 16× larger than a `/24`   |
+| `/19`        | 8192 IPs      | 32× larger than a `/24`   |
+| `/18`        | 16,384 IPs    | 64× larger than a `/24`   |
+| `/17`        | 32,768 IPs    | 128× larger than a `/24`  |
+| `/16`        | 65,536 IPs    | Usually a full ISP range or organization block |
+
+
+
+
 ## 🛡️ Why This Matters  
 
 - **Improves Performance** → Less bot traffic = More resources for real users.  
@@ -165,4 +185,7 @@ https://ats.work/
 
 Blog post about it. 
 https://www.webdeveloper.today/2025/03/optimizing-server-resources-by-blocking.html 
+
+
+
 
