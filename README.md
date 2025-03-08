@@ -34,6 +34,8 @@ To **optimize server resources**, we implemented a **firewall-based filtering sy
 ```bash
 git clone https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry.git
 cd DropIPsByCountry
+pwd
+/home/downloads/DropIPsByCountry
 ```
 
 ### 2️⃣ Install Dependencies  
@@ -146,6 +148,13 @@ python block_cn_ips.py
 
 ---
 
+or you could generate subnets and ban crawlers by subnet 
+
+```bash
+python aggregate_cn_subnets.py 
+python block_cn_subnet.py
+```
+
 ## CIDR Subnet Table
 
 When calculating subnets, different prefix lengths affect the number of IP addresses per subnet:
@@ -162,8 +171,30 @@ When calculating subnets, different prefix lengths affect the number of IP addre
 | `/17`        | 32,768 IPs    | 128× larger than a `/24`  |
 | `/16`        | 65,536 IPs    | Usually a full ISP range or organization block |
 
+Compare blocked subnets with access of status logs
 
 
+```bash
+ufw status | grep "DENY" | awk '{print $3}' | sort -u > ufw_blocked_subnets.txt
+python parse_ips.py 
+python compare_ips.py
+get_ip_country.py
+```
+
+Check that all crawlers from a particular country no longer appear in access logs or status logs.
+
+
+
+Frequently used commands
+```bash
+sudo ufw status numbered
+iptables -L -n -v | grep 27.186
+iptables -L -n --line-numbers
+ufw reload
+tcpdump -i any host 27.186.186.103
+netstat -an | grep 27.186
+ufw insert 1 deny from
+```
 
 ## 🛡️ Why This Matters  
 
@@ -185,6 +216,89 @@ https://ats.work/
 
 Blog post about it. 
 https://www.webdeveloper.today/2025/03/optimizing-server-resources-by-blocking.html 
+
+
+# How UFW Rules Work
+
+UFW (Uncomplicated Firewall) is a user-friendly interface for managing firewall rules on Linux systems. It simplifies the use of iptables by allowing administrators to define rules in a more readable and structured manner.
+
+## Understanding UFW Rule Processing
+- **Order Matters**: UFW processes rules in the order they appear, from top to bottom.
+- **First Match Wins**: Once a packet matches a rule, subsequent rules are ignored.
+- **Default Policies**: UFW has default policies that apply when no rule matches.
+
+### Rule Types:
+- `ALLOW IN` → Allows incoming traffic.
+- `DENY IN` → Blocks incoming traffic.
+- `ALLOW OUT` → Allows outgoing traffic.
+- `DENY OUT` → Blocks outgoing traffic.
+
+## Example of a Correct Rule Order
+Let's say we want to block all traffic from `27.186.0.0/16`, but still allow HTTPS (port 443) for everyone else.
+
+### 1️⃣ Deny all traffic from the subnet BEFORE allowing 443:
+```bash
+sudo ufw insert 1 deny from 27.186.0.0/16
+```
+This ensures that traffic from this subnet is dropped before reaching any allow rules.
+
+### 2️⃣ Allow traffic on HTTPS (port 443) for everyone:
+```bash
+sudo ufw allow in 443
+```
+
+### 3️⃣ Allow standard HTTP (port 80) traffic for everyone:
+```bash
+sudo ufw allow in 80/tcp
+```
+
+### 4️⃣ Allow outgoing web traffic (useful for servers contacting the internet):
+```bash
+sudo ufw allow out 80/tcp
+sudo ufw allow out 443/tcp
+```
+
+### 5️⃣ Check the rules to ensure the correct order:
+```bash
+sudo ufw status numbered
+```
+The output should look like this:
+```csharp
+[1] Anywhere                   DENY IN     27.186.0.0/16
+[2] 443                        ALLOW IN    Anywhere
+[3] 80/tcp                     ALLOW IN    Anywhere
+[4] 80/tcp                     ALLOW OUT   Anywhere (out)
+[5] 443/tcp                    ALLOW OUT   Anywhere (out)
+```
+🚀 Now, any traffic from `27.186.0.0/16` is blocked before reaching port `443`, ensuring effective filtering.
+
+## How to Confirm the Rules Are Working
+
+### 1️⃣ Check active network connections:
+```bash
+sudo netstat -an | grep 27.186
+```
+✅ If you see no active connections, the rule is working.
+
+### 2️⃣ Monitor traffic from this subnet in real-time:
+```bash
+sudo tcpdump -i any host 27.186.186.103
+```
+✅ If you see no output, the IP is blocked.
+
+### 3️⃣ Ensure UFW is correctly applying the rules:
+```bash
+sudo ufw reload
+```
+✅ This makes sure all rules are properly applied.
+
+## Summary
+📌 **Key Takeaways:**
+- UFW processes rules in order (**first match applies**).
+- **Block unwanted traffic BEFORE allowing good traffic**.
+- Always check the order of rules with `sudo ufw status numbered`.
+- Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
+
 
 
 
