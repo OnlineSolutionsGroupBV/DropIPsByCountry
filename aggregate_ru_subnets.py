@@ -6,7 +6,7 @@ with open("geo_data.json", "r") as file:
     geo_data = json.load(file)
 
 # Filter alleen IP's uit China (CN)
-cn_ips = [ip for ip, details in geo_data.items() if details.get("country") == "CN"]
+cn_ips = [ip for ip, details in geo_data.items() if details.get("country") == "RU"]
 
 # Stap 1: Maak een lijst van CIDR-subnetten (initieel als /24)
 subnets = [netaddr.IPNetwork(ip).cidr for ip in cn_ips]
@@ -34,7 +34,7 @@ for subnet in merged_subnets:
     
 
 # Opslaan in een JSON-bestand
-with open("aggregated_cn_subnets.json", "w") as file:
+with open("aggregated_ru_subnets.json", "w") as file:
     json.dump([str(subnet) for subnet in final_subnets], file, indent=4)
 
 import pdb;pdb.set_trace()
