@@ -146,6 +146,13 @@ python block_cn_ips.py
 
 ---
 
+or you could generate subnets and ban crawlers by subnet 
+
+```bash
+aggregate_cn_subnets.py 
+block_cn_subnet.py
+```
+
 ## CIDR Subnet Table
 
 When calculating subnets, different prefix lengths affect the number of IP addresses per subnet:
