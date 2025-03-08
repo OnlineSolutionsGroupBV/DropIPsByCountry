@@ -149,8 +149,8 @@ python block_cn_ips.py
 or you could generate subnets and ban crawlers by subnet 
 
 ```bash
-aggregate_cn_subnets.py 
-block_cn_subnet.py
+python aggregate_cn_subnets.py 
+python block_cn_subnet.py
 ```
 
 ## CIDR Subnet Table
