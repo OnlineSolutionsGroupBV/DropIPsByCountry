@@ -169,8 +169,9 @@ When calculating subnets, different prefix lengths affect the number of IP addre
 | `/17`        | 32,768 IPs    | 128× larger than a `/24`  |
 | `/16`        | 65,536 IPs    | Usually a full ISP range or organization block |
 
+Compare blocked subnets with access of status logs
 
-
+sudo ufw status | grep "DENY" | awk '{print $3}' | sort -u > ufw_blocked_subnets.txt
 
 ## 🛡️ Why This Matters  
 
