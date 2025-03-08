@@ -34,6 +34,8 @@ To **optimize server resources**, we implemented a **firewall-based filtering sy
 ```bash
 git clone https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry.git
 cd DropIPsByCountry
+pwd
+/home/downloads/DropIPsByCountry
 ```
 
 ### 2️⃣ Install Dependencies  
