@@ -97,6 +97,16 @@ geo_data.json
 python block_cn_ips.py 
 ```
 
+### ✅ **  : Block Unwanted Traffic Generic subnets **  
+
+COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD", "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY", "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", 'PS', 'OM', 'DZ', 'SN', 'BY', 'TN', 'GE', 'ID', 'RS', 'AM', 'AL', 'SG', 'MM', 'ET',]
+
+```bash
+python parse_ips.py 
+python aggregate_generiek_subnets.py
+python block_generiek_subnet.py
+```
+
 This will:  
 ✔ Read previously processed IPs  
 ✔ Compare with already blocked IPs  
