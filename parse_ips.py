@@ -13,5 +13,5 @@ with open("output.txt", "w") as file:
     for ip in ip_addresses:
         file.write(ip + "\n")
 
-print("Gevonden IP-adressen opgeslagen in output.txt ({len(ip_addresses)} gevonden).")
+print("Gevonden IP-adressen opgeslagen in output.txt ( " + str(len(ip_addresses)) + " gevonden).")
 

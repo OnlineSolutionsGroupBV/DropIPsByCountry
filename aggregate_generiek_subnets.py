@@ -6,7 +6,7 @@ with open("geo_data.json", "r") as file:
     geo_data = json.load(file)
 
 # Filter alleen van verschillende landen
-COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD", "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY", "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", 'PS', 'OM', 'DZ', 'SN', 'BY', 'TN', 'GE', 'ID', 'RS', 'AM', 'AL', 'SG', 'MM', 'ET',]
+COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD", "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY", "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR",     "PS", "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG", "MM", "ET", "LB", "MY", "VN", "PY", "BH"]
 cn_ips = [ip for ip, details in geo_data.items() if details.get("country") in COUNTRY_CODES]
 
 # Stap 1: Maak een lijst van CIDR-subnetten (initieel als /24)
@@ -38,7 +38,7 @@ for subnet in merged_subnets:
 with open("aggregated_generiek_subnets.json", "w") as file:
     json.dump([str(subnet) for subnet in final_subnets], file, indent=4)
 
-import pdb;pdb.set_trace()
+#import pdb;pdb.set_trace()
 print("Originele subnetten:", len(cn_ips))
 print("Samengevoegde subnetten:", len(final_subnets))
 
