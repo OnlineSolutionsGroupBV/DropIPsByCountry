@@ -97,7 +97,15 @@ geo_data.json
 python block_cn_ips.py 
 ```
 
-### ✅ **  : Block Unwanted Traffic Generic subnets **  
+This will:  
+✔ Read previously processed IPs  
+✔ Compare with already blocked IPs  
+✔ Block **new** Chinese IPs using `ufw deny from <IP>`  
+✔ Save blocked IPs in `blocked_cn_ips.txt`  
+
+---
+
+### ✅  Block Unwanted Traffic Generic subnets 
 
 COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD", "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY", "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", 'PS', 'OM', 'DZ', 'SN', 'BY', 'TN', 'GE', 'ID', 'RS', 'AM', 'AL', 'SG', 'MM', 'ET',]
 
@@ -107,25 +115,19 @@ python aggregate_generiek_subnets.py
 python block_generiek_subnet.py
 ```
 
-This will:  
-✔ Read previously processed IPs  
-✔ Compare with already blocked IPs  
-✔ Block **new** Chinese IPs using `ufw deny from <IP>`  
-✔ Save blocked IPs in `blocked_cn_ips.txt`  
-
----
-
 ## 📂 File Structure  
 
 ```
 .
-├── input.txt              # Raw logs with IPs
-├── geo_data.json          # JSON file storing IP-country mapping
-├── blocked_cn_ips.txt     # List of already blocked IPs
-├── parse_ips.py           # Extracts unique IPs from logs
-├── get_ip_country.py      # Fetches country info from ipinfo.io
-├── block_cn_ips.py        # Applies firewall rules for unwanted IPs
-└── README.md              # This documentation
+├── input.txt                            # Raw logs with IPs
+├── geo_data.json                        # JSON file storing IP-country mapping
+├── blocked_cn_ips.txt                   # List of already blocked IPs
+├── parse_ips.py                         # Extracts unique IPs from logs
+├── get_ip_country.py                    # Fetches country info from ipinfo.io
+├── block_cn_ips.py                      # Applies firewall rules for unwanted IPs
+├── aggregate_generiek_subnets.py        # Aggregate generic subnet for different counries like CN, IN, RU ... Config here prefix lengths for CIDR
+├── block_generiek_subnet.py             # Block firewall rules for unwanted IPs
+└── README.md                            # This documentation
 ```
 
 ---
