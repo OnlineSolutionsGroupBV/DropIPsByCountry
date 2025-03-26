@@ -20,7 +20,7 @@ ip_geo_data = {}
 geo_data_file = "geo_data.json"
 
 # IPInfo API-token
-TOKEN = ""
+TOKEN = "0cf3e64923fa64"
 
 
 # Lees het bestaande JSON-bestand als het bestaat
@@ -37,7 +37,7 @@ else:
 # Stap 2: Filter de IP's die al gecontroleerd zijn
 unique_ips = set(new_ips) - existing_ips  # Alleen onbekende IP's overhouden
 
-import pdb;pdb.set_trace()
+#import pdb;pdb.set_trace()
 print(len(unique_ips))
 # API opvragen voor elk uniek IP
 for ip in unique_ips:
