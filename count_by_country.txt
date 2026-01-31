@@ -1,0 +1,119 @@
+Country Code | Country Name | IP Count
+--------------------------------------
+CN | Shanghai | 8726
+BR | Minas Gerais | 2409
+IQ | Bābil | 370
+TR | Istanbul | 301
+US | California | 278
+UZ | Tashkent | 269
+IN | Punjab | 238
+SA | Riyadh Region | 204
+VE | Zulia | 162
+RU | Voronezh Oblast | 147
+KE | Nairobi County | 138
+BD | Chittagong | 133
+AR | Buenos Aires | 125
+JO | Amman | 110
+PK | Punjab | 106
+MA | Tanger-Tetouan-Al Hoceima | 106
+ZA | Western Cape | 103
+UA | Lviv | 98
+EC | El Oro | 70
+AZ | Baki | 66
+UY | Montevideo Department | 57
+MX | Michoacán | 56
+PY | Asunción | 54
+KZ | Almaty | 54
+BE | Flanders | 52
+AE | Abu Dhabi | 52
+NP | Bagmati Province | 48
+CO | Bogota D.C. | 48
+DZ | Algiers | 44
+LB | Mont-Liban | 40
+EG | Cairo | 38
+ET | Addis Ababa | 38
+OM | Muscat | 36
+TN | Tunis Governorate | 36
+JM | Saint Catherine Parish | 33
+PH | Metro Manila | 32
+NL | North Brabant | 32
+IL | Tel Aviv | 31
+PE | Lima Province | 29
+ES | Catalonia | 29
+SN | Dakar | 29
+PA | Coclé | 28
+SY | Dimashq | 28
+GE | Imereti | 25
+KG | Chuy Region | 25
+NI | Managua Department | 24
+PS | West Bank | 23
+FR | Occitanie | 23
+DO | Valverde Province | 23
+ID | Riau | 23
+CL | Santiago Metropolitan | 21
+RS | Central Serbia | 20
+HK | Hong Kong | 19
+CR | Puntarenas Province | 19
+SG | Singapore | 18
+IR | Hamadan Province | 18
+AL | Tirana | 18
+BO | Santa Cruz Department | 17
+CI | Vallée du Bandama District | 15
+DE | North Rhine-Westphalia | 15
+VN | Hanoi | 15
+AO | Luanda | 14
+MD | Anenii Noi | 14
+LY | Tripoli | 14
+MY | Selangor | 14
+BG | Sofia-Capital | 13
+HN | Atlántida Department | 11
+BH | Manama | 10
+BY | Minsk | 10
+GB | England | 10
+MN | Ulaanbaatar | 10
+AM | Yerevan | 10
+QA | Baladīyat ad Dawḩah | 10
+IT | Sicily | 9
+GY | Demerara-Mahaica | 8
+HU | Budapest | 8
+CA | Quebec | 8
+CG | Pointe-Noire | 8
+GA | Estuaire | 7
+NG | Lagos | 7
+SR | Paramaribo District | 7
+GT | Guatemala | 6
+BF | Hauts-Bassins | 5
+BA | Srpska | 5
+RO | București | 5
+GR | Central Macedonia | 5
+PT | Braga | 5
+SV | San Salvador Department | 5
+IE | Leinster | 5
+ZM | Copperbelt | 4
+CZ | Prague | 4
+CY | Nicosia | 4
+ZW | Harare | 3
+SO | Banaadir | 3
+KW | Al Asimah | 3
+LK | Western Province | 3
+TJ | Dushanbe | 3
+TH | Bangkok | 3
+TG | Plateaux | 3
+BW | Gaborone | 2
+LV | Riga | 2
+MZ | Maputo City | 2
+AT | Vienna | 2
+TZ | Dar es Salaam Region | 2
+BN | Brunei-Muara District | 1
+PR | San Juan | 1
+PL | Mazovia | 1
+EH | Western Sahara | 1
+MG | Analamanga | 1
+ML | Bamako | 1
+MU | Rodrigues | 1
+NA | Khomas Region | 1
+FJ | Central | 1
+CM | Littoral | 1
+CU | Havana | 1
+MK | Grad Skopje | 1
+TT | Chaguanas | 1

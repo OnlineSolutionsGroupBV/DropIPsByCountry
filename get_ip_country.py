@@ -19,7 +19,8 @@ ip_geo_data = {}
 
 geo_data_file = "geo_data.json"
 
-# IPInfo API-token
+# IPInfo API-token YOUR_API_TOKEN
+# https://ipinfo.io/ 0cf3e64923fa64 
 TOKEN = "0cf3e64923fa64"
 
 

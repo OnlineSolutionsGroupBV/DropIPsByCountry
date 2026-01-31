@@ -1,0 +1,7 @@
+sudo ufw status numbered
+iptables -L -n -v | grep 27.186
+iptables -L -n --line-numbers
+ufw reload
+tcpdump -i any host 27.186.186.103
+netstat -an | grep 27.186
+ufw insert 1 deny from 

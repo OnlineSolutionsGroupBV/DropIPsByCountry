@@ -1,0 +1,490 @@
+487
+185.192.70.193 {'loc': u'51.5125,-0.1225', 'country': u'GB', 'region': u'England', 'org': u'AS42831 UK Dedicated Servers Limited', 'city': u'London'}
+23.123.232.159 {'loc': u'39.7265,-86.0005', 'country': u'US', 'region': u'Indiana', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Indianapolis'}
+70.95.234.214 {'loc': u'34.0298,-118.3528', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Los Angeles'}
+23.28.172.186 {'loc': u'32.4610,-84.9877', 'country': u'US', 'region': u'Georgia', 'org': u'AS12083 WideOpenWest Finance LLC', 'city': u'Columbus'}
+66.196.12.152 {'loc': u'31.5493,-97.1467', 'country': u'US', 'region': u'Texas', 'org': u'AS7459 Grande Communications Networks, LLC', 'city': u'Waco'}
+88.97.160.59 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS51809 BRSK Limited', 'city': u'London'}
+77.102.243.224 {'loc': u'51.3368,-0.1120', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Purley'}
+73.186.114.92 {'loc': u'41.6612,-72.7795', 'country': u'US', 'region': u'Connecticut', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'New Britain'}
+95.166.36.41 {'loc': u'51.3607,1.0257', 'country': u'GB', 'region': u'England', 'org': u'AS48101 Trooli Ltd.', 'city': u'Whitstable'}
+2.222.101.195 {'loc': u'51.3813,1.3862', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Margate'}
+173.79.240.222 {'loc': u'38.7166,-77.2369', 'country': u'US', 'region': u'Virginia', 'org': u'AS701 Verizon Business', 'city': u'Laurel Hill'}
+73.128.56.223 {'loc': u'38.3607,-75.5994', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Salisbury'}
+70.107.209.74 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'New York City'}
+24.210.230.141 {'loc': u'41.1075,-81.5006', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Akron'}
+81.102.131.71 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'London'}
+23.113.162.50 {'loc': u'38.4328,-90.3776', 'country': u'US', 'region': u'Missouri', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Arnold'}
+156.47.240.98 {'loc': u'38.5816,-121.4944', 'country': u'US', 'region': u'California', 'org': u'AS14051 Consolidated Communications, Inc.', 'city': u'Sacramento'}
+76.35.73.119 {'loc': u'39.7589,-84.1916', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Dayton'}
+216.110.230.245 {'loc': u'44.0834,-80.9997', 'country': u'CA', 'region': u'Ontario', 'org': u'AS29974 Wightman Telecom', 'city': u'Neustadt'}
+75.188.178.22 {'loc': u'41.5200,-81.5562', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Cleveland Heights'}
+68.33.28.59 {'loc': u'38.8951,-77.0364', 'country': u'US', 'region': u'District of Columbia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Washington'}
+108.252.119.125 {'loc': u'29.0339,-95.4344', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Lake Jackson'}
+50.89.5.84 {'loc': u'28.5801,-81.4846', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Orlando'}
+35.145.130.151 {'loc': u'28.9005,-81.2637', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Deltona'}
+184.170.164.7 {'loc': u'42.4928,-92.3430', 'country': u'US', 'region': u'Iowa', 'org': u'AS30600 Metronet', 'city': u'Waterloo'}
+24.248.5.6 {'loc': u'33.4484,-112.0740', 'country': u'US', 'region': u'Arizona', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Phoenix'}
+174.20.100.149 {'loc': u'44.9800,-93.2638', 'country': u'US', 'region': u'Minnesota', 'org': u'AS209 CenturyLink Communications, LLC', 'city': u'Minneapolis'}
+73.156.102.150 {'loc': u'26.5629,-81.9495', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Cape Coral'}
+76.11.22.74 {'loc': u'46.1351,-60.1831', 'country': u'CA', 'region': u'Nova Scotia', 'org': u'AS11260 EastLink', 'city': u'Sydney'}
+174.96.84.233 {'loc': u'41.4156,-81.9235', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'North Olmsted'}
+50.5.97.36 {'loc': u'39.2131,-84.5994', 'country': u'US', 'region': u'Ohio', 'org': u'AS6181 Cincinnati Bell Telephone Company LLC', 'city': u'White Oak'}
+76.104.180.21 {'loc': u'47.6062,-122.3321', 'country': u'US', 'region': u'Washington', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Seattle'}
+96.234.120.214 {'loc': u'40.7357,-74.1724', 'country': u'US', 'region': u'New Jersey', 'org': u'AS701 Verizon Business', 'city': u'Newark'}
+71.200.86.227 {'loc': u'38.9428,-76.7303', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Bowie'}
+122.246.66.133 {'loc': u'29.8782,121.5494', 'country': u'CN', 'region': u'Zhejiang', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Ningbo'}
+158.120.184.116 {'loc': u'34.2479,-88.9987', 'country': u'US', 'region': u'Mississippi', 'org': u'AS15171 Tombigbee Fiber LLC', 'city': u'Pontotoc'}
+82.37.165.183 {'loc': u'51.4552,-2.5966', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Bristol'}
+75.214.113.171 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6167 Verizon Business', 'city': u'New York City'}
+66.52.75.137 {'loc': u'32.7230,-97.4483', 'country': u'US', 'region': u'Texas', 'org': u'AS20115 Charter Communications LLC', 'city': u'Fort Worth'}
+88.188.142.46 {'loc': u'48.5285,2.5894', 'country': u'FR', 'region': u'\xcele-de-France', 'org': u'AS12322 Free SAS', 'city': u'Boissise-la-Bertrand'}
+73.208.171.127 {'loc': u'41.8500,-87.6500', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Chicago'}
+108.67.35.108 {'loc': u'34.8285,-82.3516', 'country': u'US', 'region': u'South Carolina', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Greenville'}
+174.104.240.201 {'loc': u'41.3684,-82.1077', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Elyria'}
+58.58.169.254 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Shanghai'}
+172.58.255.244 {'loc': u'35.2271,-80.8431', 'country': u'US', 'region': u'North Carolina', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Charlotte'}
+2.123.74.177 {'loc': u'53.4106,-2.9779', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Liverpool'}
+98.227.179.222 {'loc': u'40.0456,-86.0086', 'country': u'US', 'region': u'Indiana', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Noblesville'}
+213.166.86.94 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS25369 Hydra Communications Ltd', 'city': u'London'}
+73.147.161.179 {'loc': u'37.2526,-81.2712', 'country': u'US', 'region': u'Virginia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Bluefield'}
+172.75.99.169 {'loc': u'34.3740,-80.0734', 'country': u'US', 'region': u'South Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Hartsville'}
+50.27.8.204 {'loc': u'33.5779,-101.8552', 'country': u'US', 'region': u'Texas', 'org': u'AS19108 Optimum', 'city': u'Lubbock'}
+181.214.131.162 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS199218 Proton AG', 'city': u'New York City'}
+90.241.2.232 {'loc': u'52.6386,-1.1317', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Leicester'}
+75.231.65.198 {'loc': u'44.9800,-93.2638', 'country': u'US', 'region': u'Minnesota', 'org': u'AS6167 Verizon Business', 'city': u'Minneapolis'}
+75.214.125.19 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6167 Verizon Business', 'city': u'New York City'}
+88.97.194.61 {'loc': u'54.5685,-1.3187', 'country': u'GB', 'region': u'England', 'org': u'AS212655 YouFibre Limited', 'city': u'Stockton-on-Tees'}
+99.26.65.69 {'loc': u'32.3700,-90.1738', 'country': u'US', 'region': u'Mississippi', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Jackson'}
+74.132.224.93 {'loc': u'39.0515,-84.5816', 'country': u'US', 'region': u'Kentucky', 'org': u'AS10796 Charter Communications Inc', 'city': u'Crescent Springs'}
+72.225.47.77 {'loc': u'43.1317,-77.6062', 'country': u'US', 'region': u'New York', 'org': u'AS11351 Charter Communications Inc', 'city': u'Rochester'}
+24.108.96.197 {'loc': u'48.4496,-123.5026', 'country': u'CA', 'region': u'British Columbia', 'org': u'AS6327 Shaw Communications Inc.', 'city': u'Langford'}
+142.126.215.123 {'loc': u'45.4112,-75.6981', 'country': u'CA', 'region': u'Ontario', 'org': u'AS577 Bell Canada', 'city': u'Ottawa'}
+35.145.155.147 {'loc': u'27.9902,-82.7433', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Clearwater'}
+73.120.132.155 {'loc': u'28.5383,-81.3792', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Orlando'}
+81.79.160.119 {'loc': u'53.3830,-1.4659', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Sheffield'}
+72.108.176.37 {'loc': u'39.0840,-77.1528', 'country': u'US', 'region': u'Maryland', 'org': u'AS6167 Verizon Business', 'city': u'Rockville'}
+98.22.187.247 {'loc': u'35.7721,-78.6386', 'country': u'US', 'region': u'North Carolina', 'org': u'AS7029 Windstream Communications LLC', 'city': u'Raleigh'}
+98.48.242.201 {'loc': u'32.7763,-79.9327', 'country': u'US', 'region': u'South Carolina', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Charleston'}
+24.178.142.41 {'loc': u'33.5798,-85.0812', 'country': u'US', 'region': u'Georgia', 'org': u'AS20115 Charter Communications LLC', 'city': u'Carrollton'}
+98.50.143.144 {'loc': u'35.0868,-89.8101', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Germantown'}
+98.82.66.172 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS14618 Amazon.com, Inc.', 'city': u'Ashburn'}
+45.88.222.103 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS141039 PacketHub S.A.', 'city': u'New York City'}
+97.95.178.230 {'loc': u'42.3110,-71.7958', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS20115 Charter Communications LLC', 'city': u'Worcester'}
+98.47.251.50 {'loc': u'38.3566,-121.9877', 'country': u'US', 'region': u'California', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Vacaville'}
+104.50.37.35 {'loc': u'29.5572,-95.8086', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Rosenberg'}
+108.29.36.21 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'New York City'}
+76.127.118.217 {'loc': u'37.7974,-121.2160', 'country': u'US', 'region': u'California', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Manteca'}
+104.58.158.229 {'loc': u'39.5296,-119.8138', 'country': u'US', 'region': u'Nevada', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Reno'}
+109.154.54.189 {'loc': u'52.8620,-3.0550', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Oswestry'}
+47.41.60.56 {'loc': u'33.9315,-117.4119', 'country': u'US', 'region': u'California', 'org': u'AS20115 Charter Communications LLC', 'city': u'Riverside'}
+35.170.205.140 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS14618 Amazon.com, Inc.', 'city': u'Ashburn'}
+67.162.207.34 {'loc': u'34.7781,-92.3490', 'country': u'US', 'region': u'Arkansas', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Cammack Village'}
+24.125.83.124 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+216.131.87.140 {'loc': u'25.7867,-80.1800', 'country': u'US', 'region': u'Florida', 'org': u'AS62651 Strong Technology, LLC.', 'city': u'Miami'}
+176.25.34.159 {'loc': u'51.1284,-3.0036', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Bridgwater'}
+71.227.195.176 {'loc': u'48.4212,-122.3341', 'country': u'US', 'region': u'Washington', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Mount Vernon'}
+98.211.211.81 {'loc': u'25.8576,-80.2781', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Hialeah'}
+73.72.229.111 {'loc': u'41.5039,-87.7131', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Matteson'}
+109.250.16.56 {'loc': u'50.1006,8.7665', 'country': u'DE', 'region': u'Hesse', 'org': u'AS8881 1&1 Versatel Deutschland GmbH', 'city': u'Offenbach'}
+70.123.4.41 {'loc': u'30.2960,-97.6396', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Austin'}
+50.41.225.3 {'loc': u'39.3292,-82.1013', 'country': u'US', 'region': u'Ohio', 'org': u'AS5650 Frontier Communications of America, Inc.', 'city': u'Athens'}
+76.206.46.87 {'loc': u'42.4098,-82.9441', 'country': u'US', 'region': u'Michigan', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Detroit'}
+76.35.194.115 {'loc': u'40.8373,-81.2596', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Louisville'}
+178.26.128.243 {'loc': u'48.1088,11.7265', 'country': u'DE', 'region': u'Bavaria', 'org': u'AS3209 Vodafone GmbH', 'city': u'Haar'}
+77.20.238.101 {'loc': u'52.6662,8.2375', 'country': u'DE', 'region': u'Lower Saxony', 'org': u'AS3209 Vodafone GmbH', 'city': u'Lohne'}
+76.68.40.98 {'loc': u'45.4112,-75.6981', 'country': u'CA', 'region': u'Ontario', 'org': u'AS577 Bell Canada', 'city': u'Ottawa'}
+108.201.139.192 {'loc': u'36.6677,-121.6596', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Salinas'}
+99.113.139.82 {'loc': u'41.8804,-87.7223', 'country': u'US', 'region': u'Illinois', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Chicago'}
+51.6.249.6 {'loc': u'51.3581,0.1277', 'country': u'GB', 'region': u'England', 'org': u'AS6871 Plusnet', 'city': u'Chelsfield'}
+51.190.115.166 {'loc': u'53.4500,-2.3167', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Stretford'}
+35.142.0.232 {'loc': u'28.1147,-82.3678', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Tampa'}
+67.181.57.188 {'loc': u'37.0583,-120.8499', 'country': u'US', 'region': u'California', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Los Banos'}
+73.203.174.228 {'loc': u'32.2988,-90.1848', 'country': u'US', 'region': u'Mississippi', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Jackson'}
+98.16.46.123 {'loc': u'35.2220,-101.8313', 'country': u'US', 'region': u'Texas', 'org': u'AS7029 Windstream Communications LLC', 'city': u'Amarillo'}
+172.56.234.67 {'loc': u'34.0522,-118.2437', 'country': u'US', 'region': u'California', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Los Angeles'}
+24.229.255.88 {'loc': u'40.6026,-75.4691', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS3737 PenTeleData Inc.', 'city': u'Allentown'}
+73.182.144.34 {'loc': u'43.0204,-71.6004', 'country': u'US', 'region': u'New Hampshire', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Goffstown'}
+72.130.70.178 {'loc': u'20.8895,-156.4743', 'country': u'US', 'region': u'Hawaii', 'org': u'AS20001 Charter Communications Inc', 'city': u'Kahului'}
+173.90.134.70 {'loc': u'38.1768,-85.5218', 'country': u'US', 'region': u'Kentucky', 'org': u'AS10796 Charter Communications Inc', 'city': u'Louisville'}
+159.46.196.19 {'loc': u'52.0767,4.2986', 'country': u'NL', 'region': u'South Holland', 'org': u'AS29311 Solvinity B.V.', 'city': u'The Hague'}
+86.138.228.25 {'loc': u'52.4143,-1.7809', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Solihull'}
+70.174.116.211 {'loc': u'36.8468,-76.2852', 'country': u'US', 'region': u'Virginia', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Norfolk'}
+80.2.57.212 {'loc': u'53.2788,-2.9013', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Ellesmere Port Town'}
+71.35.18.152 {'loc': u'33.4223,-111.8226', 'country': u'US', 'region': u'Arizona', 'org': u'AS209 CenturyLink Communications, LLC', 'city': u'Mesa'}
+34.199.252.22 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS14618 Amazon.com, Inc.', 'city': u'Ashburn'}
+85.237.194.40 {'loc': u'41.8798,-87.6285', 'country': u'US', 'region': u'Illinois', 'org': u'AS206092 Internet Utilities Europe and Asia Limited', 'city': u'Chicago'}
+172.56.85.88 {'loc': u'33.4484,-112.0740', 'country': u'US', 'region': u'Arizona', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Phoenix'}
+67.169.158.107 {'loc': u'37.8044,-122.2708', 'country': u'US', 'region': u'California', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Oakland'}
+108.231.121.167 {'loc': u'43.0488,-88.0015', 'country': u'US', 'region': u'Wisconsin', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Milwaukee'}
+76.105.99.190 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+179.6.171.240 {'loc': u'-12.0432,-77.0282', 'country': u'PE', 'region': u'Lima Province', 'org': u'AS12252 America Movil Peru S.A.C.', 'city': u'Lima'}
+185.192.70.11 {'loc': u'51.5125,-0.1225', 'country': u'GB', 'region': u'England', 'org': u'AS42831 UK Dedicated Servers Limited', 'city': u'London'}
+75.108.135.115 {'loc': u'35.6127,-77.3663', 'country': u'US', 'region': u'North Carolina', 'org': u'AS19108 Optimum', 'city': u'Greenville'}
+76.128.120.180 {'loc': u'26.0032,-80.2239', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Pembroke Pines'}
+99.232.17.43 {'loc': u'43.8501,-79.0329', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Ajax'}
+162.154.242.223 {'loc': u'38.2503,-85.7034', 'country': u'US', 'region': u'Kentucky', 'org': u'AS10796 Charter Communications Inc', 'city': u'Louisville'}
+71.233.185.71 {'loc': u'42.3584,-71.0598', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Boston'}
+40.77.167.159 {'loc': u'36.6676,-78.3875', 'country': u'US', 'region': u'Virginia', 'org': u'AS8075 Microsoft Corporation', 'city': u'Boydton'}
+24.191.72.143 {'loc': u'40.9504,-72.8426', 'country': u'US', 'region': u'New York', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'Wading River'}
+96.236.157.26 {'loc': u'40.3120,-79.8231', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS701 Verizon Business', 'city': u'Boston'}
+174.96.86.118 {'loc': u'39.7589,-84.1916', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Dayton'}
+75.135.181.19 {'loc': u'41.4140,-73.3034', 'country': u'US', 'region': u'Connecticut', 'org': u'AS20115 Charter Communications LLC', 'city': u'Newtown'}
+74.124.150.40 {'loc': u'32.1363,-81.6235', 'country': u'US', 'region': u'Georgia', 'org': u'AS15313 Pembroke Telephone Company, Inc.', 'city': u'Pembroke'}
+90.211.56.127 {'loc': u'52.6386,-1.1317', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Leicester'}
+172.59.75.130 {'loc': u'39.0997,-94.5786', 'country': u'US', 'region': u'Missouri', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Kansas City'}
+73.236.78.121 {'loc': u'40.4212,-79.7881', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Monroeville'}
+92.188.99.34 {'loc': u'49.4027,3.3583', 'country': u'FR', 'region': u'Hauts-de-France', 'org': u'AS8362 NordNet SA', 'city': u'Crouy'}
+146.70.230.131 {'loc': u'34.0443,-118.2509', 'country': u'US', 'region': u'California', 'org': u'AS9009 M247 Europe SRL', 'city': u'Los Angeles'}
+70.115.103.53 {'loc': u'32.7115,-97.0069', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Grand Prairie'}
+84.247.43.47 {'loc': u'55.8651,-4.2576', 'country': u'GB', 'region': u'Scotland', 'org': u'AS25369 Hydra Communications Ltd', 'city': u'Glasgow'}
+72.203.10.181 {'loc': u'36.1750,-115.1372', 'country': u'US', 'region': u'Nevada', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Las Vegas'}
+72.178.80.20 {'loc': u'31.1164,-97.7278', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Killeen'}
+73.193.184.12 {'loc': u'39.8115,-74.9829', 'country': u'US', 'region': u'New Jersey', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Clementon'}
+96.242.35.139 {'loc': u'40.7357,-74.1724', 'country': u'US', 'region': u'New Jersey', 'org': u'AS701 Verizon Business', 'city': u'Newark'}
+24.240.30.244 {'loc': u'33.5443,-84.2338', 'country': u'US', 'region': u'Georgia', 'org': u'AS20115 Charter Communications LLC', 'city': u'Stockbridge'}
+172.225.252.25 {'loc': u'51.2205,4.4003', 'country': u'BE', 'region': u'Flanders', 'org': u'AS36183 Akamai Technologies, Inc.', 'city': u'Antwerpen'}
+76.178.117.170 {'loc': u'33.8356,-117.8681', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Anaheim'}
+172.56.66.232 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Atlanta'}
+67.207.195.77 {'loc': u'32.4487,-99.7331', 'country': u'US', 'region': u'Texas', 'org': u'AS22353 Taylor Telephone Cooperative, Inc.', 'city': u'Abilene'}
+90.198.240.149 {'loc': u'53.2602,-2.1256', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Macclesfield'}
+96.29.14.23 {'loc': u'38.2989,-86.9550', 'country': u'US', 'region': u'Indiana', 'org': u'AS10796 Charter Communications Inc', 'city': u'Huntingburg'}
+78.150.210.115 {'loc': u'51.8892,0.9042', 'country': u'GB', 'region': u'England', 'org': u'AS13285 TalkTalk Communications Limited', 'city': u'Colchester'}
+174.219.194.133 {'loc': u'38.5816,-121.4944', 'country': u'US', 'region': u'California', 'org': u'AS6167 Verizon Business', 'city': u'Sacramento'}
+71.127.234.247 {'loc': u'40.0979,-74.2176', 'country': u'US', 'region': u'New Jersey', 'org': u'AS701 Verizon Business', 'city': u'Lakewood'}
+191.26.113.72 {'loc': u'-19.7697,-43.8514', 'country': u'BR', 'region': u'Minas Gerais', 'org': u'AS26599 TELEF\xd4NICA BRASIL S.A', 'city': u'Santa Luzia'}
+81.147.169.33 {'loc': u'53.3934,-3.0148', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Birkenhead'}
+69.133.41.225 {'loc': u'39.9528,-83.7804', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Springfield'}
+173.217.97.61 {'loc': u'30.2131,-93.2044', 'country': u'US', 'region': u'Louisiana', 'org': u'AS19108 Optimum', 'city': u'Lake Charles'}
+92.67.209.177 {'loc': u'52.3740,4.8897', 'country': u'NL', 'region': u'North Holland', 'org': u'AS1136 KPN B.V.', 'city': u'Amsterdam'}
+75.215.151.208 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6167 Verizon Business', 'city': u'New York City'}
+142.120.254.229 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS577 Bell Canada', 'city': u'Toronto'}
+90.211.28.224 {'loc': u'55.9468,-3.9905', 'country': u'GB', 'region': u'Scotland', 'org': u'AS5607 Sky UK Limited', 'city': u'Cumbernauld'}
+73.128.132.115 {'loc': u'39.0840,-77.1528', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Rockville'}
+172.245.232.201 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS136258 BrainStorm Network, Inc', 'city': u'Ashburn'}
+75.12.89.53 {'loc': u'42.8977,-85.7186', 'country': u'US', 'region': u'Michigan', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Wyoming'}
+170.203.209.19 {'loc': u'51.0501,-114.0853', 'country': u'CA', 'region': u'Alberta', 'org': u'AS14593 Space Exploration Technologies Corporation', 'city': u'Calgary'}
+47.160.0.212 {'loc': u'31.9565,-99.9623', 'country': u'US', 'region': u'Texas', 'org': u'AS5650 Frontier Communications of America, Inc.', 'city': u'Winters'}
+80.4.3.10 {'loc': u'54.9530,-1.5715', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Felling'}
+172.59.117.118 {'loc': u'36.8468,-76.2852', 'country': u'US', 'region': u'Virginia', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Norfolk'}
+84.65.59.220 {'loc': u'51.2483,-0.7639', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Aldershot'}
+109.88.230.178 {'loc': u'50.4669,4.8675', 'country': u'BE', 'region': u'Wallonia', 'org': u'AS12392 VOO S.A.', 'city': u'Namur'}
+99.1.216.239 {'loc': u'34.0663,-84.6784', 'country': u'US', 'region': u'Georgia', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Acworth'}
+172.56.165.54 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'New York City'}
+220.205.14.135 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS4837 CHINA UNICOM China169 Backbone', 'city': u'Shanghai'}
+82.11.34.240 {'loc': u'52.6386,-1.1317', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Leicester'}
+89.241.108.14 {'loc': u'51.4309,-0.5061', 'country': u'GB', 'region': u'England', 'org': u'AS13285 TalkTalk Communications Limited', 'city': u'Staines'}
+71.193.214.98 {'loc': u'44.6365,-123.1059', 'country': u'US', 'region': u'Oregon', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Albany'}
+76.18.149.8 {'loc': u'36.3048,-86.6200', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Hendersonville'}
+76.65.77.143 {'loc': u'45.4772,-75.7016', 'country': u'CA', 'region': u'Quebec', 'org': u'AS577 Bell Canada', 'city': u'Gatineau'}
+35.143.201.235 {'loc': u'28.9889,-80.9023', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Edgewater'}
+193.254.27.78 {'loc': u'51.4541,-0.4781', 'country': u'GB', 'region': u'England', 'org': u'AS207990 HostRoyale Technologies Pvt Ltd', 'city': u'Stanwell'}
+81.111.123.170 {'loc': u'53.2667,-1.3500', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Staveley'}
+24.21.207.12 {'loc': u'45.5234,-122.6762', 'country': u'US', 'region': u'Oregon', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Portland'}
+82.38.95.65 {'loc': u'51.5541,-2.5711', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Almondsbury'}
+67.8.214.69 {'loc': u'28.0384,-82.3949', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Tampa'}
+38.22.154.80 {'loc': u'38.6273,-90.1979', 'country': u'US', 'region': u'Missouri', 'org': u'AS33616 Co-Mo Comm Inc', 'city': u'St. Louis'}
+76.34.169.15 {'loc': u'41.1075,-81.5006', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Akron'}
+75.179.22.97 {'loc': u'41.0835,-81.5674', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Akron'}
+24.1.104.35 {'loc': u'40.1164,-88.2434', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Champaign'}
+68.184.239.172 {'loc': u'38.7947,-90.2831', 'country': u'US', 'region': u'Missouri', 'org': u'AS20115 Charter Communications LLC', 'city': u'Florissant'}
+62.3.36.160 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS147049 PacketHub S.A.', 'city': u'Toronto'}
+76.124.74.214 {'loc': u'39.9524,-75.1636', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Philadelphia'}
+86.24.201.244 {'loc': u'53.5654,-0.0755', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Grimsby'}
+173.242.240.220 {'loc': u'36.0776,-86.0333', 'country': u'US', 'region': u'Tennessee', 'org': u'AS12261 DTC Communications, Inc.', 'city': u'Alexandria'}
+73.208.57.131 {'loc': u'41.7534,-86.1108', 'country': u'US', 'region': u'Indiana', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Granger'}
+67.48.146.85 {'loc': u'26.2792,-98.1832', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Edinburg'}
+94.226.102.169 {'loc': u'51.3225,4.9447', 'country': u'BE', 'region': u'Flanders', 'org': u'AS6848 Telenet BV', 'city': u'Turnhout'}
+68.188.186.77 {'loc': u'43.6088,-83.9530', 'country': u'US', 'region': u'Michigan', 'org': u'AS20115 Charter Communications LLC', 'city': u'Bay City'}
+107.9.175.216 {'loc': u'41.0239,-81.1634', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Atwater'}
+198.27.133.151 {'loc': u'37.7749,-122.4194', 'country': u'US', 'region': u'California', 'org': u'AS46375 Sonic Telecom LLC', 'city': u'San Francisco'}
+67.250.183.67 {'loc': u'40.8662,-73.9221', 'country': u'US', 'region': u'New York', 'org': u'AS12271 Charter Communications Inc', 'city': u'Inwood'}
+92.239.176.240 {'loc': u'52.4814,-1.8998', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Birmingham'}
+184.52.96.130 {'loc': u'32.8387,-86.6294', 'country': u'US', 'region': u'Alabama', 'org': u'AS6621 Hughes Network Systems, LLC', 'city': u'Clanton'}
+71.11.107.22 {'loc': u'38.6445,-90.2544', 'country': u'US', 'region': u'Missouri', 'org': u'AS20115 Charter Communications LLC', 'city': u'St. Louis'}
+208.104.195.165 {'loc': u'34.9249,-81.0251', 'country': u'US', 'region': u'South Carolina', 'org': u'AS14615 Comporium, Inc', 'city': u'Rock Hill'}
+24.30.133.187 {'loc': u'33.7207,-116.2168', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Indio'}
+76.123.127.208 {'loc': u'30.3322,-81.6556', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Jacksonville'}
+216.131.76.94 {'loc': u'41.8713,-87.6277', 'country': u'US', 'region': u'Illinois', 'org': u'AS62651 Strong Technology, LLC.', 'city': u'Chicago'}
+75.108.71.224 {'loc': u'38.3326,-82.9485', 'country': u'US', 'region': u'Kentucky', 'org': u'AS19108 Optimum', 'city': u'Grayson'}
+68.113.81.36 {'loc': u'32.3736,-86.1833', 'country': u'US', 'region': u'Alabama', 'org': u'AS20115 Charter Communications LLC', 'city': u'Montgomery'}
+172.58.122.115 {'loc': u'39.2418,-84.5437', 'country': u'US', 'region': u'Ohio', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Cincinnati'}
+209.234.253.21 {'loc': u'49.2497,-123.1193', 'country': u'CA', 'region': u'British Columbia', 'org': u'AS55286 B2 Net Solutions Inc.', 'city': u'Vancouver'}
+99.247.24.10 {'loc': u'43.5789,-79.6583', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Mississauga'}
+64.20.183.158 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS27506 Crown Castle Fiber LLC', 'city': u'New York City'}
+73.126.38.152 {'loc': u'42.7762,-71.0773', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Haverhill'}
+107.175.102.252 {'loc': u'42.8865,-78.8784', 'country': u'US', 'region': u'New York', 'org': u'AS131199 Nexeon Technologies, Inc.', 'city': u'Buffalo'}
+72.200.37.144 {'loc': u'29.9547,-90.0751', 'country': u'US', 'region': u'Louisiana', 'org': u'AS22773 Cox Communications Inc.', 'city': u'New Orleans'}
+75.64.44.237 {'loc': u'35.2045,-89.8740', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Bartlett'}
+54.80.185.200 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS14618 Amazon.com, Inc.', 'city': u'Ashburn'}
+24.218.79.189 {'loc': u'43.0362,-71.1834', 'country': u'US', 'region': u'New Hampshire', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Raymond'}
+173.77.64.90 {'loc': u'40.7693,-73.1151', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'Bohemia'}
+80.4.37.171 {'loc': u'51.6440,-3.9414', 'country': u'GB', 'region': u'Wales', 'org': u'AS5089 Virgin Media Limited', 'city': u'Landore'}
+80.193.62.42 {'loc': u'51.3833,-0.1000', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Croydon'}
+24.74.93.189 {'loc': u'35.7990,-80.8940', 'country': u'US', 'region': u'North Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Statesville'}
+96.94.160.174 {'loc': u'33.5207,-86.8025', 'country': u'US', 'region': u'Alabama', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Birmingham'}
+162.233.88.162 {'loc': u'42.5051,-83.4072', 'country': u'US', 'region': u'Michigan', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Farmington'}
+192.214.226.251 {'loc': u'45.5088,-73.5878', 'country': u'CA', 'region': u'Quebec', 'org': u'AS22423 Altima Telecom', 'city': u'Montr\xe9al'}
+109.132.223.9 {'loc': u'50.8536,3.5100', 'country': u'BE', 'region': u'Flanders', 'org': u'AS5432 Proximus NV', 'city': u'Wortegem'}
+47.18.93.47 {'loc': u'41.0534,-73.5387', 'country': u'US', 'region': u'Connecticut', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'Stamford'}
+156.222.205.249 {'loc': u'30.0626,31.2497', 'country': u'EG', 'region': u'Cairo', 'org': u'AS8452 TE-AS', 'city': u'Cairo'}
+184.55.237.216 {'loc': u'43.1122,-87.9932', 'country': u'US', 'region': u'Wisconsin', 'org': u'AS10796 Charter Communications Inc', 'city': u'Milwaukee'}
+108.219.13.19 {'loc': u'36.9102,-121.7569', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Watsonville'}
+86.21.21.33 {'loc': u'52.6083,1.7305', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Great Yarmouth'}
+201.34.240.169 {'loc': u'-16.6786,-49.2539', 'country': u'BR', 'region': u'Goi\xe1s', 'org': u'AS8167 V tal', 'city': u'Goi\xe2nia'}
+216.213.15.134 {'loc': u'38.1142,-82.6032', 'country': u'US', 'region': u'Kentucky', 'org': u'AS394111 Foothills Rural Telephone Cooperative Corporation, Inc.', 'city': u'Louisa'}
+72.241.174.74 {'loc': u'41.6639,-83.5552', 'country': u'US', 'region': u'Ohio', 'org': u'AS13490 Buckeye Cablevision, Inc.', 'city': u'Toledo'}
+95.142.107.4 {'loc': u'52.3740,4.8897', 'country': u'NL', 'region': u'North Holland', 'org': u'AS8455 atom86 BV', 'city': u'Amsterdam'}
+98.185.183.227 {'loc': u'41.8240,-71.4128', 'country': u'US', 'region': u'Rhode Island', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Providence'}
+61.185.148.57 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Shanghai'}
+172.90.69.246 {'loc': u'33.7523,-117.8541', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Santa Ana'}
+98.43.132.182 {'loc': u'39.8680,-104.9719', 'country': u'US', 'region': u'Colorado', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Thornton'}
+172.58.242.102 {'loc': u'39.2904,-76.6122', 'country': u'US', 'region': u'Maryland', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Baltimore'}
+82.33.87.231 {'loc': u'52.4066,-1.5122', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Coventry'}
+94.193.77.5 {'loc': u'51.5095,-0.5954', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Slough'}
+107.192.73.123 {'loc': u'28.4637,-81.3948', 'country': u'US', 'region': u'Florida', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Orlando'}
+24.44.83.91 {'loc': u'40.7357,-74.1724', 'country': u'US', 'region': u'New Jersey', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'Newark'}
+99.43.72.192 {'loc': u'29.8941,-95.6481', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Houston'}
+173.64.11.52 {'loc': u'42.9784,-78.7998', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'Amherst'}
+107.13.110.89 {'loc': u'35.8480,-78.6317', 'country': u'US', 'region': u'North Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Raleigh'}
+149.40.56.8 {'loc': u'29.7633,-95.3633', 'country': u'US', 'region': u'Texas', 'org': u'AS212238 Datacamp Limited', 'city': u'Houston'}
+86.31.81.199 {'loc': u'52.6386,-1.1317', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Leicester'}
+173.172.54.64 {'loc': u'33.1854,-96.1304', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Greenville'}
+76.113.188.145 {'loc': u'44.7677,-93.2777', 'country': u'US', 'region': u'Minnesota', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Burnsville'}
+92.72.55.80 {'loc': u'52.5244,13.4105', 'country': u'DE', 'region': u'Berlin', 'org': u'AS3209 Vodafone GmbH', 'city': u'Berlin'}
+68.193.8.20 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'New York City'}
+216.49.134.2 {'loc': u'41.8668,-72.4495', 'country': u'US', 'region': u'Connecticut', 'org': u'AS395748 NetSpeed LLC', 'city': u'Rockville'}
+76.108.244.162 {'loc': u'25.8195,-80.3553', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Doral'}
+47.18.113.44 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'New York City'}
+192.248.210.110 {'loc': u'46.2346,-63.1256', 'country': u'CA', 'region': u'Prince Edward Island', 'org': u'AS53913 City Wide Communications Inc.', 'city': u'Charlottetown'}
+98.255.19.8 {'loc': u'36.7477,-119.7724', 'country': u'US', 'region': u'California', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Fresno'}
+104.195.157.214 {'loc': u'42.9787,-82.4041', 'country': u'CA', 'region': u'Ontario', 'org': u'AS5645 TekSavvy Solutions, Inc.', 'city': u'Sarnia'}
+76.145.143.153 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+50.72.145.95 {'loc': u'49.8844,-97.1470', 'country': u'CA', 'region': u'Manitoba', 'org': u'AS6327 Shaw Communications Inc.', 'city': u'Winnipeg'}
+84.69.123.162 {'loc': u'53.3830,-1.4659', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Sheffield'}
+52.167.144.180 {'loc': u'36.6676,-78.3875', 'country': u'US', 'region': u'Virginia', 'org': u'AS8075 Microsoft Corporation', 'city': u'Boydton'}
+174.59.50.13 {'loc': u'39.9376,-77.6611', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Chambersburg'}
+35.146.121.148 {'loc': u'26.2792,-98.1832', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Edinburg'}
+2.56.189.97 {'loc': u'32.7939,-96.8319', 'country': u'US', 'region': u'Texas', 'org': u'AS62240 Clouvider', 'city': u'Dallas'}
+99.224.104.189 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Toronto'}
+191.41.173.51 {'loc': u'-22.8075,-43.4139', 'country': u'BR', 'region': u'Rio de Janeiro', 'org': u'AS26615 TIM S/A', 'city': u'Nil\xf3polis'}
+86.153.39.62 {'loc': u'52.8073,-1.6426', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Burton upon Trent'}
+47.195.171.35 {'loc': u'28.0395,-81.9498', 'country': u'US', 'region': u'Florida', 'org': u'AS5650 Frontier Communications of America, Inc.', 'city': u'Lakeland'}
+76.122.125.127 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+104.249.178.73 {'loc': u'41.6997,-93.0480', 'country': u'US', 'region': u'Iowa', 'org': u'AS19628 Mahaska Communication Group, LLC', 'city': u'Newton'}
+73.233.61.252 {'loc': u'39.9524,-75.1636', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Philadelphia'}
+68.98.115.103 {'loc': u'33.4484,-112.0740', 'country': u'US', 'region': u'Arizona', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Phoenix'}
+98.194.77.125 {'loc': u'29.7633,-95.3633', 'country': u'US', 'region': u'Texas', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Houston'}
+76.145.0.101 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+70.95.176.159 {'loc': u'33.0067,-117.0690', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'San Diego'}
+200.195.234.33 {'loc': u'-15.7797,-47.9297', 'country': u'BR', 'region': u'Federal District', 'org': u'AS61889 BR.Digital Provider', 'city': u'Bras\xedlia'}
+73.150.22.197 {'loc': u'39.4523,-74.7277', 'country': u'US', 'region': u'New Jersey', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Mays Landing'}
+76.167.194.108 {'loc': u'32.8239,-117.1965', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'San Diego'}
+172.56.90.164 {'loc': u'30.2672,-97.7431', 'country': u'US', 'region': u'Texas', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Austin'}
+71.238.172.200 {'loc': u'34.7781,-92.3490', 'country': u'US', 'region': u'Arkansas', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Cammack Village'}
+35.146.174.1 {'loc': u'32.8794,-96.6411', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Garland'}
+172.56.77.42 {'loc': u'28.5383,-81.3792', 'country': u'US', 'region': u'Florida', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Orlando'}
+75.134.89.231 {'loc': u'41.6209,-71.0620', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS20115 Charter Communications LLC', 'city': u'Head of Westport'}
+78.117.86.25 {'loc': u'49.9216,1.0777', 'country': u'FR', 'region': u'Normandy', 'org': u'AS15557 Societe Francaise Du Radiotelephone - SFR SA', 'city': u'Dieppe'}
+67.146.120.251 {'loc': u'35.2627,-77.5816', 'country': u'US', 'region': u'North Carolina', 'org': u'AS19901 Brightspeed', 'city': u'Kinston'}
+73.150.217.22 {'loc': u'39.8023,-75.0641', 'country': u'US', 'region': u'New Jersey', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Blackwood'}
+173.92.214.37 {'loc': u'35.1168,-80.7237', 'country': u'US', 'region': u'North Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Matthews'}
+37.67.26.33 {'loc': u'46.5826,0.3435', 'country': u'FR', 'region': u'Nouvelle-Aquitaine', 'org': u'AS15557 Societe Francaise Du Radiotelephone - SFR SA', 'city': u'Poitiers'}
+24.159.67.13 {'loc': u'36.2178,-85.5423', 'country': u'US', 'region': u'Tennessee', 'org': u'AS20115 Charter Communications LLC', 'city': u'Cookeville'}
+70.142.206.196 {'loc': u'32.6493,-96.7130', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Hutchins'}
+151.231.230.154 {'loc': u'53.4106,-2.9779', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Liverpool'}
+86.138.246.2 {'loc': u'51.5752,0.1858', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Romford'}
+172.59.211.184 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'New York City'}
+80.171.190.78 {'loc': u'51.2217,6.7762', 'country': u'DE', 'region': u'North Rhine-Westphalia', 'org': u'AS6805 Telefonica Germany GmbH & Co.OHG', 'city': u'D\xfcsseldorf'}
+72.174.125.99 {'loc': u'39.1071,-108.5968', 'country': u'US', 'region': u'Colorado', 'org': u'AS33588 Charter Communications LLC', 'city': u'Grand Junction'}
+73.107.44.146 {'loc': u'26.5629,-81.9495', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Cape Coral'}
+142.196.52.147 {'loc': u'28.4944,-81.2902', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Orlando'}
+82.36.179.178 {'loc': u'52.5000,-2.0833', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Dudley'}
+86.204.139.22 {'loc': u'47.3167,5.0167', 'country': u'FR', 'region': u'Bourgogne-Franche-Comt\xe9', 'org': u'AS3215 Orange S.A.', 'city': u'Dijon'}
+86.191.211.143 {'loc': u'51.0817,1.1673', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Folkestone'}
+24.119.163.241 {'loc': u'37.9967,-88.9201', 'country': u'US', 'region': u'Illinois', 'org': u'AS11492 CABLE ONE, INC.', 'city': u'Benton'}
+108.4.219.156 {'loc': u'39.9524,-75.1636', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS701 Verizon Business', 'city': u'Philadelphia'}
+172.56.34.175 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'New York City'}
+80.195.181.248 {'loc': u'52.5667,-1.8167', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Sutton Coldfield'}
+194.140.212.179 {'loc': u'57.4791,-4.2240', 'country': u'GB', 'region': u'Scotland', 'org': u'AS57356 Highland Network Ltd', 'city': u'Inverness'}
+74.140.167.228 {'loc': u'39.8439,-84.1247', 'country': u'US', 'region': u'Ohio', 'org': u'AS10796 Charter Communications Inc', 'city': u'Huber Heights'}
+71.84.219.94 {'loc': u'34.4222,-117.3025', 'country': u'US', 'region': u'California', 'org': u'AS20115 Charter Communications LLC', 'city': u'Hesperia'}
+183.157.190.34 {'loc': u'30.7522,120.7500', 'country': u'CN', 'region': u'Zhejiang', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Jiaxing'}
+108.227.234.111 {'loc': u'39.8088,-86.3163', 'country': u'US', 'region': u'Indiana', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Indianapolis'}
+75.84.29.32 {'loc': u'33.8268,-118.3118', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Torrance'}
+76.168.222.112 {'loc': u'34.0794,-117.4551', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Fontana'}
+71.194.23.234 {'loc': u'41.8897,-87.9890', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Villa Park'}
+173.49.80.187 {'loc': u'39.9524,-75.1636', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS701 Verizon Business', 'city': u'Philadelphia'}
+24.186.179.115 {'loc': u'41.0340,-73.7629', 'country': u'US', 'region': u'New York', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'White Plains'}
+69.255.14.135 {'loc': u'39.1732,-77.2716', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Germantown'}
+178.17.240.227 {'loc': u'51.4408,-0.9238', 'country': u'GB', 'region': u'England', 'org': u'AS49375 No One Internet Ltd', 'city': u'Earley'}
+73.163.106.18 {'loc': u'38.6246,-76.9391', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Waldorf'}
+45.61.187.113 {'loc': u'25.7743,-80.1937', 'country': u'US', 'region': u'Florida', 'org': u'AS53667 FranTech Solutions', 'city': u'Miami'}
+65.95.160.100 {'loc': u'43.1001,-79.0663', 'country': u'CA', 'region': u'Ontario', 'org': u'AS577 Bell Canada', 'city': u'Niagara Falls'}
+188.30.140.184 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS206067 Hutchison 3G UK Limited', 'city': u'London'}
+69.250.67.119 {'loc': u'39.2404,-76.8394', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Columbia'}
+75.214.59.42 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS6167 Verizon Business', 'city': u'New York City'}
+73.247.129.197 {'loc': u'41.8500,-87.6500', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Chicago'}
+191.197.194.23 {'loc': u'-29.0289,-51.1817', 'country': u'BR', 'region': u'Rio Grande do Sul', 'org': u'AS26599 TELEF\xd4NICA BRASIL S.A', 'city': u'Flores da Cunha'}
+24.91.150.195 {'loc': u'41.7001,-70.2995', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Barnstable'}
+74.83.51.151 {'loc': u'39.1271,-84.5144', 'country': u'US', 'region': u'Ohio', 'org': u'AS6181 Cincinnati Bell Telephone Company LLC', 'city': u'Cincinnati'}
+81.152.5.249 {'loc': u'51.3813,1.3862', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Margate'}
+172.59.208.190 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'New York City'}
+72.39.186.146 {'loc': u'42.9787,-82.4041', 'country': u'CA', 'region': u'Ontario', 'org': u'AS7992 Cogeco Connexion Inc.', 'city': u'Sarnia'}
+86.22.64.226 {'loc': u'53.4877,-2.2904', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Salford'}
+98.122.121.67 {'loc': u'33.5510,-79.0414', 'country': u'US', 'region': u'South Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Murrells Inlet'}
+104.187.188.201 {'loc': u'38.0049,-121.8058', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Antioch'}
+77.96.249.32 {'loc': u'53.4106,-2.9779', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Liverpool'}
+135.129.122.224 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS14593 Space Exploration Technologies Corporation', 'city': u'Toronto'}
+73.57.163.48 {'loc': u'25.8195,-80.3553', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Doral'}
+73.193.232.254 {'loc': u'40.6976,-74.2632', 'country': u'US', 'region': u'New Jersey', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Union'}
+75.66.136.121 {'loc': u'34.8240,-89.9937', 'country': u'US', 'region': u'Mississippi', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Hernando'}
+73.244.22.32 {'loc': u'25.5384,-80.4089', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Princeton'}
+108.45.98.88 {'loc': u'38.9045,-76.8683', 'country': u'US', 'region': u'Maryland', 'org': u'AS701 Verizon Business', 'city': u'Summerfield'}
+73.203.128.5 {'loc': u'35.1495,-90.0490', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Memphis'}
+107.3.234.134 {'loc': u'35.8456,-86.3903', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Murfreesboro'}
+73.147.187.63 {'loc': u'37.5538,-77.4603', 'country': u'US', 'region': u'Virginia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Richmond'}
+96.224.89.81 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'New York City'}
+98.193.250.254 {'loc': u'36.1659,-86.7844', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Nashville'}
+98.200.103.205 {'loc': u'29.7633,-95.3633', 'country': u'US', 'region': u'Texas', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Houston'}
+47.42.201.63 {'loc': u'34.1070,-117.5941', 'country': u'US', 'region': u'California', 'org': u'AS20115 Charter Communications LLC', 'city': u'Rancho Cucamonga'}
+70.180.183.238 {'loc': u'36.1750,-115.1372', 'country': u'US', 'region': u'Nevada', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Las Vegas'}
+60.213.61.64 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS4837 CHINA UNICOM China169 Backbone', 'city': u'Shanghai'}
+160.3.133.17 {'loc': u'30.3505,-89.1528', 'country': u'US', 'region': u'Mississippi', 'org': u'AS11492 CABLE ONE, INC.', 'city': u'Long Beach'}
+74.83.238.153 {'loc': u'39.0623,-84.2883', 'country': u'US', 'region': u'Ohio', 'org': u'AS6181 Cincinnati Bell Telephone Company LLC', 'city': u'Withamsville'}
+216.73.161.36 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS206092 Internet Utilities Europe and Asia Limited', 'city': u'New York City'}
+92.41.100.178 {'loc': u'54.5762,-1.2348', 'country': u'GB', 'region': u'England', 'org': u'AS206067 Hutchison 3G UK Limited', 'city': u'Middlesbrough'}
+97.80.167.148 {'loc': u'33.0243,-85.0739', 'country': u'US', 'region': u'Georgia', 'org': u'AS20115 Charter Communications LLC', 'city': u'LaGrange'}
+76.9.201.197 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS21949 Beanfield Technologies Inc.', 'city': u'Toronto'}
+170.62.45.5 {'loc': u'34.6802,-79.1950', 'country': u'US', 'region': u'North Carolina', 'org': u'AS33574 LREMC Technologies, L.L.C.', 'city': u'Pembroke'}
+184.176.81.193 {'loc': u'33.4484,-112.0740', 'country': u'US', 'region': u'Arizona', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Phoenix'}
+99.251.83.26 {'loc': u'43.4254,-80.5112', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Kitchener'}
+24.8.254.103 {'loc': u'40.4233,-104.7091', 'country': u'US', 'region': u'Colorado', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Greeley'}
+75.42.62.211 {'loc': u'32.3834,-86.2434', 'country': u'US', 'region': u'Alabama', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Montgomery'}
+99.65.119.242 {'loc': u'39.0150,-94.3118', 'country': u'US', 'region': u'Missouri', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Blue Springs'}
+69.143.107.143 {'loc': u'39.2904,-76.6122', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Baltimore'}
+84.193.168.154 {'loc': u'50.8732,5.5184', 'country': u'BE', 'region': u'Flanders', 'org': u'AS6848 Telenet BV', 'city': u'Bilzen'}
+70.188.125.224 {'loc': u'30.4433,-91.1875', 'country': u'US', 'region': u'Louisiana', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Baton Rouge'}
+50.89.87.83 {'loc': u'28.6625,-81.4117', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Altamonte Springs'}
+50.35.81.8 {'loc': u'47.7918,-122.2243', 'country': u'US', 'region': u'Washington', 'org': u'AS20055 Wholesail networks LLC', 'city': u'Bothell'}
+66.182.118.125 {'loc': u'33.0581,-112.0476', 'country': u'US', 'region': u'Arizona', 'org': u'AS17385 Orbitel Communications, LLC', 'city': u'Maricopa'}
+71.183.89.29 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'New York City'}
+173.81.196.4 {'loc': u'38.3498,-81.6326', 'country': u'US', 'region': u'West Virginia', 'org': u'AS19108 Optimum', 'city': u'Charleston'}
+73.17.149.114 {'loc': u'41.7198,-72.8320', 'country': u'US', 'region': u'Connecticut', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Farmington'}
+23.251.21.252 {'loc': u'39.5489,-89.2945', 'country': u'US', 'region': u'Illinois', 'org': u'AS11492 CABLE ONE, INC.', 'city': u'Taylorville'}
+24.145.25.211 {'loc': u'40.3267,-78.9220', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS11776 Breezeline', 'city': u'Johnstown'}
+69.126.79.26 {'loc': u'40.2273,-74.6532', 'country': u'US', 'region': u'New Jersey', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'Hamilton Square'}
+96.19.49.125 {'loc': u'30.4035,-88.8971', 'country': u'US', 'region': u'Mississippi', 'org': u'AS11492 CABLE ONE, INC.', 'city': u'Biloxi'}
+2.220.145.119 {'loc': u'51.5095,-0.5954', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Slough'}
+50.88.126.151 {'loc': u'28.2680,-81.4675', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Kissimmee'}
+70.160.106.51 {'loc': u'36.8468,-76.2852', 'country': u'US', 'region': u'Virginia', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Norfolk'}
+76.106.146.54 {'loc': u'30.3322,-81.6556', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Jacksonville'}
+73.96.9.201 {'loc': u'45.6387,-122.6615', 'country': u'US', 'region': u'Washington', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Vancouver'}
+70.127.147.72 {'loc': u'27.8802,-82.7534', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Largo'}
+151.204.222.98 {'loc': u'39.9929,-74.7877', 'country': u'US', 'region': u'New Jersey', 'org': u'AS701 Verizon Business', 'city': u'Mount Holly'}
+108.199.187.161 {'loc': u'38.7892,-90.3226', 'country': u'US', 'region': u'Missouri', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Florissant'}
+71.54.16.143 {'loc': u'26.9762,-82.0906', 'country': u'US', 'region': u'Florida', 'org': u'AS209 CenturyLink Communications, LLC', 'city': u'Port Charlotte'}
+134.22.106.106 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS400511 Clearwave Communications', 'city': u'Atlanta'}
+82.38.252.222 {'loc': u'52.5000,-2.0833', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Dudley'}
+172.56.79.28 {'loc': u'28.5383,-81.3792', 'country': u'US', 'region': u'Florida', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Orlando'}
+173.183.187.162 {'loc': u'51.0501,-114.0853', 'country': u'CA', 'region': u'Alberta', 'org': u'AS852 TELUS Communications Inc.', 'city': u'Calgary'}
+206.13.105.193 {'loc': u'42.3542,-87.8651', 'country': u'US', 'region': u'Illinois', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Waukegan'}
+92.233.222.6 {'loc': u'52.5187,-1.9945', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'West Bromwich'}
+99.255.217.236 {'loc': u'43.7064,-79.3986', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Toronto'}
+64.194.67.70 {'loc': u'40.1201,-123.8234', 'country': u'US', 'region': u'California', 'org': u'AS21541 101Netlink', 'city': u'Redway'}
+199.34.73.68 {'loc': u'45.0334,-79.3163', 'country': u'CA', 'region': u'Ontario', 'org': u'AS30549 Lakeland Networks', 'city': u'Bracebridge'}
+24.99.231.123 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Atlanta'}
+81.159.243.219 {'loc': u'51.4015,-1.3247', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Newbury'}
+109.155.193.168 {'loc': u'53.1333,-1.2000', 'country': u'GB', 'region': u'England', 'org': u'AS2856 British Telecommunications PLC', 'city': u'Mansfield'}
+152.97.199.57 {'loc': u'35.3723,-85.6180', 'country': u'US', 'region': u'Tennessee', 'org': u'AS21766 BEN LOMAND RURAL TELEPHONE COOPERATIVE, INC.', 'city': u'Gruetli-Laager'}
+69.14.32.83 {'loc': u'42.4895,-83.1446', 'country': u'US', 'region': u'Michigan', 'org': u'AS12083 WideOpenWest Finance LLC', 'city': u'Royal Oak'}
+108.5.230.136 {'loc': u'40.8570,-74.0215', 'country': u'US', 'region': u'New Jersey', 'org': u'AS701 Verizon Business', 'city': u'Ridgefield Park'}
+173.52.54.164 {'loc': u'40.7143,-74.0060', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'New York City'}
+77.96.122.107 {'loc': u'52.5853,-1.9840', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Walsall'}
+66.249.76.75 {'loc': u'51.2205,4.4003', 'country': u'BE', 'region': u'Flanders', 'org': u'AS15169 Google LLC', 'city': u'Antwerpen'}
+76.36.146.131 {'loc': u'35.0257,-78.9705', 'country': u'US', 'region': u'North Carolina', 'org': u'AS11426 Charter Communications Inc', 'city': u'Fayetteville'}
+39.174.160.59 {'loc': u'29.8782,121.5494', 'country': u'CN', 'region': u'Zhejiang', 'org': u'AS56041 China Mobile communications corporation', 'city': u'Ningbo'}
+70.104.182.45 {'loc': u'36.9804,-76.4297', 'country': u'US', 'region': u'Virginia', 'org': u'AS701 Verizon Business', 'city': u'Newport News'}
+194.59.6.28 {'loc': u'52.3740,4.8897', 'country': u'NL', 'region': u'North Holland', 'org': u'AS199218 Proton AG', 'city': u'Amsterdam'}
+174.62.7.239 {'loc': u'32.3123,-106.7783', 'country': u'US', 'region': u'New Mexico', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Las Cruces'}
+75.40.17.90 {'loc': u'37.5671,-122.3676', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Burlingame'}
+99.30.154.207 {'loc': u'38.4797,-121.4438', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Sacramento'}
+86.29.80.115 {'loc': u'51.5500,0.1667', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Dagenham'}
+176.24.92.143 {'loc': u'53.5405,-2.1183', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Oldham'}
+216.131.77.82 {'loc': u'41.8713,-87.6277', 'country': u'US', 'region': u'Illinois', 'org': u'AS62651 Strong Technology, LLC.', 'city': u'Chicago'}
+95.91.197.247 {'loc': u'53.0511,8.6309', 'country': u'DE', 'region': u'Lower Saxony', 'org': u'AS3209 Vodafone GmbH', 'city': u'Delmenhorst'}
+96.41.8.184 {'loc': u'34.1070,-117.5941', 'country': u'US', 'region': u'California', 'org': u'AS20115 Charter Communications LLC', 'city': u'Rancho Cucamonga'}
+173.255.172.65 {'loc': u'39.1479,-94.5680', 'country': u'US', 'region': u'Missouri', 'org': u'AS54203 Strong Technology, LLC.', 'city': u'Kansas City'}
+172.58.54.21 {'loc': u'29.7633,-95.3633', 'country': u'US', 'region': u'Texas', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Houston'}
+68.49.0.40 {'loc': u'42.4734,-83.2219', 'country': u'US', 'region': u'Michigan', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Southfield'}
+172.59.203.138 {'loc': u'33.4484,-112.0740', 'country': u'US', 'region': u'Arizona', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Phoenix'}
+98.218.45.31 {'loc': u'38.3607,-75.5994', 'country': u'US', 'region': u'Maryland', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Salisbury'}
+107.133.253.65 {'loc': u'39.6841,-84.1633', 'country': u'US', 'region': u'Ohio', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Dayton'}
+24.41.110.111 {'loc': u'33.8984,-88.9992', 'country': u'US', 'region': u'Mississippi', 'org': u'AS398913 NT Spark, LLC', 'city': u'Houston'}
+70.188.123.183 {'loc': u'30.4433,-91.1875', 'country': u'US', 'region': u'Louisiana', 'org': u'AS22773 Cox Communications Inc.', 'city': u'Baton Rouge'}
+172.58.0.41 {'loc': u'33.7490,-84.3880', 'country': u'US', 'region': u'Georgia', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Atlanta'}
+82.18.170.101 {'loc': u'53.5791,-0.6544', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Scunthorpe'}
+68.58.248.62 {'loc': u'42.2139,-83.1938', 'country': u'US', 'region': u'Michigan', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Southgate'}
+80.189.90.32 {'loc': u'53.4170,-2.2315', 'country': u'GB', 'region': u'England', 'org': u'AS6871 Plusnet', 'city': u'Didsbury'}
+99.9.52.19 {'loc': u'34.2073,-84.1402', 'country': u'US', 'region': u'Georgia', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Cumming'}
+153.33.162.90 {'loc': u'30.4383,-84.2807', 'country': u'US', 'region': u'Florida', 'org': u'AS23473 PAVLOV MEDIA INC', 'city': u'Tallahassee'}
+90.240.239.2 {'loc': u'52.3709,-1.2642', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Rugby'}
+108.67.22.8 {'loc': u'30.0377,-95.5326', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Spring'}
+47.38.90.108 {'loc': u'33.9166,-78.1611', 'country': u'US', 'region': u'North Carolina', 'org': u'AS20115 Charter Communications LLC', 'city': u'Oak Island'}
+107.77.198.98 {'loc': u'33.1032,-96.6706', 'country': u'US', 'region': u'Texas', 'org': u'AS20057 AT&T Enterprises, LLC', 'city': u'Allen'}
+107.179.210.3 {'loc': u'42.9834,-81.2330', 'country': u'CA', 'region': u'Ontario', 'org': u'AS5645 TekSavvy Solutions, Inc.', 'city': u'London'}
+146.200.30.114 {'loc': u'52.7667,-1.2000', 'country': u'GB', 'region': u'England', 'org': u'AS6871 Plusnet', 'city': u'Loughborough'}
+71.233.187.96 {'loc': u'42.3584,-71.0598', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Boston'}
+24.113.27.156 {'loc': u'48.1181,-123.4307', 'country': u'US', 'region': u'Washington', 'org': u'AS11404 Wave Broadband', 'city': u'Port Angeles'}
+73.176.1.144 {'loc': u'41.8500,-87.6500', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Chicago'}
+148.252.144.72 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS25135 Vodafone Limited', 'city': u'London'}
+70.119.88.183 {'loc': u'33.0277,-96.6777', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Plano'}
+76.11.102.237 {'loc': u'45.8334,-64.1987', 'country': u'CA', 'region': u'Nova Scotia', 'org': u'AS11260 EastLink', 'city': u'Amherst'}
+172.59.24.0 {'loc': u'41.4995,-81.6954', 'country': u'US', 'region': u'Ohio', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Cleveland'}
+69.127.157.251 {'loc': u'40.0979,-74.2176', 'country': u'US', 'region': u'New Jersey', 'org': u'AS6128 Cablevision Systems Corp.', 'city': u'Lakewood'}
+172.59.125.41 {'loc': u'35.4676,-97.5164', 'country': u'US', 'region': u'Oklahoma', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Oklahoma City'}
+73.244.75.150 {'loc': u'27.0595,-80.1364', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Hobe Sound'}
+90.240.62.239 {'loc': u'52.9059,-2.1541', 'country': u'GB', 'region': u'England', 'org': u'AS5378 Vodafone Limited', 'city': u'Stone'}
+71.49.195.31 {'loc': u'31.3081,-86.4824', 'country': u'US', 'region': u'Alabama', 'org': u'AS19901 Brightspeed', 'city': u'Andalusia'}
+34.195.248.30 {'loc': u'39.0437,-77.4875', 'country': u'US', 'region': u'Virginia', 'org': u'AS14618 Amazon.com, Inc.', 'city': u'Ashburn'}
+172.56.223.125 {'loc': u'39.9524,-75.1636', 'country': u'US', 'region': u'Pennsylvania', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Philadelphia'}
+73.142.49.1 {'loc': u'41.7015,-71.1551', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Fall River'}
+24.1.181.111 {'loc': u'41.5261,-87.8892', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Mokena'}
+73.53.158.170 {'loc': u'30.3322,-81.6556', 'country': u'US', 'region': u'Florida', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Jacksonville'}
+176.253.71.37 {'loc': u'52.0304,-0.7864', 'country': u'GB', 'region': u'England', 'org': u'AS5607 Sky UK Limited', 'city': u'Loughton'}
+172.59.75.67 {'loc': u'39.0997,-94.5786', 'country': u'US', 'region': u'Missouri', 'org': u'AS21928 T-Mobile USA, Inc.', 'city': u'Kansas City'}
+68.55.70.174 {'loc': u'42.3314,-83.0457', 'country': u'US', 'region': u'Michigan', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Detroit'}
+68.201.15.125 {'loc': u'33.9519,-98.5145', 'country': u'US', 'region': u'Texas', 'org': u'AS11427 Charter Communications Inc', 'city': u'Wichita Falls'}
+97.140.212.61 {'loc': u'35.2271,-80.8431', 'country': u'US', 'region': u'North Carolina', 'org': u'AS6167 Verizon Business', 'city': u'Charlotte'}
+23.245.14.30 {'loc': u'37.9254,-76.8591', 'country': u'US', 'region': u'Virginia', 'org': u'AS11776 Breezeline', 'city': u'Tappahannock'}
+73.215.145.58 {'loc': u'40.7323,-74.2349', 'country': u'US', 'region': u'New Jersey', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Irvington'}
+172.116.20.98 {'loc': u'33.7852,-117.3166', 'country': u'US', 'region': u'California', 'org': u'AS20001 Charter Communications Inc', 'city': u'Perris'}
+37.65.5.230 {'loc': u'44.8404,-0.5805', 'country': u'FR', 'region': u'Nouvelle-Aquitaine', 'org': u'AS15557 Societe Francaise Du Radiotelephone - SFR SA', 'city': u'Bordeaux'}
+173.68.192.244 {'loc': u'40.9312,-73.8988', 'country': u'US', 'region': u'New York', 'org': u'AS701 Verizon Business', 'city': u'Yonkers'}
+16.98.89.143 {'loc': u'39.7628,-86.3997', 'country': u'US', 'region': u'Indiana', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Avon'}
+99.120.166.41 {'loc': u'36.1633,-86.6609', 'country': u'US', 'region': u'Tennessee', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Nashville'}
+96.252.78.80 {'loc': u'42.5584,-71.2690', 'country': u'US', 'region': u'Massachusetts', 'org': u'AS701 Verizon Business', 'city': u'Billerica'}
+73.59.175.176 {'loc': u'32.2988,-90.1848', 'country': u'US', 'region': u'Mississippi', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Jackson'}
+99.251.75.187 {'loc': u'43.4254,-80.5112', 'country': u'CA', 'region': u'Ontario', 'org': u'AS812 Rogers Communications Canada Inc.', 'city': u'Kitchener'}
+80.41.163.5 {'loc': u'53.3830,-1.4659', 'country': u'GB', 'region': u'England', 'org': u'AS9105 TalkTalk Communications Limited', 'city': u'Sheffield'}
+216.122.42.198 {'loc': u'37.1925,-86.2678', 'country': u'US', 'region': u'Kentucky', 'org': u'AS29894 South Central Rural Telecommunications Cooperative Inc.', 'city': u'Brownsville'}
+108.172.84.150 {'loc': u'49.2497,-123.1193', 'country': u'CA', 'region': u'British Columbia', 'org': u'AS852 TELUS Communications Inc.', 'city': u'Vancouver'}
+98.214.108.191 {'loc': u'42.2711,-89.0940', 'country': u'US', 'region': u'Illinois', 'org': u'AS7922 Comcast Cable Communications, LLC', 'city': u'Rockford'}
+76.38.248.152 {'loc': u'43.1009,-75.2327', 'country': u'US', 'region': u'New York', 'org': u'AS11351 Charter Communications Inc', 'city': u'Utica'}
+2.101.126.204 {'loc': u'54.5968,-5.9254', 'country': u'GB', 'region': u'Northern Ireland', 'org': u'AS13285 TalkTalk Communications Limited', 'city': u'Belfast'}
+50.24.8.191 {'loc': u'38.3498,-81.6326', 'country': u'US', 'region': u'West Virginia', 'org': u'AS19108 Optimum', 'city': u'Charleston'}
+107.205.42.38 {'loc': u'34.1993,-118.5983', 'country': u'US', 'region': u'California', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Calabasas'}
+76.72.71.152 {'loc': u'30.2241,-92.0198', 'country': u'US', 'region': u'Louisiana', 'org': u'AS25921 LUS Fiber', 'city': u'Lafayette'}
+50.89.208.234 {'loc': u'29.1372,-81.0241', 'country': u'US', 'region': u'Florida', 'org': u'AS33363 Charter Communications, Inc', 'city': u'Port Orange'}
+99.158.254.105 {'loc': u'29.4027,-98.6433', 'country': u'US', 'region': u'Texas', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'San Antonio'}
+185.198.243.24 {'loc': u'51.5085,-0.1257', 'country': u'GB', 'region': u'England', 'org': u'AS62240 Clouvider', 'city': u'London'}
+142.188.22.4 {'loc': u'43.7667,-79.3991', 'country': u'CA', 'region': u'Ontario', 'org': u'AS577 Bell Canada', 'city': u'Willowdale'}
+174.211.225.231 {'loc': u'30.3322,-81.6556', 'country': u'US', 'region': u'Florida', 'org': u'AS6167 Verizon Business', 'city': u'Jacksonville'}
+68.185.51.146 {'loc': u'46.2109,-119.1680', 'country': u'US', 'region': u'Washington', 'org': u'AS20115 Charter Communications LLC', 'city': u'Highland'}
+45.19.175.3 {'loc': u'41.7039,-83.6034', 'country': u'US', 'region': u'Ohio', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Toledo'}
+191.218.134.105 {'loc': u'-25.4278,-49.2731', 'country': u'BR', 'region': u'Paran\xe1', 'org': u'AS8167 V tal', 'city': u'Curitiba'}
+81.98.84.43 {'loc': u'54.9911,-1.5340', 'country': u'GB', 'region': u'England', 'org': u'AS5089 Virgin Media Limited', 'city': u'Wallsend'}
+162.203.138.118 {'loc': u'41.6156,-87.5295', 'country': u'US', 'region': u'Illinois', 'org': u'AS7018 AT&T Enterprises, LLC', 'city': u'Calumet City'}
+173.80.64.55 {'loc': u'35.9382,-77.7905', 'country': u'US', 'region': u'North Carolina', 'org': u'AS19108 Optimum', 'city': u'Rocky Mount'}
+
+Gegevens opgeslagen in geo_data.json ({len(ip_geo_data)} IP's).
