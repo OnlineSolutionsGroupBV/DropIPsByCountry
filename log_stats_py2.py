@@ -47,12 +47,20 @@ def ensure_date_bucket(db, date_key):
             "total_requests": 0,
             "urls": {},
             "ips": {},
+            "ip_urls": {},
         }
     return dates[date_key]
 
 
 def add_count(counter, key, amount=1):
     counter[key] = counter.get(key, 0) + amount
+
+
+def add_ip_url(bucket, ip, url):
+    ip_urls = bucket["ip_urls"]
+    if ip not in ip_urls:
+        ip_urls[ip] = {}
+    add_count(ip_urls[ip], url)
 
 
 def parse_logs(log_paths, db, show_errors=False):
@@ -76,10 +84,26 @@ def parse_logs(log_paths, db, show_errors=False):
                 bucket["total_requests"] += 1
                 add_count(bucket["urls"], url)
                 add_count(bucket["ips"], ip)
+                add_ip_url(bucket, ip, url)
     return parsed_lines, matched_lines
 
 
-def report(db, date_key=None, top_urls=20, top_ips=20):
+def is_static_url(url):
+    static_prefixes = ("/static/", "/media/", "/assets/")
+    static_exts = (
+        ".css", ".js", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico",
+        ".woff", ".woff2", ".ttf", ".eot", ".map", ".webp", ".avif",
+        ".mp4", ".mp3", ".webm", ".ogg", ".pdf",
+    )
+    if url == "/favicon.ico":
+        return True
+    if url.startswith(static_prefixes):
+        return True
+    lower_url = url.lower()
+    return lower_url.endswith(static_exts)
+
+
+def report(db, date_key=None, top_urls=20, top_ips=20, include_static=False, per_ip_urls=5):
     dates = db.get("dates", {})
     if not dates:
         print("No data in database.")
@@ -103,14 +127,39 @@ def report(db, date_key=None, top_urls=20, top_ips=20):
 
     urls = bucket.get("urls", {})
     ips = bucket.get("ips", {})
+    ip_urls = bucket.get("ip_urls", {})
 
     print("\nTop URLs:")
-    for url, count in sorted(urls.items(), key=lambda x: x[1], reverse=True)[:top_urls]:
+    shown = 0
+    for url, count in sorted(urls.items(), key=lambda x: x[1], reverse=True):
+        if not include_static and is_static_url(url):
+            continue
         print("  {}  {}".format(count, url))
+        shown += 1
+        if shown >= top_urls:
+            break
+    if shown == 0:
+        print("  (no non-static URLs found)")
 
     print("\nTop IPs:")
-    for ip, count in sorted(ips.items(), key=lambda x: x[1], reverse=True)[:top_ips]:
+    shown_ips = 0
+    for ip, count in sorted(ips.items(), key=lambda x: x[1], reverse=True):
         print("  {}  {}".format(count, ip))
+        if per_ip_urls > 0:
+            urls_for_ip = ip_urls.get(ip, {})
+            shown_urls = 0
+            for url, ucount in sorted(urls_for_ip.items(), key=lambda x: x[1], reverse=True):
+                if not include_static and is_static_url(url):
+                    continue
+                print("      {}  {}".format(ucount, url))
+                shown_urls += 1
+                if shown_urls >= per_ip_urls:
+                    break
+            if shown_urls == 0:
+                print("      (no non-static URLs found)")
+        shown_ips += 1
+        if shown_ips >= top_ips:
+            break
 
     return 0
 
@@ -131,6 +180,8 @@ def build_parser():
     report_cmd.add_argument("--date", help="Date to report (YYYY-MM-DD).")
     report_cmd.add_argument("--top-urls", type=int, default=20, help="Number of URLs to show.")
     report_cmd.add_argument("--top-ips", type=int, default=20, help="Number of IPs to show.")
+    report_cmd.add_argument("--include-static", action="store_true", help="Include static assets in URL report.")
+    report_cmd.add_argument("--per-ip-urls", type=int, default=5, help="Number of URLs to show under each IP.")
 
     return parser
 
@@ -153,7 +204,14 @@ def main():
 
     if args.command == "report":
         db = load_db(args.db)
-        return report(db, date_key=args.date, top_urls=args.top_urls, top_ips=args.top_ips)
+        return report(
+            db,
+            date_key=args.date,
+            top_urls=args.top_urls,
+            top_ips=args.top_ips,
+            include_static=args.include_static,
+            per_ip_urls=args.per_ip_urls,
+        )
 
     return 1
 

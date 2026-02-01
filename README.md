@@ -113,6 +113,8 @@ python3 log_stats.py report --db log_stats.json --date 2026-02-01 --top-urls 20 
 ```
 
 Zonder `--date` zie je welke datums beschikbaar zijn.
+Standaard worden static assets gefilterd. Gebruik `--include-static` om ze toch te tonen.
+Per IP worden ook de top‑URLs getoond (default 5). Pas dit aan met `--per-ip-urls N`.
 
 ### 🐍 Python 2 versie
 
@@ -124,6 +126,11 @@ python2 log_stats_py2.py parse --log /pad/naar/nieuwejobs_custom.log --db log_st
 
 ```bash
 python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20
+```
+
+Voor extra opties:
+```bash
+python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20 --per-ip-urls 5 --include-static
 ```
 
 ### 📄 Log pattern (voorbeeld)
@@ -356,6 +363,5 @@ sudo ufw reload
 - **Block unwanted traffic BEFORE allowing good traffic**.
 - Always check the order of rules with `sudo ufw status numbered`.
 - Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
-
 
 
