@@ -57,6 +57,8 @@ def add_count(counter, key, amount=1):
 
 
 def add_ip_url(bucket, ip, url):
+    if "ip_urls" not in bucket:
+        bucket["ip_urls"] = {}
     ip_urls = bucket["ip_urls"]
     if ip not in ip_urls:
         ip_urls[ip] = {}
