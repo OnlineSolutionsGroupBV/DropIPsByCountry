@@ -142,6 +142,24 @@ python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls
 
 ---
 
+## 🔒 Blokkeer IPs die /accounts/ misbruiken
+
+Gebruik de logstatistieken om IP’s te blokkeren die veel requests doen naar `/accounts/…` (login/signup/etc).
+
+### ✅ Dry-run (alleen tonen)
+```bash
+python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200 --dry-run
+```
+
+### ✅ Blokkeren via UFW
+```bash
+python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200
+```
+
+De geblokkeerde IP’s worden bijgehouden in `blocked_accounts_ips.txt` zodat er geen dubbele regels worden toegevoegd.
+
+---
+
 ### ✅ **Step 3: Block Unwanted Traffic**  
 
 To block all **China (`CN`) IPs** dynamically using **UFW**:  
@@ -364,4 +382,3 @@ sudo ufw reload
 - **Block unwanted traffic BEFORE allowing good traffic**.
 - Always check the order of rules with `sudo ufw status numbered`.
 - Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
-
