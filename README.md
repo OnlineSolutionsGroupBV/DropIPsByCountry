@@ -114,6 +114,18 @@ python3 log_stats.py report --db log_stats.json --date 2026-02-01 --top-urls 20 
 
 Zonder `--date` zie je welke datums beschikbaar zijn.
 
+### 🐍 Python 2 versie
+
+Gebruik `log_stats_py2.py` als je nog op Python 2.7 zit:
+
+```bash
+python2 log_stats_py2.py parse --log /pad/naar/nieuwejobs_custom.log --db log_stats.json
+```
+
+```bash
+python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20
+```
+
 ### 📄 Log pattern (voorbeeld)
 
 ```
@@ -344,7 +356,6 @@ sudo ufw reload
 - **Block unwanted traffic BEFORE allowing good traffic**.
 - Always check the order of rules with `sudo ufw status numbered`.
 - Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
-
 
 
 
