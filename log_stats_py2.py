@@ -22,7 +22,8 @@ def load_db(path):
 
 def save_db(path, data):
     data["updated_at"] = dt.datetime.utcnow().isoformat() + "Z"
-    with io.open(path, "w", encoding="utf-8") as f:
+    # In Python 2 json.dump writes byte str, so use binary mode.
+    with open(path, "wb") as f:
         json.dump(data, f, indent=2, sort_keys=True, ensure_ascii=True)
 
 
