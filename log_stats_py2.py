@@ -40,6 +40,11 @@ def parse_date(date_str):
     return parsed.date().isoformat()
 
 
+def normalize_url(url):
+    # Strip query string and fragment for generic stats.
+    return url.split("?", 1)[0].split("#", 1)[0]
+
+
 def ensure_date_bucket(db, date_key):
     dates = db["dates"]
     if date_key not in dates:
@@ -79,7 +84,7 @@ def parse_logs(log_paths, db, show_errors=False):
                     continue
                 matched_lines += 1
                 date_key = parse_date(match.group("dt"))
-                url = match.group("url")
+                url = normalize_url(match.group("url"))
                 ip = match.group("ip")
 
                 bucket = ensure_date_bucket(db, date_key)

@@ -94,6 +94,7 @@ Met `log_stats.py` kun je een custom access log parsen en per datum opslaan:
 - meest opgevraagde URL’s
 - aantal requests per IP
 - totalen per datum  
+URL’s worden genormaliseerd zonder query parameters (alles na `?` of `#`).
 
 ### ✅ Command 1: Parset en bewaart in JSON
 
@@ -363,5 +364,4 @@ sudo ufw reload
 - **Block unwanted traffic BEFORE allowing good traffic**.
 - Always check the order of rules with `sudo ufw status numbered`.
 - Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
-
 
