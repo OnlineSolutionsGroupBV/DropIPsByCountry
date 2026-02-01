@@ -88,6 +88,40 @@ This will:
 
 ---
 
+## 📊 Logstatistiek (custom access logs)
+
+Met `log_stats.py` kun je een custom access log parsen en per datum opslaan:
+- meest opgevraagde URL’s
+- aantal requests per IP
+- totalen per datum  
+
+### ✅ Command 1: Parset en bewaart in JSON
+
+```bash
+python3 log_stats.py parse --log /pad/naar/nieuwejobs_custom.log --db log_stats.json
+```
+
+Optioneel meerdere logs:
+```bash
+python3 log_stats.py parse --log /pad/naar/log1.log --log /pad/naar/log2.log --db log_stats.json
+```
+
+### ✅ Command 2: Toon statistiek
+
+```bash
+python3 log_stats.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20
+```
+
+Zonder `--date` zie je welke datums beschikbaar zijn.
+
+### 📄 Log pattern (voorbeeld)
+
+```
+66.249.64.129 - - [01/Feb/2026:06:25:43 +0100] "GET /job/viewjob/19316704/chargee-bd-et-marketing-junior-hf.html HTTP/1.1" 200 31967 "-" "Mozilla/5.0 ..."
+```
+
+---
+
 ### ✅ **Step 3: Block Unwanted Traffic**  
 
 To block all **China (`CN`) IPs** dynamically using **UFW**:  
@@ -310,7 +344,6 @@ sudo ufw reload
 - **Block unwanted traffic BEFORE allowing good traffic**.
 - Always check the order of rules with `sudo ufw status numbered`.
 - Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
-
 
 
 
