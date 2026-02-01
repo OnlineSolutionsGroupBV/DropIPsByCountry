@@ -16,8 +16,13 @@ LOG_PATTERN = re.compile(
 def load_db(path):
     if not os.path.exists(path):
         return {"dates": {}, "updated_at": None}
+    if os.path.getsize(path) == 0:
+        return {"dates": {}, "updated_at": None}
     with io.open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        try:
+            return json.load(f)
+        except ValueError:
+            return {"dates": {}, "updated_at": None}
 
 
 def save_db(path, data):
