@@ -296,7 +296,7 @@ ufw insert 1 deny from
 Feel free to contribute or reach out for questions!  
 
 
-https://ats.work/ 
+https://ats.work/ | https://onlinesolutionsgroup.website/
 
 Blog post about it. 
 https://www.webdeveloper.today/2025/03/optimizing-server-resources-by-blocking.html 
