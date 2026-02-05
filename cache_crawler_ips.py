@@ -5,7 +5,29 @@ import json
 import os
 import re
 import time
-import ipaddress
+try:
+    import ipaddress as _ip
+    def ip_network(value, strict=False):
+        return _ip.ip_network(value, strict=strict)
+    def ip_address(value):
+        return _ip.ip_address(value)
+    def net_to_str(net):
+        return str(net)
+except ImportError:
+    try:
+        import ipaddr as _ip
+    except ImportError:
+        _ip = None
+    def ip_network(value, strict=False):
+        if _ip is None:
+            raise ImportError("Missing ipaddress/ipaddr module")
+        return _ip.IPNetwork(value)
+    def ip_address(value):
+        if _ip is None:
+            raise ImportError("Missing ipaddress/ipaddr module")
+        return _ip.IPAddress(value)
+    def net_to_str(net):
+        return str(net)
 
 try:
     # Py3
@@ -49,10 +71,10 @@ def extract_prefixes(obj):
 
     def add_candidate(value):
         try:
-            net = ipaddress.ip_network(value, strict=False)
+            net = ip_network(value, strict=False)
         except ValueError:
             return
-        prefixes.add(str(net))
+        prefixes.add(net_to_str(net))
 
     def walk(item):
         if isinstance(item, dict):
@@ -75,22 +97,22 @@ def extract_prefixes(obj):
     for text in json.dumps(obj).split():
         for m in IPV4_RE.findall(text):
             try:
-                ipaddress.ip_address(m)
+                ip_address(m)
             except ValueError:
                 continue
-            prefixes.add(str(ipaddress.ip_network(m + "/32")))
+            prefixes.add(net_to_str(ip_network(m + "/32")))
         for m in IPV6_RE.findall(text):
             try:
                 if "/" in m:
-                    ipaddress.ip_network(m, strict=False)
+                    ip_network(m, strict=False)
                 else:
-                    ipaddress.ip_address(m)
+                    ip_address(m)
             except ValueError:
                 continue
             if "/" in m:
-                prefixes.add(str(ipaddress.ip_network(m, strict=False)))
+                prefixes.add(net_to_str(ip_network(m, strict=False)))
             else:
-                prefixes.add(str(ipaddress.ip_network(m + "/128")))
+                prefixes.add(net_to_str(ip_network(m + "/128")))
 
     return sorted(prefixes, key=lambda s: (":" in s, s))
 
@@ -110,6 +132,9 @@ def load_cached(path, max_age_days):
 
 
 def main():
+    if _ip is None:
+        print("ERROR: Missing ipaddress module. Install one of: pip install ipaddress (Py2 backport) or pip install ipaddr")
+        return 1
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache-dir", default="ip_cache", help="Cache directory")
     parser.add_argument("--max-age-days", type=int, default=7, help="Max cache age in days")
