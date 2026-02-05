@@ -48,7 +48,12 @@ SOURCES = {
 
 CIDR_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}/\d{1,2}\b")
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
-IPV6_RE = re.compile(r"\b[0-9a-fA-F:]{2,}(?:/\d{1,3})?\b")
+IPV6_RE = re.compile(r"\b[0-9a-fA-F:]*:[0-9a-fA-F:]+(?:/\d{1,3})?\b")
+
+try:
+    text_type = unicode  # Py2
+except NameError:
+    text_type = str
 
 
 def fetch_json(url):
@@ -66,6 +71,18 @@ def fetch_json(url):
     return json.loads(data)
 
 
+def _to_text(value):
+    if isinstance(value, text_type):
+        return value
+    try:
+        return value.decode("utf-8")
+    except Exception:
+        try:
+            return value.decode("latin-1")
+        except Exception:
+            return text_type(value)
+
+
 def extract_prefixes(obj):
     prefixes = set()
 
@@ -80,39 +97,37 @@ def extract_prefixes(obj):
         if isinstance(item, dict):
             for k, v in item.items():
                 if k in ("ipv4Prefix", "ipv6Prefix", "ip_prefix", "ipPrefix", "prefix"):
-                    if isinstance(v, str):
-                        add_candidate(v)
+                    if isinstance(v, (str, text_type)):
+                        add_candidate(_to_text(v))
                 else:
                     walk(v)
         elif isinstance(item, list):
             for v in item:
                 walk(v)
-        elif isinstance(item, str):
-            for m in CIDR_RE.findall(item):
+        elif isinstance(item, (str, text_type)):
+            text = _to_text(item)
+            for m in CIDR_RE.findall(text):
                 add_candidate(m)
+            for m in IPV4_RE.findall(text):
+                try:
+                    ip_address(m)
+                except ValueError:
+                    continue
+                prefixes.add(net_to_str(ip_network(m + "/32")))
+            for m in IPV6_RE.findall(text):
+                try:
+                    if "/" in m:
+                        ip_network(m, strict=False)
+                    else:
+                        ip_address(m)
+                except ValueError:
+                    continue
+                if "/" in m:
+                    prefixes.add(net_to_str(ip_network(m, strict=False)))
+                else:
+                    prefixes.add(net_to_str(ip_network(m + "/128")))
 
     walk(obj)
-
-    # If a source publishes plain IPs (no CIDR), convert to /32 or /128
-    for text in json.dumps(obj).split():
-        for m in IPV4_RE.findall(text):
-            try:
-                ip_address(m)
-            except ValueError:
-                continue
-            prefixes.add(net_to_str(ip_network(m + "/32")))
-        for m in IPV6_RE.findall(text):
-            try:
-                if "/" in m:
-                    ip_network(m, strict=False)
-                else:
-                    ip_address(m)
-            except ValueError:
-                continue
-            if "/" in m:
-                prefixes.add(net_to_str(ip_network(m, strict=False)))
-            else:
-                prefixes.add(net_to_str(ip_network(m + "/128")))
 
     return sorted(prefixes, key=lambda s: (":" in s, s))
 
