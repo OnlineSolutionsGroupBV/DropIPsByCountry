@@ -1,7 +1,31 @@
 #!/usr/bin/env python
 from __future__ import print_function
 import argparse
-import ipaddress
+try:
+    import ipaddress as _ip
+    def ip_network(value, strict=False):
+        return _ip.ip_network(value, strict=strict)
+    def net_version(net):
+        return net.version
+    def net_is_subnet_of(a, b):
+        return a.subnet_of(b)
+except ImportError:
+    try:
+        import ipaddr as _ip
+    except ImportError:
+        _ip = None
+    def ip_network(value, strict=False):
+        if _ip is None:
+            raise ImportError("Missing ipaddress/ipaddr module")
+        return _ip.IPNetwork(value)
+    def net_version(net):
+        return net.version
+    def net_is_subnet_of(a, b):
+        if _ip is None:
+            raise ImportError("Missing ipaddress/ipaddr module")
+        if a.version != b.version:
+            return False
+        return a.network >= b.network and a.broadcast <= b.broadcast
 import json
 import os
 import re
@@ -19,7 +43,7 @@ def load_allowlist(path):
     nets = []
     for c in cidrs:
         try:
-            nets.append(ipaddress.ip_network(c, strict=False))
+            nets.append(ip_network(c, strict=False))
         except ValueError:
             continue
     return nets
@@ -43,17 +67,17 @@ def extract_ips(line):
     for m in IPV4_RE.findall(line):
         try:
             if "/" in m:
-                found.append(ipaddress.ip_network(m, strict=False))
+                found.append(ip_network(m, strict=False))
             else:
-                found.append(ipaddress.ip_network(m + "/32"))
+                found.append(ip_network(m + "/32"))
         except ValueError:
             continue
     for m in IPV6_RE.findall(line):
         try:
             if "/" in m:
-                found.append(ipaddress.ip_network(m, strict=False))
+                found.append(ip_network(m, strict=False))
             else:
-                found.append(ipaddress.ip_network(m + "/128"))
+                found.append(ip_network(m + "/128"))
         except ValueError:
             continue
     return found
@@ -62,19 +86,17 @@ def extract_ips(line):
 def is_blocking_allowed(candidate, allowlist):
     # Only flag rules that are entirely within an allowlist range.
     for allow in allowlist:
-        if candidate.version != allow.version:
+        if net_version(candidate) != net_version(allow):
             continue
-        try:
-            if candidate.subnet_of(allow):
-                return True
-        except AttributeError:
-            # Py<3.7 compatibility fallback (not expected here)
-            if allow.supernet_of(candidate):
-                return True
+        if net_is_subnet_of(candidate, allow):
+            return True
     return False
 
 
 def main():
+    if _ip is None:
+        print("ERROR: Missing ipaddress module. Install one of: pip install ipaddress (Py2 backport) or pip install ipaddr")
+        return 1
     parser = argparse.ArgumentParser()
     parser.add_argument("--allowlist", default=os.path.join("ip_cache", "allowlist_cidrs.json"))
     parser.add_argument("--output", default="bad_ufw_rules.json")

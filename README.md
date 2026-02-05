@@ -146,6 +146,16 @@ python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls
 
 Gebruik de logstatistieken om IP’s te blokkeren die veel requests doen naar `/accounts/…` (login/signup/etc).
 
+### ✅ Allowlist voor OpenAI + Google crawlers
+
+Maak eerst de lokale allowlist (cache) met de officiële OpenAI/Google IP‑ranges:
+
+```bash
+python cache_crawler_ips.py --cache-dir ip_cache
+```
+
+Dit maakt o.a. `ip_cache/allowlist_cidrs.json` en wordt gebruikt om deze IP’s **niet** te blokkeren.
+
 ### ✅ Dry-run (alleen tonen)
 ```bash
 python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200 --dry-run
@@ -157,6 +167,48 @@ python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requ
 ```
 
 De geblokkeerde IP’s worden bijgehouden in `blocked_accounts_ips.txt` zodat er geen dubbele regels worden toegevoegd.
+
+Je kunt de allowlist expliciet meegeven:
+
+```bash
+python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200 --allowlist ip_cache/allowlist_cidrs.json
+```
+
+Als `ipaddress` ontbreekt op Python 2:
+```bash
+pip install ipaddress
+```
+
+---
+
+## 🧹 Opschonen: verwijder verkeerde UFW‑regels (OpenAI/Google)
+
+Als je eerder IP’s hebt geblokkeerd en die blijken OpenAI/Google te zijn, kun je dit cleanen:
+
+### 1) Cache OpenAI/Google ranges
+```bash
+python cache_crawler_ips.py --cache-dir ip_cache
+```
+
+### 2) Vind verkeerde regels in UFW
+```bash
+python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
+```
+
+### 3) Verwijder de regels
+```bash
+python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
+```
+
+### ✅ Alles in één keer (wrappers)
+```bash
+bash run_clean_crawlers_py2.sh
+```
+
+of
+```bash
+bash run_clean_crawlers_py3.sh
+```
 
 ---
 
