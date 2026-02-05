@@ -1,12 +1,18 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+from __future__ import print_function
 import argparse
 import json
 import os
 import re
 import time
-import urllib.request
-from typing import Iterable, List, Set
 import ipaddress
+
+try:
+    # Py3
+    from urllib.request import Request, urlopen
+except ImportError:
+    # Py2
+    from urllib2 import Request, urlopen
 
 
 SOURCES = {
@@ -23,24 +29,32 @@ IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
 IPV6_RE = re.compile(r"\b[0-9a-fA-F:]{2,}(?:/\d{1,3})?\b")
 
 
-def fetch_json(url: str) -> dict:
-    req = urllib.request.Request(url, headers={"User-Agent": "DropIPsByCountry/1.0"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = resp.read().decode("utf-8")
+def fetch_json(url):
+    req = Request(url, headers={"User-Agent": "DropIPsByCountry/1.0"})
+    resp = urlopen(req, timeout=30)
+    try:
+        data = resp.read()
+    finally:
+        try:
+            resp.close()
+        except Exception:
+            pass
+    if isinstance(data, bytes):
+        data = data.decode("utf-8")
     return json.loads(data)
 
 
-def extract_prefixes(obj: object) -> List[str]:
-    prefixes: Set[str] = set()
+def extract_prefixes(obj):
+    prefixes = set()
 
-    def add_candidate(value: str) -> None:
+    def add_candidate(value):
         try:
             net = ipaddress.ip_network(value, strict=False)
         except ValueError:
             return
         prefixes.add(str(net))
 
-    def walk(item: object) -> None:
+    def walk(item):
         if isinstance(item, dict):
             for k, v in item.items():
                 if k in ("ipv4Prefix", "ipv6Prefix", "ip_prefix", "ipPrefix", "prefix"):
@@ -81,36 +95,43 @@ def extract_prefixes(obj: object) -> List[str]:
     return sorted(prefixes, key=lambda s: (":" in s, s))
 
 
-def load_cached(path: str, max_age_days: int) -> dict | None:
+def load_cached(path, max_age_days):
     if not os.path.exists(path):
         return None
     age = time.time() - os.path.getmtime(path)
     if age > max_age_days * 86400:
         return None
-    with open(path, "r", encoding="utf-8") as f:
+    try:
+        f = open(path, "r")
+    except TypeError:
+        f = open(path, "r")
+    with f:
         return json.load(f)
 
 
-def main() -> int:
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--cache-dir", default="ip_cache", help="Cache directory")
     parser.add_argument("--max-age-days", type=int, default=7, help="Max cache age in days")
     parser.add_argument("--force", action="store_true", help="Force refresh")
     args = parser.parse_args()
 
-    os.makedirs(args.cache_dir, exist_ok=True)
+    try:
+        os.makedirs(args.cache_dir)
+    except OSError:
+        pass
 
-    combined: Set[str] = set()
+    combined = set()
     meta = {"updated_at": int(time.time()), "sources": {}}
 
     for name, url in SOURCES.items():
-        cache_path = os.path.join(args.cache_dir, f"{name}.json")
+        cache_path = os.path.join(args.cache_dir, "%s.json" % name)
         data = None
         if not args.force:
             data = load_cached(cache_path, args.max_age_days)
         if data is None:
             data = fetch_json(url)
-            with open(cache_path, "w", encoding="utf-8") as f:
+            with open(cache_path, "w") as f:
                 json.dump(data, f, indent=2, sort_keys=True)
             meta["sources"][name] = {"url": url, "cached": False}
         else:
@@ -121,14 +142,14 @@ def main() -> int:
 
     allowlist = sorted(combined, key=lambda s: (":" in s, s))
     allowlist_path = os.path.join(args.cache_dir, "allowlist_cidrs.json")
-    with open(allowlist_path, "w", encoding="utf-8") as f:
+    with open(allowlist_path, "w") as f:
         json.dump({"updated_at": meta["updated_at"], "cidrs": allowlist}, f, indent=2)
 
     meta_path = os.path.join(args.cache_dir, "allowlist_meta.json")
-    with open(meta_path, "w", encoding="utf-8") as f:
+    with open(meta_path, "w") as f:
         json.dump(meta, f, indent=2)
 
-    print(f"Cached {len(allowlist)} CIDRs to {allowlist_path}")
+    print("Cached %d CIDRs to %s" % (len(allowlist), allowlist_path))
     return 0
 
 

@@ -1,19 +1,19 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+from __future__ import print_function
 import argparse
 import ipaddress
 import json
 import os
 import re
 import subprocess
-from typing import Iterable, List, Tuple
 
 
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}(?:/\d{1,2})?\b")
 IPV6_RE = re.compile(r"\b[0-9a-fA-F:]{2,}(?:/\d{1,3})?\b")
 
 
-def load_allowlist(path: str) -> List[ipaddress._BaseNetwork]:
-    with open(path, "r", encoding="utf-8") as f:
+def load_allowlist(path):
+    with open(path, "r") as f:
         data = json.load(f)
     cidrs = data.get("cidrs", [])
     nets = []
@@ -25,16 +25,21 @@ def load_allowlist(path: str) -> List[ipaddress._BaseNetwork]:
     return nets
 
 
-def run_ufw_status(sudo: bool) -> str:
+def run_ufw_status(sudo):
     cmd = ["ufw", "status", "numbered"]
     if sudo:
         cmd = ["sudo"] + cmd
-    proc = subprocess.run(cmd, check=True, capture_output=True, text=True)
-    return proc.stdout
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out, err = proc.communicate()
+    if proc.returncode != 0:
+        raise RuntimeError("ufw status failed: %s" % (err.decode("utf-8") if isinstance(err, bytes) else err))
+    if isinstance(out, bytes):
+        out = out.decode("utf-8")
+    return out
 
 
-def extract_ips(line: str) -> List[ipaddress._BaseNetwork]:
-    found: List[ipaddress._BaseNetwork] = []
+def extract_ips(line):
+    found = []
     for m in IPV4_RE.findall(line):
         try:
             if "/" in m:
@@ -54,7 +59,7 @@ def extract_ips(line: str) -> List[ipaddress._BaseNetwork]:
     return found
 
 
-def is_blocking_allowed(candidate: ipaddress._BaseNetwork, allowlist: List[ipaddress._BaseNetwork]) -> bool:
+def is_blocking_allowed(candidate, allowlist):
     # Only flag rules that are entirely within an allowlist range.
     for allow in allowlist:
         if candidate.version != allow.version:
@@ -69,7 +74,7 @@ def is_blocking_allowed(candidate: ipaddress._BaseNetwork, allowlist: List[ipadd
     return False
 
 
-def main() -> int:
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--allowlist", default=os.path.join("ip_cache", "allowlist_cidrs.json"))
     parser.add_argument("--output", default="bad_ufw_rules.json")
@@ -98,10 +103,10 @@ def main() -> int:
         if bad:
             bad_rules.append({"num": num, "line": line, "cidrs": bad})
 
-    with open(args.output, "w", encoding="utf-8") as f:
+    with open(args.output, "w") as f:
         json.dump({"count": len(bad_rules), "rules": bad_rules}, f, indent=2)
 
-    print(f"Found {len(bad_rules)} bad rule(s). Wrote {args.output}")
+    print("Found %d bad rule(s). Wrote %s" % (len(bad_rules), args.output))
     return 0
 
 
