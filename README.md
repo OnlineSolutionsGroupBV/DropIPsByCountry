@@ -235,9 +235,51 @@ COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD"
 
 ```bash
 python parse_ips.py 
+python get_ip_country.py
 python aggregate_generiek_subnets.py
-python block_generiek_subnet.py
+python block_generiek_subnet.py --sudo --dry-run
+python block_generiek_subnet.py --sudo
 ```
+
+`block_generiek_subnet.py` reads `aggregated_generiek_subnets.json`, compares those
+subnets with the current live output of `ufw status numbered`, and only inserts
+rules that are not already covered by an existing `DENY IN` rule. This means the
+same repository can be copied to another server and run again without trusting an
+old `blocked_generiek_ips.txt` file from a different machine.
+
+Implementation details:
+- Live UFW is the source of truth for deciding whether a subnet is already blocked.
+- `blocked_generiek_ips.txt` is updated only after a successful UFW insert.
+- `--dry-run` prints the exact `ufw insert 1 deny from ...` commands without changing UFW.
+- Dry-run previews the first 50 planned additions by default; use `--show-all` if
+  you want to print every planned rule.
+- `--check-bad-rules` runs `find_bad_ufw_rules.py` first and stops if allowlisted
+  crawler ranges are currently blocked.
+- `--ufw-status-file ufw_status_numbered` can be used for local testing without
+  calling UFW.
+
+Recommended full order on each server:
+
+```bash
+vim input.txt
+python parse_ips.py
+python get_ip_country.py
+python aggregate_generiek_subnets.py
+
+# Optional but recommended before adding broad subnet blocks:
+python cache_crawler_ips.py --cache-dir ip_cache
+python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
+python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
+
+# Review planned UFW changes first:
+python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
+
+# Apply after review:
+python block_generiek_subnet.py --sudo --check-bad-rules
+```
+
+If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
+`clean_bad_ufw_rules.py` without `--dry-run` only after confirming those deletes are correct.
 
 ## 📂 File Structure  
 
@@ -251,6 +293,8 @@ python block_generiek_subnet.py
 ├── block_cn_ips.py                      # Applies firewall rules for unwanted IPs
 ├── aggregate_generiek_subnets.py        # Aggregate generic subnet for different counries like CN, IN, RU ... Config here prefix lengths for CIDR
 ├── block_generiek_subnet.py             # Block firewall rules for unwanted IPs
+├── docs/generic-subnet-ufw-plan.md      # Engineering plan for live UFW comparison workflow
+├── tests/test_block_generiek_subnet.py  # Unit tests for UFW parsing and rule planning
 └── README.md                            # This documentation
 ```
 
