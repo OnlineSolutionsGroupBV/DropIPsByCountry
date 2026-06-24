@@ -185,6 +185,51 @@ pip install ipaddress
 
 Als je eerder IP’s hebt geblokkeerd en die blijken OpenAI/Google te zijn, kun je dit cleanen:
 
+### Python 2 op een oude server
+
+Gebruik dit als de server nog Python 2 gebruikt:
+
+```bash
+bash run_clean_crawlers_py2.sh
+```
+
+De wrapper kiest eerst `$PYTHON2`, daarna `python2`, en valt als laatste terug op `python`.
+Als jouw Python 2 interpreter ergens anders staat:
+
+```bash
+PYTHON2=/usr/bin/python2.7 bash run_clean_crawlers_py2.sh
+```
+
+Voor Python 2 heb je meestal de backport van `ipaddress` nodig:
+
+```bash
+pip install ipaddress
+```
+
+Als `pip` ook expliciet Python 2 moet zijn:
+
+```bash
+python2 -m pip install ipaddress
+```
+
+### Veilige controle zonder verwijderen
+
+Deze stappen bouwen de allowlist, vinden foute regels, en tonen wat verwijderd zou worden:
+
+```bash
+python2 cache_crawler_ips.py --cache-dir ip_cache
+python2 find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
+python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
+```
+
+Als de dry-run klopt, verwijder je de regels:
+
+```bash
+python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
+```
+
+Let op: UFW-regelnummers veranderen na elke delete. `clean_bad_ufw_rules.py` verwijdert daarom van hoog naar laag, zodat de juiste regels worden verwijderd.
+
 ### 1) Cache OpenAI/Google ranges
 ```bash
 python cache_crawler_ips.py --cache-dir ip_cache
