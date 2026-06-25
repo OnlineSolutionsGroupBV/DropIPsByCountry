@@ -63,6 +63,24 @@ class BlockGeneriekSubnetTests(unittest.TestCase):
         finally:
             os.unlink(path)
 
+    def test_load_candidate_networks_accepts_reported_valid_16_cidrs(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            with open(path, "w") as f:
+                f.write('["88.245.0.0/16", "82.222.0.0/16", "105.190.0.0/16", "117.40.0.0/16"]')
+
+            loaded = [str(net) for net in blocker.load_candidate_networks(path)]
+
+            self.assertEqual(loaded, [
+                "88.245.0.0/16",
+                "82.222.0.0/16",
+                "105.190.0.0/16",
+                "117.40.0.0/16",
+            ])
+        finally:
+            os.unlink(path)
+
 
 if __name__ == "__main__":
     unittest.main()

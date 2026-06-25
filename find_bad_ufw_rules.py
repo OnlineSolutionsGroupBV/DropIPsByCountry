@@ -9,6 +9,10 @@ try:
         return net.version
     def net_is_subnet_of(a, b):
         return a.subnet_of(b)
+    def net_first_int(net):
+        return int(net.network_address)
+    def net_last_int(net):
+        return int(net.broadcast_address)
 except ImportError:
     try:
         import ipaddr as _ip
@@ -26,6 +30,10 @@ except ImportError:
         if a.version != b.version:
             return False
         return a.network >= b.network and a.broadcast <= b.broadcast
+    def net_first_int(net):
+        return int(net.network)
+    def net_last_int(net):
+        return int(net.broadcast)
 import json
 import os
 import re
@@ -83,12 +91,17 @@ def extract_ips(line):
     return found
 
 
+def net_overlaps(a, b):
+    if net_version(a) != net_version(b):
+        return False
+    return net_first_int(a) <= net_last_int(b) and net_first_int(b) <= net_last_int(a)
+
+
 def is_blocking_allowed(candidate, allowlist):
-    # Only flag rules that are entirely within an allowlist range.
+    # Flag exact allowlist blocks and broad deny rules that cover part of an
+    # allowlisted crawler range.
     for allow in allowlist:
-        if net_version(candidate) != net_version(allow):
-            continue
-        if net_is_subnet_of(candidate, allow):
+        if net_overlaps(candidate, allow):
             return True
     return False
 
