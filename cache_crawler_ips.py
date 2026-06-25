@@ -39,6 +39,7 @@ except ImportError:
 
 SOURCES = {
     "openai_gptbot": "https://openai.com/gptbot.json",
+    "bingbot": "https://www.bing.com/toolbox/bingbot.json",
     "googlebot": "https://developers.google.com/static/search/apis/ipranges/googlebot.json",
     "google_special": "https://developers.google.com/static/search/apis/ipranges/special-crawlers.json",
     "google_user_triggered": "https://developers.google.com/static/search/apis/ipranges/user-triggered-fetchers.json",

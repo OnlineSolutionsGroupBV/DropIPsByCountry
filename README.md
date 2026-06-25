@@ -181,9 +181,10 @@ pip install ipaddress
 
 ---
 
-## 🧹 Opschonen: verwijder verkeerde UFW‑regels (OpenAI/Google)
+## 🧹 Opschonen: verwijder verkeerde UFW‑regels (OpenAI/Google/Bing)
 
-Als je eerder IP’s hebt geblokkeerd en die blijken OpenAI/Google te zijn, kun je dit cleanen:
+Als je eerder IP’s hebt geblokkeerd en die blijken OpenAI, Google of Bing te
+zijn, kun je dit cleanen:
 
 ### Python 2 op een oude server
 
@@ -191,6 +192,12 @@ Gebruik dit als de server nog Python 2 gebruikt:
 
 ```bash
 bash run_clean_crawlers_py2.sh
+```
+
+Veilig eerst bekijken zonder verwijderen:
+
+```bash
+DRY_RUN=1 bash run_clean_crawlers_py2.sh
 ```
 
 De wrapper kiest eerst `$PYTHON2`, daarna `python2`, en valt als laatste terug op `python`.
@@ -230,7 +237,7 @@ python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
 
 Let op: UFW-regelnummers veranderen na elke delete. `clean_bad_ufw_rules.py` verwijdert daarom van hoog naar laag, zodat de juiste regels worden verwijderd.
 
-### 1) Cache OpenAI/Google ranges
+### 1) Cache OpenAI/Google/Bing ranges
 ```bash
 python cache_crawler_ips.py --cache-dir ip_cache
 ```
@@ -247,11 +254,13 @@ python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
 
 ### ✅ Alles in één keer (wrappers)
 ```bash
+DRY_RUN=1 bash run_clean_crawlers_py2.sh
 bash run_clean_crawlers_py2.sh
 ```
 
 of
 ```bash
+DRY_RUN=1 bash run_clean_crawlers_py3.sh
 bash run_clean_crawlers_py3.sh
 ```
 
@@ -276,12 +285,17 @@ This will:
 
 ### ✅  Block Unwanted Traffic Generic subnets 
 
-COUNTRY_CODES = ["CN", "BR", "IQ", "TR", "UZ","IN", "SA", "VE", "RU", "KE", "BD", "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY", "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", 'PS', 'OM', 'DZ', 'SN', 'BY', 'TN', 'GE', 'ID', 'RS', 'AM', 'AL', 'SG', 'MM', 'ET',]
+`aggregate_generiek_subnets.py` keeps `US` in the default country list. The
+default output is now `/24`, because `/16` can block 65,536 IPs because of one
+source IP in the logs. If you deliberately want the old broader behavior for a
+country batch, run with `--target-prefix 16` and audit it first.
 
 ```bash
 python parse_ips.py 
 python get_ip_country.py
-python aggregate_generiek_subnets.py
+python aggregate_generiek_subnets.py --target-prefix 24
+python cache_crawler_ips.py --cache-dir ip_cache
+python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json
 python block_generiek_subnet.py --sudo --dry-run
 python block_generiek_subnet.py --sudo
 ```
@@ -302,6 +316,55 @@ Implementation details:
   crawler ranges are currently blocked.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
   calling UFW.
+- `audit_generiek_subnets.py` is read-only and checks generated subnets before
+  UFW is changed. It reports invalid CIDRs, `/16` versus `/24` distribution,
+  broad one-hit subnets, and overlaps with the OpenAI/Google/Bing allowlist.
+
+The allowlist cache includes OpenAI GPTBot, Google crawler ranges, and Bingbot.
+Other crawlers are not protected by this repo unless you add their official
+ranges to `cache_crawler_ips.py`.
+
+Why `US` stays in the default country list:
+- A lot of crawler and cloud traffic comes from US networks, including generic
+  datacenter traffic that is not useful for every EU jobsite.
+- US also contains important shared infrastructure. Google, OpenAI, Bing,
+  Microsoft, AWS, CDN providers, APIs, and real users can all appear there.
+- Because of that, US should normally be generated as `/24`, not `/16`. A `/24`
+  contains 256 IPs; a `/16` contains 65,536 IPs. The smaller range blocks the
+  local noisy network seen in logs without taking out a large shared provider
+  block.
+
+Example for US-only `/24` audit:
+
+```bash
+python aggregate_generiek_subnets.py --country-codes US --target-prefix 24 --output aggregated_us_subnets.json
+python cache_crawler_ips.py --cache-dir ip_cache
+python audit_generiek_subnets.py --input aggregated_us_subnets.json --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
+```
+
+When `/16` can still be acceptable:
+- For some countries or provider networks, especially China cloud/provider
+  networks such as Tencent or Alibaba, broad `/16` blocks can be reasonable when
+  your site has no business need for that traffic and logs show repeated abuse.
+- For an EU-focused jobsite, traffic from countries such as China or Russia may
+  have little hiring value. In many roles it is very hard to legally hire someone
+  from those countries into local EU office jobs, so blocking the whole source
+  range can be a business decision, not only a bot/crawler decision.
+- This is project-specific. A jobsite, SaaS app, marketplace, or public API may
+  each have different acceptable traffic. Use the audit output before applying.
+
+Example for a more aggressive China-only `/16` test:
+
+```bash
+python aggregate_generiek_subnets.py --country-codes CN --target-prefix 16 --min-hits 10 --output aggregated_cn_16_subnets.json
+python cache_crawler_ips.py --cache-dir ip_cache
+python audit_generiek_subnets.py --input aggregated_cn_16_subnets.json --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
+python block_generiek_subnet.py --input aggregated_cn_16_subnets.json --sudo --check-bad-rules --dry-run
+```
+
+If that audit reports OpenAI/Google/Bing overlap, do not apply the `/16` blocks
+until those ranges are removed from the candidate list or the existing UFW rules
+are cleaned.
 
 Recommended full order on each server:
 
@@ -309,10 +372,15 @@ Recommended full order on each server:
 vim input.txt
 python parse_ips.py
 python get_ip_country.py
-python aggregate_generiek_subnets.py
+python aggregate_generiek_subnets.py --target-prefix 24
 
-# Optional but recommended before adding broad subnet blocks:
+# Build crawler allowlist for OpenAI, Google, and Bing:
 python cache_crawler_ips.py --cache-dir ip_cache
+
+# Audit generated blocks before touching UFW:
+python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json
+
+# Check existing UFW rules for crawler overlap:
 python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
 python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
 
@@ -326,6 +394,18 @@ python block_generiek_subnet.py --sudo --check-bad-rules
 If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
 `clean_bad_ufw_rules.py` without `--dry-run` only after confirming those deletes are correct.
 
+For the old `/16` behavior, test it explicitly:
+
+```bash
+python aggregate_generiek_subnets.py --target-prefix 16
+python cache_crawler_ips.py --cache-dir ip_cache
+python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
+python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
+```
+
+If `audit_generiek_subnets.py --fail-on-overlap` exits non-zero, do not apply the
+UFW rules until the overlapping OpenAI/Google/Bing ranges are handled.
+
 ## 📂 File Structure  
 
 ```
@@ -337,6 +417,7 @@ If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
 ├── get_ip_country.py                    # Fetches country info from ipinfo.io
 ├── block_cn_ips.py                      # Applies firewall rules for unwanted IPs
 ├── aggregate_generiek_subnets.py        # Aggregate generic subnet for different counries like CN, IN, RU ... Config here prefix lengths for CIDR
+├── audit_generiek_subnets.py            # Read-only audit for generated subnet risk and crawler allowlist overlap
 ├── block_generiek_subnet.py             # Block firewall rules for unwanted IPs
 ├── docs/generic-subnet-ufw-plan.md      # Engineering plan for live UFW comparison workflow
 ├── tests/test_block_generiek_subnet.py  # Unit tests for UFW parsing and rule planning
