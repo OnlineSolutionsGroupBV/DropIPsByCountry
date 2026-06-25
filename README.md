@@ -306,6 +306,31 @@ rules that are not already covered by an existing `DENY IN` rule. This means the
 same repository can be copied to another server and run again without trusting an
 old `blocked_generiek_ips.txt` file from a different machine.
 
+`python block_generiek_subnet.py` works with default parameters, but it is not
+the recommended production command. With no parameters it uses
+`aggregated_generiek_subnets.json` and `blocked_generiek_ips.txt`, does not run
+the crawler overlap check, does not use `--sudo`, and does not dry-run. On many
+servers it will fail because UFW needs root permissions; on a permissive setup it
+may try to add rules immediately.
+
+Use this for review:
+
+```bash
+python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
+```
+
+Apply only after reviewing the dry-run:
+
+```bash
+python block_generiek_subnet.py --sudo --check-bad-rules
+```
+
+For local testing without touching live UFW:
+
+```bash
+python block_generiek_subnet.py --ufw-status-file ufw_status_numbered --dry-run
+```
+
 Implementation details:
 - Live UFW is the source of truth for deciding whether a subnet is already blocked.
 - `blocked_generiek_ips.txt` is updated only after a successful UFW insert.
@@ -394,6 +419,47 @@ python block_generiek_subnet.py --sudo --check-bad-rules
 If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
 `clean_bad_ufw_rules.py` without `--dry-run` only after confirming those deletes are correct.
 
+### One-command wrapper
+
+Use `run_prepare_generiek_blocks.sh` when you want the whole preparation flow
+from `input.txt` through audit and UFW dry-run:
+
+```bash
+bash run_prepare_generiek_blocks.sh
+```
+
+By default this:
+- reads `input.txt`
+- writes parsed IPs to `output.txt`
+- enriches unknown IPs into `geo_data.json`
+- generates `aggregated_generiek_subnets.json` as `/24`
+- caches OpenAI/Google/Bing ranges
+- audits candidate blocks against the allowlist
+- checks existing UFW rules for crawler overlap
+- prints the planned UFW additions without applying them
+
+Apply after reviewing the dry-run:
+
+```bash
+APPLY=1 bash run_prepare_generiek_blocks.sh
+```
+
+Useful variants:
+
+```bash
+# Use Python 2 on an old server:
+PYTHON=python2 bash run_prepare_generiek_blocks.sh
+
+# Test only US as /24:
+COUNTRY_CODES=US TARGET_PREFIX=24 bash run_prepare_generiek_blocks.sh
+
+# Aggressive China-only /16 test, only when at least 10 source IPs hit a subnet:
+COUNTRY_CODES=CN TARGET_PREFIX=16 MIN_HITS=10 bash run_prepare_generiek_blocks.sh
+
+# Use another input file but still run the standard flow:
+INPUT_FILE=/var/log/nginx/access.log bash run_prepare_generiek_blocks.sh
+```
+
 For the old `/16` behavior, test it explicitly:
 
 ```bash
@@ -419,6 +485,7 @@ UFW rules until the overlapping OpenAI/Google/Bing ranges are handled.
 ├── aggregate_generiek_subnets.py        # Aggregate generic subnet for different counries like CN, IN, RU ... Config here prefix lengths for CIDR
 ├── audit_generiek_subnets.py            # Read-only audit for generated subnet risk and crawler allowlist overlap
 ├── block_generiek_subnet.py             # Block firewall rules for unwanted IPs
+├── run_prepare_generiek_blocks.sh       # Full input.txt -> audit -> UFW dry-run/apply wrapper
 ├── docs/generic-subnet-ufw-plan.md      # Engineering plan for live UFW comparison workflow
 ├── tests/test_block_generiek_subnet.py  # Unit tests for UFW parsing and rule planning
 └── README.md                            # This documentation

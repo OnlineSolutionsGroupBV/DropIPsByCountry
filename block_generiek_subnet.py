@@ -8,11 +8,83 @@ import re
 import subprocess
 import sys
 
+
+class IPv4NetworkCompat(object):
+    def __init__(self, value):
+        if "/" in value:
+            ip_part, prefix_part = value.split("/", 1)
+            prefixlen = int(prefix_part)
+        else:
+            ip_part = value
+            prefixlen = 32
+
+        if prefixlen < 0 or prefixlen > 32:
+            raise ValueError("Invalid IPv4 prefix length: %s" % value)
+
+        parts = ip_part.split(".")
+        if len(parts) != 4:
+            raise ValueError("Invalid IPv4 address: %s" % value)
+
+        octets = []
+        for part in parts:
+            if not part.isdigit():
+                raise ValueError("Invalid IPv4 address: %s" % value)
+            octet = int(part)
+            if octet < 0 or octet > 255:
+                raise ValueError("Invalid IPv4 address: %s" % value)
+            octets.append(octet)
+
+        address = 0
+        for octet in octets:
+            address = (address << 8) | octet
+
+        mask = (0xffffffff << (32 - prefixlen)) & 0xffffffff if prefixlen else 0
+        self.network = address & mask
+        self.broadcast = self.network | (~mask & 0xffffffff)
+        self.prefixlen = prefixlen
+        self.version = 4
+
+    def subnet_of(self, other):
+        return (
+            self.version == other.version
+            and self.network >= network_first_int(other)
+            and self.broadcast <= network_last_int(other)
+        )
+
+    def __str__(self):
+        return "%s/%d" % (ipv4_int_to_text(self.network), self.prefixlen)
+
+
+def ipv4_int_to_text(value):
+    return ".".join(str((value >> shift) & 0xff) for shift in (24, 16, 8, 0))
+
+
+def parse_ipv4_network(value):
+    return IPv4NetworkCompat(value)
+
+
+def network_first_int(net):
+    value = getattr(net, "network_address", None)
+    if value is not None:
+        return int(value)
+    return int(net.network)
+
+
+def network_last_int(net):
+    value = getattr(net, "broadcast_address", None)
+    if value is not None:
+        return int(value)
+    return int(net.broadcast)
+
+
 try:
     import ipaddress as _ip
 
     def ip_network(value, strict=False):
-        return _ip.ip_network(value, strict=strict)
+        try:
+            return _ip.ip_network(value, strict=strict)
+        except ValueError:
+            return parse_ipv4_network(value)
 
     def network_version(net):
         return net.version
@@ -27,9 +99,12 @@ except ImportError:
         _ip = None
 
     def ip_network(value, strict=False):
-        if _ip is None:
-            raise ImportError("Missing ipaddress/ipaddr module")
-        return _ip.IPNetwork(value)
+        if _ip is not None:
+            try:
+                return _ip.IPNetwork(value)
+            except ValueError:
+                pass
+        return parse_ipv4_network(value)
 
     def network_version(net):
         return net.version
@@ -37,7 +112,7 @@ except ImportError:
     def is_subnet_of(candidate, existing):
         if candidate.version != existing.version:
             return False
-        return candidate.network >= existing.network and candidate.broadcast <= existing.broadcast
+        return network_first_int(candidate) >= network_first_int(existing) and network_last_int(candidate) <= network_last_int(existing)
 
 
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}(?:/\d{1,2})?\b")
@@ -247,10 +322,6 @@ def build_parser():
 
 
 def main():
-    if _ip is None:
-        print("ERROR: Missing ipaddress module. Install one of: pip install ipaddress or pip install ipaddr")
-        return 1
-
     args = build_parser().parse_args()
 
     try:
