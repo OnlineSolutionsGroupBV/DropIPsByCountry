@@ -46,7 +46,7 @@ fi
 "$PYTHON_BIN" aggregate_generiek_subnets.py "${AGG_ARGS[@]}"
 "$PYTHON_BIN" cache_crawler_ips.py --cache-dir ip_cache
 "$PYTHON_BIN" audit_generiek_subnets.py --input "$OUTPUT_FILE" --allowlist ip_cache/allowlist_cidrs.json --country-codes "$COUNTRY_CODES" --fail-on-overlap --fail-on-country-mismatch
-"$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json $SUDO_FLAG
+"$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes "$COUNTRY_CODES" $SUDO_FLAG
 "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG --dry-run
 
 if [ "$APPLY" = "1" ]; then

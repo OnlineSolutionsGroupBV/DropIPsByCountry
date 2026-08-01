@@ -346,7 +346,7 @@ Implementation details:
 - Dry-run previews the first 50 planned additions by default; use `--show-all` if
   you want to print every planned rule.
 - `--check-bad-rules` runs `find_bad_ufw_rules.py` first and stops if allowlisted
-  crawler ranges are currently blocked.
+  crawler ranges or source IPs outside `--country-codes` are currently blocked.
 - `block_generiek_subnet.py` runs a country safety check by default and stops if
   a candidate subnet contains a geo_data source IP outside `--country-codes`.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
@@ -417,7 +417,7 @@ python cache_crawler_ips.py --cache-dir ip_cache
 python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
 
 # Check existing UFW rules for crawler overlap:
-python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
+python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --sudo
 python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
 
 # Review planned UFW changes first:

@@ -332,6 +332,10 @@ def run_bad_rule_check(args):
         args.allowlist,
         "--output",
         args.bad_rules_output,
+        "--country-codes",
+        args.country_codes,
+        "--geo-data",
+        args.geo_data,
     ]
     if args.sudo:
         cmd.append("--sudo")
