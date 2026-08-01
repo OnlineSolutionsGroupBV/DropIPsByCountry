@@ -293,12 +293,20 @@ country batch, run with `--target-prefix 16` and audit it first.
 ```bash
 python parse_ips.py 
 python get_ip_country.py
-python aggregate_generiek_subnets.py --target-prefix 24
+python aggregate_generiek_subnets.py --source geo --filter-ips-file output.txt --target-prefix 24
 python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json
+python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
 python block_generiek_subnet.py --sudo --dry-run
 python block_generiek_subnet.py --sudo
 ```
+
+The geo aggregation writes review files before UFW is touched:
+- `generiek_country_report.json` shows country totals plus blocked, allowed,
+  and missing geo entries.
+- `generiek_blocked_candidate_ips.txt` lists source IPs whose country is in
+  `DEFAULT_COUNTRY_CODES` and can become UFW deny candidates.
+- `generiek_allowed_non_target_ips.txt` lists source IPs whose country is outside
+  `DEFAULT_COUNTRY_CODES`; these must not become UFW deny candidates.
 
 `block_generiek_subnet.py` reads `aggregated_generiek_subnets.json`, compares those
 subnets with the current live output of `ufw status numbered`, and only inserts
@@ -339,11 +347,14 @@ Implementation details:
   you want to print every planned rule.
 - `--check-bad-rules` runs `find_bad_ufw_rules.py` first and stops if allowlisted
   crawler ranges are currently blocked.
+- `block_generiek_subnet.py` runs a country safety check by default and stops if
+  a candidate subnet contains a geo_data source IP outside `--country-codes`.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
   calling UFW.
 - `audit_generiek_subnets.py` is read-only and checks generated subnets before
   UFW is changed. It reports invalid CIDRs, `/16` versus `/24` distribution,
-  broad one-hit subnets, and overlaps with the OpenAI/Google/Bing allowlist.
+  broad one-hit subnets, country mismatches, and overlaps with the
+  OpenAI/Google/Bing allowlist.
 
 The allowlist cache includes OpenAI GPTBot, Google crawler ranges, and Bingbot.
 Other crawlers are not protected by this repo unless you add their official
@@ -364,7 +375,7 @@ Example for US-only `/24` audit:
 ```bash
 python aggregate_generiek_subnets.py --country-codes US --target-prefix 24 --output aggregated_us_subnets.json
 python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --input aggregated_us_subnets.json --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
+python audit_generiek_subnets.py --input aggregated_us_subnets.json --allowlist ip_cache/allowlist_cidrs.json --country-codes US --fail-on-overlap --fail-on-country-mismatch
 ```
 
 When `/16` can still be acceptable:
@@ -383,8 +394,8 @@ Example for a more aggressive China-only `/16` test:
 ```bash
 python aggregate_generiek_subnets.py --country-codes CN --target-prefix 16 --min-hits 10 --output aggregated_cn_16_subnets.json
 python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --input aggregated_cn_16_subnets.json --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
-python block_generiek_subnet.py --input aggregated_cn_16_subnets.json --sudo --check-bad-rules --dry-run
+python audit_generiek_subnets.py --input aggregated_cn_16_subnets.json --allowlist ip_cache/allowlist_cidrs.json --country-codes CN --fail-on-overlap --fail-on-country-mismatch
+python block_generiek_subnet.py --input aggregated_cn_16_subnets.json --country-codes CN --sudo --check-bad-rules --dry-run
 ```
 
 If that audit reports OpenAI/Google/Bing overlap, do not apply the `/16` blocks
@@ -397,13 +408,13 @@ Recommended full order on each server:
 vim input.txt
 python parse_ips.py
 python get_ip_country.py
-python aggregate_generiek_subnets.py --target-prefix 24
+python aggregate_generiek_subnets.py --source geo --filter-ips-file output.txt --target-prefix 24
 
 # Build crawler allowlist for OpenAI, Google, and Bing:
 python cache_crawler_ips.py --cache-dir ip_cache
 
 # Audit generated blocks before touching UFW:
-python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json
+python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
 
 # Check existing UFW rules for crawler overlap:
 python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo

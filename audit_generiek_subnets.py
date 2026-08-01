@@ -147,6 +147,51 @@ def load_geo_counts(path, candidates):
     return counts, examples
 
 
+def parse_country_codes(value):
+    return set(code.strip().upper() for code in value.split(",") if code.strip())
+
+
+def load_country_mismatches(path, candidates, country_codes):
+    if not path or not os.path.exists(path) or not country_codes:
+        return []
+
+    prefix_lengths = sorted(set(net_prefixlen(net) for net in candidates if net_version(net) == 4))
+    candidate_keys = set(str(net) for net in candidates)
+    mismatches = {}
+
+    with open(path, "r") as f:
+        geo_data = json.load(f)
+
+    for ip, details in geo_data.items():
+        try:
+            addr = ip_address(ip)
+        except ValueError:
+            continue
+        if getattr(addr, "version", 4) != 4:
+            continue
+
+        country = to_text(details.get("country", "?")).upper()
+        if country in country_codes:
+            continue
+
+        for prefix in prefix_lengths:
+            net = ip_network("%s/%d" % (ip, prefix), strict=False)
+            key = str(net)
+            if key not in candidate_keys:
+                continue
+            if key not in mismatches:
+                mismatches[key] = []
+            if len(mismatches[key]) < 3:
+                mismatches[key].append("%s %s %s" % (ip, country, details.get("org", "?")))
+
+    result = []
+    for net in candidates:
+        key = str(net)
+        if key in mismatches:
+            result.append((net, mismatches[key]))
+    return result
+
+
 def find_overlaps(candidates, allowlist):
     overlaps = []
     for candidate in candidates:
@@ -164,8 +209,10 @@ def build_parser():
     parser.add_argument("--input", default="aggregated_generiek_subnets.json")
     parser.add_argument("--geo-data", default="geo_data.json")
     parser.add_argument("--allowlist", default=os.path.join("ip_cache", "allowlist_cidrs.json"))
+    parser.add_argument("--country-codes", default="")
     parser.add_argument("--max-examples", type=int, default=30)
     parser.add_argument("--fail-on-overlap", action="store_true")
+    parser.add_argument("--fail-on-country-mismatch", action="store_true")
     return parser
 
 
@@ -227,6 +274,18 @@ def main():
     if len(overlaps) > args.max_examples:
         print("  ... %d more overlap(s)" % (len(overlaps) - args.max_examples))
 
+    country_codes = parse_country_codes(args.country_codes)
+    mismatches = load_country_mismatches(args.geo_data, candidates, country_codes)
+    if country_codes:
+        print("Target country codes:", ",".join(sorted(country_codes)))
+        print("Candidate/source country mismatches:", len(mismatches))
+        for candidate, examples in mismatches[:args.max_examples]:
+            print("  BLOCK %s contains non-target source: %s" % (candidate, "; ".join(examples)))
+        if len(mismatches) > args.max_examples:
+            print("  ... %d more country mismatch(es)" % (len(mismatches) - args.max_examples))
+
+    if mismatches and args.fail_on_country_mismatch:
+        return 3
     if overlaps and args.fail_on_overlap:
         return 2
     if invalid:

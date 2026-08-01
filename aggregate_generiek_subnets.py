@@ -2,6 +2,7 @@
 from __future__ import print_function
 
 import argparse
+import collections
 import json
 import re
 import sys
@@ -90,6 +91,20 @@ def parse_ips_from_text(text):
     return ips
 
 
+def geo_country(details):
+    return to_text(details.get("country", "Unknown")).upper()
+
+
+def geo_detail_line(ip, details):
+    return "%s %s %s %s %s" % (
+        ip,
+        geo_country(details),
+        details.get("region", "Unknown"),
+        details.get("city", "Unknown"),
+        details.get("org", "Unknown"),
+    )
+
+
 def build_subnets_from_ips(ips, target_prefix, min_hits):
     counts = {}
     selected_ips = 0
@@ -112,16 +127,90 @@ def build_subnets_from_ips(ips, target_prefix, min_hits):
     return selected_ips, subnets
 
 
-def build_subnets_from_geo(geo_data, country_codes, target_prefix, min_hits):
+def build_subnets_from_geo(geo_data, country_codes, target_prefix, min_hits, source_ips=None):
     country_set = set(country_codes)
+    source_ip_set = set(source_ips) if source_ips is not None else None
     ips = []
 
     for ip, details in geo_data.items():
+        if source_ip_set is not None and ip not in source_ip_set:
+            continue
         if details.get("country") not in country_set:
             continue
         ips.append(ip)
 
     return build_subnets_from_ips(ips, target_prefix, min_hits)
+
+
+def build_country_report(geo_data, country_codes, source_ips=None):
+    country_set = set(country_codes)
+    ip_list = list(source_ips) if source_ips is not None else sorted(geo_data.keys())
+    report = {
+        "target_country_codes": sorted(country_set),
+        "total_ips": len(ip_list),
+        "blocked_ips": [],
+        "allowed_ips": [],
+        "missing_geo_ips": [],
+        "countries": {},
+    }
+
+    country_counts = collections.defaultdict(lambda: {"total": 0, "blocked": 0, "allowed": 0})
+
+    for ip in ip_list:
+        details = geo_data.get(ip)
+        if not details:
+            report["missing_geo_ips"].append(ip)
+            continue
+
+        country = geo_country(details)
+        blocked = country in country_set
+        row = {
+            "ip": ip,
+            "country": country,
+            "region": details.get("region", "Unknown"),
+            "city": details.get("city", "Unknown"),
+            "org": details.get("org", "Unknown"),
+        }
+
+        country_counts[country]["total"] += 1
+        if blocked:
+            report["blocked_ips"].append(row)
+            country_counts[country]["blocked"] += 1
+        else:
+            report["allowed_ips"].append(row)
+            country_counts[country]["allowed"] += 1
+
+    for country, counts in country_counts.items():
+        report["countries"][country] = dict(counts)
+
+    return report
+
+
+def write_ip_detail_file(path, rows):
+    with open(path, "w") as f:
+        for row in rows:
+            f.write("%s %s %s %s %s\n" % (
+                row["ip"],
+                row["country"],
+                row["region"],
+                row["city"],
+                row["org"],
+            ))
+
+
+def print_country_report(report):
+    print("Country statistics:")
+    print("  Country | Total | Blocked | Allowed")
+    for country, counts in sorted(report["countries"].items()):
+        print("  %s | %d | %d | %d" % (
+            country,
+            counts.get("total", 0),
+            counts.get("blocked", 0),
+            counts.get("allowed", 0),
+        ))
+    print("Blocked IPs:", len(report["blocked_ips"]))
+    print("Allowed IPs:", len(report["allowed_ips"]))
+    print("Missing geo IPs:", len(report["missing_geo_ips"]))
 
 
 def build_parser():
@@ -135,7 +224,14 @@ def build_parser():
         default="geo",
         help="Read --input as geo_data.json country data or as raw IP/text input.",
     )
+    parser.add_argument(
+        "--filter-ips-file",
+        help="When --source=geo, only aggregate geo_data entries whose IP appears in this raw IP/text file.",
+    )
     parser.add_argument("--output", default="aggregated_generiek_subnets.json")
+    parser.add_argument("--report-output", default="generiek_country_report.json")
+    parser.add_argument("--blocked-ips-output", default="generiek_blocked_candidate_ips.txt")
+    parser.add_argument("--allowed-ips-output", default="generiek_allowed_non_target_ips.txt")
     parser.add_argument(
         "--country-codes",
         default=",".join(DEFAULT_COUNTRY_CODES),
@@ -173,7 +269,22 @@ def main():
         with open(args.input, "r") as f:
             geo_data = json.load(f)
         country_codes = parse_country_codes(args.country_codes)
-        selected_ips, subnets = build_subnets_from_geo(geo_data, country_codes, args.target_prefix, args.min_hits)
+        source_ips = None
+        if args.filter_ips_file:
+            with open(args.filter_ips_file, "r") as f:
+                source_ips = parse_ips_from_text(f.read())
+        selected_ips, subnets = build_subnets_from_geo(
+            geo_data,
+            country_codes,
+            args.target_prefix,
+            args.min_hits,
+            source_ips=source_ips,
+        )
+        report = build_country_report(geo_data, country_codes, source_ips=source_ips)
+        with open(args.report_output, "w") as f:
+            json.dump(report, f, indent=4, sort_keys=True)
+        write_ip_detail_file(args.blocked_ips_output, report["blocked_ips"])
+        write_ip_detail_file(args.allowed_ips_output, report["allowed_ips"])
     else:
         with open(args.input, "r") as f:
             selected_ips, subnets = build_subnets_from_ips(
@@ -190,6 +301,11 @@ def main():
     print("Source:", args.source)
     print("Target prefix:", args.target_prefix)
     print("Output:", args.output)
+    if args.source == "geo":
+        print("Report:", args.report_output)
+        print("Blocked candidate IPs:", args.blocked_ips_output)
+        print("Allowed non-target IPs:", args.allowed_ips_output)
+        print_country_report(report)
     return 0
 
 

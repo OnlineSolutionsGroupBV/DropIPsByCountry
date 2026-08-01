@@ -1,4 +1,5 @@
 import os
+import json
 import sys
 import tempfile
 import unittest
@@ -81,6 +82,29 @@ class BlockGeneriekSubnetTests(unittest.TestCase):
                 "105.190.0.0/16",
                 "117.40.0.0/16",
             ])
+        finally:
+            os.unlink(path)
+
+    def test_find_country_mismatches_flags_non_target_ip_inside_candidate(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            with open(path, "w") as f:
+                json.dump({
+                    "109.134.6.23": {"country": "BE", "org": "AS5432 Proximus NV"},
+                    "1.2.3.4": {"country": "CN", "org": "Example CN"},
+                }, f)
+
+            mismatches = blocker.find_country_mismatches(
+                [self.net("109.134.6.0/24"), self.net("1.2.3.0/24")],
+                path,
+                set(["CN", "IN"]),
+                10,
+            )
+
+            self.assertEqual(len(mismatches), 1)
+            self.assertEqual(str(mismatches[0][0]), "109.134.6.0/24")
+            self.assertIn("109.134.6.23 BE AS5432 Proximus NV", mismatches[0][1])
         finally:
             os.unlink(path)
 
