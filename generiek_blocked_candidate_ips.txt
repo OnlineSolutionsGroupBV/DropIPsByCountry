@@ -1,0 +1,162 @@
+95.170.222.90 IQ Duhok Sīnah AS21277 Allay Nawroz Telecom Company for Communication/Ltd.
+138.84.137.132 PH National Capital Region Manila AS4775 Globe Telecoms
+75.241.214.212 US Colorado Aurora AS6167 Verizon Business
+5.62.149.249 IQ Baghdad Baghdad AS198589 Al-Jazeera Al-Arabiya Company for Communication and Internet LTD
+131.161.225.49 BR Ceará Fortaleza AS264398 NEONET SERVICOS DE TELECOMUNICACOES LTDA
+5.62.149.139 IQ Baghdad Baghdad AS198589 Al-Jazeera Al-Arabiya Company for Communication and Internet LTD
+92.62.60.2 RU St.-Petersburg Saint Petersburg AS42065 Global Network Management Inc
+171.51.142.8 IN West Bengal Kharagpur AS45609 Bharti Airtel Ltd. AS for GPRS Service
+154.109.129.43 TN Sfax Governorate Sfax AS37693 OOREDOO TUNISIE SA
+187.226.57.22 MX Morelos Xochitepec AS8151 UNINET
+171.97.49.76 TH Bangkok Bangkok AS17552 True Online
+131.0.202.52 BR São Paulo São Carlos AS28649 Desktop Sigmanet Comunicação Multimídia SA
+187.225.104.123 MX Morelos Cuernavaca AS8151 UNINET
+189.223.84.119 MX Baja California Tijuana AS8151 UNINET
+66.249.68.137 US Oregon The Dalles AS15169 Google LLC
+52.167.144.189 US Virginia Boydton AS8075 Microsoft Corporation
+40.77.167.74 US Virginia Boydton AS8075 Microsoft Corporation
+217.142.31.213 IQ Baghdad Baghdad AS14593 Space Exploration Technologies Corporation
+65.43.86.135 US Georgia Atlanta AS7018 AT&T Enterprises, LLC
+40.77.167.21 US Virginia Boydton AS8075 Microsoft Corporation
+74.221.179.16 US Tennessee Chattanooga AS26827 EPB Fiber Optics
+91.245.155.92 RU Krasnodar Krai Gelendzhik AS47914 OOO Creative Direct Marketing Solutions
+27.130.47.89 TH Bangkok Bangkok AS133481 AIS Fibre
+40.77.167.25 US Virginia Boydton AS8075 Microsoft Corporation
+178.72.180.75 RU St.-Petersburg Saint Petersburg AS49505 JSC Selectel
+52.167.144.140 US Virginia Boydton AS8075 Microsoft Corporation
+98.45.244.195 US California San Jose AS7922 Comcast Cable Communications, LLC
+40.77.179.58 US Washington Moses Lake AS8075 Microsoft Corporation
+73.41.255.89 US California Sacramento AS7922 Comcast Cable Communications, LLC
+95.180.96.238 RS Central Serbia Zemun AS31042 Serbia BroadBand-Srpske Kablovske mreze d.o.o.
+190.231.212.114 AR Buenos Aires Hurlingham AS7303 Telecom Argentina S.A.
+91.210.250.18 UA Kyiv Oblast Sofiyivska Borschagivka AS48438 Corbina Telecom Llc.
+207.46.13.154 US Washington Moses Lake AS8075 Microsoft Corporation
+203.6.208.87 PK Punjab Multan AS135003 Multan Cable & Internet Services (Pvt) Ltd
+178.207.165.205 RU Tatarstan Republic Kazan AS28840 PJSC TATTELECOM
+162.202.193.76 US Florida Hialeah AS7018 AT&T Enterprises, LLC
+190.104.37.130 AR Buenos Aires F.D. Buenos Aires AS52363 Jumpnet Soluciones de Internet S.R.L.
+5.192.69.91 AE Abu Dhabi Abu Dhabi AS5384 Emirates Internet
+50.25.166.242 US Arkansas Cabot AS19108 Optimum
+74.7.243.252 US Georgia Atlanta AS8075 Microsoft Corporation
+187.223.202.134 MX Baja California Sur La Paz AS8151 UNINET
+200.124.252.194 EC Pichincha Quito AS27738 Ecuadortelecom S.A.
+187.125.135.175 BR Minas Gerais Belo Horizonte AS7738 V tal
+154.216.228.240 VE Zulia La Villa del Rosario AS61461 Airtek Solutions C.A.
+187.228.131.186 MX Hidalgo Tula de Allende AS8151 UNINET
+169.150.86.95 US Tennessee Dyersburg AS30257 Gibson Electric Membership Corporation
+190.104.248.57 AR Buenos Aires F.D. Buenos Aires AS11014 CPS
+102.254.47.2 ZA Gauteng Pretoria AS37457 Telkom SA Ltd.
+66.249.66.165 US North Carolina Charlotte Unknown
+125.27.131.27 TH Rayong Ban Chang AS23969 TOT Public Company Limited
+98.63.117.120 US Illinois Chicago AS7922 Comcast Cable Communications, LLC
+66.249.68.68 US Oregon The Dalles AS15169 Google LLC
+177.93.153.154 BR Rio de Janeiro Quissamã AS263153 Work Banda Larga
+76.118.178.228 US Massachusetts Barnstable AS7922 Comcast Cable Communications, LLC
+181.119.84.133 CO Bogota D.C. Bogotá AS52468 UFINET PANAMA S.A.
+67.52.19.98 US Missouri Kansas City AS11427 Charter Communications Inc
+201.138.81.199 MX Sonora Ciudad Obregón AS8151 UNINET
+46.48.3.14 RU Sverdlovsk Oblast Yekaterinburg AS12668 LLC KomTehCentr
+148.74.17.254 US New York New York City AS6128 Cablevision Systems Corp.
+190.247.103.159 AR Buenos Aires Pergamino AS7303 Telecom Argentina S.A.
+222.164.23.174 SG Singapore Singapore AS55430 Starhub Ltd
+201.243.241.144 VE Distrito Federal Caracas AS8048 CANTV Servicios, Venezuela
+145.223.7.32 US Nebraska Omaha AS209854 Cyberzone S.A.
+105.107.77.166 DZ Blida Blida AS36947 Telecom Algeria
+71.7.98.65 US Georgia Atlanta AS7029 Windstream Communications LLC
+81.177.186.68 RU Kalmykiya Republic Elista AS199833 OOO SET
+153.51.245.11 MX Guanajuato Romita AS273267 Rodrigo Mendoza Gutierrez
+77.44.192.241 SY Aleppo Aleppo AS29256 STE PDN Internal AS
+68.200.180.17 US Florida St. Petersburg AS33363 Charter Communications, Inc
+207.223.23.25 US Tennessee Jackson AS53435 JACKSON ENERGY AUTHORITY
+188.65.162.157 AZ Baki Biny Selo AS215328 Fast Net Technology LLC
+125.27.255.88 TH Chiang Mai Chiang Mai AS23969 TOT Public Company Limited
+39.32.136.38 PK Punjab Rawalpindi AS17557 Pakistan Telecommunication Company Limited
+173.174.144.194 US Texas Live Oak AS11427 Charter Communications Inc
+104.153.71.113 US Ohio Shelby AS46399 Wavelinc Communications LLC
+38.50.163.231 VE Bolívar Ciudad Bolívar AS271939 REDES ELIAS, C.A.
+27.130.39.23 TH Bangkok Bangkok AS133481 AIS Fibre
+189.140.156.110 MX Tamaulipas Reynosa AS8151 UNINET
+104.129.176.200 US Maine Nobleboro AS33247 COASTAL TELCO SERVICES, INC.
+73.210.120.2 US Illinois Chicago AS7922 Comcast Cable Communications, LLC
+102.209.57.62 KE Nairobi County Nairobi AS328856 VIJIJI CONNECT LIMITED
+76.100.210.158 US Maryland Baltimore AS7922 Comcast Cable Communications, LLC
+181.188.193.117 EC Pichincha Quito AS19114 Otecel S.A.
+54.158.180.178 US Virginia Ashburn AS14618 Amazon.com, Inc.
+223.191.94.68 IN Maharashtra Mumbai AS45609 Bharti Airtel Ltd. AS for GPRS Service
+188.244.180.52 RU Perm Krai Berezniki AS15774 Limited Liability Company "TTK-Svyaz"
+181.68.185.31 CO Bogota D.C. Bogotá AS13489 UNE EPM TELECOMUNICACIONES S.A.
+65.119.49.58 US Texas La Grange AS27235 COLORADO VALLEY COMMUNICATIONS, INC.
+66.249.75.132 US Nebraska Omaha AS15169 Google LLC
+187.234.22.226 MX México Ecatepec de Morelos AS8151 UNINET
+67.213.148.119 JM Kingston Kingston AS10278 Cable & Wireless (Barbados) Limited
+179.238.17.237 BR Ceará Fortaleza AS14593 Space Exploration Technologies Corporation
+179.33.228.2 CO Atlántico Barranquilla AS3816 COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
+38.253.206.171 OM Muscat Muscat AS204170 Awaser Oman LLC
+178.177.218.67 RU Krasnoyarsk Krai Krasnoyarsk AS31133 PJSC MegaFon
+203.31.169.71 BD Dhaka Division Dhaka AS134371 CIRCLE NETWORK BANGLADESH
+41.113.152.71 ZA Gauteng Johannesburg AS12091 MTN SA
+82.140.202.204 RU Tver Oblast Tver AS12389 PJSC Rostelecom
+98.3.65.14 US New York Waverly AS11351 Charter Communications Inc
+96.33.216.39 US Tennessee Blountville AS20115 Charter Communications LLC
+91.228.122.115 UA Chernivtsi Hlyboka AS197218 PP Dmutrashko Evgeny Vitalievich
+92.255.143.102 RU Perm Krai Perm AS12768 JSC ER-Telecom Holding
+72.94.42.39 US Pennsylvania Philadelphia AS701 Verizon Business
+179.51.143.108 EC Guayas Milagro AS263792 IN.PLANET S. A
+102.253.66.30 ZA Gauteng Johannesburg AS37457 Telkom SA Ltd.
+152.86.170.223 US Tennessee Bells AS30257 Gibson Electric Membership Corporation
+190.105.114.101 AR Buenos Aires San Miguel AS27984 Ver Tv S.A.
+156.255.250.57 VE Zulia Maracaibo AS61461 Airtek Solutions C.A.
+102.206.113.208 KE Nairobi County Nairobi AS328987 Lime Emerging Solutions Limited
+154.91.164.176 PK Punjab Rawalpindi AS45669 PMCL /LDI IP TRANSIT
+170.83.39.67 BR São Paulo São Bernardo do Campo AS266453 Acesso Net Servicos
+40.77.167.45 US Virginia Boydton AS8075 Microsoft Corporation
+181.90.72.237 AR Salta Rosario de la Frontera AS7303 Telecom Argentina S.A.
+196.69.39.126 MA Casablanca-Settat Casablanca AS36903 Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM
+189.140.114.128 MX Tamaulipas Reynosa AS8151 UNINET
+185.218.244.135 TR Bursa Province Bursa AS205424 Ulunet Internet ve Iletisim Hizmetleri San. ve Tic. Ltd. Sti.
+154.41.187.35 VE Zulia La Villa del Rosario AS269820 FULL DATA COMUNICACIONES C.A.
+102.206.92.204 ZA Gauteng Benoni AS329126 IIP1 Pty Ltd
+69.251.173.178 US Maryland Perry Hall AS7922 Comcast Cable Communications, LLC
+116.88.50.226 SG Singapore Ulu Bedok AS55430 Starhub Ltd
+165.16.186.92 ZA Gauteng Johannesburg AS37049 SADV (Pty) Ltd
+70.22.41.26 US Maryland Columbia AS701 Verizon Business
+49.206.97.214 IN Tamil Nadu Chennai AS24309 Atria Convergence Technologies Pvt. Ltd. Broadband Internet Service Provider INDIA
+201.62.94.24 BR São Paulo Marília AS28634 Life Tecnologia Ltda.
+189.156.89.151 MX Coahuila Saltillo AS8151 UNINET
+165.16.170.74 ZA Gauteng Johannesburg AS37049 SADV (Pty) Ltd
+52.167.144.169 US Virginia Boydton AS8075 Microsoft Corporation
+82.129.23.68 IQ Baghdad Baghdad AS209193 SUPER CELL NETWORK FOR INTERNET SERVICES LTD
+68.192.189.233 US New York New York City AS6128 Cablevision Systems Corp.
+71.156.25.27 US Oklahoma Stillwater AS7018 AT&T Enterprises, LLC
+143.105.136.124 AR Buenos Aires F.D. Buenos Aires AS14593 Space Exploration Technologies Corporation
+12.76.148.66 US Florida Miami Gardens AS7018 AT&T Enterprises, LLC
+66.249.77.41 US Nebraska Omaha AS15169 Google LLC
+190.249.176.213 CO Antioquia Medellín AS13489 UNE EPM TELECOMUNICACIONES S.A.
+102.209.18.54 KE Nairobi County Nairobi AS329437 VENNET SOLUTIONS LIMITED
+52.167.144.213 US Virginia Boydton AS8075 Microsoft Corporation
+197.202.68.52 DZ Blida Blida AS36947 Telecom Algeria
+207.46.13.64 US Washington Moses Lake AS8075 Microsoft Corporation
+148.230.4.8 MX Veracruz Álamo AS265606 DIGY NETWORKS
+201.102.117.212 MX México Ecatepec de Morelos AS8151 UNINET
+185.97.95.130 LB Mount Lebanon Baabda AS59989 T.H. Global Vision SARL
+167.100.190.137 SA Riyadh Region Riyadh AS25019 Saudi Telecom Company JSC
+170.246.120.13 BR Rio de Janeiro Rio de Janeiro AS52794 Net Flex Ltda ME
+189.156.242.185 MX Puebla Puebla AS8151 UNINET
+67.82.159.96 US New York Medford AS6128 Cablevision Systems Corp.
+99.36.114.89 US California Fullerton AS7018 AT&T Enterprises, LLC
+52.167.144.204 US Virginia Boydton AS8075 Microsoft Corporation
+91.247.111.177 RU Moscow Moscow AS6789 CRELCOM LLC
+151.197.245.176 US Delaware Long Neck AS701 Verizon Business
+105.164.128.232 KE Nairobi County Nairobi AS33771 Safaricom Limited
+83.149.37.64 RU Sverdlovsk Oblast Yekaterinburg AS31224 PJSC MegaFon
+201.252.120.110 AR Cordoba Córdoba AS7303 Telecom Argentina S.A.
+32.220.239.170 US Connecticut Waterbury AS46690 Verizon Business
+73.238.114.157 US Massachusetts Boston AS7922 Comcast Cable Communications, LLC
+182.3.50.38 ID Jakarta Jakarta AS23693 PT. Telekomunikasi Selular
+39.55.175.191 PK Punjab Lahore AS17557 Pakistan Telecommunication Company Limited
+223.188.141.80 IN Uttar Pradesh Meerut AS45609 Bharti Airtel Ltd. AS for GPRS Service
+45.5.140.183 BR Ceará Fortaleza AS269633 LINK CEARA TELECOM LTDA
+1.10.209.168 TH Bangkok Bangkok AS23969 TOT Public Company Limited
+148.230.190.210 MX Veracruz Totutla AS22884 TOTAL PLAY TELECOMUNICACIONES, S.A.P.I. DE C.V.
+113.10.205.234 HK Hong Kong Hong Kong AS9269 Hong Kong Broadband Network Ltd.
+153.51.229.129 VE Carabobo Valencia AS264628 CORPORACION FIBEX TELECOM, C.A.
