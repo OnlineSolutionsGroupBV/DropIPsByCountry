@@ -7,7 +7,7 @@ MIN_HITS="${MIN_HITS:-1}"
 COUNTRY_CODES="${COUNTRY_CODES:-}"
 INPUT_FILE="${INPUT_FILE:-input.txt}"
 OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"
-APPLY="${APPLY:-0}"
+APPLY="${APPLY:-1}"
 SUDO_FLAG="${SUDO_FLAG:---sudo}"
 
 if [ ! -f "$INPUT_FILE" ]; then
