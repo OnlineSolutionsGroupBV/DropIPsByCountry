@@ -1,32 +1,36 @@
-Current Time: Tuesday, 02-Jun-2026 09:12:57 CEST
-Restart Time: Tuesday, 02-Jun-2026 09:12:07 CEST
+Apache Server Status for www.nieuwejobs.com (via 148.251.129.80)
+Server Version: Apache/2.4.10 (Ubuntu) OpenSSL/1.0.2u mod_wsgi/4.3.0 Python/2.7.9
+Server MPM: event
+Server Built: Jul 24 2015 17:25:18
+Current Time: Saturday, 01-Aug-2026 15:19:22 CEST
+Restart Time: Saturday, 01-Aug-2026 15:19:01 CEST
 Parent Server Config. Generation: 1
 Parent Server MPM Generation: 0
-Server uptime: 49 seconds
-Server load: 39.61 31.22 41.48
-Total accesses: 783 - Total Traffic: 19.8 MB
-CPU Usage: u4.81 s1.02 cu0 cs0 - 11.9% CPU load
-16 requests/sec - 413.6 kB/second - 25.9 kB/request
-327 requests currently being processed, 185 idle workers
+Server uptime: 21 seconds
+Server load: 25.07 8.07 4.59
+Total accesses: 376 - Total Traffic: 5.9 MB
+CPU Usage: u3.33 s1 cu0 cs0 - 20.6% CPU load
+17.9 requests/sec - 287.5 kB/second - 16.1 kB/request
+512 requests currently being processed, 0 idle workers
 PID Connections Threads Async connections
 total   accepting   busy    idle    writing keep-alive  closing
-2395    17  yes 14  50  0   0   3
-2396    27  yes 22  42  0   3   2
-2397    73  yes 64  0   0   0   10
-4468    34  yes 35  29  0   1   0
-2399    34  yes 32  32  0   1   1
-4243    65  yes 63  1   0   0   2
-4316    66  yes 64  0   0   2   1
-4388    38  yes 33  31  0   5   0
-Sum 354     327 185 0   12  19
-_W_________RW_________R_R____W_____W____R______W______W_WWW____W
-_______WWW________________WWWWWW__WWW__W___WW_WW__RWWW___W______
-WWWWWWWWWRWWWWRWWWWWWWWWWWWWWWWWWRWRWWWWWWWWWWWWWWWWWRWWWWWWWWWW
-__________________WWW_W_WWWWWWWWWWW___RWWWWW_WWRRRWWRR_RRRWR____
-WRW_W_W____WW_W_W_WR_WW_WW_W_W__W_W_WWWW_W_W__W__W__W_______WRWW
-RWWWWRWWWWWWWWWWWRWWRRRWRWWRWWWWWWWWWWWWWWWWWWR_WWWWRWWRWWWWRWRW
-WWWWRWWWWRWWWWWWRWRWWWWWWRWWWWRWWWWWRWWWWWWRWWWWWWWWWWWWWWWWWWWW
-_WWWW__R_____R_WW__WW___WW_WWWWW__W_WW____WWWW_RWW_W__RW__WW__W_
+23208   67  yes 64  0   0   0   4
+23230   66  yes 64  0   0   0   3
+23259   69  yes 64  0   0   0   6
+23281   65  yes 64  0   0   0   2
+23282   65  yes 64  0   0   0   2
+24590   67  yes 64  0   0   0   4
+24666   66  yes 64  0   0   0   3
+24667   67  yes 64  0   0   0   4
+Sum 532     512 0   0   0   28
+WRRWRWWWWRRRRRWRWRRRRRRRRRRRRRRRWRRRRRRRRRRRWRRWRRRRWRRWRWRRRWWR
+RWRRWWRRRRRRWRRRWRRRRRRRWRRRWRWRRRRRRWRRRRRRRWRWRRRRRWWWRWRRWRRW
+RRWRWRRRRRWRRRRRRRWRRRWWRWRRRRRRRRRRRRRRRRRRRRRRRRRRWWWRRWWRRRRR
+RRRWRRRWRRWRWWRRRRRRWRRRRRRRWRRRWRRRRRRRRRWRRRWWRRRRRRRRRRWRWWRR
+RRRWRRRWRRRRRRRRRWWWWRRRRRRRRRRRRWWRRRWRRRRWRRRRRWWRRRRRRRRWRRRR
+RRRRRRRWWWWWRRRRRRRRRRWWRRRRRRWRRRWRWRRRRWRRWRWWRRWRRWRWRRRRRRRR
+RRWRWRRRRRRRRRWWRRRRRRWRRRRRWRRWRRRRRRWWWRRWRWRRRRWRRWRWRRWRRRRR
+RRRRRRRRRRWWRRWRRRWRRRRRRRRRRWWRRWWRRRRWRWWRWWWRRRRRRWWRRRWRRWWR
 Scoreboard Key:
 "_" Waiting for Connection, "S" Starting up, "R" Reading Request,
 "W" Sending Reply, "K" Keepalive (read), "D" DNS Lookup,
@@ -34,499 +38,538 @@ Scoreboard Key:
 "I" Idle cleanup of worker, "." Open slot with no current process
 
 Srv PID Acc M   CPU SS  Req Conn    Child   Slot    Client  VHost   Request
-0-0 2395    0/2/2   _   0.64    0   12926   0.0 0.05    0.05    54.197.82.195       
-0-0 2395    0/1/1   W   0.32    19  0   0.0 0.02    0.02    92.58.113.38    nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=bank
-0-0 2395    0/3/3   _   0.64    2   26886   0.0 0.05    0.05    24.200.132.83       
-0-0 2395    0/2/2   _   0.60    8   20936   0.0 0.05    0.05    95.60.7.136     
-0-0 2395    0/2/2   _   0.58    11  7984    0.0 0.03    0.03    43.167.187.11       
-0-0 2395    0/3/3   _   0.56    12  0   0.0 0.05    0.05    106.214.9.111       
-0-0 2395    0/2/2   _   0.60    10  17739   0.0 0.04    0.04    185.24.60.30        
-0-0 2395    0/3/3   _   0.49    14  0   0.0 0.07    0.07    84.194.189.97       
-0-0 2395    0/2/2   _   0.62    4   15294   0.0 0.04    0.04    40.77.167.52        
-0-0 2395    0/2/2   _   0.52    13  9387    0.0 0.04    0.04    34.196.114.170      
-0-0 2395    0/2/2   _   0.60    9   0   0.0 0.03    0.03    14.233.224.186      
-0-0 2395    0/2/2   R   0.43    13  5869    0.0 0.03    0.03    161.29.210.17       
-0-0 2395    0/1/1   W   0.36    4   0   0.0 0.01    0.01    60.50.91.5  nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=accoun
-0-0 2395    0/2/2   _   0.49    14  0   0.0 0.03    0.03    84.194.189.97       
-0-0 2395    0/2/2   _   0.62    6   17085   0.0 0.05    0.05    8.217.213.149       
-0-0 2395    0/2/2   _   0.55    13  23  0.0 0.03    0.03    106.214.9.111       
-0-0 2395    0/2/2   _   0.61    6   8180    0.0 0.05    0.05    40.77.167.52        
-0-0 2395    0/2/2   _   0.57    11  10279   0.0 0.04    0.04    40.77.167.35        
-0-0 2395    0/1/1   _   0.51    14  30005   0.0 0.02    0.02    3.232.39.98     
-0-0 2395    0/2/2   _   0.53    13  0   0.0 0.03    0.03    49.228.169.20       
-0-0 2395    0/2/2   _   0.55    12  0   0.0 0.03    0.03    106.214.9.111       
-0-0 2395    0/1/1   _   0.57    11  29065   0.0 0.02    0.02    221.121.101.153     
-0-0 2395    0/1/1   R   0.40    14  21424   0.0 0.03    0.03    84.194.189.97       
-0-0 2395    0/2/2   _   0.56    12  18648   0.0 0.04    0.04    186.144.5.18        
-0-0 2395    0/1/1   R   0.40    14  21831   0.0 0.01    0.01    60.50.34.8      
-0-0 2395    0/2/2   _   0.51    14  0   0.0 0.02    0.02    49.228.169.20       
-0-0 2395    0/2/2   _   0.49    14  0   0.0 0.02    0.02    84.194.189.97       
-0-0 2395    0/1/1   _   0.55    13  29828   0.0 0.03    0.03    78.203.118.106      
-0-0 2395    0/2/2   _   0.55    13  16115   0.0 0.05    0.05    86.172.156.226      
-0-0 2395    0/1/1   W   0.36    13  0   0.0 0.03    0.03    43.173.179.212  nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&locations=noord-b
-0-0 2395    0/2/2   _   0.64    0   25919   0.0 0.05    0.05    181.115.172.62      
-0-0 2395    0/2/2   _   0.53    13  12217   0.0 0.04    0.04    18.206.47.187       
-0-0 2395    0/2/2   _   0.65    0   13109   0.0 0.04    0.04    44.221.227.90       
-0-0 2395    0/1/1   _   0.53    13  29753   0.0 0.02    0.02    98.84.184.80        
-0-0 2395    0/1/1   _   0.54    13  26884   0.0 0.02    0.02    18.213.102.186      
-0-0 2395    0/1/1   W   0.38    13  0   0.0 0.02    0.02    79.101.120.187  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=bank
-0-0 2395    0/1/1   _   0.56    12  29531   0.0 0.03    0.03    77.137.65.134       
-0-0 2395    0/1/1   _   0.52    13  29425   0.0 0.02    0.02    3.221.222.168       
-0-0 2395    0/1/1   _   0.51    14  27077   0.0 0.02    0.02    190.44.106.180      
-0-0 2395    0/2/2   _   0.62    5   11814   0.0 0.05    0.05    23.21.228.180       
-0-0 2395    0/1/1   R   0.40    14  20026   0.0 0.02    0.02    84.194.189.97       
-0-0 2395    0/2/2   _   0.63    3   10234   0.0 0.05    0.05    18.204.89.56        
-0-0 2395    0/3/3   _   0.51    14  0   0.0 0.05    0.05    49.228.169.20       
-0-0 2395    0/2/2   _   0.60    8   0   0.0 0.03    0.03    14.233.224.186      
-0-0 2395    0/1/1   _   0.60    8   32268   0.0 0.03    0.03    190.172.122.82      
-0-0 2395    0/1/1   _   0.61    8   34161   0.0 0.02    0.02    44.215.231.15       
-0-0 2395    0/2/2   _   0.57    11  0   0.0 0.02    0.02    106.214.9.111       
-0-0 2395    0/1/1   W   0.46    10  0   0.0 0.03    0.03    46.98.112.211   nl.careersinfinances.com:443    GET /job/viewjob/34535745/logistics-returns-coordinator-french-
-0-0 2395    0/1/1   _   0.36    11  17950   0.0 0.03    0.03    40.77.167.35        
-0-0 2395    0/1/1   _   0.57    11  30642   0.0 0.02    0.02    52.73.142.41        
-0-0 2395    0/1/1   _   0.53    13  28488   0.0 0.02    0.02    3.223.134.5     
-0-0 2395    0/1/1   _   0.45    12  25213   0.0 0.01    0.01    186.144.5.18        
-0-0 2395    0/1/1   _   0.50    14  27756   0.0 0.02    0.02    44.218.6.93     
-0-0 2395    0/2/2   _   0.49    4   0   0.0 0.03    0.03    40.77.167.52        
-0-0 2395    0/1/1   W   0.46    9   0   0.0 0.02    0.02    185.24.63.8 nl.careersinfinances.com:443    GET /accounts/login/?categories=beurshandel&categories=makelari
-0-0 2395    0/2/2   _   0.58    11  0   0.0 0.03    0.03    106.214.9.111       
-0-0 2395    0/2/2   W   0.37    13  0   0.0 0.05    0.05    37.156.104.5    nl.careersinfinances.com:443    GET /accounts/login/?categories=verzekeringen-schadebeheer&cate
-0-0 2395    0/2/2   W   0.45    10  0   0.0 0.04    0.04    5.49.47.154 nl.careersinfinances.com:443    GET /job/viewjob/34512825/accountant.html?categories=belastinga
-0-0 2395    0/2/2   W   0.48    6   0   0.0 0.03    0.03    40.77.167.52    www.techtopjobs.com:443 GET /job/viewjob/1605879/vrachtwagenchauffeur-ce-ingeschreven-i
-0-0 2395    0/2/2   _   0.47    10  11227   0.0 0.05    0.05    66.249.76.38        
-0-0 2395    0/3/3   _   0.63    2   0   0.0 0.02    0.02    83.56.49.100        
-0-0 2395    0/1/1   _   0.59    10  30844   0.0 0.02    0.02    54.156.55.147       
-0-0 2395    0/1/1   _   0.51    14  27029   0.0 0.02    0.02    106.214.9.111       
-0-0 2395    0/2/2   W   0.34    12  0   0.0 0.03    0.03    185.24.60.228   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=contro
-1-0 2396    0/2/2   _   0.78    5   20599   0.0 0.05    0.05    191.112.35.246      
-1-0 2396    0/2/2   _   0.84    0   12483   0.0 0.03    0.03    94.109.50.97        
-1-0 2396    0/3/3   _   0.85    0   0   0.0 0.04    0.04    94.109.50.97        
-1-0 2396    0/3/3   _   0.73    7   0   0.0 0.05    0.05    102.153.200.174     
-1-0 2396    0/2/2   _   0.74    7   32627   0.0 0.03    0.03    34.194.233.48       
-1-0 2396    0/2/2   _   0.74    7   7817    0.0 0.03    0.03    66.249.65.168       
-1-0 2396    0/2/2   _   0.73    7   20774   0.0 0.04    0.04    52.167.144.199      
-1-0 2396    0/2/2   W   0.68    3   0   0.0 0.05    0.05    34.233.114.237  www.salestopjobs.com:443    GET /job/?categories=winkelverkoop&company=valuement&locations=
-1-0 2396    0/1/1   W   0.32    22  0   0.0 0.02    0.02    192.223.121.232 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=andere-financiele-d
-1-0 2396    0/3/3   W   0.50    14  0   0.0 0.02    0.02    99.251.197.190  nl.careersinfinances.com:443    GET /job/viewjob/34539394/productiemedewerker-hoogeveen.html?ca
-1-0 2396    0/3/3   _   0.66    7   8385    0.0 0.02    0.02    52.167.144.199      
-1-0 2396    0/2/2   _   0.73    8   12012   0.0 0.04    0.04    23.23.99.55     
-1-0 2396    0/2/2   _   0.77    6   0   0.0 0.04    0.04    78.22.31.60     
-1-0 2396    0/2/2   _   0.73    7   9354    0.0 0.03    0.03    43.172.198.22       
-1-0 2396    0/3/3   _   0.74    7   11086   0.0 0.64    0.64    3.93.211.16     
-1-0 2396    0/2/2   _   0.75    6   10037   0.0 0.05    0.05    202.46.62.96        
-1-0 2396    0/3/3   _   0.78    4   22264   0.0 0.05    0.05    131.226.101.115     
-1-0 2396    0/3/3   _   0.82    2   41  0.0 0.80    0.80    178.116.178.230     
-1-0 2396    0/2/2   _   0.71    0   10185   0.0 0.03    0.03    120.56.152.69       
-1-0 2396    0/2/2   _   0.79    4   15964   0.0 0.04    0.04    92.150.181.191      
-1-0 2396    0/3/3   _   0.72    9   11146   0.0 0.05    0.05    8.217.213.92        
-1-0 2396    0/3/3   _   0.77    6   0   0.0 0.02    0.02    78.22.31.60     
-1-0 2396    0/3/3   _   0.77    5   11686   0.0 0.14    0.14    40.77.167.52        
-1-0 2396    0/3/3   _   0.83    1   11532   0.0 0.05    0.05    66.249.66.15        
-1-0 2396    0/2/2   _   0.83    1   3   0.0 0.03    0.03    178.116.178.230     
-1-0 2396    0/3/3   _   0.83    0   14828   0.0 0.03    0.03    120.56.152.69       
-1-0 2396    0/1/1   W   0.68    4   0   0.0 0.02    0.02    40.77.167.52    www.techtopjobs.com:443 GET /job/?q=12%25E5%25B9%25B4%25E4%25BF%259D%25E5%25AD%2598+%25
-1-0 2396    0/1/1   W   0.60    12  0   0.0 0.02    0.02    5.49.89.158 nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-1-0 2396    0/2/2   W   0.48    10  0   0.0 0.02    0.02    103.46.4.65 nl.careersinfinances.com:443    GET /job/viewjob/34539031/bijbaan-chauffeur.html?categories=ban
-1-0 2396    0/1/1   W   0.38    17  0   0.0 0.02    0.02    191.156.18.46   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-1-0 2396    0/1/1   W   0.50    14  0   0.0 0.03    0.03    185.24.61.153   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=auditi
-1-0 2396    0/1/1   W   0.65    1   0   0.0 0.03    0.03    66.249.68.5 www.salestopjobs.com:443    GET /job/viewjob/380488/klantendienst-callexcel.html HTTP/1.1
-1-0 2396    0/2/2   _   0.82    2   10621   0.0 0.05    0.05    54.197.178.107      
-1-0 2396    0/2/2   _   0.77    6   8300    0.0 0.05    0.05    44.195.50.71        
-1-0 2396    0/1/1   W   0.34    20  0   0.0 0.02    0.02    37.125.180.207  nl.careersinfinances.com:443    GET /job/viewjob/34176406/customer-service-assistant.html?categ
-1-0 2396    0/2/2   W   0.60    2   0   0.0 0.05    0.05    38.19.238.233   nl.careersinfinances.com:443    GET /accounts/login/?categories=makelarij&categories=management
-1-0 2396    0/1/1   W   0.50    14  0   0.0 0.02    0.02    92.209.210.183  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=audi
-1-0 2396    0/2/2   _   0.81    2   17325   0.0 0.04    0.04    8.217.212.192       
-1-0 2396    0/2/2   _   0.85    0   12368   0.0 0.05    0.05    54.210.155.69       
-1-0 2396    0/3/3   W   0.60    10  0   0.0 0.09    0.09    190.119.49.20   nl.nieuwejobs.com:443   GET /job/viewjob/67631571/vakantie-baanzomerbaan-horeca-bedieni
-1-0 2396    0/2/2   _   0.77    5   8806    0.0 0.05    0.05    154.5.181.4     
-1-0 2396    0/2/2   _   0.82    2   24956   0.0 0.05    0.05    186.11.98.243       
-1-0 2396    0/2/2   _   0.78    4   10562   0.0 0.05    0.05    44.217.255.167      
-1-0 2396    0/2/2   W   0.70    3   0   0.0 0.05    0.05    52.70.209.13    www.jobinhoreca.com:443 GET /job/?categories=horeca-management&categories=reizen-toeris
-1-0 2396    0/1/1   W   0.52    13  0   0.0 0.02    0.02    42.118.79.193   nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=bank
-1-0 2396    0/2/2   _   0.76    6   10595   0.0 0.04    0.04    44.196.118.6        
-1-0 2396    0/2/2   W   0.67    5   0   0.0 0.04    0.04    52.0.63.151 www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-1-0 2396    0/2/2   W   0.47    14  0   0.0 0.03    0.03    190.4.114.217   nl.careersinfinances.com:443    GET /job/?categories=banking&categories=accountancy-boekhouding
-1-0 2396    0/2/2   _   0.71    2   7679    0.0 0.03    0.03    66.249.65.168       
-1-0 2396    0/2/2   _   0.66    9   7659    0.0 0.05    0.05    75.155.73.21        
-1-0 2396    0/2/2   R   0.72    0   9307    0.0 0.04    0.04    34.196.237.236      
-1-0 2396    0/2/2   W   0.54    14  0   0.0 0.11    0.11    43.173.174.31   nl.careersinfinances.com:443    GET /job/viewjob/34356158/financieel-medewerker.html?categories
-1-0 2396    0/2/2   W   0.51    14  0   0.0 0.02    0.02    167.0.181.26    nl.careersinfinances.com:443    GET /job/viewjob/34308108/manager-finance-operations.html?categ
-1-0 2396    0/1/1   W   0.49    16  0   0.0 0.02    0.02    103.4.83.58 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=auditing&categories
-1-0 2396    0/2/2   _   0.73    7   9330    0.0 0.02    0.02    43.173.182.142      
-1-0 2396    0/2/2   _   0.83    0   16088   0.0 0.04    0.04    43.173.175.147      
-1-0 2396    0/2/2   _   0.73    8   7773    0.0 0.03    0.03    102.153.200.174     
-1-0 2396    0/1/1   W   0.67    5   0   0.0 0.02    0.02    77.179.42.233   nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=belasti
-1-0 2396    0/3/3   _   0.76    6   10051   0.0 0.05    0.05    23.21.179.27        
-1-0 2396    0/3/3   _   0.81    2   0   0.0 0.05    0.05    113.212.111.58      
-1-0 2396    0/2/2   _   0.81    2   8717    0.0 0.04    0.04    178.116.178.230     
-1-0 2396    0/3/3   _   0.78    4   11458   0.0 0.06    0.06    8.217.213.220       
-1-0 2396    0/3/3   _   0.80    3   7713    0.0 0.05    0.05    66.249.68.5     
-1-0 2396    0/3/3   _   0.77    6   17630   0.0 0.05    0.05    87.12.24.19     
-2-0 2397    0/2/2   W   1.07    4   0   0.0 0.03    0.03    84.107.246.199  nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=verzek
-2-0 2397    0/1/1   W   0.88    11  0   0.0 0.02    0.02    54.159.98.248   www.careersinfinances.com:443   GET /job/?categories=controlling&categories=verzekeringen-schad
-2-0 2397    0/2/2   W   0.80    15  0   0.0 0.05    0.05    43.173.181.241  nl.careersinfinances.com:443    GET /job/viewjob/34508651/chauffeur-ce-bieten.html?categories=a
-2-0 2397    0/2/2   W   1.09    4   0   0.0 0.05    0.05    52.167.144.174  www.salestopjobs.com:443    GET /job/?locations=antwerpen&locations=namen&categories=purcha
-2-0 2397    0/4/4   W   1.11    3   0   0.0 0.10    0.10    187.148.52.221  nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=banking&categor
-2-0 2397    0/2/2   W   0.58    18  0   0.0 0.05    0.05    71.207.118.210  nl.careersinfinances.com:443    GET /job/viewjob/666524/subsidie-coordinator.html?categories=an
-2-0 2397    0/4/4   W   1.00    7   0   0.0 0.07    0.07    157.55.39.62    www.jobinhoreca.com:443 GET /job/viewjob/2858135/scrum-master.html HTTP/1.1
-2-0 2397    0/2/2   W   0.91    9   0   0.0 0.05    0.05    77.137.70.94    nl.careersinfinances.com:443    GET /job/?categories=management-consultancy&categories=belastin
-2-0 2397    0/3/3   W   1.20    1   0   0.0 0.06    0.06    66.249.70.195   www.techtopjobs.com:443 GET /job/viewjob/852240/chauffeur-b-zonhoven.html HTTP/1.1
-2-0 2397    0/2/2   R   1.10    4   24703   0.0 0.05    0.05    182.10.130.2        
-2-0 2397    0/1/1   W   0.81    14  0   0.0 0.01    0.01    64.20.25.76 nl.careersinfinances.com:443    GET /job/viewjob/34539128/machinebediende-voedingsmiddelenindus
-2-0 2397    0/1/1   W   0.85    13  0   0.0 0.03    0.03    103.6.150.10    nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=auditing&catego
-2-0 2397    0/1/1   W   0.84    12  0   0.0 0.02    0.02    102.105.50.21   nl.careersinfinances.com:443    GET /job/viewjob/34533430/junior-hr-operations-officer-french-a
-2-0 2397    0/3/3   W   1.21    0   0   0.0 0.13    0.13    90.65.137.197   nl.careersinfinances.com:443    GET /job/?categories=banking&categories=belastingadvies&categor
-2-0 2397    0/2/2   R   1.25    0   15838   0.0 0.04    0.04    196.187.145.85      
-2-0 2397    0/1/1   W   0.86    12  0   0.0 0.02    0.02    185.56.193.42   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=verzek
-2-0 2397    0/1/1   W   0.63    18  0   0.0 0.02    0.02    93.139.28.39    nl.careersinfinances.com:443    GET /job/?categories=makelarij&categories=auditing&categories=o
-2-0 2397    0/3/3   W   1.06    6   0   0.0 0.04    0.04    35.173.18.61    www.jobinhoreca.com:443 GET /job/?categories=student&categories=horeca-management&categ
-2-0 2397    0/1/1   W   0.72    18  0   0.0 0.02    0.02    190.150.36.74   nl.careersinfinances.com:443    GET /accounts/login/?categories=controlling&categories=manageme
-2-0 2397    0/2/2   W   0.81    14  0   0.0 0.04    0.04    151.62.74.197   nl.careersinfinances.com:443    GET /job/viewjob/34308114/support-specialist.html?categories=an
-2-0 2397    0/2/2   W   0.91    10  0   0.0 0.05    0.05    52.16.123.208   nl.nieuwejobs.com:443   GET /job/viewjob/67737555/machinist-minigraver.html HTTP/1.0
-2-0 2397    0/2/2   W   1.16    0   0   0.0 0.04    0.04    191.107.198.222 nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=make
-2-0 2397    0/2/2   W   0.61    18  0   0.0 0.05    0.05    186.124.18.206  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=andere-
-2-0 2397    0/1/1   W   0.65    18  0   0.0 0.02    0.02    94.129.157.0    nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-2-0 2397    0/3/3   W   1.07    4   0   0.0 0.06    0.06    154.6.49.209    nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=andere-financie
-2-0 2397    0/1/1   W   0.99    7   0   0.0 0.02    0.02    3.94.40.182 www.salestopjobs.com:443    GET /job/?categories=retail-franchising&categories=sales-buiten
-2-0 2397    0/2/2   W   1.21    1   0   0.0 0.05    0.05    35.170.205.140  www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-2-0 2397    0/3/3   W   0.89    8   0   0.0 0.04    0.04    190.183.135.93  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=banking
-2-0 2397    0/1/1   W   0.95    1   0   0.0 0.01    0.01    84.194.72.14    www.careersinfinances.com:443   GET /job/viewjob/245763/juridisch-adviseur-lichamelijke-schade-
-2-0 2397    0/1/1   W   0.87    10  0   0.0 0.03    0.03    188.26.218.214  nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=andere
-2-0 2397    0/3/3   W   1.14    2   0   0.0 0.06    0.06    155.133.103.246 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=controlling&categor
-2-0 2397    0/3/3   W   1.15    1   0   0.0 0.07    0.07    175.145.183.133 nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=belast
-2-0 2397    0/2/2   W   0.84    13  0   0.0 0.03    0.03    190.224.246.106 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=accountancy-boekhou
-2-0 2397    0/2/2   R   0.91    10  18694   0.0 0.05    0.05    113.253.24.52       
-2-0 2397    0/2/2   W   0.98    7   0   0.0 0.04    0.04    52.167.144.179  www.careersinfinances.com:443   GET /job/viewjob/321028/commerciele-dossierbeheerder-verzekerin
-2-0 2397    0/4/4   R   1.14    2   15031   0.0 0.04    0.04    41.24.67.138        
-2-0 2397    0/2/2   W   0.97    8   0   0.0 0.11    0.11    34.225.87.80    nl.careersinfinances.com:443    GET /job/?categories=auditing&company=processjobs&locations=zee
-2-0 2397    0/3/3   W   1.07    4   0   0.0 0.05    0.05    81.99.210.232   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=bela
-2-0 2397    0/3/3   W   1.08    3   0   0.0 0.05    0.05    142.170.78.114  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=beur
-2-0 2397    0/1/1   W   0.72    18  0   0.0 0.01    0.01    37.66.31.214    nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=management-cons
-2-0 2397    0/2/2   W   1.12    2   0   0.0 0.03    0.03    47.198.202.199  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=cash-management-tre
-2-0 2397    0/4/4   W   1.22    0   0   0.0 0.07    0.07    34.226.89.140   nl.careersinfinances.com:443    GET /job/viewjob/34543767/bijbaan-vulploegmedewerker-avond.html
-2-0 2397    0/2/2   W   1.02    5   0   0.0 0.04    0.04    31.208.58.133   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=contro
-2-0 2397    0/2/2   W   1.13    3   0   0.0 0.05    0.05    74.7.241.58 www.careersinfinances.com:443   GET /job/?categories=andere-financiele-diensten&categories=bank
-2-0 2397    0/3/3   W   1.19    1   0   0.0 0.05    0.05    54.84.102.81    www.salestopjobs.com:443    GET /job/?categories=retail-franchising&categories=klantendiens
-2-0 2397    0/2/2   W   0.80    13  0   0.0 0.03    0.03    86.223.255.29   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=makela
-2-0 2397    0/1/1   W   0.74    18  0   0.0 0.03    0.03    41.254.65.75    nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-2-0 2397    0/3/3   W   1.15    1   0   0.0 0.06    0.06    118.103.231.17  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-2-0 2397    0/6/6   W   1.11    3   0   0.0 0.05    0.05    99.253.24.230   nl.careersinfinances.com:443    GET /job/viewjob/34243699/senior-accountant.html?categories=onr
-2-0 2397    0/2/2   W   1.05    4   0   0.0 0.03    0.03    94.57.98.230    www.techtopjobs.com:443 GET /job/viewjob/1608515/senior-manager-legal-compliance.html?c
-2-0 2397    0/4/4   W   1.06    5   0   0.0 0.05    0.05    100.28.57.133   www.jobinhoreca.com:443 GET /job/viewjob/2929985/monteur.html?categories=receptie&categ
-2-0 2397    0/2/2   W   0.97    8   0   0.0 0.03    0.03    89.81.32.252    nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=auditing&catego
-2-0 2397    0/1/1   W   0.73    18  0   0.0 0.02    0.02    90.77.129.251   nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=makelarij&categorie
-2-0 2397    0/2/2   R   0.87    12  8049    0.0 0.05    0.05    5.183.131.24        
-2-0 2397    0/1/1   W   1.01    5   0   0.0 0.02    0.02    200.104.180.159 nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=bank
-2-0 2397    0/2/2   W   1.23    0   0   0.0 0.03    0.03    90.69.168.131   nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=accountancy-boekhou
-2-0 2397    0/3/3   W   1.24    0   0   0.0 0.06    0.06    52.204.174.139  www.careersinfinances.com:443   GET /job/?categories=verzekeringen-schadebeheer&categories=audi
-2-0 2397    0/4/4   W   1.04    4   0   0.0 0.08    0.08    189.69.212.177  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&company=undutch
-2-0 2397    0/2/2   W   1.14    2   0   0.0 0.04    0.04    8.217.158.207   nl.careersinfinances.com:443    GET /job/viewjob/33964148/scooter-delivery-driver-at.html?categ
-2-0 2397    0/5/5   W   1.21    1   0   0.0 0.07    0.07    3.226.34.98 www.nieuwejobs.com:443  GET /job/?categories=gezondheid&categories=financieel&categorie
-2-0 2397    0/3/3   W   0.95    9   0   0.0 0.05    0.05    34.227.156.153  www.salestopjobs.com:443    GET /job/?categories=purchaser-inkoper&company=valuement&locati
-2-0 2397    0/2/2   W   0.98    8   0   0.0 0.02    0.02    52.167.144.176  nl.nieuwejobs.com:443   GET /job/?q=2520edelia_elec+consumption%253+Read%2520edelia_gas
-2-0 2397    0/3/3   W   0.68    18  0   0.0 0.05    0.05    62.235.208.105  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=andere-
-2-0 2397    0/3/3   W   1.11    3   0   0.0 0.04    0.04    3.210.223.61    www.careersinfinances.com:443   GET /job/?categories=management-consultancy&company=kruidvat&lo
-3-0 4468    0/0/1   _   0.03    13  18256   0.0 0.00    0.02    52.167.144.174      
-3-0 4468    0/0/1   _   0.04    13  22087   0.0 0.00    0.02    18.209.137.234      
-3-0 4468    0/0/1   _   0.03    13  18737   0.0 0.00    0.02    52.204.71.8     
-3-0 4468    0/0/1   _   0.02    13  13473   0.0 0.00    0.03    154.61.85.3     
-3-0 4468    0/1/1   _   0.03    11  3   0.0 0.00    0.00    202.46.62.8     
-3-0 4468    0/0/0   W   0.00    11  0   0.0 0.00    0.00    196.239.155.18  nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=accountancy-boekhou
-3-0 4468    0/0/0   W   0.00    12  0   0.0 0.00    0.00    43.173.175.57   nl.careersinfinances.com:443    GET /job/viewjob/34451561/werkvoorbereider-nieuwbouw-renovatie.
-3-0 4468    0/0/0   W   0.00    10  0   0.0 0.00    0.00    186.35.136.87   nl.careersinfinances.com:443    GET /job/?categories=banking&categories=auditing&categories=bel
-3-0 4468    0/0/0   W   0.00    11  0   0.0 0.00    0.00    34.193.2.57 www.jobinhoreca.com:443 GET /job/?categories=student&categories=schoonmaakpersoneel&cat
-3-0 4468    0/1/1   _   0.03    12  0   0.0 0.00    0.00    35.168.238.50       
-3-0 4468    0/0/0   W   0.00    10  0   0.0 0.00    0.00    115.164.119.123 nl.careersinfinances.com:443    GET /job/viewjob/34539537/callcenter-medewerker-lyon.html?categ
-3-0 4468    0/0/0   W   0.00    6   0   0.0 0.00    0.00    90.227.150.60   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-3-0 4468    0/0/0   W   0.00    5   0   0.0 0.00    0.00    24.252.144.7    nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-3-0 4468    0/0/0   W   0.00    6   0   0.0 0.00    0.00    207.46.13.141   www.jobinhoreca.com:443 GET /job/?company=vermetten-wegenbouw&locations=limburg&locatio
-3-0 4468    0/0/0   W   0.00    5   0   0.0 0.00    0.00    113.19.181.150  nl.careersinfinances.com:443    GET /accounts/login/?categories=controlling&categories=banking&
-3-0 4468    0/0/0   W   0.00    5   0   0.0 0.00    0.00    54.80.73.122    www.techtopjobs.com:443 GET /job/?company=woonzorggroep-gvo&locations=namen&locations=b
-3-0 4468    0/0/0   W   0.00    2   0   0.0 0.00    0.00    80.246.94.30    nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=auditi
-3-0 4468    0/0/0   W   0.00    3   0   0.0 0.00    0.00    190.237.8.158   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-3-0 4468    0/0/0   W   0.00    3   0   0.0 0.00    0.00    190.148.33.108  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=onroerend-goed-faci
-3-0 4468    0/0/0   W   0.00    3   0   0.0 0.00    0.00    77.176.37.235   nl.careersinfinances.com:443    GET /job/viewjob/34539105/procesoperator-chemische-industrie.ht
-3-0 4468    0/0/0   W   0.00    2   0   0.0 0.00    0.00    194.230.144.94  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=managem
-3-0 4468    0/1/1   _   0.09    2   0   0.0 0.01    0.01    73.46.10.221        
-3-0 4468    0/1/1   _   0.10    2   0   0.0 0.01    0.01    199.85.232.225      
-3-0 4468    0/1/1   _   0.09    2   0   0.0 0.01    0.01    193.177.211.156     
-3-0 4468    0/0/0   R   0.00    3   0   0.0 0.00    0.00    109.81.113.84       
-3-0 4468    0/0/0   W   0.00    2   0   0.0 0.00    0.00    112.202.122.93  nl.careersinfinances.com:443    GET /job/?categories=banking&categories=makelarij&categories=au
-3-0 4468    0/0/0   W   0.00    3   0   0.0 0.00    0.00    40.77.167.51    www.salestopjobs.com:443    GET /job/sol/?j=927645 HTTP/1.1
-3-0 4468    0/0/0   W   0.00    2   0   0.0 0.00    0.00    37.65.19.158    nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=banking
-3-0 4468    0/0/0   W   0.00    2   0   0.0 0.00    0.00    120.140.5.15    nl.careersinfinances.com:443    GET /job/viewjob/34441323/account-support-german.html?categorie
-3-0 4468    0/0/0   W   0.00    1   0   0.0 0.00    0.00    185.12.21.158   www.nieuwejobs.com:443  GET /job/viewjob/9162324/virtual-work-online-data-analyst-in-be
-3-0 4468    0/1/1   _   0.11    2   16  0.0 0.03    0.03    178.116.178.230     
-3-0 4468    0/0/0   W   0.00    1   0   0.0 0.00    0.00    18.211.148.239  www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-3-0 4468    0/0/0   W   0.00    0   0   0.0 0.00    0.00    54.92.171.106   www.jobinhoreca.com:443 GET /job/?categories=horeca-management&categories=student&categ
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    2.215.124.101       
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    95.111.15.49        
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    213.57.30.11        
-3-0 4468    0/0/0   W   0.00    0   0   0.0 0.00    0.00    3.222.190.107   www.jobinhoreca.com:443 GET /job/?categories=reizen-toerisme&categories=schoonmaakperso
-3-0 4468    0/0/0   W   0.00    0   0   0.0 0.00    0.00    23.23.99.55 nl.nieuwejobs.com:443   GET /job/viewjob/67604014/machinist-heggenslagmaaier.html?categ
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    94.57.48.155        
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    41.201.207.49       
-3-0 4468    0/1/1   _   0.14    0   0   0.0 0.00    0.00    94.109.50.97        
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    201.113.201.108     
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    186.30.69.178       
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    102.69.208.102      
-3-0 4468    0/0/0   W   0.00    0   0   0.0 0.00    0.00    81.82.197.147   www.nieuwejobs.com:443  GET /server-status HTTP/1.1
-3-0 4468    0/0/0   R   0.00    0   0   0.0 0.00    0.00    81.82.197.147       
-4-0 2399    0/0/0   W   0.00    17  0   0.0 0.00    0.00    190.157.234.6   nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=belastingadvies&catego
-4-0 2399    0/0/0   R   0.00    18  0   0.0 0.00    0.00    223.205.186.46      
-4-0 2399    0/1/1   W   0.19    14  0   0.0 0.00    0.00    190.82.181.30   nl.careersinfinances.com:443    GET /accounts/login/?categories=andere-financiele-diensten&cate
-4-0 2399    0/2/2   _   0.46    9   0   0.0 0.01    0.01    103.117.194.30      
-4-0 2399    0/1/1   W   0.19    14  0   0.0 0.01    0.01    46.110.178.159  nl.careersinfinances.com:443    GET /job/?categories=makelarij&categories=controlling&categorie
-4-0 2399    0/2/2   _   0.52    1   13106   0.0 0.12    0.12    202.46.62.1     
-4-0 2399    0/1/1   W   0.40    2   0   0.0 0.00    0.00    171.6.235.107   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-4-0 2399    0/1/1   _   0.50    4   19316   0.0 0.02    0.02    47.55.47.54     
-4-0 2399    0/1/1   _   0.51    3   19407   0.0 0.02    0.02    60.54.182.56        
-4-0 2399    0/1/1   _   0.50    6   17768   0.0 0.02    0.02    52.4.213.199        
-4-0 2399    0/1/1   _   0.48    7   16288   0.0 0.02    0.02    37.66.45.144        
-4-0 2399    0/0/0   W   0.00    20  0   0.0 0.00    0.00    185.24.61.224   nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=auditing&catego
-4-0 2399    0/0/0   W   0.00    17  0   0.0 0.00    0.00    201.183.55.3    nl.careersinfinances.com:443    GET /job/?categories=makelarij&categories=management-consultanc
-4-0 2399    0/1/1   _   0.46    9   8498    0.0 0.02    0.02    98.82.38.120        
-4-0 2399    0/0/0   W   0.00    17  0   0.0 0.00    0.00    35.145.253.88   nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=beurshandel&company
-4-0 2399    0/1/1   _   0.49    6   11705   0.0 0.02    0.02    100.29.63.24        
-4-0 2399    0/1/1   W   0.31    8   0   0.0 0.01    0.01    190.121.186.163 nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=makelar
-4-0 2399    0/1/1   _   0.53    1   15385   0.0 0.01    0.01    186.10.191.238      
-4-0 2399    0/0/0   W   0.00    16  0   0.0 0.00    0.00    113.191.122.240 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-4-0 2399    0/1/1   R   0.14    10  14127   0.0 0.02    0.02    46.63.75.185        
-4-0 2399    0/1/1   _   0.50    5   11171   0.0 0.02    0.02    34.225.24.180       
-4-0 2399    0/1/1   W   0.16    14  0   0.0 0.02    0.02    90.120.204.234  nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=banking&categories=ver
-4-0 2399    0/1/1   W   0.15    14  0   0.0 0.02    0.02    185.231.255.81  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=make
-4-0 2399    0/2/2   _   0.50    5   10170   0.0 0.05    0.05    74.7.227.189        
-4-0 2399    0/1/1   W   0.24    14  0   0.0 0.02    0.02    161.18.94.90    nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=contro
-4-0 2399    0/0/0   W   0.00    7   0   0.0 0.00    0.00    185.178.247.117 nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=manage
-4-0 2399    0/2/2   _   0.47    9   0   0.0 0.03    0.03    103.117.194.30      
-4-0 2399    0/1/1   W   0.17    13  0   0.0 0.02    0.02    189.159.169.19  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=beur
-4-0 2399    0/1/1   _   0.40    13  23305   0.0 0.02    0.02    202.46.62.36        
-4-0 2399    0/1/1   W   0.22    14  0   0.0 0.02    0.02    85.158.184.192  nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=andere
-4-0 2399    0/2/2   _   0.53    1   13313   0.0 0.03    0.03    52.167.144.179      
-4-0 2399    0/2/2   _   0.51    3   8810    0.0 0.05    0.05    154.61.85.3     
-4-0 2399    0/1/1   W   0.31    9   0   0.0 0.02    0.02    177.239.91.12   nl.careersinfinances.com:443    GET /job/viewjob/34538314/machineoperator-5-ploegen.html?catego
-4-0 2399    0/1/1   _   0.42    11  23074   0.0 0.02    0.02    196.238.39.165      
-4-0 2399    0/1/1   W   0.32    8   0   0.0 0.01    0.01    38.226.159.170  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=verzekeringen-schad
-4-0 2399    0/2/2   _   0.52    2   7410    0.0 0.05    0.05    3.223.134.5     
-4-0 2399    0/1/1   W   0.40    3   0   0.0 0.02    0.02    154.61.85.3 www.nieuwejobs.com:443  GET /job/?q=&locations=oost-vlaanderen&categories=directie&page
-4-0 2399    0/1/1   W   0.25    13  0   0.0 0.01    0.01    190.161.222.99  nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=accountancy-boekhoudin
-4-0 2399    0/1/1   W   0.25    14  0   0.0 0.01    0.01    137.255.163.38  nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=belastingadvies&cat
-4-0 2399    0/1/1   W   0.25    13  0   0.0 0.02    0.02    102.203.84.172  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-4-0 2399    0/2/2   _   0.47    8   0   0.0 0.03    0.03    103.117.194.30      
-4-0 2399    0/1/1   W   0.24    13  0   0.0 0.01    0.01    200.43.135.29   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=beur
-4-0 2399    0/2/2   _   0.46    9   0   0.0 0.03    0.03    185.24.60.25        
-4-0 2399    0/1/1   W   0.32    9   0   0.0 0.03    0.03    52.7.33.248 www.careersinfinances.com:443   GET /job/?categories=banking&company=hr-flux&locations=limburg&
-4-0 2399    0/2/2   _   0.46    9   0   0.0 0.02    0.02    77.30.115.13        
-4-0 2399    0/2/2   _   0.46    9   0   0.0 0.03    0.03    103.117.194.30      
-4-0 2399    0/1/1   W   0.27    9   0   0.0 0.03    0.03    195.5.58.71 nl.careersinfinances.com:443    GET /job/viewjob/34539145/productie-medewerker-gevraagd.html?ca
-4-0 2399    0/2/2   _   0.42    12  0   0.0 0.03    0.03    46.251.211.72       
-4-0 2399    0/2/2   _   0.48    6   8551    0.0 0.03    0.03    202.46.62.60        
-4-0 2399    0/1/1   W   0.28    8   0   0.0 0.02    0.02    38.158.202.205  nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=verzekeringen-schad
-4-0 2399    0/2/2   _   0.46    9   0   0.0 0.03    0.03    154.111.34.185      
-4-0 2399    0/1/1   _   0.47    8   23968   0.0 0.01    0.01    196.187.134.80      
-4-0 2399    0/1/1   W   0.18    14  0   0.0 0.02    0.02    201.188.93.20   nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=verzekeringen-schadebe
-4-0 2399    0/1/1   _   0.40    7   20162   0.0 0.01    0.01    52.167.144.199      
-4-0 2399    0/1/1   _   0.42    12  21843   0.0 0.03    0.03    158.140.65.190      
-4-0 2399    0/1/1   _   0.42    11  23360   0.0 0.02    0.02    202.46.62.24        
-4-0 2399    0/1/1   _   0.41    12  22495   0.0 0.03    0.03    154.61.85.3     
-4-0 2399    0/1/1   _   0.48    7   27374   0.0 0.02    0.02    52.167.144.199      
-4-0 2399    0/2/2   _   0.40    13  1   0.0 0.03    0.03    88.194.2.41     
-4-0 2399    0/1/1   _   0.42    11  19718   0.0 0.02    0.02    106.71.55.223       
-4-0 2399    0/1/1   W   0.22    14  0   0.0 0.02    0.02    84.232.66.118   nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=belastingadvies&cat
-4-0 2399    0/1/1   R   0.37    9   15144   0.0 0.01    0.01    178.51.250.66       
-4-0 2399    0/1/1   W   0.23    14  0   0.0 0.02    0.02    37.248.183.110  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=bank
-4-0 2399    0/0/0   W   0.00    14  0   0.0 0.00    0.00    99.217.245.108  nl.careersinfinances.com:443    GET /job/viewjob/34522055/scooter-rider-start-immediately.html?
-5-0 4243    0/3/3   R   0.73    1   13494   0.0 0.05    0.05    37.103.111.214      
-5-0 4243    0/2/2   W   0.27    14  0   0.0 0.03    0.03    37.142.13.91    nl.careersinfinances.com:443    GET /accounts/login/?categories=cash-management-treasury&catego
-5-0 4243    0/1/1   W   0.28    14  0   0.0 0.02    0.02    188.85.62.10    nl.careersinfinances.com:443    GET /job/viewjob/34539518/operator-opleiding-tot.html?categorie
-5-0 4243    0/1/1   W   0.12    20  0   0.0 0.02    0.02    185.24.60.96    nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=accoun
-5-0 4243    0/2/2   W   0.60    6   0   0.0 0.03    0.03    52.3.127.170    www.careersinfinances.com:443   GET /job/?categories=auditing&categories=banking&categories=bel
-5-0 4243    0/2/2   R   0.27    15  355 0.0 0.22    0.22    75.177.15.115       
-5-0 4243    0/2/2   W   0.64    3   0   0.0 0.05    0.05    176.112.111.40  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-5-0 4243    0/1/1   W   0.66    3   0   0.0 0.03    0.03    74.7.242.54 nl.careersinfinances.com:443    GET /job/viewjob/34546562/transportplanner.html HTTP/1.1
-5-0 4243    0/1/1   W   0.38    11  0   0.0 0.02    0.02    94.68.18.12 nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-5-0 4243    0/3/3   W   0.50    11  0   0.0 0.03    0.03    52.200.142.199  www.salestopjobs.com:443    GET /job/?categories=sales-management&company=valuement&locatio
-5-0 4243    0/1/1   W   0.62    4   0   0.0 0.01    0.01    3.89.170.186    www.salestopjobs.com:443    GET /job/?categories=winkelverkoop&categories=sales-buitendiens
-5-0 4243    0/1/1   W   0.32    13  0   0.0 0.02    0.02    176.250.147.11  nl.careersinfinances.com:443    GET /job/?categories=auditing&locations=limburg&locations=noord
-5-0 4243    0/1/1   W   0.32    12  0   0.0 0.02    0.02    182.62.186.179  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=banking
-5-0 4243    0/1/1   W   0.42    12  0   0.0 0.02    0.02    82.56.150.150   www.salestopjobs.com:443    GET /job/viewjob/1042077/superviseur-entrepot-en-cdi.html?page=
-5-0 4243    0/0/0   W   0.00    20  0   0.0 0.00    0.00    181.42.22.45    nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-5-0 4243    0/2/2   W   0.65    4   0   0.0 0.04    0.04    35.173.18.61    nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=onroerend-goed-
-5-0 4243    0/2/2   W   0.28    14  0   0.0 0.03    0.03    5.80.7.101  nl.careersinfinances.com:443    GET /job/viewjob/34538634/lijnoperator-in-zoetermeer.html?categ
-5-0 4243    0/1/1   R   0.48    12  22508   0.0 0.02    0.02    49.237.94.51        
-5-0 4243    0/2/2   W   0.71    2   0   0.0 0.05    0.05    52.200.142.199  www.careersinfinances.com:443   GET /job/?company=kruidvat&locations=oost-vlaanderen&locations=
-5-0 4243    0/1/1   W   0.48    12  0   0.0 0.02    0.02    18.206.47.187   www.salestopjobs.com:443    GET /job/?categories=winkelverkoop&company=valuement&locations=
-5-0 4243    0/1/1   R   0.50    11  22932   0.0 0.03    0.03    69.132.53.153       
-5-0 4243    0/2/2   R   0.74    0   11895   0.0 0.05    0.05    208.80.166.22       
-5-0 4243    0/2/2   R   0.75    0   15019   0.0 0.04    0.04    186.151.101.44      
-5-0 4243    0/1/1   W   0.55    7   0   0.0 0.01    0.01    44.194.139.149  www.jobinhoreca.com:443 GET /job/?categories=reizen-toerisme&categories=horeca-manageme
-5-0 4243    0/2/2   R   0.53    9   0   0.0 0.03    0.03    90.165.255.25       
-5-0 4243    0/1/1   W   0.57    5   0   0.0 0.03    0.03    196.238.207.214 nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=control
-5-0 4243    0/2/2   W   0.28    13  0   0.0 0.02    0.02    187.195.104.80  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=make
-5-0 4243    0/2/2   R   0.74    0   7020    0.0 0.05    0.05    119.159.249.43      
-5-0 4243    0/2/2   W   0.57    6   0   0.0 0.03    0.03    189.138.43.115  nl.careersinfinances.com:443    GET /job/viewjob/34539535/vacature-chauffeurs-avond.html?catego
-5-0 4243    0/1/1   W   0.23    13  0   0.0 0.00    0.00    176.116.62.251  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=onroere
-5-0 4243    0/2/2   W   0.33    13  0   0.0 0.02    0.02    82.225.159.136  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=cont
-5-0 4243    0/1/1   W   0.61    5   0   0.0 0.02    0.02    18.215.112.101  www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-5-0 4243    0/1/1   W   0.63    4   0   0.0 0.02    0.02    44.195.50.71    nl.nieuwejobs.com:443   GET /job/?categories=bouw&categories=juridisch&categories=admin
-5-0 4243    0/1/1   W   0.56    6   0   0.0 0.02    0.02    38.58.66.192    nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=controlling&categor
-5-0 4243    0/1/1   W   0.51    7   0   0.0 0.02    0.02    181.42.176.240  nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=control
-5-0 4243    0/2/2   W   0.73    0   0   0.0 0.04    0.04    123.20.24.62    nl.careersinfinances.com:443    GET /job?categories=beurshandel&locations=flevoland&locations=n
-5-0 4243    0/2/2   W   0.61    5   0   0.0 0.03    0.03    3.213.213.161   www.careersinfinances.com:443   GET /job/?categories=auditing&company=kruidvat&locations=antwer
-5-0 4243    0/0/0   W   0.00    27  0   0.0 0.00    0.00    189.232.166.191 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-5-0 4243    0/2/2   W   0.53    8   0   0.0 0.02    0.02    83.31.138.23    nl.careersinfinances.com:443    GET /job/viewjob/34539529/product-owner.html?categories=onroere
-5-0 4243    0/2/2   W   0.27    15  0   0.0 0.03    0.03    87.171.191.239  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-5-0 4243    0/1/1   W   0.40    11  0   0.0 0.02    0.02    181.43.211.162  nl.careersinfinances.com:443    GET /accounts/login/?categories=banking&categories=controlling&
-5-0 4243    0/1/1   W   0.17    18  0   0.0 0.01    0.01    148.227.67.86   nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-5-0 4243    0/3/3   W   0.65    3   0   0.0 0.42    0.42    185.56.194.118  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-5-0 4243    0/2/2   W   0.56    6   0   0.0 0.12    0.12    37.152.143.227  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=cash
-5-0 4243    0/3/3   W   0.71    2   0   0.0 0.73    0.73    54.88.84.219    www.jobinhoreca.com:443 GET /job/?categories=zaalpersoneel&categories=keukenpersoneel&c
-5-0 4243    0/1/1   W   0.58    5   0   0.0 0.02    0.02    212.241.12.147  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-5-0 4243    0/2/2   R   0.56    7   11645   0.0 0.03    0.03    90.168.16.122       
-5-0 4243    0/3/3   _   0.76    0   11166   0.0 0.07    0.07    40.77.167.123       
-5-0 4243    0/4/4   W   0.75    0   0   0.0 0.03    0.03    52.167.144.176  nl.nieuwejobs.com:443   GET /job/viewjob/67576548/uitvoerder-civiel-techniek-2gw-landst
-5-0 4243    0/2/2   W   0.33    13  0   0.0 0.02    0.02    184.22.101.111  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-5-0 4243    0/1/1   W   0.63    4   0   0.0 0.03    0.03    52.167.144.179  www.careersinfinances.com:443   GET /job/company/synergie-belgium/in-limburg/ HTTP/1.1
-5-0 4243    0/1/1   W   0.21    17  0   0.0 0.01    0.01    45.123.220.153  nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=verzekeringen-s
-5-0 4243    0/2/2   R   0.70    3   10099   0.0 0.03    0.03    94.236.146.253      
-5-0 4243    0/2/2   W   0.33    13  0   0.0 0.02    0.02    40.77.167.51    www.salestopjobs.com:443    GET /job/?page=36&st=381202 HTTP/1.1
-5-0 4243    0/2/2   W   0.33    13  0   0.0 0.01    0.01    171.5.227.227   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=onro
-5-0 4243    0/1/1   R   0.65    4   19455   0.0 0.02    0.02    223.239.82.87       
-5-0 4243    0/2/2   W   0.71    2   0   0.0 0.03    0.03    40.77.167.123   www.techtopjobs.com:443 GET /job/viewjob/992570/service-advisor-jette.html?page=73 HTTP
-5-0 4243    0/1/1   W   0.50    11  0   0.0 0.02    0.02    3.219.80.71 www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-5-0 4243    0/1/1   W   0.72    1   0   0.0 0.02    0.02    178.51.37.52    nl.careersinfinances.com:443    GET /job/?categories=management-consultancy&categories=accounta
-5-0 4243    0/2/2   W   0.48    11  0   0.0 0.01    0.01    188.237.39.52   nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=banking&categories=beu
-5-0 4243    0/1/1   R   0.55    6   8055    0.0 0.00    0.00    76.36.211.156       
-5-0 4243    0/1/1   W   0.55    6   0   0.0 0.00    0.00    45.147.205.221  nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=banking&categories=
-5-0 4243    0/1/1   R   0.74    0   21191   0.0 0.01    0.01    81.162.244.195      
-5-0 4243    0/0/0   W   0.00    21  0   0.0 0.00    0.00    93.173.187.130  nl.careersinfinances.com:443    GET /job/viewjob/34532320/productiemedewerker.html?categories=c
-6-0 4316    0/1/1   W   0.60    10  0   0.0 0.03    0.03    83.218.245.8    nl.careersinfinances.com:443    GET /job/?categories=makelarij&categories=cash-management-treas
-6-0 4316    0/2/2   W   0.76    7   0   0.0 0.03    0.03    52.167.144.199  www.nieuwejobs.com:443  GET /job/?q=2027%25E5%25B9%25B4%25E5%25A5%25B3%25E8%25B6%25B3%2
-6-0 4316    0/1/1   W   0.92    0   0   0.0 0.02    0.02    24.250.26.229   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=audi
-6-0 4316    0/1/1   W   0.50    13  0   0.0 0.02    0.02    185.24.61.139   nl.careersinfinances.com:443    GET /job/viewjob/34538687/operator-amsterdam.html?categories=ca
-6-0 4316    0/2/2   R   0.99    0   11401   0.0 0.04    0.04    202.62.79.136       
-6-0 4316    0/2/2   W   0.98    0   0   0.0 0.05    0.05    40.77.167.51    www.salestopjobs.com:443    GET /job/?page=58&st=375054 HTTP/1.1
-6-0 4316    0/2/2   W   0.78    6   0   0.0 0.03    0.03    122.174.228.243 www.careersinfinances.com:443   GET /job/viewjob/1296541/full-stack-java-developer-angular.html
-6-0 4316    0/1/1   W   0.84    4   0   0.0 0.03    0.03    151.25.164.87   nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=belasti
-6-0 4316    0/1/1   W   0.91    0   0   0.0 0.02    0.02    3.211.105.134   www.salestopjobs.com:443    GET /job/?categories=winkelverkoop&company=valuement&locations=
-6-0 4316    0/2/2   R   1.01    0   10495   0.0 0.05    0.05    87.228.238.77       
-6-0 4316    0/2/2   W   0.86    4   0   0.0 0.04    0.04    66.249.76.36    www.careersinfinances.com:443   GET /job/viewjob/108891/controller-operator-5-ploegen.html HTTP
-6-0 4316    0/2/2   W   0.91    0   0   0.0 0.04    0.04    145.40.159.30   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-6-0 4316    0/4/4   W   0.57    11  0   0.0 0.06    0.06    201.176.87.119  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-6-0 4316    0/2/2   W   0.86    4   0   0.0 0.05    0.05    66.249.92.165   www.nieuwejobs.com:443  GET /job/?company=sodexo-belgie&locations=henegouwen&categories
-6-0 4316    0/2/2   W   0.42    18  0   0.0 0.03    0.03    69.143.109.158  nl.careersinfinances.com:443    GET /job/?categories=belastingadvies&categories=controlling&cat
-6-0 4316    0/1/1   W   0.63    8   0   0.0 0.02    0.02    102.206.242.185 nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=banking
-6-0 4316    0/2/2   R   0.93    0   26109   0.0 0.03    0.03    191.115.111.33      
-6-0 4316    0/1/1   W   0.73    7   0   0.0 0.02    0.02    92.190.191.180  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=cont
-6-0 4316    0/2/2   R   0.82    5   0   0.0 0.03    0.03    84.109.80.94        
-6-0 4316    0/4/4   W   0.80    5   0   0.0 0.06    0.06    103.75.49.137   nl.careersinfinances.com:443    GET /job/viewjob/34532320/productiemedewerker.html?categories=c
-6-0 4316    0/1/1   W   0.74    5   0   0.0 0.03    0.03    192.223.121.156 nl.careersinfinances.com:443    GET /job/viewjob/34294476/aankomend-monteur-gas-water.html?cate
-6-0 4316    0/3/3   W   0.75    7   0   0.0 0.04    0.04    43.172.198.22   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=make
-6-0 4316    0/3/3   W   0.80    5   0   0.0 0.07    0.07    142.113.141.54  nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=accountancy-boekhoudin
-6-0 4316    0/1/1   W   0.65    9   0   0.0 0.02    0.02    185.24.60.90    nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=banking
-6-0 4316    0/2/2   W   0.89    2   0   0.0 0.05    0.05    47.203.50.166   nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=beurshandel&company
-6-0 4316    0/4/4   R   0.85    4   8387    0.0 0.16    0.16    88.247.64.217       
-6-0 4316    0/2/2   W   0.66    9   0   0.0 0.03    0.03    18.215.77.19    www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-6-0 4316    0/2/2   W   0.69    9   0   0.0 0.03    0.03    84.194.72.14    www.careersinfinances.com:443   GET /job/viewjob/245763/juridisch-adviseur-lichamelijke-schade-
-6-0 4316    0/3/3   W   0.96    0   0   0.0 0.05    0.05    40.77.167.123   www.techtopjobs.com:443 GET /job/?page=19&st=882720 HTTP/1.1
-6-0 4316    0/3/3   W   0.88    3   0   0.0 0.07    0.07    37.223.22.190   nl.careersinfinances.com:443    GET /job/viewjob/34539395/chauffeur-leerlingenvervoer-moordrech
-6-0 4316    0/5/5   R   1.01    0   10275   0.0 0.07    0.07    151.73.159.19       
-6-0 4316    0/1/1   W   0.61    9   0   0.0 0.03    0.03    193.239.73.218  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=andere-financiele-d
-6-0 4316    0/3/3   W   0.75    6   0   0.0 0.05    0.05    51.171.35.188   nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=belastingadvies&cat
-6-0 4316    0/1/1   W   0.89    3   0   0.0 0.02    0.02    8.217.186.13    www.techtopjobs.com:443 GET /job/viewjob/1615708/quality-manager-voeding.html?categorie
-6-0 4316    0/2/2   W   0.73    7   0   0.0 0.04    0.04    54.167.32.123   www.careersinfinances.com:443   GET /job/?company=hr-flux&locations=oost-vlaanderen&locations=b
-6-0 4316    0/2/2   W   0.93    0   0   0.0 0.04    0.04    113.179.178.245 nl.careersinfinances.com:443    GET /job?categories=andere-financiele-diensten&categories=makel
-6-0 4316    0/2/2   R   0.82    5   8137    0.0 0.03    0.03    24.5.241.240        
-6-0 4316    0/1/1   W   0.82    5   0   0.0 0.04    0.04    116.96.212.80   nl.careersinfinances.com:443    GET /job?categories=cash-management-treasury&locations=noord-br
-6-0 4316    0/2/2   W   0.59    11  0   0.0 0.03    0.03    52.45.92.83 nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-6-0 4316    0/2/2   W   0.71    7   0   0.0 0.05    0.05    52.44.148.203   www.techtopjobs.com:443 GET /job/?categories=materiaalkunde&company=woonzorggroep-gvo&l
-6-0 4316    0/2/2   W   0.73    6   0   0.0 0.02    0.02    195.93.138.200  www.jobinhoreca.com:443 GET /job/viewjob/2922002/dossierbeheerder.html?page=86 HTTP/1.1
-6-0 4316    0/1/1   W   0.46    16  0   0.0 0.01    0.01    75.53.188.124   nl.careersinfinances.com:443    GET /job/viewjob/33964367/courier-parttime.html?categories=ande
-6-0 4316    0/1/1   W   0.35    23  0   0.0 0.02    0.02    115.164.119.212 nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=makelar
-6-0 4316    0/1/1   R   0.94    0   28381   0.0 0.03    0.03    31.171.66.130       
-6-0 4316    0/4/4   W   0.69    8   0   0.0 0.05    0.05    111.95.172.119  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-6-0 4316    0/1/1   W   0.81    4   0   0.0 0.03    0.03    41.210.155.174  nl.careersinfinances.com:443    GET /job/viewjob/34523952/veva-soldaat-chauffeur-wissellaadsyst
-6-0 4316    0/1/1   W   0.83    4   0   0.0 0.01    0.01    14.242.157.220  nl.careersinfinances.com:443    GET /job?categories=andere-financiele-diensten&categories=cash-
-6-0 4316    0/1/1   W   0.74    7   0   0.0 0.03    0.03    66.249.76.36    www.careersinfinances.com:443   GET /job/viewjob/290494/hr-officer.html HTTP/1.1
-6-0 4316    0/1/1   W   0.87    3   0   0.0 0.03    0.03    2.214.12.142    nl.careersinfinances.com:443    GET /job/viewjob/34533512/junior-sales-account-executive.html?c
-6-0 4316    0/1/1   W   0.76    6   0   0.0 0.02    0.02    43.173.182.142  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&locations=flevoland&locations=
-6-0 4316    0/0/0   W   0.00    28  0   0.0 0.00    0.00    181.42.186.205  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=make
-6-0 4316    0/1/1   W   0.69    8   0   0.0 0.02    0.02    54.85.7.119 www.jobinhoreca.com:443 GET /job/?categories=keukenpersoneel&categories=student&categor
-6-0 4316    0/2/2   W   0.60    11  0   0.0 0.02    0.02    34.206.212.24   www.jobinhoreca.com:443 GET /job/?categories=student&categories=horeca-management&categ
-6-0 4316    0/1/1   W   0.90    1   0   0.0 0.02    0.02    34.233.219.155  www.nieuwejobs.com:443  GET /job/?categories=hr&categories=toerisme&categories=veilighe
-6-0 4316    0/1/1   W   0.39    20  0   0.0 0.02    0.02    8.217.209.210   www.techtopjobs.com:443 GET /job/viewjob/1616572/prijsspecialist.html?categories=ander-
-6-0 4316    0/1/1   W   0.71    7   0   0.0 0.02    0.02    212.70.110.9    nl.careersinfinances.com:443    GET /job/?categories=banking&categories=controlling&categories=
-6-0 4316    0/1/1   W   0.90    0   0   0.0 0.01    0.01    34.206.212.24   www.salestopjobs.com:443    GET /job/?categories=klantendienst&company=valuement&locations=
-6-0 4316    0/2/2   W   0.84    3   0   0.0 0.03    0.03    154.127.181.16  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=bela
-6-0 4316    0/1/1   W   0.60    8   0   0.0 0.02    0.02    80.64.26.163    nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-6-0 4316    0/1/1   W   0.82    5   0   0.0 0.01    0.01    52.200.93.170   www.nieuwejobs.com:443  GET /job/?categories=ict&categories=bouw&categories=gezondheid&
-6-0 4316    0/1/1   W   0.42    18  0   0.0 0.00    0.00    149.18.10.232   nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=auditi
-6-0 4316    0/1/1   W   0.92    0   0   0.0 0.02    0.02    91.126.178.76   nl.careersinfinances.com:443    GET /job/viewjob/34539128/machinebediende-voedingsmiddelenindus
-6-0 4316    0/4/4   W   0.84    5   0   0.0 0.14    0.14    52.167.144.199  www.nieuwejobs.com:443  GET /job/?q=%25D7%25A6%25D7%259C%25D7%2599%25D7%259C+%25D7%259E
-6-0 4316    0/3/3   W   0.69    8   0   0.0 0.06    0.06    87.227.117.7    nl.careersinfinances.com:443    GET /job/?categories=cash-management-treasury&categories=auditi
-7-0 4388    0/2/2   _   0.58    3   10963   0.0 0.03    0.03    202.46.62.50        
-7-0 4388    0/1/1   W   0.25    16  0   0.0 0.02    0.02    49.237.165.166  nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-7-0 4388    0/1/1   W   0.49    0   0   0.0 0.02    0.02    176.186.136.1   nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-7-0 4388    0/1/1   W   0.41    13  0   0.0 0.02    0.02    102.152.157.109 nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=control
-7-0 4388    0/1/1   W   0.45    4   0   0.0 0.02    0.02    100.29.63.24    www.nieuwejobs.com:443  GET /job/?categories=onderwijs&categories=gezondheid&categories
-7-0 4388    0/2/2   _   0.63    1   0   0.0 0.03    0.03    79.43.0.198     
-7-0 4388    0/2/2   _   0.59    2   11371   0.0 0.05    0.05    17.246.19.178       
-7-0 4388    0/1/1   R   0.41    13  9659    0.0 0.02    0.02    110.159.103.154     
-7-0 4388    0/2/2   _   0.53    5   11295   0.0 0.05    0.05    100.29.155.89       
-7-0 4388    0/2/2   _   0.55    4   15907   0.0 0.03    0.03    181.43.34.75        
-7-0 4388    0/3/3   _   0.51    0   8024    0.0 0.06    0.06    183.82.113.251      
-7-0 4388    0/1/1   _   0.62    2   25588   0.0 0.02    0.02    18.214.251.19       
-7-0 4388    0/2/2   _   0.63    1   14948   0.0 0.03    0.03    52.167.144.174      
-7-0 4388    0/2/2   R   0.51    0   10809   0.0 0.04    0.04    44.213.36.21        
-7-0 4388    0/1/1   _   0.53    5   22366   0.0 0.02    0.02    43.172.196.82       
-7-0 4388    0/2/2   W   0.44    8   0   0.0 0.03    0.03    52.167.144.176  nl.nieuwejobs.com:443   GET /job/?q=2520edelia_elec+consumption%253+Read%2520edelia_gas
-7-0 4388    0/1/1   W   0.44    7   0   0.0 0.02    0.02    66.249.76.68    nl.careersinfinances.com:443    GET /job/viewjob/63665/toezichthouder-wabo.html HTTP/1.1
-7-0 4388    0/3/3   _   0.64    0   0   0.0 0.03    0.03    79.43.0.198     
-7-0 4388    0/2/2   _   0.54    4   11993   0.0 0.04    0.04    40.77.167.123       
-7-0 4388    0/0/0   W   0.00    25  0   0.0 0.00    0.00    189.229.227.154 nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-7-0 4388    0/1/1   W   0.49    0   0   0.0 0.03    0.03    70.53.162.235   nl.careersinfinances.com:443    GET /accounts/login/?categories=controlling&categories=manageme
-7-0 4388    0/4/4   _   0.64    1   16534   0.0 0.13    0.13    95.252.146.131      
-7-0 4388    0/2/2   _   0.58    3   13298   0.0 0.05    0.05    202.46.62.109       
-7-0 4388    0/1/1   _   0.60    2   21525   0.0 0.02    0.02    154.253.172.202     
-7-0 4388    0/1/1   W   0.48    1   0   0.0 0.02    0.02    115.133.215.105 nl.careersinfinances.com:443    GET /job/?categories=verzekeringen-schadebeheer&categories=onro
-7-0 4388    0/1/1   W   0.39    13  0   0.0 0.02    0.02    190.218.7.13    nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=onroerend-goed-facilit
-7-0 4388    0/1/1   _   0.51    6   17126   0.0 0.02    0.02    60.246.63.164       
-7-0 4388    0/1/1   W   0.33    14  0   0.0 0.02    0.02    213.8.71.210    nl.careersinfinances.com:443    GET /job/?categories=banking&categories=onroerend-goed-facility
-7-0 4388    0/2/2   W   0.43    11  0   0.0 0.03    0.03    24.53.28.158    nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=belastingadvies&cat
-7-0 4388    0/3/3   W   0.27    18  0   0.0 0.53    0.53    62.98.169.215   nl.careersinfinances.com:443    GET /job/?categories=accountancy-boekhouding&categories=belasti
-7-0 4388    0/1/1   W   0.46    4   0   0.0 0.02    0.02    109.255.48.24   nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=banking&categories=
-7-0 4388    0/1/1   W   0.07    20  0   0.0 0.01    0.01    86.133.250.8    nl.careersinfinances.com:443    GET /job/?categories=controlling&categories=accountancy-boekhou
-7-0 4388    0/1/1   _   0.54    5   15625   0.0 0.02    0.02    52.4.76.156     
-7-0 4388    0/1/1   _   0.55    4   17151   0.0 0.03    0.03    66.249.76.68        
-7-0 4388    0/1/1   W   0.50    0   0   0.0 0.02    0.02    8.217.183.158   www.techtopjobs.com:443 GET /job/viewjob/1615934/campaign-marketer-benelux.html?categor
-7-0 4388    0/1/1   _   0.56    4   16010   0.0 0.02    0.02    182.10.99.85        
-7-0 4388    0/2/2   W   0.43    9   0   0.0 0.01    0.01    190.92.106.41   nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-7-0 4388    0/1/1   W   0.47    2   0   0.0 0.02    0.02    54.147.238.89   www.salestopjobs.com:443    GET /job/?categories=vertegenwoordiging&categories=andere-sales
-7-0 4388    0/3/3   _   0.48    2   11526   0.0 0.03    0.03    43.173.182.221      
-7-0 4388    0/2/2   _   0.51    5   9118    0.0 0.04    0.04    3.211.105.134       
-7-0 4388    0/2/2   _   0.59    3   11418   0.0 0.05    0.05    66.249.79.128       
-7-0 4388    0/3/3   _   0.52    5   11109   0.0 0.05    0.05    3.223.134.5     
-7-0 4388    0/3/3   W   0.47    3   0   0.0 0.03    0.03    40.77.167.123   www.techtopjobs.com:443 GET /job/?st=858280&page=9&mr=False HTTP/1.1
-7-0 4388    0/1/1   W   0.36    13  0   0.0 0.02    0.02    60.52.86.35 nl.careersinfinances.com:443    GET /job/?categories=banking&categories=accountancy-boekhouding
-7-0 4388    0/1/1   W   0.47    2   0   0.0 0.02    0.02    47.194.24.2 nl.careersinfinances.com:443    GET /job/viewjob/34513058/assistent-accountant.html?categories=
-7-0 4388    0/1/1   W   0.12    20  0   0.0 0.03    0.03    86.165.206.35   nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=bank
-7-0 4388    0/2/2   _   0.61    2   15944   0.0 0.05    0.05    46.189.236.211      
-7-0 4388    0/0/0   R   0.00    27  0   0.0 0.00    0.00    191.114.51.165      
-7-0 4388    0/0/0   W   0.00    19  0   0.0 0.00    0.00    88.135.127.212  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-7-0 4388    0/1/1   W   0.47    3   0   0.0 0.02    0.02    88.171.145.254  nl.careersinfinances.com:443    GET /job/?categories=beurshandel&categories=controlling&categor
-7-0 4388    0/1/1   _   0.57    3   15938   0.0 0.02    0.02    193.219.112.135     
-7-0 4388    0/1/1   W   0.40    13  0   0.0 0.02    0.02    43.173.173.198  nl.careersinfinances.com:443    GET /job/?categories=andere-financiele-diensten&categories=cash
-7-0 4388    0/1/1   _   0.60    2   20402   0.0 0.02    0.02    43.173.182.221      
-7-0 4388    0/2/2   _   0.64    0   14532   0.0 0.03    0.03    183.82.113.251      
-7-0 4388    0/1/1   R   0.25    19  1899    0.0 0.46    0.46    49.228.226.134      
-7-0 4388    0/1/1   W   0.44    6   0   0.0 0.02    0.02    52.167.144.179  www.careersinfinances.com:443   GET /job/viewjob/399036/arbeidsarts-regio-west-vlaanderen.html
-7-0 4388    0/1/1   _   0.46    5   11488   0.0 0.02    0.02    43.172.196.82       
-7-0 4388    0/2/2   _   0.60    2   17023   0.0 0.04    0.04    87.5.78.241     
-7-0 4388    0/0/0   W   0.00    20  0   0.0 0.00    0.00    190.213.21.113  nl.careersinfinances.com:443    GET /job/?categories=onroerend-goed-facility-management&categor
-7-0 4388    0/2/2   W   0.49    1   0   0.0 0.02    0.02    18.206.47.187   www.techtopjobs.com:443 GET /job/?categories=onderhoud-herstellingen&company=woonzorggr
-7-0 4388    0/1/1   _   0.64    0   19853   0.0 0.03    0.03    69.158.61.201       
-7-0 4388    0/3/3   _   0.53    5   12007   0.0 1.44    1.44    202.46.62.18        
-7-0 4388    0/0/0   W   0.00    20  0   0.0 0.00    0.00    200.86.179.214  nl.careersinfinances.com:443    GET /job/?categories=auditing&categories=accountancy-boekhoudin
-7-0 4388    0/3/3   _   0.61    2   16018   0.0 0.03    0.03    69.158.60.225       
+0-0 23208   0/0/0   W   0.00    18  0   0.0 0.00    0.00    36.233.241.115  nl.careersinfinances.com:443    GET /job/viewjob/26838324/bike-courier.html HTTP/1.1
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    88.97.228.80        
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    88.189.40.39        
+0-0 23208   0/2/2   W   0.38    0   0   0.0 0.02    0.02    78.134.104.119  www.careersinfinances.com:443   GET /job/viewjob/509825/projectleider-studiebureau.html?categor
+0-0 23208   0/1/1   R   0.25    7   12290   0.0 0.02    0.02    77.124.90.227       
+0-0 23208   0/0/0   W   0.00    19  0   0.0 0.00    0.00    154.161.14.167  nl.careersinfinances.com:443    GET /job/viewjob/21099412/accountmanager-cloud-applications.htm
+0-0 23208   0/3/3   W   0.42    0   0   0.0 0.04    0.04    143.58.158.28   www.techtopjobs.com:443 GET /job/viewjob/1054805/kassamedewerker-onthaal-tijdelijk.html
+0-0 23208   0/1/1   W   0.42    0   0   0.0 0.02    0.02    86.143.248.114  nl.careersinfinances.com:443    GET /job/viewjob/23299019/verpleegkundige-via-in-gelderland-gel
+0-0 23208   0/1/1   W   0.33    1   0   0.0 0.02    0.02    197.214.238.22  nl.careersinfinances.com:443    GET /job/viewjob/34496708/production-worker.html?categories=beu
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    41.158.134.143      
+0-0 23208   0/1/1   R   0.43    0   18503   0.0 0.02    0.02    77.170.61.54        
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    45.217.83.172       
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    37.31.128.137       
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    94.105.49.149       
+0-0 23208   0/1/1   W   0.37    1   0   0.0 0.02    0.02    83.27.254.129   nl.careersinfinances.com:443    GET /job/viewjob/22936337/bijbaan-horecamedewerker-bij.html?com
+0-0 23208   0/2/2   R   0.45    0   1022    0.0 0.04    0.04    213.55.218.228      
+0-0 23208   0/2/2   W   0.35    0   0   0.0 0.04    0.04    181.236.116.135 www.techtopjobs.com:443 GET /job/viewjob/1400070/accountant-group-level.html?categories
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    84.104.187.77       
+0-0 23208   0/1/1   R   0.29    4   14837   0.0 0.02    0.02    85.64.235.200       
+0-0 23208   0/1/1   R   0.32    4   13397   0.0 0.02    0.02    122.63.65.173       
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    79.151.12.208       
+0-0 23208   0/2/2   R   0.20    14  3274    0.0 0.01    0.01    156.202.237.232     
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    62.197.214.19       
+0-0 23208   0/1/1   R   0.33    3   16262   0.0 0.02    0.02    92.187.50.206       
+0-0 23208   0/1/1   R   0.28    5   13852   0.0 0.02    0.02    86.150.121.84       
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    31.188.215.190      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    87.100.174.163      
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    156.198.48.95       
+0-0 23208   0/0/0   R   0.00    20  0   0.0 0.00    0.00    66.81.178.60        
+0-0 23208   0/1/1   R   0.24    8   9799    0.0 0.01    0.01    184.99.33.119       
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    73.5.201.197        
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    41.184.7.156        
+0-0 23208   0/1/1   W   0.35    1   0   0.0 0.02    0.02    190.43.38.133   nl.careersinfinances.com:443    GET /job/application/apply/26281425/ HTTP/1.1
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    109.157.119.71      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    67.60.141.127       
+0-0 23208   0/2/2   R   0.26    6   10931   0.0 0.03    0.03    171.4.229.46        
+0-0 23208   0/2/2   R   0.44    0   4762    0.0 0.01    0.01    175.100.171.190     
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    178.51.44.61        
+0-0 23208   0/1/1   R   0.39    1   17672   0.0 0.02    0.02    86.172.217.133      
+0-0 23208   0/3/3   R   0.46    0   1873    0.0 0.05    0.05    84.156.235.218      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    185.225.204.112     
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    189.169.112.17      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    88.224.22.213       
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    49.200.160.110      
+0-0 23208   0/1/1   W   0.30    3   0   0.0 0.02    0.02    83.28.215.108   nl.careersinfinances.com:443    GET /job/viewjob/23002823/management-trainee-bij.html?company=t
+0-0 23208   0/1/1   R   0.43    0   18103   0.0 0.02    0.02    187.241.12.179      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    201.138.210.14      
+0-0 23208   0/1/1   W   0.22    8   0   0.0 0.02    0.02    190.32.195.185  nl.careersinfinances.com:443    GET /job/viewjob/27066119/allround-monteur-onderhoud.html HTTP/
+0-0 23208   0/1/1   R   0.40    1   15246   0.0 0.02    0.02    86.80.37.13     
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    171.241.7.15        
+0-0 23208   0/1/1   R   0.26    7   12292   0.0 0.02    0.02    37.223.104.156      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    152.172.103.84      
+0-0 23208   0/1/1   W   0.20    12  0   0.0 0.01    0.01    179.50.220.204  nl.careersinfinances.com:443    GET /job/viewjob/31557726/teamleider-5-ploegendienst.html HTTP/
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    5.162.93.164        
+0-0 23208   0/2/2   R   0.44    0   824 0.0 0.04    0.04    36.37.140.80        
+0-0 23208   0/1/1   W   0.33    1   0   0.0 0.01    0.01    218.212.67.94   nl.careersinfinances.com:443    GET /job/viewjob/20468543/accounting-assistent.html?categories=
+0-0 23208   0/2/2   R   0.44    0   3430    0.0 0.01    0.01    106.71.53.122       
+0-0 23208   0/2/2   W   0.41    0   0   0.0 0.03    0.03    94.191.137.204  www.careersinfinances.com:443   GET /job/viewjob/1079375/project-manager-data-analytics.html?ca
+0-0 23208   0/2/2   R   0.42    0   6644    0.0 0.03    0.03    188.89.192.212      
+0-0 23208   0/0/0   R   0.00    19  0   0.0 0.00    0.00    88.165.116.209      
+0-0 23208   0/1/1   R   0.30    4   13893   0.0 0.01    0.01    1.164.199.61        
+0-0 23208   0/1/1   W   0.36    1   0   0.0 0.02    0.02    38.121.208.253  www.careersinfinances.com:443   GET /job/viewjob/1108972/financial-controller.html?company=it-p
+0-0 23208   0/0/0   W   0.00    18  0   0.0 0.00    0.00    109.182.244.250 nl.careersinfinances.com:443    GET /job/viewjob/31619975/pedagogisch-medewerker-mbo.html HTTP/
+0-0 23208   0/2/2   R   0.42    0   11467   0.0 0.01    0.01    112.199.127.170     
+1-0 23230   0/1/1   R   0.35    2   18214   0.0 0.01    0.01    213.10.89.222       
+1-0 23230   0/1/1   W   0.25    9   0   0.0 0.02    0.02    165.99.194.14   nl.careersinfinances.com:443    GET /job/viewjob/26066119/jurist-arbeidsrecht.html HTTP/1.1
+1-0 23230   0/2/2   R   0.44    1   5355    0.0 0.03    0.03    197.53.102.208      
+1-0 23230   0/2/2   R   0.33    3   3927    0.0 0.03    0.03    98.207.69.236       
+1-0 23230   0/2/2   W   0.38    1   0   0.0 0.05    0.05    213.157.186.9   nl.careersinfinances.com:443    GET /job/viewjob/31465167/operator.html HTTP/1.1
+1-0 23230   0/1/1   W   0.21    14  0   0.0 0.02    0.02    202.140.128.57  nl.careersinfinances.com:443    GET /job/viewjob/29534902/bedieningbarista-restaurant.html HTTP
+1-0 23230   0/0/0   R   0.00    19  0   0.0 0.00    0.00    5.191.135.137       
+1-0 23230   0/1/1   R   0.46    0   16832   0.0 0.02    0.02    89.203.215.235      
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    14.11.199.224       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    180.181.251.226     
+1-0 23230   0/1/1   R   0.41    1   13927   0.0 0.02    0.02    95.77.191.85        
+1-0 23230   0/1/1   R   0.31    6   9064    0.0 0.02    0.02    87.88.62.226        
+1-0 23230   0/1/1   W   0.31    3   0   0.0 0.02    0.02    109.87.126.164  nl.careersinfinances.com:443    GET /job/viewjob/23138131/technicus-service-technicus.html?cate
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    210.50.82.172       
+1-0 23230   0/1/1   R   0.45    0   16555   0.0 0.02    0.02    89.124.97.163       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    178.142.87.134      
+1-0 23230   0/1/1   W   0.42    0   0   0.0 0.01    0.01    47.62.91.210    www.careersinfinances.com:443   GET /job/viewjob/537536/calculator-bouw.html?categories=auditin
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    95.39.87.202        
+1-0 23230   0/1/1   R   0.29    7   10425   0.0 0.02    0.02    106.197.88.125      
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    88.180.47.103       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    188.193.7.192       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    190.177.167.213     
+1-0 23230   0/1/1   R   0.32    6   11856   0.0 0.02    0.02    81.77.29.224        
+1-0 23230   0/2/2   R   0.44    0   8098    0.0 0.01    0.01    200.23.230.103      
+1-0 23230   0/0/0   W   0.00    16  0   0.0 0.00    0.00    58.120.198.68   nl.careersinfinances.com:443    GET /job/viewjob/31240622/biotechnicus-en-laborant-dierproeven.
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    110.32.179.172      
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    83.250.31.247       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    196.170.108.237     
+1-0 23230   0/1/1   W   0.33    2   0   0.0 0.01    0.01    186.156.245.211 nl.careersinfinances.com:443    GET /job/viewjob/18448945/verpleegkundige-niveau-4-via-in-utrec
+1-0 23230   0/1/1   R   0.32    5   11286   0.0 0.01    0.01    156.217.245.32      
+1-0 23230   0/1/1   W   0.41    0   0   0.0 0.02    0.02    46.109.102.176  nl.careersinfinances.com:443    GET /job/viewjob/31210671/production-assistant-rotterdam-ridder
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    81.108.72.170       
+1-0 23230   0/1/1   R   0.40    1   15777   0.0 0.02    0.02    41.73.99.8      
+1-0 23230   0/1/1   R   0.24    11  5194    0.0 0.01    0.01    158.47.224.181      
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    62.198.142.9        
+1-0 23230   0/1/1   R   0.35    2   13136   0.0 0.01    0.01    181.43.38.232       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    27.70.136.44        
+1-0 23230   0/1/1   W   0.34    1   0   0.0 0.02    0.02    181.72.29.11    nl.careersinfinances.com:443    GET /job/application/apply/22352555/ HTTP/1.1
+1-0 23230   0/1/1   R   0.22    13  3875    0.0 0.03    0.03    80.2.169.167        
+1-0 23230   0/1/1   R   0.37    2   14798   0.0 0.02    0.02    81.100.171.64       
+1-0 23230   0/2/2   R   0.26    8   3018    0.0 0.03    0.03    45.244.106.104      
+1-0 23230   0/1/1   R   0.27    7   8813    0.0 0.01    0.01    1.236.64.118        
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    151.72.96.93        
+1-0 23230   0/1/1   R   0.20    17  0   0.0 0.01    0.01    58.186.65.165       
+1-0 23230   0/1/1   R   0.46    0   16515   0.0 0.02    0.02    27.130.61.83        
+1-0 23230   0/2/2   W   0.42    0   0   0.0 0.01    0.01    92.26.119.181   nl.careersinfinances.com:443    GET /job/application/apply/31420332/ HTTP/1.1
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    60.91.10.140        
+1-0 23230   0/0/0   W   0.00    15  0   0.0 0.00    0.00    103.7.60.241    nl.careersinfinances.com:443    GET /job/company/bilderberg-garden-hotel.html HTTP/1.1
+1-0 23230   0/1/1   R   0.38    2   14862   0.0 0.02    0.02    173.168.151.247     
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    27.124.93.38        
+1-0 23230   0/1/1   R   0.48    0   17179   0.0 0.02    0.02    188.142.72.228      
+1-0 23230   0/3/3   R   0.34    3   3475    0.0 0.06    0.06    39.14.177.115       
+1-0 23230   0/0/0   R   0.00    18  0   0.0 0.00    0.00    84.82.244.61        
+1-0 23230   0/0/0   W   0.00    17  0   0.0 0.00    0.00    102.180.84.118  nl.careersinfinances.com:443    GET /job/viewjob/22770489/recruitment-consultant-tempsperm.html
+1-0 23230   0/0/0   W   0.00    17  0   0.0 0.00    0.00    150.246.141.145 nl.careersinfinances.com:443    GET /job/viewjob/33695580/embedded-software-engineer.html HTTP/
+1-0 23230   0/0/0   W   0.00    17  0   0.0 0.00    0.00    117.211.113.35  nl.careersinfinances.com:443    GET /job/viewjob/24795407/part-time-horecamedewerker.html HTTP/
+1-0 23230   0/1/1   R   0.43    1   16362   0.0 0.02    0.02    84.193.227.104      
+1-0 23230   0/2/2   W   0.48    0   0   0.0 0.01    0.01    109.134.6.23    www.nieuwejobs.com:443  GET /server-status HTTP/1.1
+1-0 23230   0/2/2   R   0.47    0   6297    0.0 0.03    0.03    189.140.4.77        
+1-0 23230   0/1/1   R   0.34    3   13038   0.0 0.01    0.01    62.231.87.165       
+1-0 23230   0/1/1   W   0.41    0   0   0.0 0.02    0.02    51.171.67.10    nl.careersinfinances.com:443    GET /job/application/apply/28295432/ HTTP/1.1
+1-0 23230   0/1/1   R   0.31    6   10021   0.0 0.02    0.02    188.27.131.152      
+1-0 23230   0/1/1   R   0.39    1   14645   0.0 0.02    0.02    77.101.214.11       
+1-0 23230   0/1/1   W   0.36    1   0   0.0 0.02    0.02    31.183.172.242  nl.careersinfinances.com:443    GET /job/viewjob/27066001/meewerkend-voorman-dagdienst.html HTT
+2-0 23259   0/2/2   R   0.48    1   8621    0.0 0.03    0.03    86.123.229.89       
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    158.174.56.201      
+2-0 23259   0/2/2   W   0.38    1   0   0.0 0.05    0.05    189.171.204.15  nl.careersinfinances.com:443    GET /job/application/apply/20339646/ HTTP/1.1
+2-0 23259   0/2/2   R   0.44    1   2547    0.0 0.05    0.05    193.179.66.85       
+2-0 23259   0/0/0   W   0.00    20  0   0.0 0.00    0.00    85.243.148.117  nl.careersinfinances.com:443    GET /job/viewjob/20491672/opleiding-tot-operator.html HTTP/1.1
+2-0 23259   0/1/1   R   0.30    7   12717   0.0 0.01    0.01    156.211.91.156      
+2-0 23259   0/1/1   R   0.42    2   15572   0.0 0.02    0.02    146.255.74.7        
+2-0 23259   0/0/0   R   0.00    20  0   0.0 0.00    0.00    75.191.74.49        
+2-0 23259   0/1/1   R   0.43    2   15361   0.0 0.02    0.02    38.226.149.42       
+2-0 23259   0/1/1   R   0.21    13  7043    0.0 0.03    0.03    201.177.140.51      
+2-0 23259   0/1/1   W   0.36    3   0   0.0 0.02    0.02    41.98.82.117    nl.careersinfinances.com:443    GET /job/viewjob/31503033/hse-coordinator-fulltime.html HTTP/1.
+2-0 23259   0/1/1   R   0.31    6   12722   0.0 0.02    0.02    5.192.104.226       
+2-0 23259   0/2/2   R   0.35    4   3750    0.0 0.03    0.03    94.161.152.70       
+2-0 23259   0/3/3   R   0.50    0   802 0.0 0.05    0.05    154.67.36.194       
+2-0 23259   0/1/1   R   0.51    0   18562   0.0 0.00    0.00    82.7.136.193        
+2-0 23259   0/0/0   R   0.00    20  0   0.0 0.00    0.00    83.252.47.217       
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    212.91.105.50       
+2-0 23259   0/1/1   R   0.49    1   16713   0.0 0.02    0.02    87.102.225.185      
+2-0 23259   0/2/2   W   0.47    0   0   0.0 0.03    0.03    81.32.63.70 nl.careersinfinances.com:443    GET /job/application/apply/20934939/ HTTP/1.1
+2-0 23259   0/1/1   R   0.31    5   11402   0.0 0.01    0.01    93.222.114.186      
+2-0 23259   0/1/1   R   0.45    1   15077   0.0 0.02    0.02    154.179.169.104     
+2-0 23259   0/1/1   R   0.40    3   15944   0.0 0.02    0.02    171.255.236.185     
+2-0 23259   0/1/1   W   0.39    2   0   0.0 0.01    0.01    93.99.5.16  nl.careersinfinances.com:443    GET /job/viewjob/32303701/bicycle-courier.html?categories=banki
+2-0 23259   0/2/2   W   0.49    0   0   0.0 0.03    0.03    91.33.205.39    nl.careersinfinances.com:443    GET /job/application/apply/21222868/ HTTP/1.1
+2-0 23259   0/1/1   R   0.22    13  5307    0.0 0.01    0.01    179.238.1.143       
+2-0 23259   0/1/1   W   0.28    7   0   0.0 0.01    0.01    203.204.25.168  nl.careersinfinances.com:443    GET /job/viewjob/23137968/financial-controller-intern.html HTTP
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    102.47.189.83       
+2-0 23259   0/1/1   R   0.33    4   13517   0.0 0.02    0.02    41.84.235.201       
+2-0 23259   0/1/1   R   0.31    5   12155   0.0 0.01    0.01    49.191.150.230      
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    102.179.171.208     
+2-0 23259   0/2/2   R   0.41    2   9797    0.0 0.03    0.03    188.86.58.13        
+2-0 23259   0/3/3   R   0.51    0   2625    0.0 0.05    0.05    173.238.57.6        
+2-0 23259   0/2/2   R   0.49    0   7536    0.0 0.01    0.01    58.11.83.95     
+2-0 23259   0/2/2   R   0.31    5   2645    0.0 0.05    0.05    94.9.57.177     
+2-0 23259   0/2/2   R   0.48    1   1294    0.0 0.04    0.04    58.165.2.53     
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    78.171.238.2        
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    42.62.176.6     
+2-0 23259   0/1/1   R   0.36    4   13476   0.0 0.02    0.02    88.167.110.174      
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    85.251.89.219       
+2-0 23259   0/1/1   R   0.29    7   11176   0.0 0.01    0.01    102.64.161.49       
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    81.56.31.63     
+2-0 23259   0/1/1   R   0.46    1   17307   0.0 0.02    0.02    49.159.75.131       
+2-0 23259   0/1/1   R   0.33    5   7340    0.0 0.02    0.02    181.43.152.57       
+2-0 23259   0/0/0   R   0.00    19  0   0.0 0.00    0.00    126.177.208.131     
+2-0 23259   0/1/1   R   0.33    5   12343   0.0 0.02    0.02    193.153.7.183       
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    191.91.140.92       
+2-0 23259   0/4/4   R   0.51    0   2137    0.0 0.06    0.06    92.232.124.210      
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    188.27.152.83       
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    94.52.36.35     
+2-0 23259   0/1/1   R   0.47    1   16534   0.0 0.02    0.02    72.11.30.237        
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    193.161.134.214     
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    101.190.158.64      
+2-0 23259   0/0/0   W   0.00    17  0   0.0 0.00    0.00    179.32.249.85   nl.careersinfinances.com:443    GET /job/viewjob/34070456/allround-monteur-in-opleiding.html HT
+2-0 23259   0/1/1   W   0.23    9   0   0.0 0.01    0.01    37.67.196.151   nl.careersinfinances.com:443    GET /job/viewjob/28144404/operatorproductiemedewerker.html HTTP
+2-0 23259   0/0/0   W   0.00    14  0   0.0 0.00    0.00    175.177.48.63   nl.careersinfinances.com:443    GET /job/viewjob/31210671/production-assistant-rotterdam-ridder
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    31.217.167.204      
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    217.183.65.102      
+2-0 23259   0/0/0   W   0.00    17  0   0.0 0.00    0.00    89.244.86.98    nl.careersinfinances.com:443    GET /job/viewjob/31465167/operator.html HTTP/1.1
+2-0 23259   0/1/1   W   0.24    10  0   0.0 0.01    0.01    51.175.134.115  nl.careersinfinances.com:443    GET /job/viewjob/32258801/lid-raad-van-bestuur-for-netherland-r
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    201.171.174.193     
+2-0 23259   0/1/1   R   0.23    11  5220    0.0 0.01    0.01    46.151.136.244      
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    1.156.137.102       
+2-0 23259   0/1/1   R   0.40    0   13021   0.0 0.01    0.01    46.6.122.221        
+2-0 23259   0/0/0   R   0.00    18  0   0.0 0.00    0.00    223.188.155.173     
+3-0 23281   0/1/1   R   0.01    19  0   0.0 0.01    0.01    5.70.10.183     
+3-0 23281   0/0/0   R   0.00    18  0   0.0 0.00    0.00    49.230.212.77       
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    157.147.35.137      
+3-0 23281   0/0/0   W   0.00    20  0   0.0 0.00    0.00    84.178.180.239  nl.careersinfinances.com:443    GET /job/viewjob/30412944/junior-project-engineer-scheepvaart.h
+3-0 23281   0/2/2   R   0.35    3   4277    0.0 0.04    0.04    92.208.146.0        
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    185.46.77.100       
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    119.76.28.74        
+3-0 23281   0/0/0   W   0.00    0   0   0.0 0.00    0.00    99.227.20.39    www.careersinfinances.com:443   GET /job/viewjob/1054168/project-support-officer.html?categorie
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    190.148.253.130     
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    202.89.67.78        
+3-0 23281   0/2/2   W   0.26    5   0   0.0 0.02    0.02    99.85.14.126    nl.careersinfinances.com:443    GET /job/viewjob/23421791/machines-operator.html HTTP/1.1
+3-0 23281   0/1/1   R   0.33    3   15960   0.0 0.02    0.02    1.145.171.187       
+3-0 23281   0/1/1   W   0.34    0   0   0.0 0.02    0.02    160.166.4.93    nl.careersinfinances.com:443    GET /job/viewjob/32227910/heftruckchauffeur-logistiek.html HTTP
+3-0 23281   0/1/1   W   0.30    4   0   0.0 0.02    0.02    82.49.192.91    nl.careersinfinances.com:443    GET /job/application/apply/19503374/ HTTP/1.1
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    89.134.2.12     
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    79.100.7.61     
+3-0 23281   0/2/2   R   0.42    0   3561    0.0 0.02    0.02    217.247.18.248      
+3-0 23281   0/2/2   R   0.46    0   3396    0.0 0.03    0.03    181.176.40.146      
+3-0 23281   0/1/1   R   0.23    8   11015   0.0 0.01    0.01    79.45.194.85        
+3-0 23281   0/1/1   R   0.43    0   17945   0.0 0.02    0.02    79.216.234.74       
+3-0 23281   0/1/1   W   0.23    7   0   0.0 0.01    0.01    152.166.199.76  nl.careersinfinances.com:443    GET /job/viewjob/30618171/sign-up-for-earning-opportunities-ear
+3-0 23281   0/1/1   R   0.28    6   13508   0.0 0.01    0.01    106.70.60.32        
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    184.154.225.244     
+3-0 23281   0/1/1   R   0.28    6   12243   0.0 0.01    0.01    79.181.173.252      
+3-0 23281   0/1/1   R   0.36    3   16031   0.0 0.01    0.01    188.25.225.1        
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    119.192.43.33       
+3-0 23281   0/1/1   R   0.35    3   15309   0.0 0.02    0.02    87.52.111.129       
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    99.245.62.214       
+3-0 23281   0/1/1   W   0.39    1   0   0.0 0.02    0.02    62.250.5.187    nl.careersinfinances.com:443    GET /job/viewjob/31954827/elektromonteur-utiliteit-werk-leertra
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    188.96.19.8     
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    89.244.85.183       
+3-0 23281   0/2/2   R   0.45    0   1704    0.0 0.04    0.04    41.188.116.47       
+3-0 23281   0/1/1   W   0.29    5   0   0.0 0.01    0.01    117.205.67.222  nl.careersinfinances.com:443    GET /job/viewjob/26802012/hoofd-technische-dienst-mv.html HTTP/
+3-0 23281   0/2/2   R   0.44    0   7036    0.0 0.04    0.04    201.138.193.228     
+3-0 23281   0/1/1   R   0.41    1   13865   0.0 0.01    0.01    181.162.152.109     
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    41.189.162.83       
+3-0 23281   0/0/0   R   0.00    20  0   0.0 0.00    0.00    118.175.249.91      
+3-0 23281   0/1/1   R   0.27    6   12978   0.0 0.02    0.02    188.77.74.158       
+3-0 23281   0/1/1   R   0.23    8   10326   0.0 0.01    0.01    196.156.148.195     
+3-0 23281   0/1/1   R   0.45    0   16306   0.0 0.02    0.02    47.202.145.236      
+3-0 23281   0/1/1   R   0.36    2   15591   0.0 0.02    0.02    161.29.247.85       
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    93.105.131.80       
+3-0 23281   0/0/0   W   0.00    19  0   0.0 0.00    0.00    116.126.207.195 nl.careersinfinances.com:443    GET /job/viewjob/32128752/warehouse-operator.html HTTP/1.1
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    101.188.164.25      
+3-0 23281   0/1/1   R   0.26    6   11258   0.0 0.02    0.02    212.143.137.115     
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    188.26.212.5        
+3-0 23281   0/1/1   W   0.40    0   0   0.0 0.02    0.02    95.92.74.162    nl.careersinfinances.com:443    GET /job/viewjob/26904140/bijbaan-horecamedewerker.html HTTP/1.
+3-0 23281   0/1/1   W   0.29    4   0   0.0 0.01    0.01    105.224.59.199  nl.careersinfinances.com:443    GET /job/viewjob/27008407/gezocht-sales-accountmanager-buitendi
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    94.239.172.217      
+3-0 23281   0/1/1   R   0.26    6   12173   0.0 0.02    0.02    94.15.132.137       
+3-0 23281   0/1/1   R   0.41    1   17517   0.0 0.02    0.02    78.45.72.26     
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    190.45.148.24       
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    200.151.0.191       
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    102.47.218.133      
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    31.4.247.145        
+3-0 23281   0/2/2   R   0.40    2   3761    0.0 0.03    0.03    187.150.252.66      
+3-0 23281   0/2/2   R   0.44    0   6511    0.0 0.03    0.03    84.203.45.192       
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    27.130.15.250       
+3-0 23281   0/0/0   W   0.00    18  0   0.0 0.00    0.00    176.78.227.185  nl.careersinfinances.com:443    GET /job/viewjob/20993277/restaurantmanager.html HTTP/1.1
+3-0 23281   0/1/1   R   0.36    3   14571   0.0 0.01    0.01    88.178.44.17        
+3-0 23281   0/2/2   W   0.37    2   0   0.0 0.03    0.03    213.47.182.145  nl.careersinfinances.com:443    GET /job/viewjob/22032537/parttime-horecamedewerker.html HTTP/1
+3-0 23281   0/2/2   W   0.42    0   0   0.0 0.04    0.04    87.68.196.70    nl.careersinfinances.com:443    GET /job/viewjob/30004210/barista-needed.html HTTP/1.1
+3-0 23281   0/0/0   R   0.00    19  0   0.0 0.00    0.00    77.22.182.207       
+3-0 23281   0/1/1   R   0.31    5   13939   0.0 0.02    0.02    92.141.252.120      
+4-0 23282   0/2/2   R   1.00    1   16927   0.0 0.03    0.03    210.79.145.114      
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    49.49.240.24        
+4-0 23282   0/3/3   R   1.05    0   3782    0.0 0.04    0.04    89.153.28.75        
+4-0 23282   0/1/1   W   0.92    7   0   0.0 0.02    0.02    93.66.2.62  nl.careersinfinances.com:443    GET /job/viewjob/8733809/automation-systems-engineer.html HTTP/
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    117.194.62.129      
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    171.97.206.79       
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    91.69.82.126        
+4-0 23282   0/2/2   W   0.97    3   0   0.0 0.03    0.03    91.82.250.226   nl.careersinfinances.com:443    GET /job/viewjob/18668700/officier-cyber-hbowo.html HTTP/1.1
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    87.16.163.11        
+4-0 23282   0/1/1   R   0.88    12  6051    0.0 0.01    0.01    219.91.181.16       
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    99.66.253.95        
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    83.39.188.12        
+4-0 23282   0/1/1   R   1.04    0   19014   0.0 0.02    0.02    92.81.216.160       
+4-0 23282   0/1/1   R   1.00    1   13989   0.0 0.01    0.01    91.126.182.126      
+4-0 23282   0/1/1   R   1.04    0   17585   0.0 0.02    0.02    85.60.116.94        
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    176.186.17.0        
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    223.207.96.163      
+4-0 23282   0/1/1   W   0.93    4   0   0.0 0.01    0.01    180.197.47.133  nl.careersinfinances.com:443    GET /job/application/apply/22907760/ HTTP/1.1
+4-0 23282   0/1/1   W   0.95    3   0   0.0 0.02    0.02    86.7.51.178 nl.careersinfinances.com:443    GET /job/viewjob/22933281/delivery-driver-dhl.html?company=easy
+4-0 23282   0/0/0   W   0.00    17  0   0.0 0.00    0.00    191.128.80.207  nl.careersinfinances.com:443    GET /job/viewjob/22557396/wil-jij-als-afstudeerder-of-stagiair-
+4-0 23282   0/1/1   W   0.93    6   0   0.0 0.02    0.02    82.17.135.178   nl.careersinfinances.com:443    GET /job/viewjob/32709266/bike-courier-summer-job.html HTTP/1.1
+4-0 23282   0/1/1   R   1.01    1   9016    0.0 0.01    0.01    95.90.253.156       
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    83.86.3.139     
+4-0 23282   0/0/0   R   0.00    20  0   0.0 0.00    0.00    197.167.194.96      
+4-0 23282   0/1/1   R   1.00    1   9860    0.0 0.01    0.01    81.108.228.119      
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    167.104.119.46      
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    36.79.152.19        
+4-0 23282   0/1/1   R   0.93    6   11163   0.0 0.01    0.01    45.125.5.239        
+4-0 23282   0/1/1   R   0.88    12  4162    0.0 0.01    0.01    88.186.100.128      
+4-0 23282   0/1/1   R   0.87    14  4032    0.0 0.01    0.01    102.184.251.48      
+4-0 23282   0/1/1   R   0.98    4   13706   0.0 0.01    0.01    72.219.82.80        
+4-0 23282   0/1/1   R   0.94    5   12440   0.0 0.01    0.01    2.84.146.104        
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    171.97.229.161      
+4-0 23282   0/0/0   W   0.00    17  0   0.0 0.00    0.00    179.226.186.27  nl.careersinfinances.com:443    GET /job/viewjob/23001675/operator-in-de-5-ploegen.html?company
+4-0 23282   0/1/1   W   0.92    4   0   0.0 0.02    0.02    102.128.76.199  nl.careersinfinances.com:443    GET /job/viewjob/20930531/stagiair-recruitment-groningen.html?c
+4-0 23282   0/2/2   R   0.91    8   3592    0.0 0.03    0.03    83.21.138.226       
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    125.235.239.198     
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    188.143.58.101      
+4-0 23282   0/0/0   W   0.00    17  0   0.0 0.00    0.00    102.138.75.140  nl.careersinfinances.com:443    GET /job/viewjob/31705078/racket-stringing-specialist.html HTTP
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    98.248.9.37     
+4-0 23282   0/1/1   R   0.98    3   13927   0.0 0.02    0.02    200.117.120.200     
+4-0 23282   0/0/0   R   0.00    18  0   0.0 0.00    0.00    41.44.188.254       
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    83.11.142.12        
+4-0 23282   0/1/1   W   1.00    0   0   0.0 0.01    0.01    59.30.191.32    www.careersinfinances.com:443   GET /job/viewjob/550029/klantensercice-medewerker.html?categori
+4-0 23282   0/2/2   R   1.02    0   832 0.0 0.04    0.04    189.253.221.158     
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    187.137.73.104      
+4-0 23282   0/1/1   R   1.03    0   17361   0.0 0.02    0.02    201.246.44.98       
+4-0 23282   0/1/1   R   0.94    5   11510   0.0 0.02    0.02    202.9.41.124        
+4-0 23282   0/2/2   R   1.00    1   12027   0.0 0.01    0.01    165.58.129.150      
+4-0 23282   0/0/0   W   0.00    17  0   0.0 0.00    0.00    102.185.189.49  nl.careersinfinances.com:443    GET /job/viewjob/31984704/lead-technical-ba-for-netherland-resi
+4-0 23282   0/0/0   W   0.00    18  0   0.0 0.00    0.00    196.15.147.222  nl.careersinfinances.com:443    GET /job/viewjob/32293816/fietskoerier-delivery-driver.html?cat
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    88.11.201.1     
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    176.164.179.26      
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    83.28.75.136        
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    188.83.7.49     
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    117.209.120.209     
+4-0 23282   0/1/1   R   1.05    0   16548   0.0 0.02    0.02    212.93.158.60       
+4-0 23282   0/2/2   R   1.06    0   3705    0.0 0.03    0.03    79.19.242.100       
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    71.46.194.91        
+4-0 23282   0/1/1   W   1.02    0   0   0.0 0.02    0.02    76.211.201.199  nl.careersinfinances.com:443    GET /job/application/apply/21005399/ HTTP/1.1
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    89.66.170.93        
+4-0 23282   0/0/0   R   0.00    19  0   0.0 0.00    0.00    178.153.12.121      
+4-0 23282   0/1/1   R   0.89    9   8540    0.0 0.02    0.02    81.56.191.102       
+4-0 23282   0/2/2   R   1.06    0   2401    0.0 0.03    0.03    202.61.110.170      
+5-0 24590   0/2/2   R   0.39    0   4339    0.0 0.04    0.04    196.170.122.43      
+5-0 24590   0/1/1   R   0.32    4   11028   0.0 0.02    0.02    156.193.90.208      
+5-0 24590   0/1/1   R   0.31    5   11258   0.0 0.02    0.02    195.213.163.6       
+5-0 24590   0/1/1   R   0.30    5   4707    0.0 0.02    0.02    213.13.242.43       
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    38.165.183.149      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    60.243.189.172      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    95.42.71.116        
+5-0 24590   0/1/1   W   0.26    6   0   0.0 0.02    0.02    87.1.133.204    nl.careersinfinances.com:443    GET /job/viewjob/20875128/technisch-engineer.html HTTP/1.1
+5-0 24590   0/3/3   W   0.38    1   0   0.0 0.05    0.05    27.73.12.114    nl.careersinfinances.com:443    GET /job/viewjob/34326848/logistics-employee.html?page=5 HTTP/1
+5-0 24590   0/0/0   W   0.00    14  0   0.0 0.00    0.00    179.6.7.75  nl.careersinfinances.com:443    GET /job/viewjob/28531723/automonteur-mv.html HTTP/1.1
+5-0 24590   0/0/0   W   0.00    15  0   0.0 0.00    0.00    49.206.19.21    nl.careersinfinances.com:443    GET /job/viewjob/30701669/bezorgmogelijkheden-bij-mij-in-de-buu
+5-0 24590   0/0/0   W   0.00    16  0   0.0 0.00    0.00    95.111.26.239   nl.careersinfinances.com:443    GET /job/viewjob/32675767/productie-engineer-gezocht.html HTTP/
+5-0 24590   0/1/1   R   0.39    1   13597   0.0 0.01    0.01    174.101.134.24      
+5-0 24590   0/1/1   R   0.29    6   11019   0.0 0.02    0.02    149.210.7.249       
+5-0 24590   0/1/1   R   0.21    12  4460    0.0 0.01    0.01    187.58.48.198       
+5-0 24590   0/2/2   R   0.44    0   1193    0.0 0.03    0.03    24.180.62.87        
+5-0 24590   0/2/2   R   0.33    2   3720    0.0 0.05    0.05    95.239.104.42       
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    78.35.149.123       
+5-0 24590   0/1/1   R   0.38    1   15283   0.0 0.01    0.01    197.233.46.148      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    85.85.155.10        
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    171.241.198.59      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    202.70.43.166       
+5-0 24590   0/1/1   W   0.36    1   0   0.0 0.02    0.02    86.182.147.221  nl.careersinfinances.com:443    GET /job/viewjob/30972413/weekendhulp-spoelkeuken.html HTTP/1.1
+5-0 24590   0/0/0   W   0.00    16  0   0.0 0.00    0.00    210.195.103.250 nl.careersinfinances.com:443    GET /job/viewjob/2331916/assistent-manager-services.html HTTP/1
+5-0 24590   0/1/1   R   0.43    0   16326   0.0 0.02    0.02    36.80.26.49     
+5-0 24590   0/1/1   R   0.40    0   14575   0.0 0.01    0.01    85.242.60.152       
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    79.159.224.243      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    81.33.163.48        
+5-0 24590   0/1/1   R   0.42    0   15942   0.0 0.02    0.02    49.238.60.49        
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    90.170.252.20       
+5-0 24590   0/0/0   W   0.00    16  0   0.0 0.00    0.00    187.222.156.112 nl.careersinfinances.com:443    GET /job/viewjob/22347027/senior-accountmanager.html HTTP/1.1
+5-0 24590   0/2/2   R   0.44    0   4936    0.0 0.03    0.03    200.28.153.180      
+5-0 24590   0/1/1   R   0.31    5   11522   0.0 0.02    0.02    174.89.238.181      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    190.100.201.154     
+5-0 24590   0/1/1   W   0.22    10  0   0.0 0.01    0.01    82.128.135.37   nl.careersinfinances.com:443    GET /job/application/apply/14412748/ HTTP/1.1
+5-0 24590   0/1/1   R   0.33    3   12876   0.0 0.01    0.01    187.225.43.64       
+5-0 24590   0/2/2   W   0.36    1   0   0.0 0.01    0.01    1.168.157.224   nl.careersinfinances.com:443    GET /job/application/apply/24093740/ HTTP/1.1
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    120.154.30.143      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    83.135.188.104      
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    50.92.111.13        
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    41.35.196.40        
+5-0 24590   0/0/0   W   0.00    16  0   0.0 0.00    0.00    2.72.193.137    nl.careersinfinances.com:443    GET /job/viewjob/2380949/senior-medewerker-planning-trigion-cit
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    84.225.97.248       
+5-0 24590   0/2/2   R   0.42    0   4845    0.0 0.01    0.01    38.59.191.40        
+5-0 24590   0/1/1   W   0.35    2   0   0.0 0.01    0.01    95.112.165.42   nl.careersinfinances.com:443    GET /job/viewjob/22829447/tractormachinist.html HTTP/1.1
+5-0 24590   0/1/1   R   0.45    0   16421   0.0 0.02    0.02    186.40.59.100       
+5-0 24590   0/0/0   W   0.00    16  0   0.0 0.00    0.00    61.1.21.35  nl.careersinfinances.com:443    GET /job/viewjob/31791814/assistent-supermarktmanager.html HTTP
+5-0 24590   0/1/1   W   0.23    9   0   0.0 0.02    0.02    154.242.254.118 nl.careersinfinances.com:443    GET /job/viewjob/26293752/leidinggevende-bouw.html HTTP/1.1
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    190.28.60.35        
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    103.119.179.253     
+5-0 24590   0/1/1   W   0.37    1   0   0.0 0.01    0.01    83.185.41.35    nl.careersinfinances.com:443    GET /job/viewjob/34281432/financieel-medewerker.html?company=ca
+5-0 24590   0/2/2   R   0.41    0   7686    0.0 0.03    0.03    90.47.68.106        
+5-0 24590   0/1/1   R   0.26    7   9833    0.0 0.02    0.02    171.229.1.138       
+5-0 24590   0/2/2   W   0.40    0   0   0.0 0.03    0.03    176.63.27.59    nl.careersinfinances.com:443    GET /job/application/apply/31097699/ HTTP/1.1
+5-0 24590   0/1/1   R   0.38    1   13727   0.0 0.01    0.01    171.99.153.122      
+5-0 24590   0/1/1   W   0.36    0   0   0.0 0.02    0.02    196.134.48.220  nl.careersinfinances.com:443    GET /job/viewjob/3408929/campaign-manager-dach.html HTTP/1.1
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    102.179.131.64      
+5-0 24590   0/1/1   R   0.33    4   12597   0.0 0.02    0.02    189.239.65.3        
+5-0 24590   0/1/1   R   0.29    6   10551   0.0 0.01    0.01    94.71.169.98        
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    173.176.227.148     
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    41.233.83.216       
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    122.58.179.68       
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    119.247.150.143     
+5-0 24590   0/0/0   R   0.00    17  0   0.0 0.00    0.00    66.181.176.67       
+6-0 24666   0/1/1   R   0.39    0   14885   0.0 0.02    0.02    173.35.246.101      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    57.134.182.35       
+6-0 24666   0/1/1   W   0.31    1   0   0.0 0.01    0.01    86.123.35.151   www.techtopjobs.com:443 GET /job/viewjob/1416367/technical-project-manager-it.html?loca
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    86.44.105.195       
+6-0 24666   0/0/0   W   0.00    15  0   0.0 0.00    0.00    90.186.153.64   nl.careersinfinances.com:443    GET /job/viewjob/27066001/meewerkend-voorman-dagdienst.html HTT
+6-0 24666   0/3/3   R   0.39    0   689 0.0 0.05    0.05    67.102.182.27       
+6-0 24666   0/2/2   R   0.40    0   3811    0.0 0.03    0.03    91.17.219.251       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    137.220.71.124      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    197.54.53.78        
+6-0 24666   0/1/1   R   0.34    1   13091   0.0 0.01    0.01    78.96.239.36        
+6-0 24666   0/1/1   R   0.24    7   7284    0.0 0.02    0.02    200.92.168.168      
+6-0 24666   0/1/1   R   0.34    1   13814   0.0 0.01    0.01    173.248.238.209     
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    1.141.21.21     
+6-0 24666   0/1/1   R   0.34    1   13671   0.0 0.01    0.01    78.54.171.139       
+6-0 24666   0/0/0   W   0.00    13  0   0.0 0.00    0.00    101.166.63.15   nl.careersinfinances.com:443    GET /job/viewjob/20132831/logistiek-backoffice-medewerker.html
+6-0 24666   0/1/1   W   0.25    5   0   0.0 0.02    0.02    176.182.218.3   nl.careersinfinances.com:443    GET /job/viewjob/10278844/financial-controller-intern.html HTTP
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    186.31.19.82        
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    84.80.134.197       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    64.126.180.39       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    88.97.186.174       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    93.108.79.20        
+6-0 24666   0/2/2   R   0.39    0   4355    0.0 0.03    0.03    67.213.150.106      
+6-0 24666   0/1/1   W   0.35    0   0   0.0 0.01    0.01    156.206.117.161 nl.careersinfinances.com:443    GET /job/viewjob/32191579/junior-beleidsmedewerker.html?categor
+6-0 24666   0/1/1   R   0.36    1   14323   0.0 0.02    0.02    79.177.151.44       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    101.189.166.231     
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    197.63.245.191      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    78.51.244.231       
+6-0 24666   0/1/1   R   0.33    1   13871   0.0 0.01    0.01    179.65.193.231      
+6-0 24666   0/1/1   W   0.29    0   0   0.0 0.01    0.01    78.213.150.146  nl.careersinfinances.com:443    GET /job/viewjob/26785581/engineer-machinebouw.html HTTP/1.1
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    1.1.246.20      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    86.163.71.141       
+6-0 24666   0/1/1   W   0.34    0   0   0.0 0.01    0.01    179.6.164.42    nl.careersinfinances.com:443    GET /job/viewjob/22159067/salesmanager-haarlem-alkmaar.html?com
+6-0 24666   0/1/1   R   0.32    1   13565   0.0 0.02    0.02    80.7.109.246        
+6-0 24666   0/1/1   R   0.34    1   13533   0.0 0.01    0.01    212.224.238.200     
+6-0 24666   0/2/2   R   0.36    0   816 0.0 0.03    0.03    222.114.243.77      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    95.235.191.214      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    90.46.20.88     
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    181.197.58.192      
+6-0 24666   0/1/1   W   0.28    4   0   0.0 0.02    0.02    27.130.80.205   nl.careersinfinances.com:443    GET /job/application/apply/27072245/ HTTP/1.1
+6-0 24666   0/1/1   W   0.31    1   0   0.0 0.01    0.01    171.245.167.140 nl.careersinfinances.com:443    GET /job/viewjob/23791528/management-trainee-mcdonalds.html HTT
+6-0 24666   0/0/0   W   0.00    16  0   0.0 0.00    0.00    95.76.18.124    nl.careersinfinances.com:443    GET /job/viewjob/32938421/verpleegkundige-niveau-4-via-zorgwerk
+6-0 24666   0/2/2   R   0.36    0   5726    0.0 0.03    0.03    132.184.130.157     
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    188.71.225.158      
+6-0 24666   0/1/1   W   0.29    2   0   0.0 0.02    0.02    46.96.64.149    www.techtopjobs.com:443 GET /job/viewjob/1503807/comptable.html?categories=elektrotechn
+6-0 24666   0/1/1   R   0.23    8   3425    0.0 0.02    0.02    124.218.152.47      
+6-0 24666   0/1/1   W   0.33    1   0   0.0 0.02    0.02    185.201.129.124 www.careersinfinances.com:443   GET /job/?q=h&categories=accountancy-boekhouding HTTP/1.1
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    82.218.42.185       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    142.67.144.184      
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    2.34.200.208        
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    110.136.218.112     
+6-0 24666   0/1/1   W   0.32    1   0   0.0 0.01    0.01    171.237.159.10  www.techtopjobs.com:443 GET /job/viewjob/1048934/contracting-officer.html?categories=bi
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    47.53.215.150       
+6-0 24666   0/2/2   R   0.38    0   7488    0.0 0.04    0.04    76.132.113.81       
+6-0 24666   0/1/1   W   0.30    1   0   0.0 0.01    0.01    92.208.183.212  nl.careersinfinances.com:443    GET /job/application/apply/26645250/ HTTP/1.1
+6-0 24666   0/1/1   R   0.37    0   14793   0.0 0.02    0.02    156.218.13.54       
+6-0 24666   0/1/1   W   0.27    4   0   0.0 0.02    0.02    86.32.245.100   nl.careersinfinances.com:443    GET /job/application/apply/13730887/ HTTP/1.1
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    155.4.130.70        
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    84.194.119.59       
+6-0 24666   0/1/1   W   0.30    1   0   0.0 0.01    0.01    109.239.43.131  nl.careersinfinances.com:443    GET /job/viewjob/29705668/allround-timmerman-full-time.html HTT
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    90.230.241.68       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    36.80.254.108       
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    213.199.220.217     
+6-0 24666   0/1/1   R   0.22    8   6070    0.0 0.02    0.02    110.136.244.213     
+6-0 24666   0/0/0   R   0.00    16  0   0.0 0.00    0.00    75.118.116.55       
+7-0 24667   0/1/1   R   0.22    11  3465    0.0 0.01    0.01    84.70.229.53        
+7-0 24667   0/1/1   R   0.39    1   13751   0.0 0.01    0.01    83.25.124.86        
+7-0 24667   0/2/2   R   0.46    0   811 0.0 0.03    0.03    84.79.108.163       
+7-0 24667   0/2/2   R   0.50    0   2959    0.0 0.04    0.04    109.43.112.124      
+7-0 24667   0/1/1   R   0.26    6   8591    0.0 0.02    0.02    187.76.162.37       
+7-0 24667   0/1/1   R   0.49    0   15234   0.0 0.02    0.02    94.234.69.55        
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    213.147.164.197     
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    68.171.124.53       
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    87.31.94.80     
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    66.181.171.181      
+7-0 24667   0/1/1   W   0.41    0   0   0.0 0.01    0.01    72.182.203.74   nl.careersinfinances.com:443    GET /job/application/apply/18775162/ HTTP/1.1
+7-0 24667   0/0/0   W   0.00    14  0   0.0 0.00    0.00    101.190.225.186 nl.careersinfinances.com:443    GET /job/viewjob/34281432/financieel-medewerker.html?company=ca
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    94.63.74.136        
+7-0 24667   0/1/1   R   0.46    0   15763   0.0 0.02    0.02    125.27.46.239       
+7-0 24667   0/2/2   W   0.45    0   0   0.0 0.03    0.03    89.6.121.57 www.careersinfinances.com:443   GET /job/viewjob/552469/automation-engineer.html?categories=bel
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    106.201.218.207     
+7-0 24667   0/2/2   R   0.35    2   2932    0.0 0.04    0.04    27.61.228.55        
+7-0 24667   0/1/1   R   0.49    0   14977   0.0 0.02    0.02    60.111.176.147      
+7-0 24667   0/2/2   W   0.35    1   0   0.0 0.03    0.03    93.9.233.82 nl.careersinfinances.com:443    GET /job/viewjob/27455622/aspirant-vrachtwagen-chauffeur-c.html
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    70.124.205.149      
+7-0 24667   0/1/1   R   0.32    3   12163   0.0 0.02    0.02    89.111.208.59       
+7-0 24667   0/3/3   R   0.49    0   3874    0.0 0.05    0.05    85.11.159.169       
+7-0 24667   0/2/2   R   0.33    3   3432    0.0 0.04    0.04    83.46.14.204        
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    90.209.76.233       
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    201.229.178.53      
+7-0 24667   0/1/1   R   0.50    0   15541   0.0 0.02    0.02    81.96.114.188       
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    178.51.171.79       
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    92.208.20.145       
+7-0 24667   0/1/1   R   0.42    1   15311   0.0 0.02    0.02    92.35.197.90        
+7-0 24667   0/1/1   W   0.37    1   0   0.0 0.01    0.01    86.161.40.253   nl.careersinfinances.com:443    GET /job/viewjob/21144829/allround-monteur-fulltime.html?catego
+7-0 24667   0/0/0   W   0.00    15  0   0.0 0.00    0.00    178.191.45.217  nl.careersinfinances.com:443    GET /job/viewjob/29592095/werkvoorbereider-kabels.html HTTP/1.1
+7-0 24667   0/1/1   R   0.39    1   14462   0.0 0.02    0.02    27.73.108.22        
+7-0 24667   0/1/1   R   0.47    0   14934   0.0 0.02    0.02    80.49.128.215       
+7-0 24667   0/2/2   W   0.38    1   0   0.0 0.04    0.04    54.165.13.201   www.techtopjobs.com:443 GET /job/viewjob/990129/trade-officer.html?page=3 HTTP/1.1
+7-0 24667   0/1/1   W   0.41    0   0   0.0 0.02    0.02    223.207.249.22  nl.careersinfinances.com:443    GET /job/application/apply/25153914/ HTTP/1.1
+7-0 24667   0/0/0   R   0.00    15  0   0.0 0.00    0.00    202.21.107.45       
+7-0 24667   0/1/1   R   0.30    4   11716   0.0 0.02    0.02    95.113.43.208       
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    189.99.111.189      
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    213.149.184.1       
+7-0 24667   0/0/0   W   0.00    15  0   0.0 0.00    0.00    79.41.119.117   nl.careersinfinances.com:443    GET /job/viewjob/23152383/directiesecretaresse-internationaal.h
+7-0 24667   0/1/1   R   0.27    6   9111    0.0 0.02    0.02    151.63.89.178       
+7-0 24667   0/2/2   R   0.51    0   2317    0.0 0.01    0.01    79.146.99.169       
+7-0 24667   0/1/1   W   0.42    0   0   0.0 0.01    0.01    109.243.132.125 nl.careersinfinances.com:443    GET /job/application/apply/22562057/ HTTP/1.1
+7-0 24667   0/1/1   W   0.35    0   0   0.0 0.01    0.01    80.240.202.65   nl.careersinfinances.com:443    GET /job/viewjob/24023372/servicetechnicus-elektrotechniek.html
+7-0 24667   0/1/1   W   0.40    0   0   0.0 0.01    0.01    87.192.104.140  nl.careersinfinances.com:443    GET /job/application/apply/22328243/ HTTP/1.1
+7-0 24667   0/0/0   W   0.00    15  0   0.0 0.00    0.00    71.104.119.157  www.techtopjobs.com:443 GET /job/viewjob/1388908/-data-analyst.html?locations=brussel&l
+7-0 24667   0/1/1   W   0.29    3   0   0.0 0.02    0.02    88.97.177.52    nl.careersinfinances.com:443    GET /job/application/apply/23482019/ HTTP/1.1
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    90.222.104.221      
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    171.51.185.192      
+7-0 24667   0/1/1   R   0.37    1   14012   0.0 0.01    0.01    181.172.247.107     
+7-0 24667   0/2/2   R   0.51    0   2004    0.0 0.01    0.01    73.115.231.151      
+7-0 24667   0/2/2   R   0.47    0   884 0.0 0.02    0.02    88.102.103.155      
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    196.150.47.172      
+7-0 24667   0/1/1   W   0.23    7   0   0.0 0.02    0.02    154.160.1.184   nl.careersinfinances.com:443    GET /job/viewjob/23005242/gl-accountant.html HTTP/1.1
+7-0 24667   0/1/1   W   0.45    0   0   0.0 0.02    0.02    89.200.205.45   nl.careersinfinances.com:443    GET /job/company/5flex.html HTTP/1.1
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    174.100.180.85      
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    5.28.189.193        
+7-0 24667   0/2/2   R   0.43    1   4197    0.0 0.04    0.04    89.101.53.9     
+7-0 24667   0/1/1   W   0.25    6   0   0.0 0.02    0.02    31.217.173.180  nl.careersinfinances.com:443    GET /job/viewjob/20453665/monteur-werken-elektrotechniek.html H
+7-0 24667   0/3/3   R   0.45    0   0   0.0 0.02    0.02    36.78.5.220     
+7-0 24667   0/0/0   R   0.00    16  0   0.0 0.00    0.00    86.33.92.91     
+7-0 24667   0/2/2   W   0.43    0   0   0.0 0.02    0.02    85.76.83.171    nl.careersinfinances.com:443    GET /job/application/apply/22604831/ HTTP/1.1
+7-0 24667   0/1/1   W   0.38    0   0   0.0 0.01    0.01    141.255.80.44   www.techtopjobs.com:443 GET /job/viewjob/1209316/magazijnier-parttime.html?categories=c
+7-0 24667   0/1/1   R   0.39    1   13588   0.0 0.01    0.01    83.21.81.10     
 
-
+Srv Child Server number - generation
+PID OS process ID
+Acc Number of accesses this connection / this child / this slot
+M   Mode of operation
+CPU CPU usage, number of seconds
+SS  Seconds since beginning of most recent request
+Req Milliseconds required to process most recent request
+Conn    Kilobytes transferred this connection
+Child   Megabytes transferred this child
+Slot    Total megabytes transferred this slot
+SSL/TLS Session Cache Status:
+cache type: SHMCB, shared memory: 1024000 bytes, current entries: 840
+subcaches: 32, indexes per subcache: 177
+time left on oldest entries' objects: avg: 278 seconds, (range: 278...279)
+index usage: 14%, cache usage: 19%
+total entries stored since starting: 840
+total entries replaced since starting: 0
+total entries expired since starting: 0
+total (pre-expiry) entries scrolled out of the cache: 0
+total retrieves since starting: 0 hit, 932 miss
+total removes since starting: 0 hit, 0 miss
+Apache/2.4.10 (Ubuntu) Server at www.nieuwejobs.com Port 443
