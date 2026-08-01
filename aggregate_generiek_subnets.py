@@ -8,6 +8,8 @@ import json
 import re
 import sys
 
+from country_policy import DEFAULT_COUNTRY_CODES, effective_country_codes
+
 try:
     text_type = unicode  # Py2
 except NameError:
@@ -53,17 +55,8 @@ except ImportError:
         return _ip.IPNetwork(value)
 
 
-DEFAULT_COUNTRY_CODES = [
-    "CN", "BR", "IQ", "TR", "UZ", "IN", "SA", "VE", "RU", "KE", "BD",
-    "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY",
-    "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", "PS",
-    "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG",
-    "MM", "ET", "LB", "MY", "VN", "BH", "TH", "US",
-]
-
-
 def parse_country_codes(value):
-    return [code.strip().upper() for code in value.split(",") if code.strip()]
+    return effective_country_codes([code.strip().upper() for code in value.split(",") if code.strip()])
 
 
 def network_sort_key(value):

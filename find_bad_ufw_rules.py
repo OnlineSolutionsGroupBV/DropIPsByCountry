@@ -39,18 +39,11 @@ import os
 import re
 import subprocess
 
+from country_policy import DEFAULT_COUNTRY_CODES, effective_country_codes
+
 
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}(?:/\d{1,2})?\b")
 IPV6_RE = re.compile(r"\b[0-9a-fA-F:]{2,}(?:/\d{1,3})?\b")
-DEFAULT_COUNTRY_CODES = [
-    "CN", "BR", "IQ", "TR", "UZ", "IN", "SA", "VE", "RU", "KE", "BD",
-    "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY",
-    "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", "PS",
-    "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG",
-    "MM", "ET", "LB", "MY", "VN", "BH", "TH", "US",
-]
-
-
 def load_allowlist(path):
     with open(path, "r") as f:
         data = json.load(f)
@@ -72,7 +65,7 @@ def load_geo_data(path):
 
 
 def parse_country_codes(value):
-    return set(code.strip().upper() for code in value.split(",") if code.strip())
+    return set(effective_country_codes([code.strip().upper() for code in value.split(",") if code.strip()]))
 
 
 def run_ufw_status(sudo):

@@ -308,6 +308,10 @@ The geo aggregation writes review files before UFW is touched:
 - `generiek_allowed_non_target_ips.txt` lists source IPs whose country is outside
   `DEFAULT_COUNTRY_CODES`; these must not become UFW deny candidates.
 
+Protected local market countries `BE`, `DE`, `FR`, and `NL` are removed from the
+effective block-country list even if they are accidentally passed in
+`COUNTRY_CODES`.
+
 `block_generiek_subnet.py` reads `aggregated_generiek_subnets.json`, compares those
 subnets with the current live output of `ufw status numbered`, and only inserts
 rules that are not already covered by an existing `DENY IN` rule. This means the

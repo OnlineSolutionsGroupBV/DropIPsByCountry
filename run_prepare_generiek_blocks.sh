@@ -4,7 +4,7 @@ set -euo pipefail
 PYTHON_BIN="${PYTHON:-python}"
 TARGET_PREFIX="${TARGET_PREFIX:-24}"
 MIN_HITS="${MIN_HITS:-1}"
-COUNTRY_CODES="${COUNTRY_CODES:-CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US}"
+COUNTRY_CODES="${COUNTRY_CODES:-$("$PYTHON_BIN" -c 'import country_policy; print(country_policy.default_country_codes_csv())')}"
 AGG_SOURCE="${AGG_SOURCE:-geo}"
 INPUT_FILE="${INPUT_FILE:-input.txt}"
 OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"

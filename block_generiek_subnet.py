@@ -8,6 +8,8 @@ import re
 import subprocess
 import sys
 
+from country_policy import DEFAULT_COUNTRY_CODES, effective_country_codes
+
 try:
     text_type = unicode  # Py2
 except NameError:
@@ -138,15 +140,6 @@ except ImportError:
 
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}(?:/\d{1,2})?\b")
 IPV6_RE = re.compile(r"\b[0-9a-fA-F:]*:[0-9a-fA-F:]+(?:/\d{1,3})?\b")
-DEFAULT_COUNTRY_CODES = [
-    "CN", "BR", "IQ", "TR", "UZ", "IN", "SA", "VE", "RU", "KE", "BD",
-    "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY",
-    "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", "PS",
-    "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG",
-    "MM", "ET", "LB", "MY", "VN", "BH", "TH", "US",
-]
-
-
 def read_text(path):
     with open(path, "rb") as f:
         data = f.read()
@@ -156,7 +149,7 @@ def read_text(path):
 
 
 def parse_country_codes(value):
-    return set(code.strip().upper() for code in value.split(",") if code.strip())
+    return set(effective_country_codes([code.strip().upper() for code in value.split(",") if code.strip()]))
 
 
 def network_sort_key(net):
