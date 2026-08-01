@@ -345,8 +345,10 @@ Implementation details:
 - `--dry-run` prints the exact `ufw insert 1 deny from ...` commands without changing UFW.
 - Dry-run previews the first 50 planned additions by default; use `--show-all` if
   you want to print every planned rule.
-- `--check-bad-rules` runs `find_bad_ufw_rules.py` first and stops if allowlisted
-  crawler ranges or source IPs outside `--country-codes` are currently blocked.
+- Candidate subnets that overlap the crawler allowlist are skipped and reported,
+  so Google/Bing/OpenAI ranges are not added while the rest can continue.
+- `--check-bad-rules` runs `find_bad_ufw_rules.py` and stops if existing live UFW
+  rules already block crawler ranges or source IPs outside `--country-codes`.
 - `block_generiek_subnet.py` runs a country safety check by default and stops if
   a candidate subnet contains a geo_data source IP outside `--country-codes`.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
@@ -429,6 +431,41 @@ python block_generiek_subnet.py --sudo --check-bad-rules
 
 If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
 `clean_bad_ufw_rules.py` without `--dry-run` only after confirming those deletes are correct.
+
+### Apache multi-site subnet analysis
+
+For servers with multiple small niche jobsites, use the Apache log directory as
+the decision source instead of `/server-status`. The status page only shows live
+workers; access logs show the traffic pattern across all sites and rotated logs.
+
+```bash
+python analyze_apache_subnets.py \
+  --log-dir /var/log/apache2 \
+  --geo-data geo_data.json \
+  --country-codes CN,IN \
+  --prefixes 32,24,16 \
+  --min-requests 100 \
+  --min-unique-ips 3
+```
+
+This writes:
+- `apache_subnet_report.json` — machine-readable full report.
+- `apache_subnet_report.txt` — human review table with `/32`, `/24`, and `/16`
+  options, observed IPs, request counts, countries, sites, and how many IPs each
+  CIDR would block.
+- `apache_subnet_candidates.txt` — only subnets marked `CANDIDATE`; review this
+  before using it as input for any UFW command.
+- `apache_log_ips.txt` — all unique IPs found in the scanned logs.
+- `apache_missing_geo_ips.txt` — IPs that are not present in `geo_data.json` yet;
+  resolve these before trusting country-based decisions.
+
+Decision labels:
+- `CANDIDATE`: all observed IPs in the subnet are target-country IPs and the
+  subnet passes the request and unique-IP thresholds.
+- `LOW_EVIDENCE`: target-country traffic exists, but there is not enough evidence
+  to block the subnet automatically.
+- `REVIEW_NON_TARGET_PRESENT`: the subnet contains at least one observed source
+  IP outside `--country-codes`; do not block it without manual review.
 
 ### One-command wrapper
 

@@ -51,6 +51,19 @@ class BlockGeneriekSubnetTests(unittest.TestCase):
 
         self.assertEqual(planned, ["177.62.0.0/16"])
 
+    def test_split_allowlisted_candidates_skips_overlaps_and_keeps_rest(self):
+        candidates = [
+            self.net("40.77.167.0/24"),
+            self.net("117.40.0.0/24"),
+        ]
+        allowlist = [self.net("40.77.167.0/24")]
+
+        allowed, skipped = blocker.split_allowlisted_candidates(candidates, allowlist)
+
+        self.assertEqual([str(net) for net in allowed], ["117.40.0.0/24"])
+        self.assertEqual(str(skipped[0][0]), "40.77.167.0/24")
+        self.assertEqual([str(net) for net in skipped[0][1]], ["40.77.167.0/24"])
+
     def test_load_candidate_networks_accepts_json_list_and_deduplicates(self):
         handle, path = tempfile.mkstemp()
         os.close(handle)
