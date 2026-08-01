@@ -290,24 +290,14 @@ def find_country_mismatches(candidates, geo_data_path, country_codes, max_exampl
     return [(net, mismatch_by_key[to_text(net)]) for net in candidates if to_text(net) in mismatch_by_key]
 
 
-def ensure_no_country_mismatches(candidates, args):
+def split_country_mismatch_candidates(candidates, args):
     if args.skip_country_check:
-        return
+        return candidates, []
 
     country_codes = parse_country_codes(args.country_codes)
     mismatches = find_country_mismatches(candidates, args.geo_data, country_codes, args.max_country_examples)
-    if not mismatches:
-        return
-
-    lines = [
-        "Country safety check failed: %d candidate subnet(s) contain non-target source IPs." % len(mismatches)
-    ]
-    for candidate, examples in mismatches[:args.max_country_examples]:
-        lines.append("  %s contains %s" % (candidate, "; ".join(examples)))
-    if len(mismatches) > args.max_country_examples:
-        lines.append("  ... %d more country mismatch(es)" % (len(mismatches) - args.max_country_examples))
-    lines.append("Regenerate candidates with aggregate_generiek_subnets.py --source geo and the intended --country-codes.")
-    raise RuntimeError("\n".join(lines))
+    mismatch_keys = set(to_text(candidate) for candidate, _examples in mismatches)
+    return [candidate for candidate in candidates if to_text(candidate) not in mismatch_keys], mismatches
 
 
 def is_covered_by_existing_rule(candidate, existing_rules):
@@ -461,7 +451,13 @@ def main():
 
     try:
         candidates = load_candidate_networks(args.input)
-        ensure_no_country_mismatches(candidates, args)
+        candidates, country_mismatch_skips = split_country_mismatch_candidates(candidates, args)
+        if country_mismatch_skips:
+            print("Skipped country-mismatch candidate subnets: %d" % len(country_mismatch_skips))
+            for candidate, examples in country_mismatch_skips[:args.max_preview]:
+                print("  skip %s contains %s" % (candidate, "; ".join(examples[:3])))
+            if len(country_mismatch_skips) > args.max_preview:
+                print("  ... %d more skipped country-mismatch candidate(s)" % (len(country_mismatch_skips) - args.max_preview))
         allowlisted_skips = []
         if args.skip_allowlist_overlaps or args.fail_on_allowlist_overlap:
             allowlist = load_allowlist_networks(args.allowlist)

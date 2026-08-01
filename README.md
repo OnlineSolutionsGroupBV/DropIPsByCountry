@@ -355,8 +355,9 @@ Implementation details:
 - `--check-bad-rules` is for one-time existing-UFW cleanup checks. It runs
   `find_bad_ufw_rules.py` and stops if existing live UFW rules already block
   crawler ranges or source IPs outside `--country-codes`.
-- `block_generiek_subnet.py` runs a country safety check by default and stops if
-  a candidate subnet contains a geo_data source IP outside `--country-codes`.
+- `block_generiek_subnet.py` skips candidate subnets that contain a geo_data
+  source IP outside `--country-codes`, then continues with the remaining safe
+  candidates.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
   calling UFW.
 - `audit_generiek_subnets.py` is read-only and checks generated subnets before

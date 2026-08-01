@@ -121,6 +121,32 @@ class BlockGeneriekSubnetTests(unittest.TestCase):
         finally:
             os.unlink(path)
 
+    def test_split_country_mismatch_candidates_skips_mixed_country_subnet(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            with open(path, "w") as f:
+                json.dump({
+                    "109.134.6.23": {"country": "BE", "org": "AS5432 Proximus NV"},
+                    "1.2.3.4": {"country": "CN", "org": "Example CN"},
+                }, f)
+
+            class Args(object):
+                skip_country_check = False
+                country_codes = "CN,IN"
+                geo_data = path
+                max_country_examples = 10
+
+            candidates, skipped = blocker.split_country_mismatch_candidates(
+                [self.net("109.134.6.0/24"), self.net("1.2.3.0/24")],
+                Args(),
+            )
+
+            self.assertEqual([str(net) for net in candidates], ["1.2.3.0/24"])
+            self.assertEqual(str(skipped[0][0]), "109.134.6.0/24")
+        finally:
+            os.unlink(path)
+
 
 if __name__ == "__main__":
     unittest.main()
