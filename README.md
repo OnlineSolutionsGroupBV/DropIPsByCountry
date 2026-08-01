@@ -503,14 +503,32 @@ By default this:
 - generates `aggregated_generiek_subnets.json` as `/24`
 - caches OpenAI/Google/Bing ranges
 - audits candidate blocks against the allowlist
-- checks existing UFW rules for crawler overlap
-- prints the planned UFW additions
-- applies the planned UFW additions if all checks pass
+- skips crawler allowlist and country-mismatch candidate subnets
+- applies the planned UFW additions when `APPLY=1`
 
 Run a dry-run without applying changes:
 
 ```bash
 APPLY=0 bash run_prepare_generiek_blocks.sh
+```
+
+Use `run_geo_bulk_blocks.sh` when you want to bulk-block from the whole
+`geo_data.json` cache instead of the current `input.txt` snapshot:
+
+```bash
+bash run_geo_bulk_blocks.sh
+```
+
+Bulk defaults are intentionally aggressive:
+- `APPLY=1`
+- `CHECK_EXISTING=1`
+- `TARGET_PREFIX=24`
+- `MIN_HITS=1`
+
+Review first with:
+
+```bash
+APPLY=0 bash run_geo_bulk_blocks.sh
 ```
 
 Useful variants:
