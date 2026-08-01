@@ -63,6 +63,9 @@ class BlockGeneriekSubnetTests(unittest.TestCase):
         finally:
             os.unlink(path)
 
+    def test_ip_network_accepts_bytes_without_hex_ipv6_regression(self):
+        self.assertEqual(str(blocker.ip_network(b"101.128.108.0/24", strict=False)), "101.128.108.0/24")
+
     def test_load_candidate_networks_accepts_reported_valid_16_cidrs(self):
         handle, path = tempfile.mkstemp()
         os.close(handle)
