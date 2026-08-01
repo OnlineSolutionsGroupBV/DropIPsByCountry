@@ -2,6 +2,7 @@
 from __future__ import print_function
 
 import argparse
+import codecs
 import collections
 import json
 import re
@@ -187,7 +188,7 @@ def build_country_report(geo_data, country_codes, source_ips=None):
 
 
 def write_ip_detail_file(path, rows):
-    with open(path, "w") as f:
+    with codecs.open(path, "w", encoding="utf-8") as f:
         for row in rows:
             f.write("%s %s %s %s %s\n" % (
                 row["ip"],
