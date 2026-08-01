@@ -422,7 +422,7 @@ If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
 ### One-command wrapper
 
 Use `run_prepare_generiek_blocks.sh` when you want the whole preparation flow
-from `input.txt` through audit and UFW dry-run:
+from `input.txt` through audit and UFW apply:
 
 ```bash
 bash run_prepare_generiek_blocks.sh
@@ -436,12 +436,13 @@ By default this:
 - caches OpenAI/Google/Bing ranges
 - audits candidate blocks against the allowlist
 - checks existing UFW rules for crawler overlap
-- prints the planned UFW additions without applying them
+- prints the planned UFW additions
+- applies the planned UFW additions if all checks pass
 
-Apply after reviewing the dry-run:
+Run a dry-run without applying changes:
 
 ```bash
-APPLY=1 bash run_prepare_generiek_blocks.sh
+APPLY=0 bash run_prepare_generiek_blocks.sh
 ```
 
 Useful variants:
