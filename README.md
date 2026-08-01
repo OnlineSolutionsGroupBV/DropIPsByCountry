@@ -321,16 +321,17 @@ the crawler overlap check, does not use `--sudo`, and does not dry-run. On many
 servers it will fail because UFW needs root permissions; on a permissive setup it
 may try to add rules immediately.
 
-Use this for review:
+Use this for review. This checks new candidates and skips crawler allowlist
+overlaps, but does not run the heavier existing-UFW cleanup audit:
 
 ```bash
-python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
+python block_generiek_subnet.py --sudo --dry-run
 ```
 
 Apply only after reviewing the dry-run:
 
 ```bash
-python block_generiek_subnet.py --sudo --check-bad-rules
+python block_generiek_subnet.py --sudo
 ```
 
 For local testing without touching live UFW:
@@ -347,8 +348,9 @@ Implementation details:
   you want to print every planned rule.
 - Candidate subnets that overlap the crawler allowlist are skipped and reported,
   so Google/Bing/OpenAI ranges are not added while the rest can continue.
-- `--check-bad-rules` runs `find_bad_ufw_rules.py` and stops if existing live UFW
-  rules already block crawler ranges or source IPs outside `--country-codes`.
+- `--check-bad-rules` is for one-time existing-UFW cleanup checks. It runs
+  `find_bad_ufw_rules.py` and stops if existing live UFW rules already block
+  crawler ranges or source IPs outside `--country-codes`.
 - `block_generiek_subnet.py` runs a country safety check by default and stops if
   a candidate subnet contains a geo_data source IP outside `--country-codes`.
 - `--ufw-status-file ufw_status_numbered` can be used for local testing without
@@ -418,19 +420,32 @@ python cache_crawler_ips.py --cache-dir ip_cache
 # Audit generated blocks before touching UFW:
 python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
 
-# Check existing UFW rules for crawler overlap:
-python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --sudo
-python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
-
 # Review planned UFW changes first:
-python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
+python block_generiek_subnet.py --sudo --dry-run
 
 # Apply after review:
-python block_generiek_subnet.py --sudo --check-bad-rules
+python block_generiek_subnet.py --sudo
 ```
 
-If the bad-rule check reports rules, inspect `bad_ufw_rules.json` and run
-`clean_bad_ufw_rules.py` without `--dry-run` only after confirming those deletes are correct.
+Run the existing-UFW cleanup audit separately when setting up a server or after a
+firewall incident:
+
+```bash
+bash run_audit_existing_ufw.sh
+```
+
+If the dry-run output is correct:
+
+```bash
+APPLY_CLEAN=1 bash run_audit_existing_ufw.sh
+```
+
+The normal wrapper skips this heavy audit by default. Use `CHECK_EXISTING=1` only
+when you deliberately want the one-time cleanup step included:
+
+```bash
+CHECK_EXISTING=1 APPLY=0 bash run_prepare_generiek_blocks.sh
+```
 
 ### Apache multi-site subnet analysis
 

@@ -9,6 +9,7 @@ AGG_SOURCE="${AGG_SOURCE:-geo}"
 INPUT_FILE="${INPUT_FILE:-input.txt}"
 OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"
 APPLY="${APPLY:-1}"
+CHECK_EXISTING="${CHECK_EXISTING:-0}"
 SUDO_FLAG="${SUDO_FLAG:---sudo}"
 
 if [ ! -f "$INPUT_FILE" ]; then
@@ -46,19 +47,29 @@ fi
 "$PYTHON_BIN" aggregate_generiek_subnets.py "${AGG_ARGS[@]}"
 "$PYTHON_BIN" cache_crawler_ips.py --cache-dir ip_cache
 "$PYTHON_BIN" audit_generiek_subnets.py --input "$OUTPUT_FILE" --allowlist ip_cache/allowlist_cidrs.json --country-codes "$COUNTRY_CODES" --fail-on-country-mismatch
-"$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes "$COUNTRY_CODES" $SUDO_FLAG
-"$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG --dry-run
 
-if [ "$APPLY" = "1" ]; then
-  "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG
+if [ "$CHECK_EXISTING" = "1" ]; then
+  "$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes "$COUNTRY_CODES" $SUDO_FLAG
+  "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG --dry-run
+  if [ "$APPLY" = "1" ]; then
+    "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG
+  fi
+else
+  echo "Skipping existing UFW audit. Run with CHECK_EXISTING=1 for one-time cleanup."
 fi
 
 BLOCK_ARGS=(
   --input "$OUTPUT_FILE"
-  --check-bad-rules
   --country-codes "$COUNTRY_CODES"
-  --dry-run
 )
+
+if [ "$CHECK_EXISTING" = "1" ]; then
+  BLOCK_ARGS+=(--check-bad-rules)
+fi
+
+if [ "$APPLY" != "1" ]; then
+  BLOCK_ARGS+=(--dry-run)
+fi
 
 if [ -n "$SUDO_FLAG" ]; then
   BLOCK_ARGS+=($SUDO_FLAG)
@@ -66,16 +77,6 @@ fi
 
 "$PYTHON_BIN" block_generiek_subnet.py "${BLOCK_ARGS[@]}"
 
-if [ "$APPLY" = "1" ]; then
-  APPLY_ARGS=(
-    --input "$OUTPUT_FILE"
-    --check-bad-rules
-    --country-codes "$COUNTRY_CODES"
-  )
-  if [ -n "$SUDO_FLAG" ]; then
-    APPLY_ARGS+=($SUDO_FLAG)
-  fi
-  "$PYTHON_BIN" block_generiek_subnet.py "${APPLY_ARGS[@]}"
-else
+if [ "$APPLY" != "1" ]; then
   echo "Dry-run complete. Re-run with APPLY=1 to add the planned UFW rules."
 fi
