@@ -193,6 +193,29 @@ def load_candidate_networks(path):
     return networks
 
 
+def load_allowlist_networks(path):
+    if not path or not os.path.exists(path):
+        return []
+
+    with open(path, "r") as f:
+        data = json.load(f)
+
+    if isinstance(data, dict):
+        raw_values = data.get("cidrs", [])
+    elif isinstance(data, list):
+        raw_values = data
+    else:
+        return []
+
+    networks = []
+    for value in raw_values:
+        try:
+            networks.append(ip_network(to_text(value).strip(), strict=False))
+        except ValueError:
+            continue
+    return networks
+
+
 def run_ufw_status(sudo):
     cmd = ["ufw", "status", "numbered"]
     if sudo:
@@ -305,6 +328,27 @@ def is_covered_by_existing_rule(candidate, existing_rules):
     return False
 
 
+def networks_overlap(left, right):
+    if network_version(left) != network_version(right):
+        return False
+    return network_first_int(left) <= network_last_int(right) and network_first_int(right) <= network_last_int(left)
+
+
+def split_allowlisted_candidates(candidates, allowlist):
+    allowed = []
+    skipped = []
+    for candidate in candidates:
+        overlaps = []
+        for allowed_net in allowlist:
+            if networks_overlap(candidate, allowed_net):
+                overlaps.append(allowed_net)
+        if overlaps:
+            skipped.append((candidate, overlaps))
+        else:
+            allowed.append(candidate)
+    return allowed, skipped
+
+
 def plan_new_rules(candidates, existing_rules):
     exact_existing = set(str(net) for net in existing_rules)
     existing_by_version_prefix = {}
@@ -410,6 +454,8 @@ def build_parser():
     parser.add_argument("--check-bad-rules", action="store_true", help="Run find_bad_ufw_rules.py before adding rules")
     parser.add_argument("--allowlist", default=os.path.join("ip_cache", "allowlist_cidrs.json"))
     parser.add_argument("--bad-rules-output", default="bad_ufw_rules.json")
+    parser.add_argument("--skip-allowlist-overlaps", action="store_true", default=True, help="Skip candidate subnets that overlap crawler allowlist CIDRs")
+    parser.add_argument("--fail-on-allowlist-overlap", action="store_true", help="Stop instead of skipping candidate subnets that overlap crawler allowlist CIDRs")
     parser.add_argument("--geo-data", default="geo_data.json")
     parser.add_argument("--country-codes", default=",".join(DEFAULT_COUNTRY_CODES))
     parser.add_argument("--skip-country-check", action="store_true", help="Disable geo_data country mismatch safety check")
@@ -423,8 +469,21 @@ def main():
     try:
         candidates = load_candidate_networks(args.input)
         ensure_no_country_mismatches(candidates, args)
-        if args.check_bad_rules:
-            run_bad_rule_check(args)
+        allowlisted_skips = []
+        if args.skip_allowlist_overlaps or args.fail_on_allowlist_overlap:
+            allowlist = load_allowlist_networks(args.allowlist)
+            candidates, allowlisted_skips = split_allowlisted_candidates(candidates, allowlist)
+            if allowlisted_skips:
+                print("Skipped allowlist-overlap candidate subnets: %d" % len(allowlisted_skips))
+                for candidate, overlaps in allowlisted_skips[:args.max_preview]:
+                    print("  skip %s overlaps %s" % (
+                        candidate,
+                        ", ".join(to_text(net) for net in overlaps[:3]),
+                    ))
+                if len(allowlisted_skips) > args.max_preview:
+                    print("  ... %d more skipped allowlist-overlap candidate(s)" % (len(allowlisted_skips) - args.max_preview))
+                if args.fail_on_allowlist_overlap:
+                    raise RuntimeError("Candidate list contains allowlist overlaps.")
 
         if args.ufw_status_file:
             status_text = read_text(args.ufw_status_file)
@@ -432,6 +491,8 @@ def main():
             status_text = run_ufw_status(args.sudo)
 
         existing_rules = parse_ufw_denies(status_text)
+        if args.check_bad_rules:
+            run_bad_rule_check(args)
         to_add = plan_new_rules(candidates, existing_rules)
 
         print("Candidate subnets: %d" % len(candidates))
