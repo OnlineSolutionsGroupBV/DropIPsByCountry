@@ -138,6 +138,13 @@ except ImportError:
 
 IPV4_RE = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}(?:/\d{1,2})?\b")
 IPV6_RE = re.compile(r"\b[0-9a-fA-F:]*:[0-9a-fA-F:]+(?:/\d{1,3})?\b")
+DEFAULT_COUNTRY_CODES = [
+    "CN", "BR", "IQ", "TR", "UZ", "IN", "SA", "VE", "RU", "KE", "BD",
+    "AR", "JO", "PK", "MA", "ZA", "UA", "EC", "AZ", "UY", "MX", "PY",
+    "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", "PS",
+    "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG",
+    "MM", "ET", "LB", "MY", "VN", "BH", "TH", "US",
+]
 
 
 def read_text(path):
@@ -146,6 +153,14 @@ def read_text(path):
     if isinstance(data, bytes):
         return data.decode("utf-8")
     return data
+
+
+def parse_country_codes(value):
+    return set(code.strip().upper() for code in value.split(",") if code.strip())
+
+
+def network_sort_key(net):
+    return (network_version(net), network_first_int(net), net.prefixlen)
 
 
 def load_candidate_networks(path):
@@ -227,6 +242,58 @@ def parse_ufw_denies(status_text):
     return denied
 
 
+def find_country_mismatches(candidates, geo_data_path, country_codes, max_examples):
+    if not geo_data_path or not os.path.exists(geo_data_path) or not country_codes:
+        return []
+
+    with open(geo_data_path, "r") as f:
+        geo_data = json.load(f)
+
+    candidates = [net for net in candidates if network_version(net) == 4]
+    candidates.sort(key=network_sort_key)
+    candidate_keys = set(to_text(net) for net in candidates)
+    prefix_lengths = sorted(set(net.prefixlen for net in candidates))
+    mismatch_by_key = {}
+
+    for ip, details in geo_data.items():
+        country = to_text(details.get("country", "Unknown")).upper()
+        if country in country_codes:
+            continue
+        for prefix in prefix_lengths:
+            try:
+                candidate_key = to_text(ip_network("%s/%d" % (ip, prefix), strict=False))
+            except ValueError:
+                continue
+            if candidate_key not in candidate_keys:
+                continue
+            if candidate_key not in mismatch_by_key:
+                mismatch_by_key[candidate_key] = []
+            if len(mismatch_by_key[candidate_key]) < max_examples:
+                mismatch_by_key[candidate_key].append("%s %s %s" % (ip, country, details.get("org", "Unknown")))
+
+    return [(net, mismatch_by_key[to_text(net)]) for net in candidates if to_text(net) in mismatch_by_key]
+
+
+def ensure_no_country_mismatches(candidates, args):
+    if args.skip_country_check:
+        return
+
+    country_codes = parse_country_codes(args.country_codes)
+    mismatches = find_country_mismatches(candidates, args.geo_data, country_codes, args.max_country_examples)
+    if not mismatches:
+        return
+
+    lines = [
+        "Country safety check failed: %d candidate subnet(s) contain non-target source IPs." % len(mismatches)
+    ]
+    for candidate, examples in mismatches[:args.max_country_examples]:
+        lines.append("  %s contains %s" % (candidate, "; ".join(examples)))
+    if len(mismatches) > args.max_country_examples:
+        lines.append("  ... %d more country mismatch(es)" % (len(mismatches) - args.max_country_examples))
+    lines.append("Regenerate candidates with aggregate_generiek_subnets.py --source geo and the intended --country-codes.")
+    raise RuntimeError("\n".join(lines))
+
+
 def is_covered_by_existing_rule(candidate, existing_rules):
     for existing in existing_rules:
         if network_version(candidate) != network_version(existing):
@@ -265,6 +332,10 @@ def run_bad_rule_check(args):
         args.allowlist,
         "--output",
         args.bad_rules_output,
+        "--country-codes",
+        args.country_codes,
+        "--geo-data",
+        args.geo_data,
     ]
     if args.sudo:
         cmd.append("--sudo")
@@ -339,6 +410,10 @@ def build_parser():
     parser.add_argument("--check-bad-rules", action="store_true", help="Run find_bad_ufw_rules.py before adding rules")
     parser.add_argument("--allowlist", default=os.path.join("ip_cache", "allowlist_cidrs.json"))
     parser.add_argument("--bad-rules-output", default="bad_ufw_rules.json")
+    parser.add_argument("--geo-data", default="geo_data.json")
+    parser.add_argument("--country-codes", default=",".join(DEFAULT_COUNTRY_CODES))
+    parser.add_argument("--skip-country-check", action="store_true", help="Disable geo_data country mismatch safety check")
+    parser.add_argument("--max-country-examples", type=int, default=10)
     return parser
 
 
@@ -347,6 +422,7 @@ def main():
 
     try:
         candidates = load_candidate_networks(args.input)
+        ensure_no_country_mismatches(candidates, args)
         if args.check_bad_rules:
             run_bad_rule_check(args)
 

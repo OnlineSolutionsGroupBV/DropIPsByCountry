@@ -25,6 +25,17 @@ class FindBadUfwRulesTests(unittest.TestCase):
 
         self.assertFalse(bad_rules.is_blocking_allowed(candidate, allowlist))
 
+    def test_find_non_target_sources_flags_existing_ufw_rule_for_allowed_country(self):
+        candidate = self.net("148.251.129.0/24")
+        geo_data = {
+            "148.251.129.80": {"country": "DE", "org": "AS24940 Hetzner Online GmbH"},
+            "1.2.3.4": {"country": "CN", "org": "Example CN"},
+        }
+
+        found = bad_rules.find_non_target_sources(candidate, geo_data, set(["CN", "IN"]), 10)
+
+        self.assertEqual(found, ["148.251.129.80 DE AS24940 Hetzner Online GmbH"])
+
 
 if __name__ == "__main__":
     unittest.main()
