@@ -8,13 +8,32 @@ import os
 import sys
 
 try:
+    text_type = unicode  # Py2
+except NameError:
+    text_type = str
+
+try:
+    binary_type = bytes
+except NameError:
+    binary_type = str
+
+
+def to_text(value):
+    if isinstance(value, text_type):
+        return value
+    if isinstance(value, binary_type):
+        return value.decode("utf-8")
+    return text_type(value)
+
+
+try:
     import ipaddress as _ip
 
     def ip_address(value):
-        return _ip.ip_address(value)
+        return _ip.ip_address(to_text(value))
 
     def ip_network(value, strict=False):
-        return _ip.ip_network(value, strict=strict)
+        return _ip.ip_network(to_text(value), strict=strict)
 
 except ImportError:
     try:
@@ -25,12 +44,12 @@ except ImportError:
     def ip_address(value):
         if _ip is None:
             raise ImportError("Missing ipaddress/ipaddr module")
-        return _ip.IPAddress(value)
+        return _ip.IPAddress(to_text(value))
 
     def ip_network(value, strict=False):
         if _ip is None:
             raise ImportError("Missing ipaddress/ipaddr module")
-        return _ip.IPNetwork(value)
+        return _ip.IPNetwork(to_text(value))
 
 
 def net_version(net):
@@ -81,7 +100,7 @@ def load_network_list(path):
     seen = set()
     for value in raw_values:
         try:
-            net = ip_network(str(value).strip(), strict=False)
+            net = ip_network(to_text(value).strip(), strict=False)
         except ValueError as exc:
             invalid.append((value, str(exc)))
             continue
