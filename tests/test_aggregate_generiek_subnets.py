@@ -1,4 +1,6 @@
 import unittest
+import os
+import tempfile
 
 import aggregate_generiek_subnets as aggregate
 
@@ -64,6 +66,23 @@ class AggregateGeneriekSubnetsTests(unittest.TestCase):
         self.assertEqual(report["missing_geo_ips"], ["9.9.9.9"])
         self.assertEqual(report["countries"]["CN"], {"total": 1, "blocked": 1, "allowed": 0})
         self.assertEqual(report["countries"]["BE"], {"total": 1, "blocked": 0, "allowed": 1})
+
+    def test_write_ip_detail_file_writes_unicode_as_utf8(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            aggregate.write_ip_detail_file(path, [{
+                "ip": "84.126.19.181",
+                "country": "ES",
+                "region": "Andalusia",
+                "city": u"M\xe1laga",
+                "org": "AS6739 Vodafone ONO AS",
+            }])
+
+            with open(path, "rb") as f:
+                self.assertIn(u"M\xe1laga".encode("utf-8"), f.read())
+        finally:
+            os.unlink(path)
 
 
 if __name__ == "__main__":
