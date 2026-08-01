@@ -5,6 +5,7 @@ PYTHON_BIN="${PYTHON:-python}"
 TARGET_PREFIX="${TARGET_PREFIX:-24}"
 MIN_HITS="${MIN_HITS:-1}"
 COUNTRY_CODES="${COUNTRY_CODES:-}"
+AGG_SOURCE="${AGG_SOURCE:-ips}"
 INPUT_FILE="${INPUT_FILE:-input.txt}"
 OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"
 APPLY="${APPLY:-1}"
@@ -20,15 +21,25 @@ if [ "$INPUT_FILE" != "input.txt" ]; then
 fi
 
 "$PYTHON_BIN" parse_ips.py
-"$PYTHON_BIN" get_ip_country.py
 
 AGG_ARGS=(
+  --source "$AGG_SOURCE"
   --target-prefix "$TARGET_PREFIX"
   --min-hits "$MIN_HITS"
   --output "$OUTPUT_FILE"
 )
 
-if [ -n "$COUNTRY_CODES" ]; then
+if [ "$AGG_SOURCE" = "geo" ]; then
+  "$PYTHON_BIN" get_ip_country.py
+  AGG_ARGS+=(--input geo_data.json)
+elif [ "$AGG_SOURCE" = "ips" ]; then
+  AGG_ARGS+=(--input output.txt)
+else
+  echo "ERROR: AGG_SOURCE must be 'ips' or 'geo'" >&2
+  exit 1
+fi
+
+if [ "$AGG_SOURCE" = "geo" ] && [ -n "$COUNTRY_CODES" ]; then
   AGG_ARGS+=(--country-codes "$COUNTRY_CODES")
 fi
 
@@ -37,6 +48,10 @@ fi
 "$PYTHON_BIN" audit_generiek_subnets.py --input "$OUTPUT_FILE" --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
 "$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json $SUDO_FLAG
 "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG --dry-run
+
+if [ "$APPLY" = "1" ]; then
+  "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG
+fi
 
 BLOCK_ARGS=(
   --input "$OUTPUT_FILE"

@@ -3,6 +3,7 @@ from __future__ import print_function
 
 import argparse
 import json
+import re
 import sys
 
 try:
@@ -71,14 +72,29 @@ def network_sort_key(value):
     return (net.version, int(first), net.prefixlen)
 
 
-def build_subnets(geo_data, country_codes, target_prefix, min_hits):
-    country_set = set(country_codes)
+def parse_ips_from_text(text):
+    ip_pattern = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
+    ips = []
+    seen = set()
+    for value in ip_pattern.findall(text):
+        try:
+            addr = ip_address(value)
+        except ValueError:
+            continue
+        if getattr(addr, "version", 4) != 4:
+            continue
+        key = str(addr)
+        if key not in seen:
+            ips.append(key)
+            seen.add(key)
+    return ips
+
+
+def build_subnets_from_ips(ips, target_prefix, min_hits):
     counts = {}
     selected_ips = 0
 
-    for ip, details in geo_data.items():
-        if details.get("country") not in country_set:
-            continue
+    for ip in ips:
         try:
             addr = ip_address(ip)
         except ValueError:
@@ -96,11 +112,29 @@ def build_subnets(geo_data, country_codes, target_prefix, min_hits):
     return selected_ips, subnets
 
 
+def build_subnets_from_geo(geo_data, country_codes, target_prefix, min_hits):
+    country_set = set(country_codes)
+    ips = []
+
+    for ip, details in geo_data.items():
+        if details.get("country") not in country_set:
+            continue
+        ips.append(ip)
+
+    return build_subnets_from_ips(ips, target_prefix, min_hits)
+
+
 def build_parser():
     parser = argparse.ArgumentParser(
         description="Aggregate selected country IPs from geo_data.json into IPv4 CIDR ranges."
     )
     parser.add_argument("--input", default="geo_data.json")
+    parser.add_argument(
+        "--source",
+        choices=["geo", "ips"],
+        default="geo",
+        help="Read --input as geo_data.json country data or as raw IP/text input.",
+    )
     parser.add_argument("--output", default="aggregated_generiek_subnets.json")
     parser.add_argument(
         "--country-codes",
@@ -135,17 +169,25 @@ def main():
         print("ERROR: --min-hits must be at least 1", file=sys.stderr)
         return 1
 
-    with open(args.input, "r") as f:
-        geo_data = json.load(f)
-
-    country_codes = parse_country_codes(args.country_codes)
-    selected_ips, subnets = build_subnets(geo_data, country_codes, args.target_prefix, args.min_hits)
+    if args.source == "geo":
+        with open(args.input, "r") as f:
+            geo_data = json.load(f)
+        country_codes = parse_country_codes(args.country_codes)
+        selected_ips, subnets = build_subnets_from_geo(geo_data, country_codes, args.target_prefix, args.min_hits)
+    else:
+        with open(args.input, "r") as f:
+            selected_ips, subnets = build_subnets_from_ips(
+                parse_ips_from_text(f.read()),
+                args.target_prefix,
+                args.min_hits,
+            )
 
     with open(args.output, "w") as f:
         json.dump(subnets, f, indent=4)
 
     print("Selected IPs:", selected_ips)
     print("Generated subnets:", len(subnets))
+    print("Source:", args.source)
     print("Target prefix:", args.target_prefix)
     print("Output:", args.output)
     return 0
