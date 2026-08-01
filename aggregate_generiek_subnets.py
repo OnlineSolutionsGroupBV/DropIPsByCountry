@@ -6,13 +6,32 @@ import json
 import sys
 
 try:
+    text_type = unicode  # Py2
+except NameError:
+    text_type = str
+
+try:
+    binary_type = bytes
+except NameError:
+    binary_type = str
+
+
+def to_text(value):
+    if isinstance(value, text_type):
+        return value
+    if isinstance(value, binary_type):
+        return value.decode("utf-8")
+    return text_type(value)
+
+
+try:
     import ipaddress as _ip
 
     def ip_address(value):
-        return _ip.ip_address(value)
+        return _ip.ip_address(to_text(value))
 
     def ip_network(value, strict=False):
-        return _ip.ip_network(value, strict=strict)
+        return _ip.ip_network(to_text(value), strict=strict)
 
 except ImportError:
     try:
