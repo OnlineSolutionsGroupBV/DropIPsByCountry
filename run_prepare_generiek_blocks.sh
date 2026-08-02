@@ -11,17 +11,56 @@ OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"
 APPLY="${APPLY:-1}"
 CHECK_EXISTING="${CHECK_EXISTING:-0}"
 SUDO_FLAG="${SUDO_FLAG:---sudo}"
+RUN_ID="${RUN_ID:-$(date +%Y%m%d-%H%M%S)}"
+RUN_DIR="${RUN_DIR:-runs/$RUN_ID}"
+
+snapshot_if_exists() {
+  src="$1"
+  dest="$2"
+  if [ -e "$src" ]; then
+    cp "$src" "$RUN_DIR/$dest"
+  fi
+}
+
+write_summary() {
+  {
+    echo "run_id=$RUN_ID"
+    echo "run_dir=$RUN_DIR"
+    echo "date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    echo "python=$PYTHON_BIN"
+    echo "target_prefix=$TARGET_PREFIX"
+    echo "min_hits=$MIN_HITS"
+    echo "country_codes=$COUNTRY_CODES"
+    echo "agg_source=$AGG_SOURCE"
+    echo "input_file=$INPUT_FILE"
+    echo "output_file=$OUTPUT_FILE"
+    echo "apply=$APPLY"
+    echo "check_existing=$CHECK_EXISTING"
+    echo "sudo_flag=$SUDO_FLAG"
+    if [ -f output.txt ]; then
+      echo "parsed_ip_lines=$(wc -l < output.txt | tr -d ' ')"
+    fi
+    if [ -f "$OUTPUT_FILE" ]; then
+      echo "candidate_subnet_lines=$(grep -c '\"' "$OUTPUT_FILE" 2>/dev/null || true)"
+    fi
+  } > "$RUN_DIR/summary.txt"
+}
 
 if [ ! -f "$INPUT_FILE" ]; then
   echo "ERROR: input file not found: $INPUT_FILE" >&2
   exit 1
 fi
 
+mkdir -p "$RUN_DIR"
+snapshot_if_exists "$INPUT_FILE" "input_raw.txt"
+
 if [ "$INPUT_FILE" != "input.txt" ]; then
   cp "$INPUT_FILE" input.txt
 fi
 
 "$PYTHON_BIN" parse_ips.py
+snapshot_if_exists input.txt "input_effective.txt"
+snapshot_if_exists output.txt "output_ips.txt"
 
 AGG_ARGS=(
   --source "$AGG_SOURCE"
@@ -45,11 +84,17 @@ if [ "$AGG_SOURCE" = "geo" ]; then
 fi
 
 "$PYTHON_BIN" aggregate_generiek_subnets.py "${AGG_ARGS[@]}"
+snapshot_if_exists "$OUTPUT_FILE" "$(basename "$OUTPUT_FILE")"
+snapshot_if_exists generiek_country_report.json "generiek_country_report.json"
+snapshot_if_exists generiek_blocked_candidate_ips.txt "generiek_blocked_candidate_ips.txt"
+snapshot_if_exists generiek_allowed_non_target_ips.txt "generiek_allowed_non_target_ips.txt"
 "$PYTHON_BIN" cache_crawler_ips.py --cache-dir ip_cache
+snapshot_if_exists ip_cache/allowlist_cidrs.json "allowlist_cidrs.json"
 "$PYTHON_BIN" audit_generiek_subnets.py --input "$OUTPUT_FILE" --allowlist ip_cache/allowlist_cidrs.json --country-codes "$COUNTRY_CODES"
 
 if [ "$CHECK_EXISTING" = "1" ]; then
   "$PYTHON_BIN" find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --country-codes "$COUNTRY_CODES" $SUDO_FLAG
+  snapshot_if_exists bad_ufw_rules.json "bad_ufw_rules.json"
   "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG --dry-run
   if [ "$APPLY" = "1" ]; then
     "$PYTHON_BIN" clean_bad_ufw_rules.py --input bad_ufw_rules.json $SUDO_FLAG
@@ -76,7 +121,9 @@ if [ -n "$SUDO_FLAG" ]; then
 fi
 
 "$PYTHON_BIN" block_generiek_subnet.py "${BLOCK_ARGS[@]}"
+write_summary
 
 if [ "$APPLY" != "1" ]; then
   echo "Dry-run complete. Re-run with APPLY=1 to add the planned UFW rules."
 fi
+echo "Run snapshot saved to $RUN_DIR"

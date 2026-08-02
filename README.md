@@ -505,11 +505,21 @@ By default this:
 - audits candidate blocks against the allowlist
 - skips crawler allowlist and country-mismatch candidate subnets
 - applies the planned UFW additions when `APPLY=1`
+- saves a run snapshot under `runs/<timestamp>/`
 
 Run a dry-run without applying changes:
 
 ```bash
 APPLY=0 bash run_prepare_generiek_blocks.sh
+```
+
+Each run snapshot contains the raw input, parsed IPs, generated subnet JSON,
+country report files, allowlist cache, optional `bad_ufw_rules.json`, and
+`summary.txt`. Use `RUN_DIR=/path/to/dir` or `RUN_ID=name` to choose the snapshot
+location:
+
+```bash
+RUN_ID=incident-20260802 APPLY=0 bash run_prepare_generiek_blocks.sh
 ```
 
 Use `run_geo_bulk_blocks.sh` when you want to bulk-block from the whole
