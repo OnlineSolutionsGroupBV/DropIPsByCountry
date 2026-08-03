@@ -522,6 +522,20 @@ location:
 RUN_ID=incident-20260802 APPLY=0 bash run_prepare_generiek_blocks.sh
 ```
 
+Analyze all saved run snapshots:
+
+```bash
+python analyze_runs.py --runs-dir runs
+```
+
+This writes:
+- `runs_analysis.txt` — human-readable trend report.
+- `runs_analysis.json` — machine-readable trend report.
+
+The report shows input IP counts, blocked/allowed candidate counts, candidate
+subnet counts, top countries, and how many IPs are new or repeated compared with
+previous runs.
+
 Use `run_geo_bulk_blocks.sh` when you want to bulk-block from the whole
 `geo_data.json` cache instead of the current `input.txt` snapshot:
 
