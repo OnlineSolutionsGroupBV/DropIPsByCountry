@@ -137,6 +137,37 @@ def candidate_cidrs_for_recommendation(ips, recommendation):
     return [cidr for cidr, hits in counts.items() if hits >= min_hits]
 
 
+def candidate_details_for_recommendation(ips, recommendation):
+    prefix = recommendation["target_prefix"]
+    min_hits = recommendation["min_hits"]
+    counts = prefix_counts(ips, prefix)
+    examples = collections.defaultdict(list)
+    for ip in sorted(ips):
+        cidr = network_for_ip(ip, prefix)
+        if len(examples[cidr]) < 8:
+            examples[cidr].append(ip)
+    rows = []
+    for cidr, hits in counts.items():
+        if hits < min_hits:
+            continue
+        rows.append({
+            "cidr": cidr,
+            "hits": hits,
+            "blocks_ips": blocked_size(prefix),
+            "example_ips": examples[cidr],
+        })
+    rows.sort(key=lambda row: (-row["hits"], row["cidr"]))
+    return rows
+
+
+def risk_score(row):
+    rec = row["recommendation"]
+    if rec["decision"] != "CANDIDATE":
+        return 0
+    prefix_weight = {16: 50, 18: 35, 20: 22, 24: 12, 32: 1}.get(rec["target_prefix"], 1)
+    return row["observed_ips"] + prefix_weight + (len(row["candidate_cidrs"]) * 5)
+
+
 def build_recommendations(geo_data, country_codes, prefixes, min_provider_ips):
     required_prefixes = sorted(set(prefixes + [24, 20, 18, 16]))
     rows = []
@@ -150,20 +181,23 @@ def build_recommendations(geo_data, country_codes, prefixes, min_provider_ips):
                 "min_hits": 1,
                 "reason": "provider name matches crawler/search allowlist provider",
             }
-        candidates = []
+        candidate_details = []
         if recommendation["decision"] == "CANDIDATE":
-            candidates = candidate_cidrs_for_recommendation(ips, recommendation)
+            candidate_details = candidate_details_for_recommendation(ips, recommendation)
+        candidates = [item["cidr"] for item in candidate_details]
         rows.append({
             "country": country,
             "org": org,
             "observed_ips": len(ips),
             "recommendation": recommendation,
             "candidate_cidrs": sorted(candidates),
+            "candidate_details": candidate_details,
             "prefix_stats": [stats[prefix] for prefix in prefixes],
             "example_ips": sorted(ips)[:10],
         })
     rows.sort(key=lambda row: (
         row["recommendation"]["decision"] != "CANDIDATE",
+        -risk_score(row),
         -row["observed_ips"],
         row["country"],
         row["org"],
@@ -219,6 +253,49 @@ def write_text(path, rows, max_rows):
                 ))
 
 
+def write_danger_text(path, rows, max_rows):
+    candidates = [row for row in rows if row["recommendation"]["decision"] == "CANDIDATE"]
+    total_subnets = sum(len(row["candidate_cidrs"]) for row in candidates)
+    total_observed_ips = sum(row["observed_ips"] for row in candidates)
+    with codecs.open(path, "w", encoding="utf-8") as f:
+        f.write("Dangerous provider subnet candidates\n")
+        f.write("====================================\n\n")
+        f.write("Providers with candidate blocks: %d\n" % len(candidates))
+        f.write("Candidate subnets: %d\n" % total_subnets)
+        f.write("Observed IPs behind these providers: %d\n" % total_observed_ips)
+        f.write("Machine blocklist: provider_subnet_candidates.json\n\n")
+        f.write("Criteria: provider must be in target country list, not protected by country policy, not a known safe crawler/provider name, and enough IPs must cluster inside the recommended prefix.\n\n")
+
+        for index, row in enumerate(candidates[:max_rows], 1):
+            rec = row["recommendation"]
+            f.write("%d. %s | %s\n" % (index, row["country"], row["org"]))
+            f.write("   risk_score: %d\n" % risk_score(row))
+            f.write("   observed_ips: %d\n" % row["observed_ips"])
+            f.write("   recommendation: /%d with min_hits=%d\n" % (rec["target_prefix"], rec["min_hits"]))
+            f.write("   reason: %s\n" % rec["reason"])
+            f.write("   provider_example_ips: %s\n" % ", ".join(row["example_ips"][:8]))
+            f.write("   candidate_subnets:\n")
+            for detail in row["candidate_details"]:
+                f.write("     - %s hits=%d blocks_ips=%d examples=%s\n" % (
+                    detail["cidr"],
+                    detail["hits"],
+                    detail["blocks_ips"],
+                    ", ".join(detail["example_ips"]),
+                ))
+            f.write("   prefix_stats:\n")
+            for stat in row["prefix_stats"]:
+                f.write("     /%d networks=%d max_hits=%d n>=2=%d n>=3=%d n>=5=%d n>=10=%d\n" % (
+                    stat["prefix"],
+                    stat["networks"],
+                    stat["max_hits"],
+                    stat["networks_2_plus"],
+                    stat["networks_3_plus"],
+                    stat["networks_5_plus"],
+                    stat["networks_10_plus"],
+                ))
+            f.write("\n")
+
+
 def build_parser():
     parser = argparse.ArgumentParser(description="Recommend provider/ASN-specific subnet blocks from geo_data.json.")
     parser.add_argument("--geo-data", default="geo_data.json")
@@ -226,6 +303,7 @@ def build_parser():
     parser.add_argument("--prefixes", default="24,20,18,16")
     parser.add_argument("--min-provider-ips", type=int, default=3)
     parser.add_argument("--text-output", default="provider_subnet_recommendations.txt")
+    parser.add_argument("--danger-output", default="provider_dangerous_subnets.txt")
     parser.add_argument("--json-output", default="provider_subnet_recommendations.json")
     parser.add_argument("--candidates-output", default="provider_subnet_candidates.json")
     parser.add_argument("--max-rows", type=int, default=200)
@@ -247,10 +325,12 @@ def main():
         args.min_provider_ips,
     )
     write_text(args.text_output, rows, args.max_rows)
+    write_danger_text(args.danger_output, rows, args.max_rows)
     write_json(args.json_output, rows)
     write_candidates(args.candidates_output, rows)
     print("Providers:", len(rows))
     print("Wrote:", args.text_output)
+    print("Wrote:", args.danger_output)
     print("Wrote:", args.json_output)
     print("Wrote:", args.candidates_output)
     return 0

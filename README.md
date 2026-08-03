@@ -560,6 +560,9 @@ python recommend_provider_subnets.py --geo-data geo_data.json
 This writes:
 - `provider_subnet_recommendations.txt` — country + provider/ASN clustering with
   recommended prefix and evidence.
+- `provider_dangerous_subnets.txt` — readable review list with only providers
+  that produced block candidates, including subnet hits, blocked-IP size,
+  example IPs, and prefix statistics.
 - `provider_subnet_recommendations.json` — machine-readable provider report.
 - `provider_subnet_candidates.json` — CIDRs that passed provider-cluster rules.
 
