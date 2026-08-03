@@ -98,6 +98,36 @@ class MonitorServerStatusBlocksTests(unittest.TestCase):
         with open(snapshot) as f:
             self.assertIn("201 requests", f.read())
 
+    def test_main_passes_insecure_to_fetch_url(self):
+        input_file = os.path.join(self.tmpdir, "input.txt")
+        snapshot = os.path.join(self.tmpdir, "snapshot.txt")
+        lock_dir = os.path.join(self.tmpdir, "lock")
+        original_fetch = monitor.fetch_url
+        original_run = monitor.run_prepare
+        calls = []
+
+        def fake_fetch(url, timeout, insecure=False):
+            calls.append((url, timeout, insecure))
+            return "149 requests currently being processed, 56 idle workers"
+
+        monitor.fetch_url = fake_fetch
+        monitor.run_prepare = lambda *args: None
+        try:
+            rc = monitor.main_with_args([
+                "--url", "https://example.test/server-status",
+                "--threshold", "200",
+                "--input-file", input_file,
+                "--snapshot-file", snapshot,
+                "--lock-dir", lock_dir,
+                "--insecure",
+            ])
+        finally:
+            monitor.fetch_url = original_fetch
+            monitor.run_prepare = original_run
+
+        self.assertEqual(rc, 0)
+        self.assertEqual(calls, [("https://example.test/server-status", 30, True)])
+
 
 if __name__ == "__main__":
     unittest.main()

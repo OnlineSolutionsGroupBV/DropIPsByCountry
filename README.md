@@ -692,7 +692,8 @@ Run the blocker only when Apache server-status is above a busy-worker threshold:
 ```bash
 PYTHON=python2 python2 monitor_server_status_blocks.py \
   --url https://www.nieuwejobs.com/server-status \
-  --threshold 200
+  --threshold 200 \
+  --insecure
 ```
 
 The monitor uses a lock directory so overlapping cron runs skip automatically.
@@ -702,13 +703,22 @@ and `input.txt`, then runs `./run_prepare_generiek_blocks.sh`.
 Dry-run test:
 
 ```bash
-PYTHON=python2 python2 monitor_server_status_blocks.py --threshold 200 --dry-run
+PYTHON=python2 python2 monitor_server_status_blocks.py --threshold 200 --insecure --dry-run
+```
+
+If the status endpoint is local and available over plain HTTP, avoid SSL
+entirely:
+
+```bash
+PYTHON=python2 python2 monitor_server_status_blocks.py \
+  --url http://127.0.0.1/server-status \
+  --threshold 200
 ```
 
 Crontab every 30 minutes:
 
 ```cron
-*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --threshold 200 >> monitor_server_status_blocks.log 2>&1
+*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --threshold 200 --insecure >> monitor_server_status_blocks.log 2>&1
 ```
 
 ## 📂 File Structure  

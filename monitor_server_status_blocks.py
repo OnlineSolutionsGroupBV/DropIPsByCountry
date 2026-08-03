@@ -5,6 +5,7 @@ import argparse
 import os
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import time
@@ -36,9 +37,19 @@ def parse_busy_requests(status_text):
     return int(match.group(1))
 
 
-def fetch_url(url, timeout):
+def insecure_ssl_context():
+    if hasattr(ssl, "_create_unverified_context"):
+        return ssl._create_unverified_context()
+    return None
+
+
+def fetch_url(url, timeout, insecure=False):
     request = Request(url, headers={"User-Agent": "DropIPsByCountry-monitor/1.0"})
-    response = urlopen(request, timeout=timeout)
+    context = insecure_ssl_context() if insecure else None
+    if context is not None:
+        response = urlopen(request, timeout=timeout, context=context)
+    else:
+        response = urlopen(request, timeout=timeout)
     data = response.read()
     return to_text(data)
 
@@ -95,6 +106,7 @@ def build_parser():
     parser.add_argument("--lock-dir", default=".server_status_block.lock")
     parser.add_argument("--stale-lock-seconds", type=int, default=7200)
     parser.add_argument("--timeout", type=int, default=30)
+    parser.add_argument("--insecure", action="store_true", help="Disable SSL certificate verification for local/self-signed server-status checks")
     parser.add_argument("--script", default="./run_prepare_generiek_blocks.sh")
     parser.add_argument("--python-bin", default=os.environ.get("PYTHON", "python2"))
     parser.add_argument("--apply", action="store_true", help="Run blocker with APPLY=1. This is the default unless --dry-run is used.")
@@ -116,7 +128,7 @@ def main_with_args(argv):
             with open(args.status_file, "rb") as f:
                 status = to_text(f.read())
         else:
-            status = fetch_url(args.url, args.timeout)
+            status = fetch_url(args.url, args.timeout, insecure=args.insecure)
         busy = parse_busy_requests(status)
         if busy is None:
             raise RuntimeError("could not parse busy request count from server-status")
