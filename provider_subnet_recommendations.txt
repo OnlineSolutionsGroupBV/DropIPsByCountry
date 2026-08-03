@@ -1,0 +1,1342 @@
+Provider subnet recommendations
+===============================
+
+Country | observed IPs | decision | prefix | min_hits | org | candidates | reason
+CN | 2786 | CANDIDATE | /16 | 10 | AS4134 CHINANET-BACKBONE | 28 | provider has 10+ observed IPs in a /16
+  candidate 1.193.0.0/16 blocks=65536
+  candidate 1.205.0.0/16 blocks=65536
+  candidate 106.114.0.0/16 blocks=65536
+  candidate 106.115.0.0/16 blocks=65536
+  candidate 106.117.0.0/16 blocks=65536
+  /24 networks=2637 max_hits=7 n>=2=110 n>=3=21 n>=5=4 n>=10=0
+  /20 networks=2207 max_hits=12 n>=2=382 n>=3=99 n>=5=22 n>=10=4
+  /18 networks=1752 max_hits=12 n>=2=561 n>=3=226 n>=5=57 n>=10=4
+  /16 networks=1156 max_hits=23 n>=2=561 n>=3=323 n>=5=150 n>=10=28
+CN | 2086 | CANDIDATE | /16 | 10 | AS4837 CHINA UNICOM China169 Backbone | 16 | provider has 10+ observed IPs in a /16
+  candidate 110.53.0.0/16 blocks=65536
+  candidate 111.85.0.0/16 blocks=65536
+  candidate 115.52.0.0/16 blocks=65536
+  candidate 115.60.0.0/16 blocks=65536
+  candidate 116.171.0.0/16 blocks=65536
+  /24 networks=2000 max_hits=8 n>=2=68 n>=3=10 n>=5=2 n>=10=0
+  /20 networks=1710 max_hits=8 n>=2=266 n>=3=75 n>=5=8 n>=10=0
+  /18 networks=1357 max_hits=8 n>=2=426 n>=3=163 n>=5=34 n>=10=0
+  /16 networks=805 max_hits=20 n>=2=481 n>=3=273 n>=5=113 n>=10=16
+CN | 1623 | CANDIDATE | /16 | 10 | AS9808 China Mobile Communications Group Co., Ltd. | 53 | provider has 10+ observed IPs in a /16
+  candidate 111.18.0.0/16 blocks=65536
+  candidate 111.19.0.0/16 blocks=65536
+  candidate 111.29.0.0/16 blocks=65536
+  candidate 111.49.0.0/16 blocks=65536
+  candidate 111.58.0.0/16 blocks=65536
+  /24 networks=1417 max_hits=6 n>=2=169 n>=3=24 n>=5=4 n>=10=0
+  /20 networks=752 max_hits=17 n>=2=386 n>=3=207 n>=5=67 n>=10=4
+  /18 networks=369 max_hits=26 n>=2=254 n>=3=194 n>=5=124 n>=10=41
+  /16 networks=154 max_hits=87 n>=2=119 n>=3=102 n>=5=86 n>=10=53
+EG | 489 | CANDIDATE | /16 | 10 | AS8452 TE-AS | 12 | provider has 10+ observed IPs in a /16
+  candidate 156.197.0.0/16 blocks=65536
+  candidate 156.198.0.0/16 blocks=65536
+  candidate 156.210.0.0/16 blocks=65536
+  candidate 156.217.0.0/16 blocks=65536
+  candidate 156.221.0.0/16 blocks=65536
+  /24 networks=485 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=393 max_hits=4 n>=2=84 n>=3=9 n>=5=0 n>=10=0
+  /18 networks=249 max_hits=9 n>=2=132 n>=3=61 n>=5=9 n>=10=0
+  /16 networks=93 max_hits=15 n>=2=84 n>=3=74 n>=5=46 n>=10=12
+CN | 451 | CANDIDATE | /16 | 10 | AS24445 Henan Mobile Communications Co.,Ltd | 11 | provider has 10+ observed IPs in a /16
+  candidate 120.216.0.0/16 blocks=65536
+  candidate 120.219.0.0/16 blocks=65536
+  candidate 223.88.0.0/16 blocks=65536
+  candidate 223.89.0.0/16 blocks=65536
+  candidate 223.90.0.0/16 blocks=65536
+  /24 networks=385 max_hits=3 n>=2=58 n>=3=8 n>=5=0 n>=10=0
+  /20 networks=146 max_hits=10 n>=2=100 n>=3=76 n>=5=34 n>=10=1
+  /18 networks=50 max_hits=22 n>=2=41 n>=3=38 n>=5=36 n>=10=22
+  /16 networks=19 max_hits=54 n>=2=12 n>=3=12 n>=5=11 n>=10=11
+US | 522 | CANDIDATE | /20 | 3 | AS7922 Comcast Cable Communications, LLC | 1 | provider has 3+ observed IPs in a /20
+  candidate 69.143.96.0/20 blocks=4096
+  /24 networks=521 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=508 max_hits=3 n>=2=13 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=483 max_hits=4 n>=2=35 n>=3=3 n>=5=0 n>=10=0
+  /16 networks=405 max_hits=5 n>=2=92 n>=3=19 n>=5=2 n>=10=0
+US | 465 | CANDIDATE | /16 | 10 | AS14618 Amazon.com, Inc. | 1 | provider has 10+ observed IPs in a /16
+  candidate 23.21.0.0/16 blocks=65536
+  /24 networks=463 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=431 max_hits=3 n>=2=29 n>=3=5 n>=5=0 n>=10=0
+  /18 networks=361 max_hits=7 n>=2=78 n>=3=17 n>=5=2 n>=10=0
+  /16 networks=210 max_hits=12 n>=2=121 n>=3=65 n>=5=13 n>=10=1
+CN | 339 | CANDIDATE | /16 | 10 | AS24444 Shandong Mobile Communication Company Limited | 15 | provider has 10+ observed IPs in a /16
+  candidate 111.14.0.0/16 blocks=65536
+  candidate 111.15.0.0/16 blocks=65536
+  candidate 111.16.0.0/16 blocks=65536
+  candidate 111.34.0.0/16 blocks=65536
+  candidate 111.35.0.0/16 blocks=65536
+  /24 networks=294 max_hits=4 n>=2=37 n>=3=6 n>=5=0 n>=10=0
+  /20 networks=155 max_hits=10 n>=2=86 n>=3=47 n>=5=11 n>=10=1
+  /18 networks=83 max_hits=15 n>=2=65 n>=3=51 n>=5=28 n>=10=7
+  /16 networks=27 max_hits=51 n>=2=23 n>=3=23 n>=5=23 n>=10=15
+CN | 284 | CANDIDATE | /16 | 10 | AS24547 Hebei Mobile Communication Company Limited | 4 | provider has 10+ observed IPs in a /16
+  candidate 183.197.0.0/16 blocks=65536
+  candidate 183.198.0.0/16 blocks=65536
+  candidate 183.199.0.0/16 blocks=65536
+  candidate 36.143.0.0/16 blocks=65536
+  /24 networks=242 max_hits=4 n>=2=35 n>=3=6 n>=5=0 n>=10=0
+  /20 networks=64 max_hits=10 n>=2=55 n>=3=52 n>=5=33 n>=10=1
+  /18 networks=20 max_hits=28 n>=2=17 n>=3=17 n>=5=16 n>=10=15
+  /16 networks=8 max_hits=83 n>=2=5 n>=3=5 n>=5=4 n>=10=4
+GB | 312 | CANDIDATE | /24 | 2 | AS5089 Virgin Media Limited | 2 | provider has 2+ observed IPs in a /24
+  candidate 77.100.146.0/24 blocks=256
+  candidate 82.36.179.0/24 blocks=256
+  /24 networks=310 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=294 max_hits=2 n>=2=18 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=231 max_hits=4 n>=2=66 n>=3=13 n>=5=0 n>=10=0
+  /16 networks=106 max_hits=7 n>=2=82 n>=3=61 n>=5=16 n>=10=0
+BR | 273 | CANDIDATE | /16 | 10 | AS28573 Claro NXT Telecomunicacoes Ltda | 1 | provider has 10+ observed IPs in a /16
+  candidate 189.6.0.0/16 blocks=65536
+  /24 networks=262 max_hits=2 n>=2=11 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=213 max_hits=8 n>=2=36 n>=3=12 n>=5=2 n>=10=0
+  /18 networks=189 max_hits=10 n>=2=45 n>=3=18 n>=5=4 n>=10=1
+  /16 networks=143 max_hits=13 n>=2=60 n>=3=29 n>=5=9 n>=10=1
+MX | 263 | CANDIDATE | /16 | 10 | AS8151 UNINET | 1 | provider has 10+ observed IPs in a /16
+  candidate 201.138.0.0/16 blocks=65536
+  /24 networks=263 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=235 max_hits=4 n>=2=21 n>=3=6 n>=5=0 n>=10=0
+  /18 networks=209 max_hits=6 n>=2=36 n>=3=13 n>=5=1 n>=10=0
+  /16 networks=153 max_hits=11 n>=2=57 n>=3=27 n>=5=6 n>=10=1
+CN | 234 | CANDIDATE | /16 | 10 | AS56047 China Mobile communications corporation | 6 | provider has 10+ observed IPs in a /16
+  candidate 111.8.0.0/16 blocks=65536
+  candidate 120.226.0.0/16 blocks=65536
+  candidate 120.227.0.0/16 blocks=65536
+  candidate 120.228.0.0/16 blocks=65536
+  candidate 36.148.0.0/16 blocks=65536
+  /24 networks=188 max_hits=6 n>=2=33 n>=3=7 n>=5=2 n>=10=0
+  /20 networks=75 max_hits=11 n>=2=58 n>=3=36 n>=5=16 n>=10=1
+  /18 networks=31 max_hits=21 n>=2=27 n>=3=25 n>=5=20 n>=10=11
+  /16 networks=11 max_hits=60 n>=2=10 n>=3=10 n>=5=8 n>=10=6
+UZ | 222 | CANDIDATE | /16 | 10 | AS8193 Uzbektelekom Joint Stock Company | 4 | provider has 10+ observed IPs in a /16
+  candidate 198.163.0.0/16 blocks=65536
+  candidate 213.230.0.0/16 blocks=65536
+  candidate 84.54.0.0/16 blocks=65536
+  candidate 90.156.0.0/16 blocks=65536
+  /24 networks=50 max_hits=19 n>=2=35 n>=3=21 n>=5=13 n>=10=8
+  /20 networks=14 max_hits=70 n>=2=11 n>=3=10 n>=5=10 n>=10=5
+  /18 networks=9 max_hits=87 n>=2=6 n>=3=6 n>=5=6 n>=10=4
+  /16 networks=9 max_hits=87 n>=2=6 n>=3=6 n>=5=6 n>=10=4
+US | 197 | CANDIDATE | /16 | 10 | AS6079 RCN | 1 | provider has 10+ observed IPs in a /16
+  candidate 206.239.0.0/16 blocks=65536
+  /24 networks=194 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=159 max_hits=3 n>=2=35 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=91 max_hits=6 n>=2=54 n>=3=29 n>=5=6 n>=10=0
+  /16 networks=54 max_hits=12 n>=2=39 n>=3=33 n>=5=17 n>=10=1
+TR | 194 | CANDIDATE | /16 | 10 | AS9121 Turk Telekomunikasyon Anonim Sirketi | 1 | provider has 10+ observed IPs in a /16
+  candidate 78.190.0.0/16 blocks=65536
+  /24 networks=193 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=169 max_hits=4 n>=2=18 n>=3=6 n>=5=0 n>=10=0
+  /18 networks=134 max_hits=7 n>=2=33 n>=3=12 n>=5=3 n>=10=0
+  /16 networks=95 max_hits=12 n>=2=44 n>=3=21 n>=5=7 n>=10=1
+CN | 176 | CANDIDATE | /16 | 10 | AS56046 China Mobile communications corporation | 4 | provider has 10+ observed IPs in a /16
+  candidate 112.0.0.0/16 blocks=65536
+  candidate 112.20.0.0/16 blocks=65536
+  candidate 112.21.0.0/16 blocks=65536
+  candidate 183.210.0.0/16 blocks=65536
+  /24 networks=145 max_hits=8 n>=2=13 n>=3=5 n>=5=3 n>=10=0
+  /20 networks=115 max_hits=8 n>=2=35 n>=3=11 n>=5=3 n>=10=0
+  /18 networks=75 max_hits=10 n>=2=47 n>=3=22 n>=5=8 n>=10=1
+  /16 networks=31 max_hits=18 n>=2=27 n>=3=25 n>=5=20 n>=10=4
+CN | 149 | CANDIDATE | /16 | 10 | AS56044 China Mobile communications corporation | 6 | provider has 10+ observed IPs in a /16
+  candidate 112.39.0.0/16 blocks=65536
+  candidate 112.40.0.0/16 blocks=65536
+  candidate 112.41.0.0/16 blocks=65536
+  candidate 112.42.0.0/16 blocks=65536
+  candidate 223.101.0.0/16 blocks=65536
+  /24 networks=139 max_hits=3 n>=2=9 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=64 max_hits=6 n>=2=39 n>=3=26 n>=5=5 n>=10=0
+  /18 networks=26 max_hits=14 n>=2=22 n>=3=19 n>=5=16 n>=10=5
+  /16 networks=10 max_hits=37 n>=2=7 n>=3=6 n>=5=6 n>=10=6
+US | 152 | CANDIDATE | /16 | 10 | AS11404 Wave Broadband | 2 | provider has 10+ observed IPs in a /16
+  candidate 199.13.0.0/16 blocks=65536
+  candidate 209.238.0.0/16 blocks=65536
+  /24 networks=152 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=124 max_hits=3 n>=2=24 n>=3=4 n>=5=0 n>=10=0
+  /18 networks=76 max_hits=5 n>=2=40 n>=3=24 n>=5=2 n>=10=0
+  /16 networks=44 max_hits=12 n>=2=27 n>=3=20 n>=5=14 n>=10=2
+GB | 162 | CANDIDATE | /20 | 3 | AS5607 Sky UK Limited | 2 | provider has 3+ observed IPs in a /20
+  candidate 149.241.128.0/20 blocks=4096
+  candidate 94.9.80.0/20 blocks=4096
+  /24 networks=159 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=149 max_hits=3 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=125 max_hits=4 n>=2=31 n>=3=5 n>=5=0 n>=10=0
+  /16 networks=77 max_hits=6 n>=2=44 n>=3=22 n>=5=5 n>=10=0
+GB | 172 | CANDIDATE | /24 | 2 | AS2856 British Telecommunications Limited | 1 | provider has 2+ observed IPs in a /24
+  candidate 31.104.204.0/24 blocks=256
+  /24 networks=171 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=166 max_hits=2 n>=2=6 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=149 max_hits=2 n>=2=23 n>=3=0 n>=5=0 n>=10=0
+  /16 networks=95 max_hits=6 n>=2=47 n>=3=19 n>=5=2 n>=10=0
+CN | 125 | CANDIDATE | /16 | 10 | AS4812 China Telecom (Group) | 1 | provider has 10+ observed IPs in a /16
+  candidate 124.79.0.0/16 blocks=65536
+  /24 networks=118 max_hits=4 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=103 max_hits=4 n>=2=19 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=86 max_hits=4 n>=2=27 n>=3=9 n>=5=0 n>=10=0
+  /16 networks=52 max_hits=10 n>=2=26 n>=3=17 n>=5=8 n>=10=1
+CN | 110 | CANDIDATE | /16 | 10 | AS132525 HeiLongJiang Mobile Communication Company Limited | 4 | provider has 10+ observed IPs in a /16
+  candidate 111.41.0.0/16 blocks=65536
+  candidate 111.43.0.0/16 blocks=65536
+  candidate 117.179.0.0/16 blocks=65536
+  candidate 36.132.0.0/16 blocks=65536
+  /24 networks=99 max_hits=3 n>=2=10 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=49 max_hits=6 n>=2=34 n>=3=14 n>=5=4 n>=10=0
+  /18 networks=21 max_hits=13 n>=2=17 n>=3=15 n>=5=12 n>=10=4
+  /16 networks=7 max_hits=37 n>=2=6 n>=3=6 n>=5=6 n>=10=4
+US | 122 | CANDIDATE | /16 | 10 | Unknown | 1 | provider has 10+ observed IPs in a /16
+  candidate 66.249.0.0/16 blocks=65536
+  /24 networks=95 max_hits=18 n>=2=5 n>=3=3 n>=5=2 n>=10=1
+  /20 networks=87 max_hits=24 n>=2=7 n>=3=3 n>=5=2 n>=10=1
+  /18 networks=86 max_hits=24 n>=2=8 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=86 max_hits=24 n>=2=8 n>=3=3 n>=5=2 n>=10=1
+RO | 108 | CANDIDATE | /16 | 10 | AS8708 DIGI ROMANIA S.A. | 3 | provider has 10+ observed IPs in a /16
+  candidate 188.27.0.0/16 blocks=65536
+  candidate 86.120.0.0/16 blocks=65536
+  candidate 86.124.0.0/16 blocks=65536
+  /24 networks=96 max_hits=3 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=73 max_hits=4 n>=2=23 n>=3=10 n>=5=0 n>=10=0
+  /18 networks=52 max_hits=8 n>=2=25 n>=3=14 n>=5=4 n>=10=0
+  /16 networks=27 max_hits=12 n>=2=19 n>=3=16 n>=5=7 n>=10=3
+IN | 108 | CANDIDATE | /16 | 10 | AS55836 Reliance Jio Infocomm Limited | 2 | provider has 10+ observed IPs in a /16
+  candidate 152.58.0.0/16 blocks=65536
+  candidate 152.59.0.0/16 blocks=65536
+  /24 networks=105 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=80 max_hits=5 n>=2=18 n>=3=7 n>=5=1 n>=10=0
+  /18 networks=56 max_hits=8 n>=2=19 n>=3=13 n>=5=4 n>=10=0
+  /16 networks=37 max_hits=17 n>=2=15 n>=3=10 n>=5=7 n>=10=2
+CA | 131 | CANDIDATE | /20 | 3 | AS577 Bell Canada | 2 | provider has 3+ observed IPs in a /20
+  candidate 142.119.48.0/20 blocks=4096
+  candidate 69.158.48.0/20 blocks=4096
+  /24 networks=128 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=119 max_hits=3 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=104 max_hits=4 n>=2=22 n>=3=4 n>=5=0 n>=10=0
+  /16 networks=68 max_hits=6 n>=2=40 n>=3=15 n>=5=1 n>=10=0
+VN | 123 | CANDIDATE | /18 | 5 | AS7552 Viettel Group | 1 | provider has 5+ observed IPs in a /18
+  candidate 125.235.192.0/18 blocks=16384
+  /24 networks=116 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=97 max_hits=7 n>=2=15 n>=3=5 n>=5=1 n>=10=0
+  /18 networks=88 max_hits=7 n>=2=23 n>=3=6 n>=5=1 n>=10=0
+  /16 networks=67 max_hits=7 n>=2=24 n>=3=15 n>=5=5 n>=10=0
+BR | 107 | CANDIDATE | /16 | 10 | AS7738 V tal | 1 | provider has 10+ observed IPs in a /16
+  candidate 187.125.0.0/16 blocks=65536
+  /24 networks=106 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=99 max_hits=2 n>=2=8 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=92 max_hits=3 n>=2=12 n>=3=3 n>=5=0 n>=10=0
+  /16 networks=67 max_hits=10 n>=2=21 n>=3=8 n>=5=2 n>=10=1
+US | 107 | CANDIDATE | /16 | 10 | AS20001 Charter Communications Inc | 1 | provider has 10+ observed IPs in a /16
+  candidate 101.61.0.0/16 blocks=65536
+  /24 networks=105 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=95 max_hits=3 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=77 max_hits=6 n>=2=16 n>=3=6 n>=5=3 n>=10=0
+  /16 networks=56 max_hits=13 n>=2=18 n>=3=7 n>=5=5 n>=10=1
+US | 107 | CANDIDATE | /16 | 10 | AS22773 Cox Communications Inc. | 1 | provider has 10+ observed IPs in a /16
+  candidate 66.166.0.0/16 blocks=65536
+  /24 networks=106 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=97 max_hits=3 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=90 max_hits=5 n>=2=12 n>=3=3 n>=5=1 n>=10=0
+  /16 networks=77 max_hits=11 n>=2=19 n>=3=3 n>=5=1 n>=10=1
+CN | 91 | CANDIDATE | /16 | 10 | AS56042 China Mobile communications corporation | 4 | provider has 10+ observed IPs in a /16
+  candidate 120.207.0.0/16 blocks=65536
+  candidate 120.208.0.0/16 blocks=65536
+  candidate 183.200.0.0/16 blocks=65536
+  candidate 183.202.0.0/16 blocks=65536
+  /24 networks=78 max_hits=7 n>=2=8 n>=3=1 n>=5=1 n>=10=0
+  /20 networks=46 max_hits=7 n>=2=24 n>=3=11 n>=5=3 n>=10=0
+  /18 networks=20 max_hits=13 n>=2=19 n>=3=16 n>=5=9 n>=10=1
+  /16 networks=8 max_hits=21 n>=2=7 n>=3=6 n>=5=6 n>=10=4
+IQ | 90 | CANDIDATE | /16 | 10 | AS203214 Hulum Almustakbal Company for Communication Engineering and Services Ltd | 4 | provider has 10+ observed IPs in a /16
+  candidate 37.236.0.0/16 blocks=65536
+  candidate 37.237.0.0/16 blocks=65536
+  candidate 37.238.0.0/16 blocks=65536
+  candidate 37.239.0.0/16 blocks=65536
+  /24 networks=83 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=5 n>=2=24 n>=3=13 n>=5=1 n>=10=0
+  /18 networks=18 max_hits=8 n>=2=16 n>=3=16 n>=5=11 n>=10=0
+  /16 networks=6 max_hits=26 n>=2=5 n>=3=5 n>=5=5 n>=10=4
+SA | 114 | CANDIDATE | /18 | 5 | AS25019 Saudi Telecom Company JSC | 2 | provider has 5+ observed IPs in a /18
+  candidate 167.86.128.0/18 blocks=16384
+  candidate 51.211.64.0/18 blocks=16384
+  /24 networks=114 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=93 max_hits=4 n>=2=18 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=78 max_hits=5 n>=2=20 n>=3=9 n>=5=2 n>=10=0
+  /16 networks=59 max_hits=6 n>=2=26 n>=3=13 n>=5=4 n>=10=0
+IN | 98 | CANDIDATE | /16 | 10 | AS45609 Bharti Airtel Ltd. AS for GPRS Service | 2 | provider has 10+ observed IPs in a /16
+  candidate 106.202.0.0/16 blocks=65536
+  candidate 223.188.0.0/16 blocks=65536
+  /24 networks=97 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=78 max_hits=3 n>=2=15 n>=3=5 n>=5=0 n>=10=0
+  /18 networks=64 max_hits=8 n>=2=13 n>=3=7 n>=5=3 n>=10=0
+  /16 networks=50 max_hits=18 n>=2=13 n>=3=9 n>=5=2 n>=10=2
+CN | 97 | CANDIDATE | /16 | 10 | AS56041 China Mobile communications corporation | 2 | provider has 10+ observed IPs in a /16
+  candidate 112.12.0.0/16 blocks=65536
+  candidate 39.171.0.0/16 blocks=65536
+  /24 networks=93 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=64 max_hits=4 n>=2=22 n>=3=9 n>=5=0 n>=10=0
+  /18 networks=41 max_hits=7 n>=2=22 n>=3=14 n>=5=7 n>=10=0
+  /16 networks=29 max_hits=11 n>=2=16 n>=3=13 n>=5=8 n>=10=2
+CL | 129 | CANDIDATE | /20 | 3 | AS7418 TELEFÓNICA CHILE S.A. | 1 | provider has 3+ observed IPs in a /20
+  candidate 191.113.208.0/20 blocks=4096
+  /24 networks=129 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=107 max_hits=3 n>=2=21 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=76 max_hits=4 n>=2=34 n>=3=13 n>=5=0 n>=10=0
+  /16 networks=34 max_hits=9 n>=2=28 n>=3=20 n>=5=15 n>=10=0
+US | 90 | CANDIDATE | /16 | 10 | AS21928 T-Mobile USA, Inc. | 3 | provider has 10+ observed IPs in a /16
+  candidate 172.56.0.0/16 blocks=65536
+  candidate 172.58.0.0/16 blocks=65536
+  candidate 172.59.0.0/16 blocks=65536
+  /24 networks=71 max_hits=5 n>=2=13 n>=3=3 n>=5=1 n>=10=0
+  /20 networks=30 max_hits=9 n>=2=22 n>=3=13 n>=5=6 n>=10=0
+  /18 networks=13 max_hits=12 n>=2=12 n>=3=11 n>=5=10 n>=10=4
+  /16 networks=4 max_hits=31 n>=2=3 n>=3=3 n>=5=3 n>=10=3
+CN | 85 | CANDIDATE | /16 | 10 | AS24400 Shanghai Mobile Communications Co.,Ltd. | 4 | provider has 10+ observed IPs in a /16
+  candidate 117.143.0.0/16 blocks=65536
+  candidate 117.185.0.0/16 blocks=65536
+  candidate 120.204.0.0/16 blocks=65536
+  candidate 183.192.0.0/16 blocks=65536
+  /24 networks=74 max_hits=3 n>=2=9 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=46 max_hits=10 n>=2=22 n>=3=9 n>=5=1 n>=10=1
+  /18 networks=24 max_hits=11 n>=2=18 n>=3=15 n>=5=7 n>=10=1
+  /16 networks=11 max_hits=18 n>=2=10 n>=3=9 n>=5=7 n>=10=4
+RU | 137 | CANDIDATE | /24 | 2 | AS12389 PJSC Rostelecom | 1 | provider has 2+ observed IPs in a /24
+  candidate 95.54.231.0/24 blocks=256
+  /24 networks=136 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=133 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=129 max_hits=2 n>=2=8 n>=3=0 n>=5=0 n>=10=0
+  /16 networks=126 max_hits=2 n>=2=11 n>=3=0 n>=5=0 n>=10=0
+ES | 94 | CANDIDATE | /16 | 10 | AS15704 XTRA TELECOM S.A. | 2 | provider has 10+ observed IPs in a /16
+  candidate 139.47.0.0/16 blocks=65536
+  candidate 46.6.0.0/16 blocks=65536
+  /24 networks=87 max_hits=2 n>=2=7 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=49 max_hits=6 n>=2=22 n>=3=11 n>=5=4 n>=10=0
+  /18 networks=36 max_hits=8 n>=2=18 n>=3=14 n>=5=9 n>=10=0
+  /16 networks=29 max_hits=11 n>=2=16 n>=3=12 n>=5=9 n>=10=2
+US | 96 | CANDIDATE | /16 | 10 | AS7459 Grande Communications Networks, LLC | 1 | provider has 10+ observed IPs in a /16
+  candidate 209.75.0.0/16 blocks=65536
+  /24 networks=95 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=83 max_hits=2 n>=2=13 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=50 max_hits=4 n>=2=30 n>=3=13 n>=5=0 n>=10=0
+  /16 networks=32 max_hits=11 n>=2=22 n>=3=16 n>=5=4 n>=10=1
+PA | 78 | CANDIDATE | /16 | 10 | AS18809 Cable Onda | 4 | provider has 10+ observed IPs in a /16
+  candidate 181.197.0.0/16 blocks=65536
+  candidate 190.140.0.0/16 blocks=65536
+  candidate 190.141.0.0/16 blocks=65536
+  candidate 190.219.0.0/16 blocks=65536
+  /24 networks=61 max_hits=4 n>=2=9 n>=3=6 n>=5=0 n>=10=0
+  /20 networks=41 max_hits=11 n>=2=13 n>=3=6 n>=5=3 n>=10=1
+  /18 networks=21 max_hits=13 n>=2=16 n>=3=9 n>=5=5 n>=10=3
+  /16 networks=9 max_hits=26 n>=2=6 n>=3=5 n>=5=5 n>=10=4
+CN | 107 | CANDIDATE | /18 | 5 | AS4808 China Unicom Beijing Province Network | 1 | provider has 5+ observed IPs in a /18
+  candidate 111.201.192.0/18 blocks=16384
+  /24 networks=103 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=89 max_hits=6 n>=2=10 n>=3=4 n>=5=1 n>=10=0
+  /18 networks=79 max_hits=6 n>=2=19 n>=3=5 n>=5=1 n>=10=0
+  /16 networks=53 max_hits=9 n>=2=27 n>=3=14 n>=5=2 n>=10=0
+SG | 87 | CANDIDATE | /16 | 10 | AS45102 Alibaba (US) Technology Co., Ltd. | 2 | provider has 10+ observed IPs in a /16
+  candidate 47.79.0.0/16 blocks=65536
+  candidate 47.82.0.0/16 blocks=65536
+  /24 networks=25 max_hits=35 n>=2=10 n>=3=4 n>=5=2 n>=10=2
+  /20 networks=11 max_hits=57 n>=2=4 n>=3=3 n>=5=3 n>=10=2
+  /18 networks=10 max_hits=57 n>=2=3 n>=3=3 n>=5=3 n>=10=3
+  /16 networks=8 max_hits=57 n>=2=3 n>=3=2 n>=5=2 n>=10=2
+ES | 82 | CANDIDATE | /16 | 10 | AS57269 DIGI SPAIN TELECOM S.A | 3 | provider has 10+ observed IPs in a /16
+  candidate 188.26.0.0/16 blocks=65536
+  candidate 79.116.0.0/16 blocks=65536
+  candidate 79.117.0.0/16 blocks=65536
+  /24 networks=65 max_hits=3 n>=2=16 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=21 max_hits=14 n>=2=15 n>=3=12 n>=5=7 n>=10=1
+  /18 networks=10 max_hits=20 n>=2=9 n>=3=6 n>=5=6 n>=10=4
+  /16 networks=5 max_hits=34 n>=2=5 n>=3=4 n>=5=4 n>=10=3
+CL | 76 | CANDIDATE | /16 | 10 | AS27651 ENTEL CHILE S.A. | 3 | provider has 10+ observed IPs in a /16
+  candidate 181.42.0.0/16 blocks=65536
+  candidate 181.43.0.0/16 blocks=65536
+  candidate 186.10.0.0/16 blocks=65536
+  /24 networks=55 max_hits=3 n>=2=18 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=27 max_hits=12 n>=2=15 n>=3=9 n>=5=5 n>=10=1
+  /18 networks=15 max_hits=21 n>=2=10 n>=3=9 n>=5=6 n>=10=2
+  /16 networks=6 max_hits=31 n>=2=6 n>=3=5 n>=5=3 n>=10=3
+IL | 79 | CANDIDATE | /16 | 10 | AS6810 "Bezeq"- THE ISRAEL TELECOMMUNICATION CORP. LTD. | 2 | provider has 10+ observed IPs in a /16
+  candidate 147.235.0.0/16 blocks=65536
+  candidate 79.177.0.0/16 blocks=65536
+  /24 networks=39 max_hits=8 n>=2=18 n>=3=7 n>=5=4 n>=10=0
+  /20 networks=10 max_hits=35 n>=2=7 n>=3=5 n>=5=4 n>=10=3
+  /18 networks=5 max_hits=49 n>=2=4 n>=3=4 n>=5=3 n>=10=2
+  /16 networks=5 max_hits=49 n>=2=4 n>=3=4 n>=5=3 n>=10=2
+US | 110 | CANDIDATE | /20 | 3 | AS20115 Charter Communications LLC | 1 | provider has 3+ observed IPs in a /20
+  candidate 67.101.224.0/20 blocks=4096
+  /24 networks=110 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=108 max_hits=3 n>=2=1 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=101 max_hits=4 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+  /16 networks=87 max_hits=4 n>=2=17 n>=3=5 n>=5=0 n>=10=0
+CN | 77 | CANDIDATE | /16 | 10 | AS17816 China Unicom IP network China169 Guangdong province | 1 | provider has 10+ observed IPs in a /16
+  candidate 120.84.0.0/16 blocks=65536
+  /24 networks=62 max_hits=5 n>=2=8 n>=3=4 n>=5=1 n>=10=0
+  /20 networks=48 max_hits=13 n>=2=11 n>=3=5 n>=5=2 n>=10=1
+  /18 networks=38 max_hits=13 n>=2=16 n>=3=5 n>=5=3 n>=10=1
+  /16 networks=29 max_hits=13 n>=2=14 n>=3=9 n>=5=5 n>=10=1
+IQ | 77 | CANDIDATE | /16 | 10 | AS199739 Earthlink Telecommunications Equipment Trading & Services DMCC | 1 | provider has 10+ observed IPs in a /16
+  candidate 169.224.0.0/16 blocks=65536
+  /24 networks=37 max_hits=4 n>=2=26 n>=3=11 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=27 n>=2=7 n>=3=7 n>=5=6 n>=10=3
+  /18 networks=2 max_hits=44 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+  /16 networks=1 max_hits=77 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+US | 90 | CANDIDATE | /18 | 5 | AS11427 Charter Communications Inc | 1 | provider has 5+ observed IPs in a /18
+  candidate 65.84.192.0/18 blocks=16384
+  /24 networks=89 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=78 max_hits=2 n>=2=12 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=68 max_hits=5 n>=2=14 n>=3=5 n>=5=1 n>=10=0
+  /16 networks=57 max_hits=8 n>=2=18 n>=3=7 n>=5=1 n>=10=0
+NG | 60 | CANDIDATE | /16 | 10 | AS29465 MTN NIGERIA Communication limited | 4 | provider has 10+ observed IPs in a /16
+  candidate 102.88.0.0/16 blocks=65536
+  candidate 102.89.0.0/16 blocks=65536
+  candidate 102.90.0.0/16 blocks=65536
+  candidate 102.91.0.0/16 blocks=65536
+  /24 networks=37 max_hits=4 n>=2=19 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=18 max_hits=14 n>=2=11 n>=3=7 n>=5=5 n>=10=1
+  /18 networks=10 max_hits=25 n>=2=9 n>=3=8 n>=5=5 n>=10=1
+  /16 networks=6 max_hits=25 n>=2=6 n>=3=5 n>=5=4 n>=10=4
+DZ | 102 | CANDIDATE | /20 | 3 | AS36947 Telecom Algeria | 1 | provider has 3+ observed IPs in a /20
+  candidate 154.241.96.0/20 blocks=4096
+  /24 networks=102 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=96 max_hits=4 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=79 max_hits=4 n>=2=18 n>=3=4 n>=5=0 n>=10=0
+  /16 networks=58 max_hits=7 n>=2=17 n>=3=9 n>=5=5 n>=10=0
+MA | 74 | CANDIDATE | /16 | 10 | AS36903 Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM | 1 | provider has 10+ observed IPs in a /16
+  candidate 196.206.0.0/16 blocks=65536
+  /24 networks=74 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=67 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=54 max_hits=10 n>=2=10 n>=3=3 n>=5=1 n>=10=1
+  /16 networks=37 max_hits=17 n>=2=16 n>=3=5 n>=5=2 n>=10=1
+PE | 69 | CANDIDATE | /16 | 10 | AS12252 America Movil Peru S.A.C. | 2 | provider has 10+ observed IPs in a /16
+  candidate 179.6.0.0/16 blocks=65536
+  candidate 179.7.0.0/16 blocks=65536
+  /24 networks=43 max_hits=5 n>=2=12 n>=3=7 n>=5=2 n>=10=0
+  /20 networks=15 max_hits=18 n>=2=10 n>=3=9 n>=5=5 n>=10=2
+  /18 networks=9 max_hits=35 n>=2=5 n>=3=5 n>=5=4 n>=10=2
+  /16 networks=4 max_hits=55 n>=2=4 n>=3=2 n>=5=2 n>=10=2
+CN | 68 | CANDIDATE | /16 | 10 | AS134810 China Mobile Group JiLin communications corporation | 2 | provider has 10+ observed IPs in a /16
+  candidate 111.25.0.0/16 blocks=65536
+  candidate 111.27.0.0/16 blocks=65536
+  /24 networks=59 max_hits=2 n>=2=9 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=25 max_hits=7 n>=2=17 n>=3=10 n>=5=5 n>=10=0
+  /18 networks=10 max_hits=16 n>=2=6 n>=3=5 n>=5=5 n>=10=4
+  /16 networks=4 max_hits=46 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+QA | 68 | CANDIDATE | /16 | 10 | AS8781 Ooredoo Q.S.C. | 2 | provider has 10+ observed IPs in a /16
+  candidate 37.210.0.0/16 blocks=65536
+  candidate 89.211.0.0/16 blocks=65536
+  /24 networks=67 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=45 max_hits=4 n>=2=15 n>=3=7 n>=5=0 n>=10=0
+  /18 networks=27 max_hits=5 n>=2=18 n>=3=12 n>=5=4 n>=10=0
+  /16 networks=11 max_hits=10 n>=2=10 n>=3=8 n>=5=8 n>=10=2
+ID | 94 | CANDIDATE | /20 | 3 | AS7713 PT Telekomunikasi Indonesia | 2 | provider has 3+ observed IPs in a /20
+  candidate 125.160.224.0/20 blocks=4096
+  candidate 36.73.176.0/20 blocks=4096
+  /24 networks=94 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=81 max_hits=3 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=67 max_hits=4 n>=2=15 n>=3=8 n>=5=0 n>=10=0
+  /16 networks=48 max_hits=9 n>=2=16 n>=3=9 n>=5=4 n>=10=0
+MX | 70 | CANDIDATE | /16 | 10 | AS13999 Mega Cable, S.A. de C.V. | 1 | provider has 10+ observed IPs in a /16
+  candidate 177.230.0.0/16 blocks=65536
+  /24 networks=69 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=52 max_hits=4 n>=2=12 n>=3=5 n>=5=0 n>=10=0
+  /18 networks=41 max_hits=5 n>=2=14 n>=3=8 n>=5=3 n>=10=0
+  /16 networks=29 max_hits=10 n>=2=14 n>=3=10 n>=5=4 n>=10=1
+CN | 65 | CANDIDATE | /16 | 10 | AS56040 China Mobile communications corporation | 2 | provider has 10+ observed IPs in a /16
+  candidate 120.229.0.0/16 blocks=65536
+  candidate 120.235.0.0/16 blocks=65536
+  /24 networks=58 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=40 max_hits=4 n>=2=17 n>=3=6 n>=5=0 n>=10=0
+  /18 networks=27 max_hits=8 n>=2=16 n>=3=7 n>=5=4 n>=10=0
+  /16 networks=15 max_hits=17 n>=2=8 n>=3=7 n>=5=5 n>=10=2
+ET | 55 | CANDIDATE | /16 | 10 | AS24757 Ethio Telecom | 4 | provider has 10+ observed IPs in a /16
+  candidate 196.188.0.0/16 blocks=65536
+  candidate 196.189.0.0/16 blocks=65536
+  candidate 196.190.0.0/16 blocks=65536
+  candidate 196.191.0.0/16 blocks=65536
+  /24 networks=37 max_hits=5 n>=2=10 n>=3=5 n>=5=1 n>=10=0
+  /20 networks=23 max_hits=8 n>=2=13 n>=3=7 n>=5=2 n>=10=0
+  /18 networks=16 max_hits=8 n>=2=12 n>=3=10 n>=5=4 n>=10=0
+  /16 networks=5 max_hits=18 n>=2=4 n>=3=4 n>=5=4 n>=10=4
+BO | 63 | CANDIDATE | /16 | 10 | AS6568 EMPRESA NACIONAL DE TELECOMUNICACIONES SOCIEDAD ANONIMA | 2 | provider has 10+ observed IPs in a /16
+  candidate 166.114.0.0/16 blocks=65536
+  candidate 181.115.0.0/16 blocks=65536
+  /24 networks=32 max_hits=9 n>=2=13 n>=3=8 n>=5=2 n>=10=0
+  /20 networks=13 max_hits=20 n>=2=9 n>=3=6 n>=5=4 n>=10=3
+  /18 networks=8 max_hits=23 n>=2=8 n>=3=5 n>=5=4 n>=10=3
+  /16 networks=4 max_hits=36 n>=2=4 n>=3=4 n>=5=3 n>=10=2
+HU | 67 | CANDIDATE | /16 | 10 | AS5483 Magyar Telekom Plc. | 1 | provider has 10+ observed IPs in a /16
+  candidate 31.46.0.0/16 blocks=65536
+  /24 networks=66 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=52 max_hits=5 n>=2=12 n>=3=1 n>=5=1 n>=10=0
+  /18 networks=39 max_hits=5 n>=2=18 n>=3=6 n>=5=1 n>=10=0
+  /16 networks=20 max_hits=10 n>=2=17 n>=3=15 n>=5=3 n>=10=1
+BF | 57 | CANDIDATE | /16 | 10 | AS37577 Orange Burkina Faso | 3 | provider has 10+ observed IPs in a /16
+  candidate 102.178.0.0/16 blocks=65536
+  candidate 102.179.0.0/16 blocks=65536
+  candidate 102.180.0.0/16 blocks=65536
+  /24 networks=54 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=32 max_hits=4 n>=2=18 n>=3=5 n>=5=0 n>=10=0
+  /18 networks=13 max_hits=10 n>=2=13 n>=3=11 n>=5=4 n>=10=1
+  /16 networks=4 max_hits=22 n>=2=4 n>=3=3 n>=5=3 n>=10=3
+NG | 57 | CANDIDATE | /16 | 10 | AS36873 Airtel Networks Limited | 3 | provider has 10+ observed IPs in a /16
+  candidate 105.112.0.0/16 blocks=65536
+  candidate 105.113.0.0/16 blocks=65536
+  candidate 105.127.0.0/16 blocks=65536
+  /24 networks=49 max_hits=4 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=22 max_hits=11 n>=2=16 n>=3=8 n>=5=2 n>=10=1
+  /18 networks=14 max_hits=13 n>=2=11 n>=3=8 n>=5=4 n>=10=2
+  /16 networks=9 max_hits=14 n>=2=8 n>=3=6 n>=5=4 n>=10=3
+TH | 56 | CANDIDATE | /16 | 10 | AS17552 True Online | 3 | provider has 10+ observed IPs in a /16
+  candidate 124.120.0.0/16 blocks=65536
+  candidate 124.122.0.0/16 blocks=65536
+  candidate 171.97.0.0/16 blocks=65536
+  /24 networks=54 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=34 max_hits=5 n>=2=11 n>=3=7 n>=5=1 n>=10=0
+  /18 networks=27 max_hits=7 n>=2=13 n>=3=6 n>=5=2 n>=10=0
+  /16 networks=15 max_hits=10 n>=2=10 n>=3=6 n>=5=4 n>=10=3
+BR | 97 | CANDIDATE | /24 | 2 | AS8167 V tal | 2 | provider has 2+ observed IPs in a /24
+  candidate 189.74.247.0/24 blocks=256
+  candidate 189.75.210.0/24 blocks=256
+  /24 networks=95 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=94 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=85 max_hits=3 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+  /16 networks=66 max_hits=5 n>=2=19 n>=3=9 n>=5=1 n>=10=0
+PE | 64 | CANDIDATE | /16 | 10 | AS6147 INTEGRATEL PERÚ S.A.A. | 1 | provider has 10+ observed IPs in a /16
+  candidate 190.237.0.0/16 blocks=65536
+  /24 networks=54 max_hits=3 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=45 max_hits=8 n>=2=11 n>=3=3 n>=5=1 n>=10=0
+  /18 networks=37 max_hits=8 n>=2=14 n>=3=7 n>=5=1 n>=10=0
+  /16 networks=16 max_hits=10 n>=2=13 n>=3=12 n>=5=5 n>=10=1
+IT | 90 | CANDIDATE | /20 | 3 | AS1267 WIND TRE S.P.A. | 1 | provider has 3+ observed IPs in a /20
+  candidate 151.73.144.0/20 blocks=4096
+  /24 networks=90 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=83 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=77 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+  /16 networks=51 max_hits=4 n>=2=27 n>=3=10 n>=5=0 n>=10=0
+CI | 57 | CANDIDATE | /16 | 10 | AS29571 Orange Côte d'Ivoire | 2 | provider has 10+ observed IPs in a /16
+  candidate 102.209.0.0/16 blocks=65536
+  candidate 160.154.0.0/16 blocks=65536
+  /24 networks=46 max_hits=6 n>=2=5 n>=3=3 n>=5=1 n>=10=0
+  /20 networks=34 max_hits=14 n>=2=10 n>=3=2 n>=5=1 n>=10=1
+  /18 networks=22 max_hits=14 n>=2=11 n>=3=8 n>=5=1 n>=10=1
+  /16 networks=11 max_hits=14 n>=2=7 n>=3=6 n>=5=5 n>=10=2
+VN | 56 | CANDIDATE | /16 | 10 | AS18403 FPT Telecom Company | 2 | provider has 10+ observed IPs in a /16
+  candidate 183.80.0.0/16 blocks=65536
+  candidate 58.186.0.0/16 blocks=65536
+  /24 networks=56 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=49 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=35 max_hits=6 n>=2=11 n>=3=6 n>=5=1 n>=10=0
+  /16 networks=21 max_hits=10 n>=2=9 n>=3=5 n>=5=3 n>=10=2
+IN | 75 | CANDIDATE | /18 | 5 | AS24560 Bharti Airtel Ltd., Telemedia Services | 1 | provider has 5+ observed IPs in a /18
+  candidate 122.164.64.0/18 blocks=16384
+  /24 networks=71 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=57 max_hits=5 n>=2=11 n>=3=4 n>=5=1 n>=10=0
+  /18 networks=54 max_hits=5 n>=2=11 n>=3=7 n>=5=1 n>=10=0
+  /16 networks=51 max_hits=5 n>=2=12 n>=3=8 n>=5=1 n>=10=0
+CL | 84 | CANDIDATE | /20 | 3 | AS22047 VTR BANDA ANCHA S.A. | 1 | provider has 3+ observed IPs in a /20
+  candidate 190.162.48.0/20 blocks=4096
+  /24 networks=84 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=75 max_hits=3 n>=2=8 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=52 max_hits=4 n>=2=25 n>=3=6 n>=5=0 n>=10=0
+  /16 networks=25 max_hits=7 n>=2=20 n>=3=13 n>=5=8 n>=10=0
+GH | 51 | CANDIDATE | /16 | 10 | AS30986 Scancom Limited | 2 | provider has 10+ observed IPs in a /16
+  candidate 154.160.0.0/16 blocks=65536
+  candidate 154.161.0.0/16 blocks=65536
+  /24 networks=44 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=15 max_hits=9 n>=2=13 n>=3=8 n>=5=4 n>=10=0
+  /18 networks=6 max_hits=16 n>=2=5 n>=3=5 n>=5=5 n>=10=3
+  /16 networks=3 max_hits=34 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+CA | 83 | CANDIDATE | /20 | 3 | AS812 Rogers Communications Canada Inc. | 1 | provider has 3+ observed IPs in a /20
+  candidate 99.242.48.0/20 blocks=4096
+  /24 networks=82 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=75 max_hits=3 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=63 max_hits=4 n>=2=15 n>=3=4 n>=5=0 n>=10=0
+  /16 networks=40 max_hits=5 n>=2=23 n>=3=14 n>=5=1 n>=10=0
+CL | 43 | CANDIDATE | /16 | 10 | AS27901 Pacifico Cable SPA. | 3 | provider has 10+ observed IPs in a /16
+  candidate 179.60.0.0/16 blocks=65536
+  candidate 190.114.0.0/16 blocks=65536
+  candidate 190.5.0.0/16 blocks=65536
+  /24 networks=27 max_hits=3 n>=2=13 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=3 max_hits=16 n>=2=3 n>=3=3 n>=5=3 n>=10=3
+  /18 networks=3 max_hits=16 n>=2=3 n>=3=3 n>=5=3 n>=10=3
+  /16 networks=3 max_hits=16 n>=2=3 n>=3=3 n>=5=3 n>=10=3
+TH | 52 | CANDIDATE | /16 | 10 | AS133481 AIS Fibre | 1 | provider has 10+ observed IPs in a /16
+  candidate 27.130.0.0/16 blocks=65536
+  /24 networks=47 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=19 max_hits=9 n>=2=9 n>=3=7 n>=5=4 n>=10=0
+  /18 networks=12 max_hits=22 n>=2=5 n>=3=4 n>=5=3 n>=10=2
+  /16 networks=6 max_hits=40 n>=2=4 n>=3=3 n>=5=2 n>=10=1
+CN | 42 | CANDIDATE | /16 | 10 | AS38019 tianjin Mobile Communication Company Limited | 3 | provider has 10+ observed IPs in a /16
+  candidate 111.31.0.0/16 blocks=65536
+  candidate 111.32.0.0/16 blocks=65536
+  candidate 111.33.0.0/16 blocks=65536
+  /24 networks=36 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=20 max_hits=5 n>=2=12 n>=3=5 n>=5=1 n>=10=0
+  /18 networks=8 max_hits=12 n>=2=8 n>=3=4 n>=5=4 n>=10=1
+  /16 networks=4 max_hits=14 n>=2=4 n>=3=4 n>=5=4 n>=10=3
+CN | 48 | CANDIDATE | /16 | 10 | AS56048 China Mobile Communicaitons Corporation | 1 | provider has 10+ observed IPs in a /16
+  candidate 120.244.0.0/16 blocks=65536
+  /24 networks=40 max_hits=4 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=27 max_hits=4 n>=2=11 n>=3=7 n>=5=0 n>=10=0
+  /18 networks=17 max_hits=7 n>=2=11 n>=3=7 n>=5=4 n>=10=0
+  /16 networks=11 max_hits=10 n>=2=8 n>=3=4 n>=5=4 n>=10=1
+GR | 70 | CANDIDATE | /20 | 3 | AS6799 Ote SA (Hellenic Telecommunications Organisation) | 2 | provider has 3+ observed IPs in a /20
+  candidate 2.86.208.0/20 blocks=4096
+  candidate 31.217.160.0/20 blocks=4096
+  /24 networks=65 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=56 max_hits=4 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=49 max_hits=4 n>=2=15 n>=3=5 n>=5=0 n>=10=0
+  /16 networks=27 max_hits=5 n>=2=20 n>=3=13 n>=5=3 n>=10=0
+SA | 62 | CANDIDATE | /18 | 5 | AS35819 Etihad Etisalat, a joint stock company | 1 | provider has 5+ observed IPs in a /18
+  candidate 92.48.0.0/18 blocks=16384
+  /24 networks=62 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=52 max_hits=4 n>=2=8 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=48 max_hits=5 n>=2=9 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=37 max_hits=5 n>=2=14 n>=3=7 n>=5=1 n>=10=0
+CG | 47 | CANDIDATE | /16 | 10 | AS36924 GVA Cote d'Ivoire SAS | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.141.0.0/16 blocks=65536
+  /24 networks=16 max_hits=7 n>=2=11 n>=3=8 n>=5=3 n>=10=0
+  /20 networks=2 max_hits=31 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+  /18 networks=1 max_hits=47 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=47 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+BO | 41 | CANDIDATE | /16 | 10 | AS27882 Telefónica Celular de Bolivia S.A. | 2 | provider has 10+ observed IPs in a /16
+  candidate 181.188.0.0/16 blocks=65536
+  candidate 189.28.0.0/16 blocks=65536
+  /24 networks=27 max_hits=3 n>=2=12 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=8 max_hits=12 n>=2=7 n>=3=6 n>=5=4 n>=10=1
+  /18 networks=6 max_hits=19 n>=2=5 n>=3=4 n>=5=3 n>=10=2
+  /16 networks=6 max_hits=19 n>=2=5 n>=3=4 n>=5=3 n>=10=2
+SA | 55 | CANDIDATE | /18 | 5 | AS39891 Saudi Telecom Company JSC | 2 | provider has 5+ observed IPs in a /18
+  candidate 151.255.0.0/18 blocks=16384
+  candidate 95.186.0.0/18 blocks=16384
+  /24 networks=55 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=4 n>=2=4 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=29 max_hits=8 n>=2=12 n>=3=5 n>=5=2 n>=10=0
+  /16 networks=22 max_hits=9 n>=2=12 n>=3=7 n>=5=3 n>=10=0
+CN | 45 | CANDIDATE | /16 | 10 | AS17621 China Unicom Shanghai network | 1 | provider has 10+ observed IPs in a /16
+  candidate 139.226.0.0/16 blocks=65536
+  /24 networks=36 max_hits=2 n>=2=9 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=29 max_hits=4 n>=2=12 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=20 max_hits=5 n>=2=12 n>=3=8 n>=5=1 n>=10=0
+  /16 networks=10 max_hits=11 n>=2=6 n>=3=5 n>=5=4 n>=10=1
+IT | 61 | CANDIDATE | /20 | 3 | AS30722 Fastweb SpA | 3 | provider has 3+ observed IPs in a /20
+  candidate 2.37.160.0/20 blocks=4096
+  candidate 2.37.192.0/20 blocks=4096
+  candidate 2.44.128.0/20 blocks=4096
+  /24 networks=57 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=3 n>=2=11 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=41 max_hits=3 n>=2=15 n>=3=5 n>=5=0 n>=10=0
+  /16 networks=31 max_hits=6 n>=2=15 n>=3=9 n>=5=2 n>=10=0
+PT | 56 | CANDIDATE | /18 | 5 | AS2860 NOS COMUNICACOES, S.A. | 1 | provider has 5+ observed IPs in a /18
+  candidate 87.196.64.0/18 blocks=16384
+  /24 networks=55 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=50 max_hits=6 n>=2=2 n>=3=1 n>=5=1 n>=10=0
+  /18 networks=47 max_hits=7 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+  /16 networks=23 max_hits=9 n>=2=13 n>=3=11 n>=5=1 n>=10=0
+AO | 41 | CANDIDATE | /16 | 10 | AS37645 Finstar - Sociedade de Investimento e Participacoes S.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 129.122.0.0/16 blocks=65536
+  /24 networks=39 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=17 max_hits=9 n>=2=9 n>=3=6 n>=5=2 n>=10=0
+  /18 networks=10 max_hits=18 n>=2=5 n>=3=4 n>=5=3 n>=10=1
+  /16 networks=8 max_hits=25 n>=2=5 n>=3=3 n>=5=2 n>=10=1
+JO | 36 | CANDIDATE | /16 | 10 | AS48832 Jordanian mobile phone services Ltd | 2 | provider has 10+ observed IPs in a /16
+  candidate 176.28.0.0/16 blocks=65536
+  candidate 176.29.0.0/16 blocks=65536
+  /24 networks=34 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=17 max_hits=4 n>=2=10 n>=3=7 n>=5=0 n>=10=0
+  /18 networks=8 max_hits=8 n>=2=5 n>=3=5 n>=5=5 n>=10=0
+  /16 networks=5 max_hits=22 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+TH | 36 | CANDIDATE | /16 | 10 | AS45758 Triple T Broadband Public Company Limited | 2 | provider has 10+ observed IPs in a /16
+  candidate 171.4.0.0/16 blocks=65536
+  candidate 49.49.0.0/16 blocks=65536
+  /24 networks=35 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=22 max_hits=4 n>=2=8 n>=3=5 n>=5=0 n>=10=0
+  /18 networks=16 max_hits=9 n>=2=5 n>=3=3 n>=5=3 n>=10=0
+  /16 networks=11 max_hits=11 n>=2=4 n>=3=3 n>=5=3 n>=10=2
+TW | 78 | CANDIDATE | /24 | 2 | AS3462 Data Communication Business Group | 1 | provider has 2+ observed IPs in a /24
+  candidate 125.227.85.0/24 blocks=256
+  /24 networks=77 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=75 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=70 max_hits=2 n>=2=8 n>=3=0 n>=5=0 n>=10=0
+  /16 networks=54 max_hits=4 n>=2=18 n>=3=5 n>=5=0 n>=10=0
+PL | 68 | CANDIDATE | /20 | 3 | AS5617 Orange Polska Spolka Akcyjna | 1 | provider has 3+ observed IPs in a /20
+  candidate 83.31.128.0/20 blocks=4096
+  /24 networks=68 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=62 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=52 max_hits=3 n>=2=12 n>=3=4 n>=5=0 n>=10=0
+  /16 networks=33 max_hits=6 n>=2=22 n>=3=8 n>=5=1 n>=10=0
+SA | 35 | CANDIDATE | /16 | 10 | AS43766 Mobile Telecommunication Company Saudi Arabia Joint-Stock company | 2 | provider has 10+ observed IPs in a /16
+  candidate 51.36.0.0/16 blocks=65536
+  candidate 51.39.0.0/16 blocks=65536
+  /24 networks=26 max_hits=3 n>=2=7 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=16 max_hits=8 n>=2=8 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=13 max_hits=10 n>=2=7 n>=3=3 n>=5=3 n>=10=1
+  /16 networks=8 max_hits=17 n>=2=3 n>=3=2 n>=5=2 n>=10=2
+DO | 54 | CANDIDATE | /18 | 5 | AS6400 Compañía Dominicana de Teléfonos S. A. | 1 | provider has 5+ observed IPs in a /18
+  candidate 201.229.128.0/18 blocks=16384
+  /24 networks=52 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=48 max_hits=2 n>=2=6 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=33 max_hits=6 n>=2=13 n>=3=5 n>=5=1 n>=10=0
+  /16 networks=13 max_hits=7 n>=2=11 n>=3=9 n>=5=6 n>=10=0
+TR | 54 | CANDIDATE | /18 | 5 | AS34984 Superonline Iletisim Hizmetleri A.S. | 1 | provider has 5+ observed IPs in a /18
+  candidate 212.252.64.0/18 blocks=16384
+  /24 networks=49 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=43 max_hits=3 n>=2=8 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=35 max_hits=5 n>=2=11 n>=3=5 n>=5=1 n>=10=0
+  /16 networks=29 max_hits=8 n>=2=10 n>=3=6 n>=5=2 n>=10=0
+KE | 39 | CANDIDATE | /16 | 10 | AS33771 Safaricom Limited | 1 | provider has 10+ observed IPs in a /16
+  candidate 41.90.0.0/16 blocks=65536
+  /24 networks=29 max_hits=3 n>=2=9 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=15 max_hits=11 n>=2=8 n>=3=5 n>=5=2 n>=10=1
+  /18 networks=14 max_hits=14 n>=2=7 n>=3=4 n>=5=2 n>=10=1
+  /16 networks=9 max_hits=22 n>=2=4 n>=3=3 n>=5=2 n>=10=1
+MN | 39 | CANDIDATE | /16 | 10 | AS17882 Univision LLC | 1 | provider has 10+ observed IPs in a /16
+  candidate 66.181.0.0/16 blocks=65536
+  /24 networks=25 max_hits=3 n>=2=10 n>=3=4 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=23 n>=2=5 n>=3=3 n>=5=2 n>=10=1
+  /18 networks=6 max_hits=27 n>=2=4 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=6 max_hits=27 n>=2=4 n>=3=2 n>=5=2 n>=10=1
+AO | 34 | CANDIDATE | /16 | 10 | AS37119 UNITEL SA | 2 | provider has 10+ observed IPs in a /16
+  candidate 105.168.0.0/16 blocks=65536
+  candidate 105.172.0.0/16 blocks=65536
+  /24 networks=34 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=20 max_hits=4 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=10 max_hits=7 n>=2=8 n>=3=6 n>=5=3 n>=10=0
+  /16 networks=4 max_hits=16 n>=2=4 n>=3=4 n>=5=2 n>=10=2
+ES | 76 | CANDIDATE | /24 | 2 | AS12430 VODAFONE ESPANA S.A.U. | 1 | provider has 2+ observed IPs in a /24
+  candidate 188.85.62.0/24 blocks=256
+  /24 networks=75 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=73 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=63 max_hits=3 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+  /16 networks=40 max_hits=5 n>=2=23 n>=3=8 n>=5=1 n>=10=0
+CG | 38 | CANDIDATE | /16 | 10 | AS37451 CONGO TELECOM | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.129.0.0/16 blocks=65536
+  /24 networks=4 max_hits=19 n>=2=3 n>=3=3 n>=5=3 n>=10=2
+  /20 networks=2 max_hits=19 n>=2=2 n>=3=2 n>=5=2 n>=10=2
+  /18 networks=1 max_hits=38 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=38 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+IQ | 38 | CANDIDATE | /18 | 5 | AS206206 Kurdistan Net Company for Computer and Internet Ltd. | 4 | provider has 5+ observed IPs in a /18
+  candidate 185.187.64.0/18 blocks=16384
+  candidate 185.24.0.0/18 blocks=16384
+  candidate 185.244.128.0/18 blocks=16384
+  candidate 212.237.64.0/18 blocks=16384
+  /24 networks=15 max_hits=5 n>=2=11 n>=3=7 n>=5=1 n>=10=0
+  /20 networks=7 max_hits=9 n>=2=5 n>=3=5 n>=5=4 n>=10=0
+  /18 networks=7 max_hits=9 n>=2=5 n>=3=5 n>=5=4 n>=10=0
+  /16 networks=7 max_hits=9 n>=2=5 n>=3=5 n>=5=4 n>=10=0
+IL | 37 | CANDIDATE | /16 | 10 | AS12849 Hot-Net internet services Ltd. | 1 | provider has 10+ observed IPs in a /16
+  candidate 77.137.0.0/16 blocks=65536
+  /24 networks=28 max_hits=4 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=15 n>=2=5 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=10 max_hits=15 n>=2=5 n>=3=4 n>=5=3 n>=10=1
+  /16 networks=6 max_hits=15 n>=2=6 n>=3=4 n>=5=3 n>=10=1
+OM | 36 | CANDIDATE | /16 | 10 | AS28885 Oman Telecommunications Company (S.A.O.G) | 1 | provider has 10+ observed IPs in a /16
+  candidate 37.40.0.0/16 blocks=65536
+  /24 networks=33 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=22 max_hits=10 n>=2=6 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=14 max_hits=10 n>=2=8 n>=3=4 n>=5=2 n>=10=1
+  /16 networks=8 max_hits=12 n>=2=5 n>=3=4 n>=5=4 n>=10=1
+BR | 31 | CANDIDATE | /16 | 10 | AS28126 BRISANET SERVICOS DE TELECOMUNICACOES S.A | 2 | provider has 10+ observed IPs in a /16
+  candidate 177.37.0.0/16 blocks=65536
+  candidate 187.19.0.0/16 blocks=65536
+  /24 networks=27 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=5 n>=2=8 n>=3=4 n>=5=2 n>=10=0
+  /18 networks=5 max_hits=9 n>=2=5 n>=3=5 n>=5=3 n>=10=0
+  /16 networks=3 max_hits=16 n>=2=3 n>=3=3 n>=5=2 n>=10=2
+BR | 35 | CANDIDATE | /16 | 10 | AS28649 Desktop Sigmanet Comunicação Multimídia SA | 1 | provider has 10+ observed IPs in a /16
+  candidate 179.125.0.0/16 blocks=65536
+  /24 networks=32 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=4 n>=2=9 n>=3=7 n>=5=0 n>=10=0
+  /18 networks=7 max_hits=10 n>=2=6 n>=3=6 n>=5=3 n>=10=1
+  /16 networks=6 max_hits=14 n>=2=5 n>=3=5 n>=5=3 n>=10=1
+AE | 30 | CANDIDATE | /16 | 10 | AS5384 Emirates Internet | 2 | provider has 10+ observed IPs in a /16
+  candidate 5.192.0.0/16 blocks=65536
+  candidate 83.110.0.0/16 blocks=65536
+  /24 networks=28 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=16 max_hits=5 n>=2=5 n>=3=4 n>=5=1 n>=10=0
+  /18 networks=10 max_hits=14 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=5 max_hits=15 n>=2=3 n>=3=2 n>=5=2 n>=10=2
+IL | 57 | CANDIDATE | /20 | 3 | AS12400 Partner Communications Ltd. | 2 | provider has 3+ observed IPs in a /20
+  candidate 83.130.112.0/20 blocks=4096
+  candidate 87.68.192.0/20 blocks=4096
+  /24 networks=55 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=3 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=39 max_hits=3 n>=2=13 n>=3=5 n>=5=0 n>=10=0
+  /16 networks=20 max_hits=6 n>=2=15 n>=3=10 n>=5=4 n>=10=0
+PA | 61 | CANDIDATE | /20 | 3 | AS11556 Cable & Wireless Panama | 1 | provider has 3+ observed IPs in a /20
+  candidate 190.35.64.0/20 blocks=4096
+  /24 networks=61 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=49 max_hits=3 n>=2=11 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=36 max_hits=4 n>=2=16 n>=3=6 n>=5=0 n>=10=0
+  /16 networks=13 max_hits=7 n>=2=12 n>=3=12 n>=5=8 n>=10=0
+IQ | 32 | CANDIDATE | /16 | 10 | AS208324 NBTEL Downstream | 1 | provider has 10+ observed IPs in a /16
+  candidate 37.77.0.0/16 blocks=65536
+  /24 networks=21 max_hits=5 n>=2=8 n>=3=1 n>=5=1 n>=10=0
+  /20 networks=6 max_hits=20 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+  /18 networks=6 max_hits=20 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=6 max_hits=20 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+TG | 32 | CANDIDATE | /16 | 10 | AS36924 GVA Cote d'Ivoire SAS | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.64.0.0/16 blocks=65536
+  /24 networks=19 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=5 max_hits=13 n>=2=4 n>=3=4 n>=5=3 n>=10=1
+  /18 networks=3 max_hits=18 n>=2=3 n>=3=3 n>=5=3 n>=10=1
+  /16 networks=2 max_hits=27 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+MD | 46 | CANDIDATE | /18 | 5 | AS8926 Moldtelecom SA | 1 | provider has 5+ observed IPs in a /18
+  candidate 212.0.192.0/18 blocks=16384
+  /24 networks=43 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=38 max_hits=3 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=27 max_hits=5 n>=2=12 n>=3=5 n>=5=1 n>=10=0
+  /16 networks=18 max_hits=9 n>=2=8 n>=3=8 n>=5=3 n>=10=0
+JO | 31 | CANDIDATE | /16 | 10 | AS8376 Jordan Data Communications Company LLC | 1 | provider has 10+ observed IPs in a /16
+  candidate 94.249.0.0/16 blocks=65536
+  /24 networks=24 max_hits=4 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=16 max_hits=6 n>=2=6 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=12 max_hits=7 n>=2=6 n>=3=5 n>=5=2 n>=10=0
+  /16 networks=9 max_hits=12 n>=2=4 n>=3=4 n>=5=3 n>=10=1
+KE | 31 | CANDIDATE | /16 | 10 | AS36926 Airtel Networks Kenya Limited | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.0.0.0/16 blocks=65536
+  /24 networks=20 max_hits=5 n>=2=7 n>=3=2 n>=5=1 n>=10=0
+  /20 networks=9 max_hits=14 n>=2=3 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=7 max_hits=23 n>=2=2 n>=3=2 n>=5=1 n>=10=1
+  /16 networks=7 max_hits=23 n>=2=2 n>=3=2 n>=5=1 n>=10=1
+CZ | 30 | CANDIDATE | /16 | 10 | AS5610 O2 Czech Republic, a.s. | 1 | provider has 10+ observed IPs in a /16
+  candidate 109.81.0.0/16 blocks=65536
+  /24 networks=30 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=7 n>=2=7 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=10 max_hits=12 n>=2=6 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=7 max_hits=19 n>=2=5 n>=3=2 n>=5=1 n>=10=1
+SN | 39 | CANDIDATE | /18 | 5 | AS8346 SONATEL-AS Autonomous System | 2 | provider has 5+ observed IPs in a /18
+  candidate 154.124.128.0/18 blocks=16384
+  candidate 196.207.192.0/18 blocks=16384
+  /24 networks=35 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=29 max_hits=4 n>=2=7 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=16 max_hits=5 n>=2=9 n>=3=8 n>=5=2 n>=10=0
+  /16 networks=8 max_hits=9 n>=2=7 n>=3=7 n>=5=4 n>=10=0
+TR | 29 | CANDIDATE | /16 | 10 | AS12735 TurkNet Iletisim Hizmetleri A.S. | 1 | provider has 10+ observed IPs in a /16
+  candidate 31.223.0.0/16 blocks=65536
+  /24 networks=27 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=18 max_hits=4 n>=2=7 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=8 max_hits=10 n>=2=5 n>=3=4 n>=5=2 n>=10=1
+  /16 networks=6 max_hits=18 n>=2=3 n>=3=2 n>=5=2 n>=10=1
+AU | 66 | CANDIDATE | /24 | 2 | AS1221 Telstra Limited | 1 | provider has 2+ observed IPs in a /24
+  candidate 58.169.72.0/24 blocks=256
+  /24 networks=65 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=64 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=60 max_hits=2 n>=2=6 n>=3=0 n>=5=0 n>=10=0
+  /16 networks=49 max_hits=3 n>=2=12 n>=3=5 n>=5=0 n>=10=0
+PL | 33 | CANDIDATE | /18 | 5 | AS9141 P4 Sp. z o.o. | 3 | provider has 5+ observed IPs in a /18
+  candidate 213.134.128.0/18 blocks=16384
+  candidate 77.236.0.0/18 blocks=16384
+  candidate 91.150.192.0/18 blocks=16384
+  /24 networks=31 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=18 max_hits=5 n>=2=6 n>=3=5 n>=5=1 n>=10=0
+  /18 networks=14 max_hits=7 n>=2=5 n>=3=4 n>=5=3 n>=10=0
+  /16 networks=11 max_hits=7 n>=2=6 n>=3=5 n>=5=3 n>=10=0
+US | 28 | CANDIDATE | /16 | 10 | AS62651 Strong Technology, LLC. | 1 | provider has 10+ observed IPs in a /16
+  candidate 216.131.0.0/16 blocks=65536
+  /24 networks=14 max_hits=5 n>=2=8 n>=3=4 n>=5=1 n>=10=0
+  /20 networks=6 max_hits=11 n>=2=5 n>=3=4 n>=5=3 n>=10=1
+  /18 networks=5 max_hits=16 n>=2=4 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=5 max_hits=16 n>=2=4 n>=3=3 n>=5=2 n>=10=1
+PK | 55 | CANDIDATE | /20 | 3 | AS17557 Pakistan Telecommunication Company Limited | 1 | provider has 3+ observed IPs in a /20
+  candidate 39.57.176.0/20 blocks=4096
+  /24 networks=55 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=53 max_hits=3 n>=2=1 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=51 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /16 networks=47 max_hits=3 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+US | 32 | CANDIDATE | /18 | 5 | AS399073 BUNNY TECHNOLOGY LLC | 3 | provider has 5+ observed IPs in a /18
+  candidate 151.245.192.0/18 blocks=16384
+  candidate 151.246.192.0/18 blocks=16384
+  candidate 151.247.64.0/18 blocks=16384
+  /24 networks=28 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=18 max_hits=5 n>=2=6 n>=3=4 n>=5=1 n>=10=0
+  /18 networks=13 max_hits=6 n>=2=6 n>=3=5 n>=5=3 n>=10=0
+  /16 networks=10 max_hits=6 n>=2=7 n>=3=6 n>=5=3 n>=10=0
+HK | 27 | CANDIDATE | /16 | 10 | AS45102 Alibaba (US) Technology Co., Ltd. | 1 | provider has 10+ observed IPs in a /16
+  candidate 8.210.0.0/16 blocks=65536
+  /24 networks=24 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=13 max_hits=7 n>=2=5 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=10 max_hits=10 n>=2=4 n>=3=4 n>=5=2 n>=10=1
+  /16 networks=8 max_hits=10 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+IT | 27 | CANDIDATE | /16 | 10 | AS29447 Iliad Italia S.p.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 81.56.0.0/16 blocks=65536
+  /24 networks=27 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=19 max_hits=4 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=12 max_hits=7 n>=2=5 n>=3=4 n>=5=2 n>=10=0
+  /16 networks=7 max_hits=18 n>=2=4 n>=3=1 n>=5=1 n>=10=1
+PL | 27 | CANDIDATE | /16 | 10 | AS39603 P4 Sp. z o.o. | 1 | provider has 10+ observed IPs in a /16
+  candidate 109.243.0.0/16 blocks=65536
+  /24 networks=26 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=17 max_hits=5 n>=2=6 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=13 max_hits=5 n>=2=7 n>=3=4 n>=5=1 n>=10=0
+  /16 networks=6 max_hits=10 n>=2=5 n>=3=4 n>=5=2 n>=10=1
+IT | 48 | CANDIDATE | /20 | 3 | AS12874 Fastweb SpA | 2 | provider has 3+ observed IPs in a /20
+  candidate 93.34.224.0/20 blocks=4096
+  candidate 93.44.192.0/20 blocks=4096
+  /24 networks=48 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=33 max_hits=4 n>=2=12 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=26 max_hits=4 n>=2=15 n>=3=5 n>=5=0 n>=10=0
+  /16 networks=17 max_hits=8 n>=2=10 n>=3=7 n>=5=3 n>=10=0
+BG | 40 | CANDIDATE | /18 | 5 | AS8866 Vivacom Bulgaria EAD | 1 | provider has 5+ observed IPs in a /18
+  candidate 213.130.64.0/18 blocks=16384
+  /24 networks=38 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=32 max_hits=3 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=26 max_hits=5 n>=2=8 n>=3=4 n>=5=1 n>=10=0
+  /16 networks=19 max_hits=5 n>=2=10 n>=3=6 n>=5=1 n>=10=0
+MA | 40 | CANDIDATE | /18 | 5 | AS36884 Wana Corporate | 1 | provider has 5+ observed IPs in a /18
+  candidate 105.76.128.0/18 blocks=16384
+  /24 networks=38 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=33 max_hits=5 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+  /18 networks=28 max_hits=5 n>=2=7 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=16 max_hits=8 n>=2=7 n>=3=6 n>=5=2 n>=10=0
+LK | 25 | CANDIDATE | /16 | 10 | AS18001 Dialog Axiata PLC. | 1 | provider has 10+ observed IPs in a /16
+  candidate 175.157.0.0/16 blocks=65536
+  /24 networks=24 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=15 max_hits=3 n>=2=6 n>=3=4 n>=5=0 n>=10=0
+  /18 networks=8 max_hits=9 n>=2=4 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=5 max_hits=20 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+PT | 39 | CANDIDATE | /18 | 5 | AS12353 Vodafone Portugal | 1 | provider has 5+ observed IPs in a /18
+  candidate 78.137.192.0/18 blocks=16384
+  /24 networks=38 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=33 max_hits=4 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=29 max_hits=6 n>=2=6 n>=3=1 n>=5=1 n>=10=0
+  /16 networks=17 max_hits=6 n>=2=11 n>=3=7 n>=5=1 n>=10=0
+PH | 51 | CANDIDATE | /20 | 3 | AS9299 Philippine Long Distance Telephone Company | 1 | provider has 3+ observed IPs in a /20
+  candidate 180.194.192.0/20 blocks=4096
+  /24 networks=51 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=44 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /16 networks=40 max_hits=5 n>=2=5 n>=3=4 n>=5=1 n>=10=0
+TH | 51 | CANDIDATE | /20 | 3 | AS23969 TOT Public Company Limited | 1 | provider has 3+ observed IPs in a /20
+  candidate 125.27.128.0/20 blocks=4096
+  /24 networks=48 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=45 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=33 max_hits=4 n>=2=15 n>=3=2 n>=5=0 n>=10=0
+  /16 networks=21 max_hits=8 n>=2=10 n>=3=6 n>=5=3 n>=10=0
+AZ | 23 | CANDIDATE | /16 | 10 | AS8814 Aztelekom LLC | 1 | provider has 10+ observed IPs in a /16
+  candidate 212.47.0.0/16 blocks=65536
+  /24 networks=18 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=3 max_hits=14 n>=2=3 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=2 max_hits=16 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=2 max_hits=16 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+CG | 23 | CANDIDATE | /16 | 10 | AS37550 Airtel Congo S.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 197.214.0.0/16 blocks=65536
+  /24 networks=3 max_hits=17 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /20 networks=2 max_hits=22 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=23 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=23 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+EC | 23 | CANDIDATE | /16 | 10 | AS27947 Telconet S.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 157.100.0.0/16 blocks=65536
+  /24 networks=20 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=11 max_hits=5 n>=2=5 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=9 max_hits=7 n>=2=3 n>=3=3 n>=5=3 n>=10=0
+  /16 networks=7 max_hits=12 n>=2=3 n>=3=2 n>=5=2 n>=10=1
+IE | 23 | CANDIDATE | /16 | 10 | AS6830 Liberty Global Europe Holding B.V. | 1 | provider has 10+ observed IPs in a /16
+  candidate 37.228.0.0/16 blocks=65536
+  /24 networks=20 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=10 max_hits=5 n>=2=4 n>=3=3 n>=5=3 n>=10=0
+  /18 networks=7 max_hits=16 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=5 max_hits=16 n>=2=4 n>=3=1 n>=5=1 n>=10=1
+PT | 60 | CANDIDATE | /24 | 2 | AS3243 MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A. | 1 | provider has 2+ observed IPs in a /24
+  candidate 2.81.52.0/24 blocks=256
+  /24 networks=59 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=53 max_hits=2 n>=2=7 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=42 max_hits=3 n>=2=12 n>=3=6 n>=5=0 n>=10=0
+  /16 networks=23 max_hits=6 n>=2=15 n>=3=11 n>=5=3 n>=10=0
+VE | 27 | CANDIDATE | /18 | 5 | AS264628 CORPORACION FIBEX TELECOM, C.A. | 3 | provider has 5+ observed IPs in a /18
+  candidate 153.51.192.0/18 blocks=16384
+  candidate 190.120.192.0/18 blocks=16384
+  candidate 190.89.0.0/18 blocks=16384
+  /24 networks=17 max_hits=4 n>=2=5 n>=3=4 n>=5=0 n>=10=0
+  /20 networks=6 max_hits=8 n>=2=5 n>=3=4 n>=5=3 n>=10=0
+  /18 networks=6 max_hits=8 n>=2=5 n>=3=4 n>=5=3 n>=10=0
+  /16 networks=6 max_hits=8 n>=2=5 n>=3=4 n>=5=3 n>=10=0
+IL | 49 | CANDIDATE | /20 | 3 | AS1680 Cellcom Fixed Line Communication L.P | 1 | provider has 3+ observed IPs in a /20
+  candidate 85.250.176.0/20 blocks=4096
+  /24 networks=48 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=37 max_hits=3 n>=2=11 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=28 max_hits=3 n>=2=15 n>=3=6 n>=5=0 n>=10=0
+  /16 networks=17 max_hits=8 n>=2=10 n>=3=8 n>=5=4 n>=10=0
+SG | 31 | CANDIDATE | /18 | 5 | AS3491 PCCW Global (HK) Ltd. | 2 | provider has 5+ observed IPs in a /18
+  candidate 212.212.192.0/18 blocks=16384
+  candidate 87.82.64.0/18 blocks=16384
+  /24 networks=30 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=21 max_hits=3 n>=2=7 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=11 max_hits=6 n>=2=7 n>=3=7 n>=5=2 n>=10=0
+  /16 networks=7 max_hits=9 n>=2=4 n>=3=4 n>=5=3 n>=10=0
+CN | 21 | CANDIDATE | /16 | 10 | AS23724 IDC, China Telecommunications Corporation | 1 | provider has 10+ observed IPs in a /16
+  candidate 220.181.0.0/16 blocks=65536
+  /24 networks=3 max_hits=13 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /20 networks=3 max_hits=13 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=3 max_hits=13 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=2 max_hits=20 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+LK | 21 | CANDIDATE | /16 | 10 | AS9329 Sri Lanka Telecom Internet | 1 | provider has 10+ observed IPs in a /16
+  candidate 112.134.0.0/16 blocks=65536
+  /24 networks=19 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=9 max_hits=6 n>=2=5 n>=3=2 n>=5=2 n>=10=0
+  /18 networks=6 max_hits=13 n>=2=4 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=4 max_hits=17 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+TG | 21 | CANDIDATE | /16 | 10 | AS24691 TogoTelecom, Togo | 1 | provider has 10+ observed IPs in a /16
+  candidate 196.170.0.0/16 blocks=65536
+  /24 networks=21 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=16 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=6 max_hits=8 n>=2=5 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=2 max_hits=13 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+BR | 30 | CANDIDATE | /18 | 5 | AS28210 GIGA MAIS FIBRA TELECOMUNICACOES S.A. | 2 | provider has 5+ observed IPs in a /18
+  candidate 177.131.128.0/18 blocks=16384
+  candidate 45.226.64.0/18 blocks=16384
+  /24 networks=22 max_hits=2 n>=2=8 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=5 n>=2=7 n>=3=5 n>=5=1 n>=10=0
+  /18 networks=12 max_hits=7 n>=2=7 n>=3=4 n>=5=2 n>=10=0
+  /16 networks=12 max_hits=7 n>=2=7 n>=3=4 n>=5=2 n>=10=0
+CR | 25 | CANDIDATE | /18 | 5 | AS52228 Cable Tica | 3 | provider has 5+ observed IPs in a /18
+  candidate 179.50.128.0/18 blocks=16384
+  candidate 186.15.64.0/18 blocks=16384
+  candidate 186.64.192.0/18 blocks=16384
+  /24 networks=21 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=12 max_hits=6 n>=2=7 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=8 max_hits=6 n>=2=6 n>=3=3 n>=5=3 n>=10=0
+  /16 networks=5 max_hits=8 n>=2=4 n>=3=3 n>=5=3 n>=10=0
+KG | 20 | CANDIDATE | /16 | 10 | AS12997 OJSC Kyrgyztelecom | 1 | provider has 10+ observed IPs in a /16
+  candidate 212.241.0.0/16 blocks=65536
+  /24 networks=14 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=4 max_hits=7 n>=2=3 n>=3=3 n>=5=3 n>=10=0
+  /18 networks=3 max_hits=12 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=3 max_hits=12 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+LY | 20 | CANDIDATE | /16 | 10 | AS328539 Giga for Telecommunication and Technology Limited | 1 | provider has 10+ observed IPs in a /16
+  candidate 38.252.0.0/16 blocks=65536
+  /24 networks=14 max_hits=3 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=6 max_hits=6 n>=2=5 n>=3=4 n>=5=1 n>=10=0
+  /18 networks=4 max_hits=10 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+  /16 networks=4 max_hits=10 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+PH | 20 | CANDIDATE | /16 | 10 | AS4775 Globe Telecoms | 1 | provider has 10+ observed IPs in a /16
+  candidate 138.84.0.0/16 blocks=65536
+  /24 networks=20 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=11 max_hits=5 n>=2=5 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=8 max_hits=7 n>=2=3 n>=3=2 n>=5=2 n>=10=0
+  /16 networks=6 max_hits=15 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+US | 19 | CANDIDATE | /16 | 10 | AS32934 Facebook, Inc. | 1 | provider has 10+ observed IPs in a /16
+  candidate 57.141.0.0/16 blocks=65536
+  /24 networks=4 max_hits=10 n>=2=4 n>=3=3 n>=5=1 n>=10=1
+  /20 networks=2 max_hits=17 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=19 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=19 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+VE | 19 | CANDIDATE | /16 | 10 | AS263703 VIGINET C.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 190.97.0.0/16 blocks=65536
+  /24 networks=12 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=3 max_hits=10 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+  /18 networks=2 max_hits=14 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=2 max_hits=14 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+BR | 36 | CANDIDATE | /20 | 3 | AS28343 UNIFIQUE TELECOMUNICACOES S/A | 3 | provider has 3+ observed IPs in a /20
+  candidate 170.81.208.0/20 blocks=4096
+  candidate 186.249.192.0/20 blocks=4096
+  candidate 189.28.192.0/20 blocks=4096
+  /24 networks=33 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=23 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+  /18 networks=23 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+  /16 networks=22 max_hits=3 n>=2=11 n>=3=3 n>=5=0 n>=10=0
+KW | 18 | CANDIDATE | /16 | 10 | AS47589 Kuwait Telecommunications Company K.S.C.C. | 1 | provider has 10+ observed IPs in a /16
+  candidate 37.231.0.0/16 blocks=65536
+  /24 networks=18 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=10 max_hits=4 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /16 networks=3 max_hits=10 n>=2=3 n>=3=3 n>=5=2 n>=10=1
+PE | 18 | CANDIDATE | /16 | 10 | AS270068 DESARROLLO DE INFRAESTRUCTURA DE TELECOMUNICACIONES PERU S.A.C. (INFRATEL) | 1 | provider has 10+ observed IPs in a /16
+  candidate 38.250.0.0/16 blocks=65536
+  /24 networks=11 max_hits=5 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+  /20 networks=2 max_hits=15 n>=2=2 n>=3=2 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=18 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=18 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+PY | 18 | CANDIDATE | /16 | 10 | AS27895 Núcleo S.A. | 1 | provider has 10+ observed IPs in a /16
+  candidate 181.94.0.0/16 blocks=65536
+  /24 networks=10 max_hits=4 n>=2=4 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=3 max_hits=13 n>=2=3 n>=3=2 n>=5=1 n>=10=1
+  /18 networks=3 max_hits=13 n>=2=3 n>=3=2 n>=5=1 n>=10=1
+  /16 networks=3 max_hits=13 n>=2=3 n>=3=2 n>=5=1 n>=10=1
+TH | 18 | CANDIDATE | /16 | 10 | AS131445 Advance Wireless Network | 1 | provider has 10+ observed IPs in a /16
+  candidate 49.230.0.0/16 blocks=65536
+  /24 networks=18 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=13 max_hits=4 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=6 max_hits=8 n>=2=5 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=3 max_hits=15 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+TZ | 18 | CANDIDATE | /16 | 10 | AS37133 Airtel Tanzania | 1 | provider has 10+ observed IPs in a /16
+  candidate 197.186.0.0/16 blocks=65536
+  /24 networks=14 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=4 max_hits=7 n>=2=4 n>=3=3 n>=5=2 n>=10=0
+  /18 networks=2 max_hits=12 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=1 max_hits=18 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+JO | 27 | CANDIDATE | /18 | 5 | AS9038 Batelco Jordan | 2 | provider has 5+ observed IPs in a /18
+  candidate 109.107.192.0/18 blocks=16384
+  candidate 91.186.192.0/18 blocks=16384
+  /24 networks=20 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=9 n>=2=5 n>=3=5 n>=5=2 n>=10=0
+  /18 networks=6 max_hits=9 n>=2=4 n>=3=4 n>=5=2 n>=10=0
+  /16 networks=6 max_hits=9 n>=2=4 n>=3=4 n>=5=2 n>=10=0
+AU | 17 | CANDIDATE | /16 | 10 | AS9443 Vocus Retail | 1 | provider has 10+ observed IPs in a /16
+  candidate 112.213.0.0/16 blocks=65536
+  /24 networks=16 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=13 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=8 max_hits=6 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=7 max_hits=10 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+BO | 17 | CANDIDATE | /16 | 10 | AS6568 Entel S.A. - EntelNet | 1 | provider has 10+ observed IPs in a /16
+  candidate 181.115.0.0/16 blocks=65536
+  /24 networks=8 max_hits=7 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /20 networks=5 max_hits=10 n>=2=4 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=4 max_hits=11 n>=2=4 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=3 max_hits=11 n>=2=3 n>=3=2 n>=5=1 n>=10=1
+IQ | 17 | CANDIDATE | /16 | 10 | AS198589 Al-Jazeera Al-Arabiya Company for Communication and Internet LTD | 1 | provider has 10+ observed IPs in a /16
+  candidate 5.62.0.0/16 blocks=65536
+  /24 networks=7 max_hits=4 n>=2=5 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=2 max_hits=12 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=1 max_hits=17 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=17 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+IT | 17 | CANDIDATE | /16 | 10 | AS210278 Sky Italia srl | 1 | provider has 10+ observed IPs in a /16
+  candidate 101.57.0.0/16 blocks=65536
+  /24 networks=15 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=12 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=8 max_hits=4 n>=2=5 n>=3=3 n>=5=0 n>=10=0
+  /16 networks=3 max_hits=10 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+LY | 17 | CANDIDATE | /16 | 10 | AS21003 General Post and Telecommunication Company (GPTC) | 1 | provider has 10+ observed IPs in a /16
+  candidate 41.254.0.0/16 blocks=65536
+  /24 networks=15 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=8 max_hits=5 n>=2=3 n>=3=3 n>=5=1 n>=10=0
+  /18 networks=6 max_hits=10 n>=2=2 n>=3=2 n>=5=1 n>=10=1
+  /16 networks=4 max_hits=13 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+CO | 31 | CANDIDATE | /18 | 5 | AS19429 ETB - Colombia | 1 | provider has 5+ observed IPs in a /18
+  candidate 186.154.128.0/18 blocks=16384
+  /24 networks=31 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=28 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=21 max_hits=5 n>=2=6 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=13 max_hits=9 n>=2=6 n>=3=3 n>=5=2 n>=10=0
+CI | 16 | CANDIDATE | /16 | 10 | AS36924 GVA Cote d'Ivoire SAS | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.67.0.0/16 blocks=65536
+  /24 networks=10 max_hits=4 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=3 max_hits=14 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=16 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=16 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+GB | 16 | CANDIDATE | /16 | 10 | AS212655 YouFibre Limited | 1 | provider has 10+ observed IPs in a /16
+  candidate 88.97.0.0/16 blocks=65536
+  /24 networks=13 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=4 max_hits=9 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=2 max_hits=15 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=2 max_hits=15 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+GB | 16 | CANDIDATE | /16 | 10 | AS51809 BRSK Limited | 1 | provider has 10+ observed IPs in a /16
+  candidate 88.97.0.0/16 blocks=65536
+  /24 networks=12 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=2 max_hits=11 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=1 max_hits=16 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=16 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+AU | 30 | CANDIDATE | /18 | 5 | AS4764 Aussie Fibre Pty Ltd | 1 | provider has 5+ observed IPs in a /18
+  candidate 180.181.192.0/18 blocks=16384
+  /24 networks=23 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=14 max_hits=6 n>=2=5 n>=3=5 n>=5=1 n>=10=0
+  /18 networks=10 max_hits=7 n>=2=7 n>=3=6 n>=5=1 n>=10=0
+  /16 networks=8 max_hits=7 n>=2=6 n>=3=6 n>=5=2 n>=10=0
+ID | 30 | CANDIDATE | /18 | 5 | AS23693 PT. Telekomunikasi Selular | 1 | provider has 5+ observed IPs in a /18
+  candidate 182.3.0.0/18 blocks=16384
+  /24 networks=30 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=24 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=22 max_hits=5 n>=2=5 n>=3=1 n>=5=1 n>=10=0
+  /16 networks=14 max_hits=7 n>=2=8 n>=3=3 n>=5=1 n>=10=0
+OM | 30 | CANDIDATE | /18 | 5 | AS204170 Awaser Oman LLC | 1 | provider has 5+ observed IPs in a /18
+  candidate 38.253.192.0/18 blocks=16384
+  /24 networks=30 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=23 max_hits=5 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+  /18 networks=20 max_hits=7 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=20 max_hits=7 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+IQ | 15 | CANDIDATE | /16 | 10 | AS58322 Hala Al Rafidain Company for Communications and Internet LTD. | 1 | provider has 10+ observed IPs in a /16
+  candidate 91.106.0.0/16 blocks=65536
+  /24 networks=4 max_hits=6 n>=2=3 n>=3=3 n>=5=2 n>=10=0
+  /20 networks=2 max_hits=10 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /18 networks=2 max_hits=10 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+  /16 networks=2 max_hits=10 n>=2=2 n>=3=2 n>=5=2 n>=10=1
+SA | 15 | CANDIDATE | /16 | 10 | AS35753 Integrated Telecom Co. Ltd | 1 | provider has 10+ observed IPs in a /16
+  candidate 82.167.0.0/16 blocks=65536
+  /24 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=8 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=4 max_hits=9 n>=2=2 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=2 max_hits=14 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+LY | 14 | CANDIDATE | /16 | 10 | AS37284 Aljeel Aljadeed For Technology | 1 | provider has 10+ observed IPs in a /16
+  candidate 165.16.0.0/16 blocks=65536
+  /24 networks=12 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=5 n>=2=2 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=3 max_hits=11 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=2 max_hits=13 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+CO | 41 | CANDIDATE | /20 | 3 | AS10620 Telmex Colombia S.A. | 1 | provider has 3+ observed IPs in a /20
+  candidate 181.54.0.0/20 blocks=4096
+  /24 networks=40 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=36 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=34 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /16 networks=29 max_hits=5 n>=2=5 n>=3=3 n>=5=2 n>=10=0
+PK | 28 | CANDIDATE | /18 | 5 | AS9541 Cyber Internet Services (Pvt) Ltd. | 1 | provider has 5+ observed IPs in a /18
+  candidate 175.107.192.0/18 blocks=16384
+  /24 networks=27 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=21 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=16 max_hits=5 n>=2=7 n>=3=3 n>=5=1 n>=10=0
+  /16 networks=16 max_hits=5 n>=2=7 n>=3=3 n>=5=1 n>=10=0
+AO | 23 | CANDIDATE | /18 | 5 | AS36907 TV CABO ANGOLA LDA | 2 | provider has 5+ observed IPs in a /18
+  candidate 154.127.128.0/18 blocks=16384
+  candidate 154.71.128.0/18 blocks=16384
+  /24 networks=18 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=10 max_hits=4 n>=2=7 n>=3=4 n>=5=0 n>=10=0
+  /18 networks=6 max_hits=6 n>=2=6 n>=3=5 n>=5=2 n>=10=0
+  /16 networks=4 max_hits=9 n>=2=4 n>=3=4 n>=5=2 n>=10=0
+CR | 13 | CANDIDATE | /16 | 10 | AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA | 1 | provider has 10+ observed IPs in a /16
+  candidate 186.151.0.0/16 blocks=65536
+  /24 networks=7 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=2 max_hits=11 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=2 max_hits=11 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=2 max_hits=11 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+PE | 13 | CANDIDATE | /16 | 10 | AS262210 VIETTEL PERÚ S.A.C. | 1 | provider has 10+ observed IPs in a /16
+  candidate 181.176.0.0/16 blocks=65536
+  /24 networks=9 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=5 max_hits=5 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=3 max_hits=6 n>=2=3 n>=3=2 n>=5=2 n>=10=0
+  /16 networks=1 max_hits=13 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+TR | 13 | CANDIDATE | /16 | 10 | AS208972 GIBIRNET ILETISIM HIZMETLERI SANAYI VE TICARET LIMITED SIRKETI | 1 | provider has 10+ observed IPs in a /16
+  candidate 149.86.0.0/16 blocks=65536
+  /24 networks=10 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=4 max_hits=7 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=3 max_hits=10 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=3 max_hits=10 n>=2=2 n>=3=1 n>=5=1 n>=10=1
+VE | 13 | CANDIDATE | /16 | 10 | AS11562 Net Uno, C.A. | 1 | provider has 10+ observed IPs in a /16
+  candidate 190.6.0.0/16 blocks=65536
+  /24 networks=13 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=6 max_hits=4 n>=2=3 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=3 max_hits=11 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=3 max_hits=11 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+CL | 12 | CANDIDATE | /16 | 10 | AS52341 WOM SpA | 1 | provider has 10+ observed IPs in a /16
+  candidate 186.189.0.0/16 blocks=65536
+  /24 networks=10 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=4 max_hits=6 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+IT | 12 | CANDIDATE | /16 | 10 | AS202098 ENEL S.p.A | 1 | provider has 10+ observed IPs in a /16
+  candidate 158.47.0.0/16 blocks=65536
+  /24 networks=11 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=5 max_hits=4 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=2 max_hits=11 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+PE | 12 | CANDIDATE | /16 | 10 | AS265691 WI-NET TELECOM S.A.C. | 1 | provider has 10+ observed IPs in a /16
+  candidate 38.253.0.0/16 blocks=65536
+  /24 networks=8 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=12 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+LB | 11 | CANDIDATE | /16 | 10 | AS59989 T.H. Global Vision SARL | 1 | provider has 10+ observed IPs in a /16
+  candidate 185.97.0.0/16 blocks=65536
+  /24 networks=3 max_hits=8 n>=2=2 n>=3=1 n>=5=1 n>=10=0
+  /20 networks=2 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=2 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=2 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+CA | 48 | CANDIDATE | /24 | 2 | AS852 TELUS Communications Inc. | 1 | provider has 2+ observed IPs in a /24
+  candidate 209.121.229.0/24 blocks=256
+  /24 networks=47 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=47 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /18 networks=40 max_hits=3 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+  /16 networks=29 max_hits=3 n>=2=17 n>=3=2 n>=5=0 n>=10=0
+IR | 38 | CANDIDATE | /20 | 3 | AS58224 Iran Telecommunication Company PJS | 1 | provider has 3+ observed IPs in a /20
+  candidate 85.185.32.0/20 blocks=4096
+  /24 networks=37 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=35 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=35 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /16 networks=32 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+US | 38 | CANDIDATE | /20 | 3 | AS7029 Windstream Communications LLC | 1 | provider has 3+ observed IPs in a /20
+  candidate 205.163.48.0/20 blocks=4096
+  /24 networks=38 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=31 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=23 max_hits=4 n>=2=8 n>=3=6 n>=5=0 n>=10=0
+  /16 networks=20 max_hits=6 n>=2=8 n>=3=5 n>=5=1 n>=10=0
+BF | 10 | CANDIDATE | /16 | 10 | AS36924 GVA Cote d'Ivoire SAS | 1 | provider has 10+ observed IPs in a /16
+  candidate 102.23.0.0/16 blocks=65536
+  /24 networks=8 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=2 max_hits=6 n>=2=2 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+CM | 10 | CANDIDATE | /16 | 10 | AS30992 MTN Network Solutions (Cameroon) | 1 | provider has 10+ observed IPs in a /16
+  candidate 129.0.0.0/16 blocks=65536
+  /24 networks=4 max_hits=5 n>=2=2 n>=3=2 n>=5=1 n>=10=0
+  /20 networks=3 max_hits=5 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=3 max_hits=5 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+DZ | 10 | CANDIDATE | /16 | 10 | AS33779 Wataniya Telecom Algerie | 1 | provider has 10+ observed IPs in a /16
+  candidate 105.235.0.0/16 blocks=65536
+  /24 networks=5 max_hits=3 n>=2=3 n>=3=2 n>=5=0 n>=10=0
+  /20 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /18 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+  /16 networks=1 max_hits=10 n>=2=1 n>=3=1 n>=5=1 n>=10=1
+PL | 24 | CANDIDATE | /18 | 5 | AS12912 T-Mobile Polska S.A. | 1 | provider has 5+ observed IPs in a /18
+  candidate 46.205.192.0/18 blocks=16384
+  /24 networks=22 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=12 max_hits=7 n>=2=6 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=6 max_hits=9 n>=2=6 n>=3=4 n>=5=1 n>=10=0
+  /16 networks=4 max_hits=9 n>=2=4 n>=3=4 n>=5=3 n>=10=0
+MD | 19 | CANDIDATE | /18 | 5 | AS1547 INTERDNESTRKOM, Sovmestnoe Zakrytoe Aktsionernoe Obshchestvo | 2 | provider has 5+ observed IPs in a /18
+  candidate 217.19.192.0/18 blocks=16384
+  candidate 62.221.64.0/18 blocks=16384
+  /24 networks=12 max_hits=6 n>=2=2 n>=3=2 n>=5=1 n>=10=0
+  /20 networks=7 max_hits=8 n>=2=5 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=4 max_hits=8 n>=2=4 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=4 max_hits=8 n>=2=4 n>=3=3 n>=5=2 n>=10=0
+CR | 18 | CANDIDATE | /18 | 5 | AS52263 Telecable Economico S.A. | 2 | provider has 5+ observed IPs in a /18
+  candidate 177.93.0.0/18 blocks=16384
+  candidate 190.171.64.0/18 blocks=16384
+  /24 networks=13 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=5 n>=2=6 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=4 max_hits=7 n>=2=3 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=4 max_hits=7 n>=2=3 n>=3=3 n>=5=2 n>=10=0
+TR | 18 | CANDIDATE | /18 | 5 | AS202561 High Speed Telekomunikasyon ve Hab. Hiz. Ltd. Sti. | 2 | provider has 5+ observed IPs in a /18
+  candidate 188.132.192.0/18 blocks=16384
+  candidate 38.156.64.0/18 blocks=16384
+  /24 networks=11 max_hits=4 n>=2=3 n>=3=3 n>=5=0 n>=10=0
+  /20 networks=7 max_hits=8 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=6 max_hits=8 n>=2=3 n>=3=2 n>=5=2 n>=10=0
+  /16 networks=6 max_hits=8 n>=2=3 n>=3=2 n>=5=2 n>=10=0
+ES | 17 | CANDIDATE | /18 | 5 | AS12338 Euskaltel S.A. | 2 | provider has 5+ observed IPs in a /18
+  candidate 82.130.128.0/18 blocks=16384
+  candidate 85.85.128.0/18 blocks=16384
+  /24 networks=15 max_hits=3 n>=2=1 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=9 max_hits=5 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+  /18 networks=6 max_hits=5 n>=2=4 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=5 max_hits=8 n>=2=3 n>=3=2 n>=5=2 n>=10=0
+KW | 17 | CANDIDATE | /18 | 5 | AS29357 NATIONAL MOBILE TELECOMMUNICATIONS COMPANY K.S.C.P. | 2 | provider has 5+ observed IPs in a /18
+  candidate 188.70.0.0/18 blocks=16384
+  candidate 188.71.192.0/18 blocks=16384
+  /24 networks=17 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=10 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=4 max_hits=9 n>=2=2 n>=3=2 n>=5=2 n>=10=0
+  /16 networks=4 max_hits=9 n>=2=2 n>=3=2 n>=5=2 n>=10=0
+CN | 21 | CANDIDATE | /18 | 5 | AS17638 ASN for TIANJIN Provincial Net of CT | 1 | provider has 5+ observed IPs in a /18
+  candidate 106.47.128.0/18 blocks=16384
+  /24 networks=18 max_hits=4 n>=2=1 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=12 max_hits=4 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=9 max_hits=5 n>=2=6 n>=3=3 n>=5=1 n>=10=0
+  /16 networks=5 max_hits=7 n>=2=4 n>=3=3 n>=5=3 n>=10=0
+PH | 21 | CANDIDATE | /18 | 5 | AS17639 Converge ICT Solutions Inc. | 1 | provider has 5+ observed IPs in a /18
+  candidate 136.158.0.0/18 blocks=16384
+  /24 networks=20 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=16 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=13 max_hits=7 n>=2=3 n>=3=1 n>=5=1 n>=10=0
+  /16 networks=11 max_hits=7 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+ZA | 16 | CANDIDATE | /18 | 5 | AS37105 RAIN GROUP HOLDINGS (PTY) LTD | 2 | provider has 5+ observed IPs in a /18
+  candidate 197.184.64.0/18 blocks=16384
+  candidate 41.56.128.0/18 blocks=16384
+  /24 networks=15 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+  /20 networks=11 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /18 networks=4 max_hits=6 n>=2=3 n>=3=3 n>=5=2 n>=10=0
+  /16 networks=3 max_hits=6 n>=2=3 n>=3=3 n>=5=2 n>=10=0
+AR | 20 | CANDIDATE | /18 | 5 | AS27747 Telecentro S.A. | 1 | provider has 5+ observed IPs in a /18
+  candidate 181.46.128.0/18 blocks=16384
+  /24 networks=15 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=13 max_hits=4 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+  /18 networks=12 max_hits=5 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+  /16 networks=9 max_hits=8 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+BG | 20 | CANDIDATE | /18 | 5 | AS29580 A1 Bulgaria EAD | 1 | provider has 5+ observed IPs in a /18
+  candidate 46.232.128.0/18 blocks=16384
+  /24 networks=17 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+  /20 networks=13 max_hits=7 n>=2=2 n>=3=1 n>=5=1 n>=10=0
+  /18 networks=11 max_hits=7 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+  /16 networks=9 max_hits=7 n>=2=4 n>=3=3 n>=5=1 n>=10=0

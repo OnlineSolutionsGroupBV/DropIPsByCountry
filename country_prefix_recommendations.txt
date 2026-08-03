@@ -1,0 +1,2284 @@
+Country prefix recommendations
+==============================
+
+Country | observed IPs | recommendation | min_hits | reason
+CN | 9287 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+US | 4020 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+BR | 2867 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+GB | 1102 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+IN | 732 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+ES | 688 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+EG | 636 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+CA | 522 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+RU | 495 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+IT | 489 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+MX | 483 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+TR | 456 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+IQ | 446 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+VN | 424 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+CL | 412 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+AR | 406 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+UA | 313 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+SA | 293 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+ZA | 293 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+UZ | 288 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+CO | 284 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+PL | 271 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+VE | 268 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+AU | 262 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+IL | 258 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+TH | 250 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+BD | 236 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+PE | 231 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+ID | 219 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+PK | 213 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+KE | 202 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+SG | 187 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+PT | 172 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+MA | 169 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+JP | 164 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+GR | 153 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+RO | 148 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+BG | 145 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+BO | 145 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+IE | 143 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+PA | 143 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+TW | 143 | /24 | 2 | at least one /24 has 2+ observed IPs
+PH | 141 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+NG | 140 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+KZ | 139 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+HU | 129 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+JO | 127 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+DO | 126 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+DZ | 117 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+EC | 114 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+AO | 110 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+CG | 110 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+SE | 107 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+HK | 103 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+AE | 102 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+TN | 102 | /32 | 1 | traffic is too distributed for safe subnet aggregation
+CR | 101 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+CZ | 101 | /16 | 10 | 100+ IPs and at least one /16 has 10+ observed IPs
+MD | 100 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+MY | 91 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+CI | 90 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+KG | 90 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+AZ | 88 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+KR | 88 | /32 | 1 | traffic is too distributed for safe subnet aggregation
+LB | 88 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+QA | 85 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+BF | 83 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+OM | 82 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+SY | 76 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+LY | 74 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+UY | 72 | /32 | 1 | traffic is too distributed for safe subnet aggregation
+PY | 69 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+IR | 68 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+NP | 66 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+KW | 65 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+RS | 65 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+GH | 59 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+PS | 59 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+ET | 57 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+AL | 56 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+GE | 55 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+TG | 53 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+TZ | 53 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+LK | 52 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+MN | 52 | /18 | 5 | 50+ IPs and at least one /18 has 5+ observed IPs
+NZ | 47 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+NO | 46 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+SN | 42 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+JM | 38 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+DK | 37 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+CM | 33 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+UG | 33 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+AM | 29 | /24 | 2 | at least one /24 has 2+ observed IPs
+NI | 28 | /20 | 3 | 25+ IPs and at least one /20 has 3+ observed IPs
+BH | 24 | /24 | 2 | at least one /24 has 2+ observed IPs
+BY | 24 | /32 | 1 | traffic is too distributed for safe subnet aggregation
+MG | 23 | /24 | 2 | at least one /24 has 2+ observed IPs
+XK | 21 | /24 | 2 | at least one /24 has 2+ observed IPs
+MM | 15 | /24 | 2 | at least one /24 has 2+ observed IPs
+
+Details
+-------
+
+CN (9287 observed IPs)
+  /24 networks=8461 max_hits=13 n>=2=622 n>=3=107 n>=5=21 n>=10=1
+    220.181.108.0/24 hits=13
+    202.46.62.0/24 hits=9
+    111.225.214.0/24 hits=8
+  /22 networks=7499 max_hits=15 n>=2=1218 n>=3=324 n>=5=53 n>=10=6
+    117.178.56.0/22 hits=15
+    220.181.108.0/22 hits=13
+    182.136.92.0/22 hits=12
+  /20 networks=5987 max_hits=17 n>=2=1641 n>=3=729 n>=5=225 n>=10=15
+    117.178.48.0/20 hits=17
+    120.84.0.0/20 hits=13
+    220.181.96.0/20 hits=13
+  /18 networks=4245 max_hits=28 n>=2=1680 n>=3=880 n>=5=399 n>=10=123
+    183.197.64.0/18 hits=28
+    183.197.192.0/18 hits=27
+    117.189.0.0/18 hits=26
+  /16 networks=2513 max_hits=87 n>=2=1402 n>=3=899 n>=5=489 n>=10=168
+    117.189.0.0/16 hits=87
+    183.197.0.0/16 hits=83
+    183.199.0.0/16 hits=70
+
+US (4020 observed IPs)
+  /24 networks=3552 max_hits=88 n>=2=86 n>=3=36 n>=5=17 n>=10=9
+    52.167.144.0/24 hits=88
+    40.77.167.0/24 hits=86
+    66.249.66.0/24 hits=35
+  /22 networks=3450 max_hits=88 n>=2=140 n>=3=41 n>=5=21 n>=10=11
+    52.167.144.0/22 hits=88
+    40.77.164.0/22 hits=86
+    66.249.64.0/22 hits=41
+  /20 networks=3259 max_hits=113 n>=2=262 n>=3=65 n>=5=20 n>=10=9
+    66.249.64.0/20 hits=113
+    52.167.144.0/20 hits=88
+    40.77.160.0/20 hits=86
+  /18 networks=2850 max_hits=120 n>=2=462 n>=3=165 n>=5=38 n>=10=12
+    66.249.64.0/18 hits=120
+    52.167.128.0/18 hits=88
+    40.77.128.0/18 hits=87
+  /16 networks=2285 max_hits=120 n>=2=626 n>=3=260 n>=5=93 n>=10=18
+    66.249.0.0/16 hits=120
+    52.167.0.0/16 hits=88
+    40.77.0.0/16 hits=87
+
+BR (2867 observed IPs)
+  /24 networks=2679 max_hits=4 n>=2=165 n>=3=22 n>=5=0 n>=10=0
+    170.247.238.0/24 hits=4
+    201.140.216.0/24 hits=3
+    177.54.199.0/24 hits=3
+  /22 networks=2450 max_hits=7 n>=2=313 n>=3=71 n>=5=7 n>=10=0
+    177.55.228.0/22 hits=7
+    168.232.160.0/22 hits=6
+    191.5.84.0/22 hits=6
+  /20 networks=2170 max_hits=9 n>=2=460 n>=3=143 n>=5=17 n>=10=0
+    177.55.224.0/20 hits=9
+    187.106.32.0/20 hits=8
+    168.232.160.0/20 hits=7
+  /18 networks=1664 max_hits=12 n>=2=606 n>=3=293 n>=5=72 n>=10=5
+    138.117.192.0/18 hits=12
+    177.55.192.0/18 hits=11
+    179.125.128.0/18 hits=10
+  /16 networks=1022 max_hits=20 n>=2=488 n>=3=319 n>=5=202 n>=10=50
+    170.83.0.0/16 hits=20
+    45.5.0.0/16 hits=19
+    138.117.0.0/16 hits=19
+
+GB (1102 observed IPs)
+  /24 networks=1075 max_hits=3 n>=2=24 n>=3=3 n>=5=0 n>=10=0
+    92.40.111.0/24 hits=3
+    88.97.205.0/24 hits=3
+    185.192.70.0/24 hits=3
+  /22 networks=1039 max_hits=6 n>=2=49 n>=3=10 n>=5=1 n>=10=0
+    88.97.176.0/22 hits=6
+    88.97.204.0/22 hits=4
+    149.241.136.0/22 hits=3
+  /20 networks=978 max_hits=11 n>=2=91 n>=3=14 n>=5=4 n>=10=1
+    88.97.176.0/20 hits=11
+    88.97.192.0/20 hits=9
+    145.40.144.0/20 hits=5
+  /18 networks=817 max_hits=16 n>=2=210 n>=3=42 n>=5=3 n>=10=2
+    88.97.128.0/18 hits=16
+    88.97.192.0/18 hits=15
+    145.40.128.0/18 hits=6
+  /16 networks=475 max_hits=31 n>=2=289 n>=3=161 n>=5=38 n>=10=1
+    88.97.0.0/16 hits=31
+    92.40.0.0/16 hits=8
+    90.241.0.0/16 hits=8
+
+IN (732 observed IPs)
+  /24 networks=715 max_hits=2 n>=2=17 n>=3=0 n>=5=0 n>=10=0
+    43.242.119.0/24 hits=2
+    103.87.51.0/24 hits=2
+    152.59.121.0/24 hits=2
+  /22 networks=682 max_hits=4 n>=2=44 n>=3=5 n>=5=0 n>=10=0
+    43.229.88.0/22 hits=4
+    58.84.60.0/22 hits=3
+    122.164.80.0/22 hits=3
+  /20 networks=629 max_hits=5 n>=2=74 n>=3=21 n>=5=2 n>=10=0
+    122.164.80.0/20 hits=5
+    49.43.160.0/20 hits=5
+    49.206.48.0/20 hits=4
+  /18 networks=560 max_hits=8 n>=2=88 n>=3=40 n>=5=9 n>=10=0
+    49.206.0.0/18 hits=8
+    152.59.64.0/18 hits=8
+    106.202.64.0/18 hits=8
+  /16 networks=474 max_hits=18 n>=2=104 n>=3=51 n>=5=15 n>=10=5
+    223.188.0.0/16 hits=18
+    152.58.0.0/16 hits=17
+    152.59.0.0/16 hits=13
+
+ES (688 observed IPs)
+  /24 networks=653 max_hits=3 n>=2=32 n>=3=3 n>=5=0 n>=10=0
+    82.130.130.0/24 hits=3
+    79.116.229.0/24 hits=3
+    188.26.218.0/24 hits=3
+  /22 networks=594 max_hits=5 n>=2=65 n>=3=18 n>=5=4 n>=10=0
+    79.117.196.0/22 hits=5
+    79.116.224.0/22 hits=5
+    82.130.128.0/22 hits=5
+  /20 networks=530 max_hits=14 n>=2=69 n>=3=29 n>=5=14 n>=10=2
+    79.116.224.0/20 hits=14
+    188.26.208.0/20 hits=10
+    79.117.192.0/20 hits=9
+  /18 networks=454 max_hits=23 n>=2=101 n>=3=32 n>=5=17 n>=10=5
+    79.117.192.0/18 hits=23
+    79.116.192.0/18 hits=22
+    188.26.192.0/18 hits=14
+  /16 networks=319 max_hits=38 n>=2=153 n>=3=66 n>=5=20 n>=10=5
+    79.117.0.0/16 hits=38
+    79.116.0.0/16 hits=36
+    188.26.0.0/16 hits=14
+
+EG (636 observed IPs)
+  /24 networks=631 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+    156.212.121.0/24 hits=2
+    196.134.48.0/24 hits=2
+    197.35.43.0/24 hits=2
+  /22 networks=609 max_hits=3 n>=2=26 n>=3=1 n>=5=0 n>=10=0
+    197.32.228.0/22 hits=3
+    156.195.144.0/22 hits=2
+    154.183.232.0/22 hits=2
+  /20 networks=529 max_hits=4 n>=2=95 n>=3=9 n>=5=0 n>=10=0
+    156.210.128.0/20 hits=4
+    197.35.48.0/20 hits=4
+    156.198.48.0/20 hits=4
+  /18 networks=363 max_hits=9 n>=2=155 n>=3=70 n>=5=9 n>=10=0
+    156.210.128.0/18 hits=9
+    197.35.0.0/18 hits=8
+    197.54.0.0/18 hits=7
+  /16 networks=168 max_hits=15 n>=2=116 n>=3=92 n>=5=52 n>=10=12
+    197.54.0.0/16 hits=15
+    156.210.0.0/16 hits=15
+    197.43.0.0/16 hits=15
+
+CA (522 observed IPs)
+  /24 networks=515 max_hits=2 n>=2=7 n>=3=0 n>=5=0 n>=10=0
+    142.183.237.0/24 hits=2
+    99.252.244.0/24 hits=2
+    142.119.60.0/24 hits=2
+  /22 networks=504 max_hits=3 n>=2=16 n>=3=2 n>=5=0 n>=10=0
+    69.158.60.0/22 hits=3
+    142.119.60.0/22 hits=3
+    45.44.228.0/22 hits=2
+  /20 networks=480 max_hits=4 n>=2=36 n>=3=5 n>=5=0 n>=10=0
+    106.49.48.0/20 hits=4
+    142.119.48.0/20 hits=3
+    69.158.48.0/20 hits=3
+  /18 networks=423 max_hits=4 n>=2=75 n>=3=19 n>=5=0 n>=10=0
+    129.222.64.0/18 hits=4
+    166.62.192.0/18 hits=4
+    99.255.192.0/18 hits=4
+  /16 networks=314 max_hits=6 n>=2=137 n>=3=48 n>=5=3 n>=10=0
+    206.172.0.0/16 hits=6
+    129.222.0.0/16 hits=5
+    99.251.0.0/16 hits=5
+
+RU (495 observed IPs)
+  /24 networks=490 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+    77.79.158.0/24 hits=2
+    87.250.224.0/24 hits=2
+    77.232.165.0/24 hits=2
+  /22 networks=483 max_hits=3 n>=2=11 n>=3=1 n>=5=0 n>=10=0
+    77.222.100.0/22 hits=3
+    185.169.100.0/22 hits=2
+    95.54.228.0/22 hits=2
+  /20 networks=477 max_hits=3 n>=2=17 n>=3=1 n>=5=0 n>=10=0
+    77.222.96.0/20 hits=3
+    185.169.96.0/20 hits=2
+    31.173.80.0/20 hits=2
+  /18 networks=466 max_hits=3 n>=2=28 n>=3=1 n>=5=0 n>=10=0
+    77.222.64.0/18 hits=3
+    31.163.64.0/18 hits=2
+    109.61.128.0/18 hits=2
+  /16 networks=456 max_hits=3 n>=2=38 n>=3=1 n>=5=0 n>=10=0
+    77.222.0.0/16 hits=3
+    146.120.0.0/16 hits=2
+    185.2.0.0/16 hits=2
+
+IT (489 observed IPs)
+  /24 networks=481 max_hits=3 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+    2.37.166.0/24 hits=3
+    101.56.74.0/24 hits=2
+    158.47.228.0/24 hits=2
+  /22 networks=459 max_hits=3 n>=2=28 n>=3=2 n>=5=0 n>=10=0
+    2.37.164.0/22 hits=3
+    2.37.204.0/22 hits=3
+    109.52.196.0/22 hits=2
+  /20 networks=422 max_hits=4 n>=2=53 n>=3=11 n>=5=0 n>=10=0
+    93.44.192.0/20 hits=4
+    158.47.224.0/20 hits=4
+    81.56.144.0/20 hits=4
+  /18 networks=369 max_hits=11 n>=2=75 n>=3=27 n>=5=3 n>=10=1
+    158.47.192.0/18 hits=11
+    81.56.128.0/18 hits=7
+    81.56.0.0/18 hits=5
+  /16 networks=254 max_hits=18 n>=2=116 n>=3=52 n>=5=11 n>=10=3
+    81.56.0.0/16 hits=18
+    158.47.0.0/16 hits=12
+    101.57.0.0/16 hits=10
+
+MX (483 observed IPs)
+  /24 networks=479 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    189.220.43.0/24 hits=2
+    177.229.207.0/24 hits=2
+    138.84.54.0/24 hits=2
+  /22 networks=457 max_hits=2 n>=2=26 n>=3=0 n>=5=0 n>=10=0
+    189.190.148.0/22 hits=2
+    187.136.4.0/22 hits=2
+    189.156.228.0/22 hits=2
+  /20 networks=410 max_hits=4 n>=2=55 n>=3=16 n>=5=0 n>=10=0
+    177.246.32.0/20 hits=4
+    189.223.80.0/20 hits=4
+    189.156.224.0/20 hits=3
+  /18 networks=352 max_hits=6 n>=2=87 n>=3=27 n>=5=5 n>=10=0
+    201.138.192.0/18 hits=6
+    189.156.192.0/18 hits=5
+    177.230.0.0/18 hits=5
+  /16 networks=259 max_hits=11 n>=2=100 n>=3=54 n>=5=18 n>=10=2
+    201.138.0.0/16 hits=11
+    177.230.0.0/16 hits=10
+    187.136.0.0/16 hits=7
+
+TR (456 observed IPs)
+  /24 networks=432 max_hits=4 n>=2=19 n>=3=4 n>=5=0 n>=10=0
+    38.156.75.0/24 hits=4
+    2.58.42.0/24 hits=3
+    188.132.222.0/24 hits=3
+  /22 networks=409 max_hits=8 n>=2=31 n>=3=7 n>=5=2 n>=10=0
+    38.156.72.0/22 hits=8
+    149.86.140.0/22 hits=5
+    188.120.40.0/22 hits=4
+  /20 networks=375 max_hits=8 n>=2=50 n>=3=18 n>=5=2 n>=10=0
+    38.156.64.0/20 hits=8
+    149.86.128.0/20 hits=7
+    31.223.80.0/20 hits=4
+  /18 networks=312 max_hits=10 n>=2=71 n>=3=28 n>=5=9 n>=10=2
+    149.86.128.0/18 hits=10
+    31.223.64.0/18 hits=10
+    38.156.64.0/18 hits=8
+  /16 networks=251 max_hits=18 n>=2=83 n>=3=38 n>=5=16 n>=10=3
+    31.223.0.0/16 hits=18
+    78.190.0.0/16 hits=12
+    149.86.0.0/16 hits=10
+
+IQ (446 observed IPs)
+  /24 networks=298 max_hits=6 n>=2=92 n>=3=36 n>=5=4 n>=10=0
+    91.106.43.0/24 hits=6
+    185.24.60.0/24 hits=5
+    37.77.74.0/24 hits=5
+  /22 networks=221 max_hits=10 n>=2=85 n>=3=51 n>=5=22 n>=10=1
+    91.106.40.0/22 hits=10
+    185.24.60.0/22 hits=9
+    185.244.152.0/22 hits=9
+  /20 networks=166 max_hits=27 n>=2=81 n>=3=53 n>=5=22 n>=10=6
+    169.224.0.0/20 hits=27
+    37.77.64.0/20 hits=20
+    169.224.16.0/20 hits=13
+  /18 networks=126 max_hits=44 n>=2=65 n>=3=49 n>=5=28 n>=10=5
+    169.224.0.0/18 hits=44
+    169.224.64.0/18 hits=33
+    37.77.64.0/18 hits=20
+  /16 networks=111 max_hits=77 n>=2=52 n>=3=37 n>=5=20 n>=10=8
+    169.224.0.0/16 hits=77
+    37.239.0.0/16 hits=26
+    37.77.0.0/16 hits=25
+
+VN (424 observed IPs)
+  /24 networks=417 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+    116.97.107.0/24 hits=3
+    171.252.188.0/24 hits=2
+    171.255.177.0/24 hits=2
+  /22 networks=398 max_hits=4 n>=2=20 n>=3=4 n>=5=0 n>=10=0
+    171.250.160.0/22 hits=4
+    116.97.104.0/22 hits=4
+    125.235.236.0/22 hits=3
+  /20 networks=382 max_hits=7 n>=2=30 n>=3=6 n>=5=1 n>=10=0
+    125.235.224.0/20 hits=7
+    171.250.160.0/20 hits=4
+    116.97.96.0/20 hits=4
+  /18 networks=317 max_hits=7 n>=2=72 n>=3=24 n>=5=2 n>=10=0
+    125.235.192.0/18 hits=7
+    58.186.64.0/18 hits=6
+    118.71.192.0/18 hits=4
+  /16 networks=215 max_hits=10 n>=2=89 n>=3=53 n>=5=16 n>=10=2
+    58.186.0.0/16 hits=10
+    183.80.0.0/16 hits=10
+    113.190.0.0/16 hits=8
+
+CL (412 observed IPs)
+  /24 networks=368 max_hits=3 n>=2=37 n>=3=7 n>=5=0 n>=10=0
+    190.114.38.0/24 hits=3
+    190.5.35.0/24 hits=3
+    186.10.141.0/24 hits=3
+  /22 networks=321 max_hits=8 n>=2=44 n>=3=19 n>=5=9 n>=10=0
+    190.5.32.0/22 hits=8
+    179.60.64.0/22 hits=6
+    190.114.36.0/22 hits=6
+  /20 networks=269 max_hits=16 n>=2=58 n>=3=19 n>=5=10 n>=10=4
+    179.60.64.0/20 hits=16
+    190.114.32.0/20 hits=16
+    181.42.176.0/20 hits=12
+  /18 networks=191 max_hits=21 n>=2=86 n>=3=37 n>=5=11 n>=10=6
+    181.42.128.0/18 hits=21
+    179.60.64.0/18 hits=16
+    190.114.0.0/18 hits=16
+  /16 networks=97 max_hits=31 n>=2=70 n>=3=52 n>=5=34 n>=10=7
+    181.42.0.0/16 hits=31
+    181.43.0.0/16 hits=25
+    190.114.0.0/16 hits=16
+
+AR (406 observed IPs)
+  /24 networks=395 max_hits=3 n>=2=9 n>=3=2 n>=5=0 n>=10=0
+    181.46.136.0/24 hits=3
+    148.227.121.0/24 hits=3
+    181.46.68.0/24 hits=2
+  /22 networks=381 max_hits=4 n>=2=19 n>=3=5 n>=5=0 n>=10=0
+    181.46.136.0/22 hits=4
+    181.46.68.0/22 hits=3
+    190.93.200.0/22 hits=3
+  /20 networks=361 max_hits=4 n>=2=34 n>=3=8 n>=5=0 n>=10=0
+    181.46.128.0/20 hits=4
+    190.104.32.0/20 hits=4
+    143.105.128.0/20 hits=4
+  /18 networks=319 max_hits=5 n>=2=61 n>=3=16 n>=5=2 n>=10=0
+    181.46.128.0/18 hits=5
+    148.227.64.0/18 hits=5
+    143.105.128.0/18 hits=4
+  /16 networks=257 max_hits=8 n>=2=82 n>=3=35 n>=5=8 n>=10=0
+    181.90.0.0/16 hits=8
+    181.46.0.0/16 hits=8
+    201.177.0.0/16 hits=7
+
+UA (313 observed IPs)
+  /24 networks=311 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    176.122.114.0/24 hits=2
+    195.64.239.0/24 hits=2
+    77.123.236.0/24 hits=1
+  /22 networks=296 max_hits=2 n>=2=17 n>=3=0 n>=5=0 n>=10=0
+    185.183.92.0/22 hits=2
+    195.64.236.0/22 hits=2
+    217.199.232.0/22 hits=2
+  /20 networks=290 max_hits=3 n>=2=22 n>=3=1 n>=5=0 n>=10=0
+    217.199.224.0/20 hits=3
+    194.24.224.0/20 hits=2
+    46.219.224.0/20 hits=2
+  /18 networks=278 max_hits=4 n>=2=29 n>=3=5 n>=5=0 n>=10=0
+    94.178.192.0/18 hits=4
+    176.105.192.0/18 hits=3
+    146.120.192.0/18 hits=3
+  /16 networks=264 max_hits=5 n>=2=35 n>=3=10 n>=5=2 n>=10=0
+    94.178.0.0/16 hits=5
+    146.120.0.0/16 hits=5
+    46.149.0.0/16 hits=3
+
+SA (293 observed IPs)
+  /24 networks=282 max_hits=3 n>=2=9 n>=3=2 n>=5=0 n>=10=0
+    51.39.232.0/24 hits=3
+    51.36.223.0/24 hits=3
+    51.36.221.0/24 hits=2
+  /22 networks=266 max_hits=7 n>=2=18 n>=3=3 n>=5=2 n>=10=0
+    51.36.220.0/22 hits=7
+    51.39.232.0/22 hits=5
+    92.48.20.0/22 hits=3
+  /20 networks=226 max_hits=8 n>=2=45 n>=3=11 n>=5=2 n>=10=0
+    51.36.208.0/20 hits=8
+    51.39.224.0/20 hits=5
+    92.48.16.0/20 hits=4
+  /18 networks=182 max_hits=10 n>=2=52 n>=3=21 n>=5=9 n>=10=1
+    51.36.192.0/18 hits=10
+    82.167.64.0/18 hits=9
+    151.255.0.0/18 hits=8
+  /16 networks=137 max_hits=17 n>=2=58 n>=3=30 n>=5=12 n>=10=3
+    51.36.0.0/16 hits=17
+    82.167.0.0/16 hits=14
+    51.39.0.0/16 hits=11
+
+ZA (293 observed IPs)
+  /24 networks=279 max_hits=4 n>=2=12 n>=3=1 n>=5=0 n>=10=0
+    165.16.186.0/24 hits=4
+    197.184.116.0/24 hits=2
+    102.219.24.0/24 hits=2
+  /22 networks=262 max_hits=6 n>=2=24 n>=3=4 n>=5=1 n>=10=0
+    165.16.184.0/22 hits=6
+    102.66.180.0/22 hits=3
+    102.219.24.0/22 hits=3
+  /20 networks=245 max_hits=7 n>=2=36 n>=3=7 n>=5=1 n>=10=0
+    165.16.176.0/20 hits=7
+    102.38.96.0/20 hits=4
+    41.198.144.0/20 hits=3
+  /18 networks=201 max_hits=9 n>=2=55 n>=3=19 n>=5=4 n>=10=0
+    165.16.128.0/18 hits=9
+    102.38.64.0/18 hits=6
+    41.56.128.0/18 hits=6
+  /16 networks=157 max_hits=9 n>=2=60 n>=3=36 n>=5=11 n>=10=0
+    165.16.0.0/16 hits=9
+    102.254.0.0/16 hits=7
+    41.56.0.0/16 hits=6
+
+UZ (288 observed IPs)
+  /24 networks=106 max_hits=19 n>=2=45 n>=3=21 n>=5=13 n>=10=8
+    213.230.86.0/24 hits=19
+    213.230.87.0/24 hits=18
+    84.54.70.0/24 hits=17
+  /22 networks=67 max_hits=37 n>=2=32 n>=3=23 n>=5=15 n>=10=6
+    213.230.84.0/22 hits=37
+    84.54.68.0/22 hits=30
+    84.54.72.0/22 hits=28
+  /20 networks=44 max_hits=70 n>=2=26 n>=3=18 n>=5=14 n>=10=5
+    213.230.80.0/20 hits=70
+    84.54.64.0/20 hits=63
+    198.163.192.0/20 hits=18
+  /18 networks=35 max_hits=87 n>=2=20 n>=3=13 n>=5=10 n>=10=5
+    213.230.64.0/18 hits=87
+    84.54.64.0/18 hits=82
+    198.163.192.0/18 hits=18
+  /16 networks=35 max_hits=87 n>=2=20 n>=3=13 n>=5=10 n>=10=5
+    213.230.0.0/16 hits=87
+    84.54.0.0/16 hits=82
+    198.163.0.0/16 hits=18
+
+CO (284 observed IPs)
+  /24 networks=276 max_hits=3 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+    129.222.203.0/24 hits=3
+    190.108.79.0/24 hits=3
+    143.105.99.0/24 hits=2
+  /22 networks=260 max_hits=6 n>=2=17 n>=3=4 n>=5=1 n>=10=0
+    190.108.76.0/22 hits=6
+    138.84.40.0/22 hits=3
+    181.54.0.0/22 hits=3
+  /20 networks=251 max_hits=6 n>=2=25 n>=3=5 n>=5=1 n>=10=0
+    190.108.64.0/20 hits=6
+    129.222.192.0/20 hits=3
+    138.84.32.0/20 hits=3
+  /18 networks=224 max_hits=6 n>=2=42 n>=3=12 n>=5=2 n>=10=0
+    190.108.64.0/18 hits=6
+    186.154.128.0/18 hits=5
+    138.84.0.0/18 hits=4
+  /16 networks=184 max_hits=9 n>=2=48 n>=3=25 n>=5=6 n>=10=0
+    186.154.0.0/16 hits=9
+    191.91.0.0/16 hits=9
+    190.108.0.0/16 hits=6
+
+PL (271 observed IPs)
+  /24 networks=259 max_hits=2 n>=2=12 n>=3=0 n>=5=0 n>=10=0
+    77.89.106.0/24 hits=2
+    37.209.130.0/24 hits=2
+    84.40.233.0/24 hits=2
+  /22 networks=238 max_hits=4 n>=2=26 n>=3=6 n>=5=0 n>=10=0
+    84.40.232.0/22 hits=4
+    46.205.204.0/22 hits=3
+    37.209.128.0/22 hits=3
+  /20 networks=204 max_hits=7 n>=2=42 n>=3=14 n>=5=3 n>=10=0
+    46.205.192.0/20 hits=7
+    77.236.0.0/20 hits=5
+    109.243.0.0/20 hits=5
+  /18 networks=169 max_hits=9 n>=2=50 n>=3=25 n>=5=7 n>=10=0
+    46.205.192.0/18 hits=9
+    77.236.0.0/18 hits=7
+    213.134.128.0/18 hits=6
+  /16 networks=128 max_hits=10 n>=2=60 n>=3=32 n>=5=12 n>=10=1
+    109.243.0.0/16 hits=10
+    46.205.0.0/16 hits=9
+    77.236.0.0/16 hits=7
+
+VE (268 observed IPs)
+  /24 networks=234 max_hits=4 n>=2=23 n>=3=9 n>=5=0 n>=10=0
+    200.59.191.0/24 hits=4
+    190.120.254.0/24 hits=4
+    190.97.227.0/24 hits=3
+  /22 networks=202 max_hits=7 n>=2=38 n>=3=16 n>=5=4 n>=10=0
+    190.120.252.0/22 hits=7
+    190.89.28.0/22 hits=5
+    190.97.224.0/22 hits=5
+  /20 networks=172 max_hits=10 n>=2=44 n>=3=21 n>=5=6 n>=10=1
+    190.97.224.0/20 hits=10
+    190.120.240.0/20 hits=8
+    153.51.224.0/20 hits=8
+  /18 networks=148 max_hits=14 n>=2=48 n>=3=27 n>=5=8 n>=10=2
+    190.97.192.0/18 hits=14
+    190.6.0.0/18 hits=11
+    190.120.192.0/18 hits=8
+  /16 networks=131 max_hits=14 n>=2=47 n>=3=30 n>=5=12 n>=10=2
+    190.97.0.0/16 hits=14
+    190.6.0.0/16 hits=11
+    190.120.0.0/16 hits=8
+
+AU (262 observed IPs)
+  /24 networks=249 max_hits=3 n>=2=12 n>=3=1 n>=5=0 n>=10=0
+    180.181.249.0/24 hits=3
+    115.70.99.0/24 hits=2
+    117.20.69.0/24 hits=2
+  /22 networks=235 max_hits=5 n>=2=16 n>=3=6 n>=5=1 n>=10=0
+    180.181.248.0/22 hits=5
+    157.211.44.0/22 hits=4
+    117.20.68.0/22 hits=4
+  /20 networks=223 max_hits=6 n>=2=25 n>=3=7 n>=5=1 n>=10=0
+    180.181.240.0/20 hits=6
+    157.211.32.0/20 hits=4
+    206.83.112.0/20 hits=4
+  /18 networks=193 max_hits=7 n>=2=41 n>=3=13 n>=5=3 n>=10=0
+    180.181.192.0/18 hits=7
+    112.213.128.0/18 hits=6
+    149.167.0.0/18 hits=5
+  /16 networks=148 max_hits=10 n>=2=57 n>=3=28 n>=5=5 n>=10=1
+    112.213.0.0/16 hits=10
+    149.167.0.0/16 hits=9
+    180.181.0.0/16 hits=7
+
+IL (258 observed IPs)
+  /24 networks=200 max_hits=8 n>=2=31 n>=3=11 n>=5=4 n>=10=0
+    79.177.151.0/24 hits=8
+    147.235.217.0/24 hits=8
+    79.177.143.0/24 hits=5
+  /22 networks=170 max_hits=16 n>=2=32 n>=3=14 n>=5=6 n>=10=2
+    79.177.148.0/22 hits=16
+    147.235.216.0/22 hits=11
+    77.137.72.0/22 hits=8
+  /20 networks=132 max_hits=35 n>=2=39 n>=3=12 n>=5=6 n>=10=4
+    79.177.144.0/20 hits=35
+    147.235.208.0/20 hits=16
+    77.137.64.0/20 hits=15
+  /18 networks=102 max_hits=50 n>=2=47 n>=3=22 n>=5=6 n>=10=3
+    79.177.128.0/18 hits=50
+    147.235.192.0/18 hits=21
+    77.137.64.0/18 hits=15
+  /16 networks=65 max_hits=50 n>=2=46 n>=3=30 n>=5=14 n>=10=3
+    79.177.0.0/16 hits=50
+    147.235.0.0/16 hits=21
+    77.137.0.0/16 hits=15
+
+TH (250 observed IPs)
+  /24 networks=239 max_hits=3 n>=2=10 n>=3=1 n>=5=0 n>=10=0
+    27.130.84.0/24 hits=3
+    171.97.236.0/24 hits=2
+    125.26.174.0/24 hits=2
+  /22 networks=208 max_hits=5 n>=2=36 n>=3=4 n>=5=1 n>=10=0
+    27.130.84.0/22 hits=5
+    171.97.236.0/22 hits=3
+    27.130.36.0/22 hits=3
+  /20 networks=169 max_hits=9 n>=2=37 n>=3=21 n>=5=5 n>=10=0
+    27.130.80.0/20 hits=9
+    27.130.48.0/20 hits=7
+    27.130.0.0/20 hits=6
+  /18 networks=126 max_hits=22 n>=2=46 n>=3=19 n>=5=9 n>=10=2
+    27.130.0.0/18 hits=22
+    27.130.64.0/18 hits=12
+    171.4.192.0/18 hits=9
+  /16 networks=81 max_hits=40 n>=2=36 n>=3=24 n>=5=13 n>=10=7
+    27.130.0.0/16 hits=40
+    49.230.0.0/16 hits=15
+    49.49.0.0/16 hits=11
+
+BD (236 observed IPs)
+  /24 networks=224 max_hits=2 n>=2=12 n>=3=0 n>=5=0 n>=10=0
+    106.0.54.0/24 hits=2
+    103.13.192.0/24 hits=2
+    103.114.39.0/24 hits=2
+  /22 networks=215 max_hits=3 n>=2=20 n>=3=1 n>=5=0 n>=10=0
+    106.0.52.0/22 hits=3
+    103.114.96.0/22 hits=2
+    103.69.148.0/22 hits=2
+  /20 networks=212 max_hits=3 n>=2=23 n>=3=1 n>=5=0 n>=10=0
+    106.0.48.0/20 hits=3
+    175.29.160.0/20 hits=2
+    103.114.96.0/20 hits=2
+  /18 networks=207 max_hits=3 n>=2=28 n>=3=1 n>=5=0 n>=10=0
+    106.0.0.0/18 hits=3
+    103.135.128.0/18 hits=2
+    103.114.0.0/18 hits=2
+  /16 networks=187 max_hits=4 n>=2=39 n>=3=7 n>=5=0 n>=10=0
+    103.114.0.0/16 hits=4
+    103.132.0.0/16 hits=4
+    103.135.0.0/16 hits=4
+
+PE (231 observed IPs)
+  /24 networks=169 max_hits=5 n>=2=37 n>=3=15 n>=5=3 n>=10=0
+    179.6.7.0/24 hits=5
+    38.250.154.0/24 hits=5
+    179.6.6.0/24 hits=5
+  /22 networks=134 max_hits=12 n>=2=41 n>=3=22 n>=5=8 n>=10=1
+    179.6.4.0/22 hits=12
+    38.250.152.0/22 hits=7
+    38.253.148.0/22 hits=6
+  /20 networks=104 max_hits=18 n>=2=37 n>=3=23 n>=5=9 n>=10=4
+    179.6.0.0/20 hits=18
+    38.250.144.0/20 hits=15
+    38.253.144.0/20 hits=12
+  /18 networks=80 max_hits=35 n>=2=34 n>=3=22 n>=5=12 n>=10=5
+    179.6.0.0/18 hits=35
+    38.250.128.0/18 hits=18
+    38.253.128.0/18 hits=12
+  /16 networks=45 max_hits=55 n>=2=32 n>=3=23 n>=5=12 n>=10=6
+    179.6.0.0/16 hits=55
+    38.250.0.0/16 hits=19
+    181.176.0.0/16 hits=13
+
+ID (219 observed IPs)
+  /24 networks=216 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+    163.7.16.0/24 hits=3
+    182.10.161.0/24 hits=2
+    36.67.25.0/24 hits=1
+  /22 networks=208 max_hits=3 n>=2=9 n>=3=2 n>=5=0 n>=10=0
+    103.3.220.0/22 hits=3
+    163.7.16.0/22 hits=3
+    125.160.224.0/22 hits=2
+  /20 networks=191 max_hits=3 n>=2=23 n>=3=5 n>=5=0 n>=10=0
+    125.160.224.0/20 hits=3
+    103.3.208.0/20 hits=3
+    163.7.16.0/20 hits=3
+  /18 networks=170 max_hits=5 n>=2=29 n>=3=13 n>=5=1 n>=10=0
+    182.3.0.0/18 hits=5
+    36.73.128.0/18 hits=4
+    110.136.192.0/18 hits=4
+  /16 networks=138 max_hits=9 n>=2=35 n>=3=17 n>=5=5 n>=10=0
+    110.136.0.0/16 hits=9
+    180.249.0.0/16 hits=8
+    36.73.0.0/16 hits=7
+
+PK (213 observed IPs)
+  /24 networks=204 max_hits=2 n>=2=9 n>=3=0 n>=5=0 n>=10=0
+    103.249.155.0/24 hits=2
+    103.166.150.0/24 hits=2
+    139.135.38.0/24 hits=2
+  /22 networks=195 max_hits=3 n>=2=15 n>=3=3 n>=5=0 n>=10=0
+    118.103.228.0/22 hits=3
+    103.120.68.0/22 hits=3
+    103.166.148.0/22 hits=3
+  /20 networks=184 max_hits=3 n>=2=24 n>=3=5 n>=5=0 n>=10=0
+    39.57.176.0/20 hits=3
+    103.120.64.0/20 hits=3
+    118.103.224.0/20 hits=3
+  /18 networks=173 max_hits=5 n>=2=29 n>=3=8 n>=5=1 n>=10=0
+    175.107.192.0/18 hits=5
+    154.208.0.0/18 hits=4
+    59.103.64.0/18 hits=3
+  /16 networks=164 max_hits=5 n>=2=36 n>=3=10 n>=5=1 n>=10=0
+    175.107.0.0/16 hits=5
+    154.208.0.0/16 hits=4
+    182.186.0.0/16 hits=3
+
+KE (202 observed IPs)
+  /24 networks=157 max_hits=5 n>=2=35 n>=3=8 n>=5=1 n>=10=0
+    102.0.17.0/24 hits=5
+    102.135.170.0/24 hits=3
+    102.0.15.0/24 hits=3
+  /22 networks=122 max_hits=9 n>=2=40 n>=3=21 n>=5=5 n>=10=0
+    102.0.16.0/22 hits=9
+    102.0.12.0/22 hits=6
+    102.211.144.0/22 hits=5
+  /20 networks=105 max_hits=14 n>=2=41 n>=3=17 n>=5=7 n>=10=2
+    102.0.0.0/20 hits=14
+    41.90.176.0/20 hits=11
+    102.135.160.0/20 hits=9
+  /18 networks=90 max_hits=23 n>=2=38 n>=3=18 n>=5=8 n>=10=2
+    102.0.0.0/18 hits=23
+    41.90.128.0/18 hits=14
+    102.135.128.0/18 hits=9
+  /16 networks=64 max_hits=23 n>=2=30 n>=3=23 n>=5=10 n>=10=4
+    41.90.0.0/16 hits=23
+    102.0.0.0/16 hits=23
+    102.215.0.0/16 hits=12
+
+SG (187 observed IPs)
+  /24 networks=118 max_hits=35 n>=2=16 n>=3=5 n>=5=2 n>=10=2
+    47.82.11.0/24 hits=35
+    47.82.10.0/24 hits=19
+    103.19.203.0/24 hits=3
+  /22 networks=98 max_hits=55 n>=2=18 n>=3=9 n>=5=4 n>=10=1
+    47.82.8.0/22 hits=55
+    47.79.4.0/22 hits=6
+    47.79.0.0/22 hits=6
+  /20 networks=88 max_hits=57 n>=2=19 n>=3=9 n>=5=3 n>=10=2
+    47.82.0.0/20 hits=57
+    47.79.0.0/20 hits=12
+    47.79.112.0/20 hits=9
+  /18 networks=70 max_hits=57 n>=2=23 n>=3=12 n>=5=6 n>=10=3
+    47.82.0.0/18 hits=57
+    47.79.0.0/18 hits=12
+    47.79.64.0/18 hits=11
+  /16 networks=61 max_hits=57 n>=2=23 n>=3=8 n>=5=6 n>=10=2
+    47.82.0.0/16 hits=57
+    47.79.0.0/16 hits=23
+    212.212.0.0/16 hits=9
+
+PT (172 observed IPs)
+  /24 networks=169 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    87.196.81.0/24 hits=2
+    2.81.52.0/24 hits=2
+    78.137.206.0/24 hits=2
+  /22 networks=163 max_hits=4 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+    87.196.80.0/22 hits=4
+    78.137.212.0/22 hits=3
+    87.196.84.0/22 hits=2
+  /20 networks=152 max_hits=6 n>=2=14 n>=3=2 n>=5=1 n>=10=0
+    87.196.80.0/20 hits=6
+    78.137.208.0/20 hits=4
+    78.137.192.0/20 hits=2
+  /18 networks=133 max_hits=7 n>=2=23 n>=3=9 n>=5=2 n>=10=0
+    87.196.64.0/18 hits=7
+    78.137.192.0/18 hits=6
+    2.81.0.0/18 hits=3
+  /16 networks=73 max_hits=9 n>=2=40 n>=3=32 n>=5=5 n>=10=0
+    87.196.0.0/16 hits=9
+    85.243.0.0/16 hits=6
+    78.137.0.0/16 hits=6
+
+MA (169 observed IPs)
+  /24 networks=167 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    105.76.169.0/24 hits=2
+    105.76.168.0/24 hits=2
+    160.172.63.0/24 hits=1
+  /22 networks=163 max_hits=4 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    105.76.168.0/22 hits=4
+    196.206.56.0/22 hits=2
+    196.120.8.0/22 hits=2
+  /20 networks=151 max_hits=5 n>=2=13 n>=3=3 n>=5=1 n>=10=0
+    105.76.160.0/20 hits=5
+    196.206.112.0/20 hits=3
+    196.206.80.0/20 hits=3
+  /18 networks=131 max_hits=10 n>=2=23 n>=3=5 n>=5=2 n>=10=1
+    196.206.64.0/18 hits=10
+    105.76.128.0/18 hits=5
+    197.146.0.0/18 hits=4
+  /16 networks=90 max_hits=17 n>=2=36 n>=3=15 n>=5=4 n>=10=1
+    196.206.0.0/16 hits=17
+    197.146.0.0/16 hits=8
+    105.76.0.0/16 hits=7
+
+JP (164 observed IPs)
+  /24 networks=154 max_hits=8 n>=2=3 n>=3=2 n>=5=1 n>=10=0
+    164.52.120.0/24 hits=8
+    8.216.47.0/24 hits=3
+    8.216.48.0/24 hits=2
+  /22 networks=147 max_hits=8 n>=2=9 n>=3=2 n>=5=1 n>=10=0
+    164.52.120.0/22 hits=8
+    8.216.44.0/22 hits=4
+    8.216.40.0/22 hits=2
+  /20 networks=143 max_hits=8 n>=2=11 n>=3=2 n>=5=2 n>=10=0
+    164.52.112.0/20 hits=8
+    8.216.32.0/20 hits=6
+    43.133.192.0/20 hits=2
+  /18 networks=140 max_hits=8 n>=2=12 n>=3=2 n>=5=2 n>=10=0
+    8.216.0.0/18 hits=8
+    164.52.64.0/18 hits=8
+    43.133.192.0/18 hits=2
+  /16 networks=123 max_hits=8 n>=2=23 n>=3=6 n>=5=2 n>=10=0
+    164.52.0.0/16 hits=8
+    8.216.0.0/16 hits=8
+    43.133.0.0/16 hits=4
+
+GR (153 observed IPs)
+  /24 networks=145 max_hits=3 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+    85.85.30.0/24 hits=3
+    45.139.215.0/24 hits=2
+    145.224.119.0/24 hits=2
+  /22 networks=138 max_hits=3 n>=2=13 n>=3=2 n>=5=0 n>=10=0
+    85.85.28.0/22 hits=3
+    2.86.220.0/22 hits=3
+    109.242.88.0/22 hits=2
+  /20 networks=127 max_hits=4 n>=2=22 n>=3=3 n>=5=0 n>=10=0
+    31.217.160.0/20 hits=4
+    85.85.16.0/20 hits=3
+    2.86.208.0/20 hits=3
+  /18 networks=108 max_hits=4 n>=2=33 n>=3=11 n>=5=0 n>=10=0
+    31.217.128.0/18 hits=4
+    5.55.128.0/18 hits=3
+    62.74.0.0/18 hits=3
+  /16 networks=67 max_hits=5 n>=2=44 n>=3=25 n>=5=5 n>=10=0
+    79.129.0.0/16 hits=5
+    2.86.0.0/16 hits=5
+    5.55.0.0/16 hits=5
+
+RO (148 observed IPs)
+  /24 networks=136 max_hits=3 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+    81.196.70.0/24 hits=3
+    86.120.251.0/24 hits=3
+    79.115.35.0/24 hits=2
+  /22 networks=124 max_hits=3 n>=2=18 n>=3=6 n>=5=0 n>=10=0
+    86.120.248.0/22 hits=3
+    86.127.160.0/22 hits=3
+    86.126.172.0/22 hits=3
+  /20 networks=106 max_hits=4 n>=2=28 n>=3=12 n>=5=0 n>=10=0
+    86.120.240.0/20 hits=4
+    188.27.144.0/20 hits=4
+    86.126.160.0/20 hits=3
+  /18 networks=81 max_hits=8 n>=2=33 n>=3=16 n>=5=4 n>=10=0
+    188.27.128.0/18 hits=8
+    82.79.192.0/18 hits=6
+    86.120.192.0/18 hits=6
+  /16 networks=51 max_hits=12 n>=2=28 n>=3=20 n>=5=7 n>=10=4
+    86.120.0.0/16 hits=12
+    82.79.0.0/16 hits=10
+    188.27.0.0/16 hits=10
+
+BG (145 observed IPs)
+  /24 networks=134 max_hits=4 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+    82.129.23.0/24 hits=4
+    46.232.159.0/24 hits=3
+    31.13.233.0/24 hits=2
+  /22 networks=123 max_hits=6 n>=2=12 n>=3=6 n>=5=1 n>=10=0
+    46.232.156.0/22 hits=6
+    82.129.20.0/22 hits=4
+    213.130.92.0/22 hits=3
+  /20 networks=113 max_hits=7 n>=2=20 n>=3=7 n>=5=1 n>=10=0
+    46.232.144.0/20 hits=7
+    82.129.16.0/20 hits=4
+    213.130.80.0/20 hits=3
+  /18 networks=98 max_hits=7 n>=2=26 n>=3=11 n>=5=3 n>=10=0
+    46.232.128.0/18 hits=7
+    213.130.64.0/18 hits=5
+    149.62.192.0/18 hits=5
+  /16 networks=80 max_hits=7 n>=2=35 n>=3=17 n>=5=4 n>=10=0
+    46.232.0.0/16 hits=7
+    213.91.0.0/16 hits=5
+    213.130.0.0/16 hits=5
+
+BO (145 observed IPs)
+  /24 networks=86 max_hits=12 n>=2=29 n>=3=10 n>=5=2 n>=10=2
+    181.115.172.0/24 hits=12
+    181.115.171.0/24 hits=12
+    181.115.215.0/24 hits=4
+  /22 networks=59 max_hits=15 n>=2=30 n>=3=19 n>=5=7 n>=10=2
+    181.115.172.0/22 hits=15
+    181.115.168.0/22 hits=12
+    181.115.212.0/22 hits=7
+  /20 networks=41 max_hits=30 n>=2=22 n>=3=15 n>=5=8 n>=10=4
+    181.115.160.0/20 hits=30
+    181.115.208.0/20 hits=12
+    189.28.64.0/20 hits=12
+  /18 networks=27 max_hits=34 n>=2=20 n>=3=13 n>=5=9 n>=10=5
+    181.115.128.0/18 hits=34
+    189.28.64.0/18 hits=19
+    166.114.128.0/18 hits=13
+  /16 networks=20 max_hits=47 n>=2=13 n>=3=12 n>=5=8 n>=10=5
+    181.115.0.0/16 hits=47
+    189.28.0.0/16 hits=19
+    166.114.0.0/16 hits=17
+
+IE (143 observed IPs)
+  /24 networks=140 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    37.228.207.0/24 hits=2
+    37.228.201.0/24 hits=2
+    37.228.209.0/24 hits=2
+  /22 networks=130 max_hits=3 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+    37.228.200.0/22 hits=3
+    37.228.208.0/22 hits=3
+    83.70.60.0/22 hits=2
+  /20 networks=116 max_hits=5 n>=2=18 n>=3=3 n>=5=3 n>=10=0
+    37.228.240.0/20 hits=5
+    37.228.192.0/20 hits=5
+    37.228.208.0/20 hits=5
+  /18 networks=85 max_hits=16 n>=2=34 n>=3=11 n>=5=1 n>=10=1
+    37.228.192.0/18 hits=16
+    86.46.128.0/18 hits=3
+    78.152.192.0/18 hits=3
+  /16 networks=50 max_hits=16 n>=2=30 n>=3=19 n>=5=11 n>=10=1
+    37.228.0.0/16 hits=16
+    109.76.0.0/16 hits=9
+    86.42.0.0/16 hits=7
+
+PA (143 observed IPs)
+  /24 networks=125 max_hits=4 n>=2=10 n>=3=6 n>=5=0 n>=10=0
+    190.140.112.0/24 hits=4
+    190.140.113.0/24 hits=4
+    190.140.22.0/24 hits=3
+  /22 networks=105 max_hits=11 n>=2=14 n>=3=7 n>=5=3 n>=10=1
+    190.140.112.0/22 hits=11
+    190.219.100.0/22 hits=7
+    190.140.20.0/22 hits=7
+  /20 networks=91 max_hits=11 n>=2=26 n>=3=8 n>=5=3 n>=10=1
+    190.140.112.0/20 hits=11
+    190.140.16.0/20 hits=8
+    190.219.96.0/20 hits=7
+  /18 networks=58 max_hits=13 n>=2=33 n>=3=16 n>=5=5 n>=10=3
+    190.140.64.0/18 hits=13
+    190.140.0.0/18 hits=11
+    190.219.64.0/18 hits=10
+  /16 networks=23 max_hits=26 n>=2=19 n>=3=18 n>=5=13 n>=10=4
+    190.140.0.0/16 hits=26
+    181.197.0.0/16 hits=14
+    190.141.0.0/16 hits=13
+
+TW (143 observed IPs)
+  /24 networks=142 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    125.227.85.0/24 hits=2
+    1.173.144.0/24 hits=1
+    42.77.251.0/24 hits=1
+  /22 networks=140 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    49.159.72.0/22 hits=2
+    125.227.84.0/22 hits=2
+    36.231.8.0/22 hits=2
+  /20 networks=136 max_hits=2 n>=2=7 n>=3=0 n>=5=0 n>=10=0
+    49.159.64.0/20 hits=2
+    36.231.0.0/20 hits=2
+    106.107.224.0/20 hits=2
+  /18 networks=126 max_hits=3 n>=2=15 n>=3=2 n>=5=0 n>=10=0
+    180.176.64.0/18 hits=3
+    106.107.192.0/18 hits=3
+    118.171.128.0/18 hits=2
+  /16 networks=98 max_hits=4 n>=2=30 n>=3=13 n>=5=0 n>=10=0
+    49.159.0.0/16 hits=4
+    114.43.0.0/16 hits=4
+    123.240.0.0/16 hits=3
+
+PH (141 observed IPs)
+  /24 networks=139 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    154.82.151.0/24 hits=2
+    136.158.41.0/24 hits=2
+    136.239.180.0/24 hits=1
+  /22 networks=128 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+    136.158.40.0/22 hits=3
+    138.84.136.0/22 hits=3
+    138.84.112.0/22 hits=3
+  /20 networks=122 max_hits=5 n>=2=13 n>=3=4 n>=5=1 n>=10=0
+    138.84.128.0/20 hits=5
+    180.194.192.0/20 hits=3
+    136.158.32.0/20 hits=3
+  /18 networks=110 max_hits=7 n>=2=15 n>=3=5 n>=5=3 n>=10=0
+    138.84.64.0/18 hits=7
+    136.158.0.0/18 hits=7
+    138.84.128.0/18 hits=6
+  /16 networks=101 max_hits=15 n>=2=14 n>=3=8 n>=5=3 n>=10=1
+    138.84.0.0/16 hits=15
+    136.158.0.0/16 hits=7
+    124.107.0.0/16 hits=5
+
+NG (140 observed IPs)
+  /24 networks=106 max_hits=4 n>=2=28 n>=3=4 n>=5=0 n>=10=0
+    105.127.7.0/24 hits=4
+    102.90.124.0/24 hits=4
+    102.90.118.0/24 hits=3
+  /22 networks=81 max_hits=7 n>=2=30 n>=3=14 n>=5=5 n>=10=0
+    102.90.124.0/22 hits=7
+    102.90.116.0/22 hits=5
+    98.97.76.0/22 hits=5
+  /20 networks=55 max_hits=14 n>=2=30 n>=3=17 n>=5=8 n>=10=2
+    102.90.112.0/20 hits=14
+    105.127.0.0/20 hits=11
+    102.90.96.0/20 hits=9
+  /18 networks=37 max_hits=25 n>=2=25 n>=3=18 n>=5=10 n>=10=3
+    102.90.64.0/18 hits=25
+    105.127.0.0/18 hits=13
+    105.113.64.0/18 hits=11
+  /16 networks=26 max_hits=25 n>=2=17 n>=3=13 n>=5=10 n>=10=7
+    102.90.0.0/16 hits=25
+    105.112.0.0/16 hits=14
+    105.113.0.0/16 hits=13
+
+KZ (139 observed IPs)
+  /24 networks=134 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    81.88.144.0/24 hits=3
+    37.32.73.0/24 hits=2
+    87.121.125.0/24 hits=2
+  /22 networks=125 max_hits=4 n>=2=11 n>=3=2 n>=5=0 n>=10=0
+    81.88.144.0/22 hits=4
+    87.121.124.0/22 hits=3
+    37.32.72.0/22 hits=2
+  /20 networks=119 max_hits=4 n>=2=17 n>=3=2 n>=5=0 n>=10=0
+    81.88.144.0/20 hits=4
+    87.121.112.0/20 hits=3
+    176.64.16.0/20 hits=2
+  /18 networks=108 max_hits=4 n>=2=24 n>=3=5 n>=5=0 n>=10=0
+    176.64.0.0/18 hits=4
+    81.88.128.0/18 hits=4
+    212.96.64.0/18 hits=3
+  /16 networks=98 max_hits=4 n>=2=27 n>=3=11 n>=5=0 n>=10=0
+    176.64.0.0/16 hits=4
+    81.88.0.0/16 hits=4
+    2.72.0.0/16 hits=4
+
+HU (129 observed IPs)
+  /24 networks=126 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    89.134.2.0/24 hits=2
+    84.225.97.0/24 hits=2
+    31.46.241.0/24 hits=2
+  /22 networks=119 max_hits=3 n>=2=9 n>=3=1 n>=5=0 n>=10=0
+    31.46.240.0/22 hits=3
+    31.46.112.0/22 hits=2
+    82.131.232.0/22 hits=2
+  /20 networks=104 max_hits=5 n>=2=19 n>=3=4 n>=5=1 n>=10=0
+    31.46.240.0/20 hits=5
+    84.225.96.0/20 hits=3
+    89.134.0.0/20 hits=3
+  /18 networks=84 max_hits=6 n>=2=28 n>=3=10 n>=5=2 n>=10=0
+    84.225.64.0/18 hits=6
+    31.46.192.0/18 hits=5
+    91.120.128.0/18 hits=4
+  /16 networks=55 max_hits=10 n>=2=31 n>=3=24 n>=5=4 n>=10=1
+    31.46.0.0/16 hits=10
+    46.107.0.0/16 hits=7
+    84.225.0.0/16 hits=6
+
+JO (127 observed IPs)
+  /24 networks=106 max_hits=4 n>=2=16 n>=3=4 n>=5=0 n>=10=0
+    46.185.169.0/24 hits=4
+    109.107.231.0/24 hits=3
+    212.34.20.0/24 hits=3
+  /22 networks=82 max_hits=6 n>=2=25 n>=3=13 n>=5=2 n>=10=0
+    94.249.48.0/22 hits=6
+    91.186.248.0/22 hits=5
+    46.185.168.0/22 hits=4
+  /20 networks=57 max_hits=9 n>=2=27 n>=3=19 n>=5=6 n>=10=0
+    91.186.240.0/20 hits=9
+    212.34.16.0/20 hits=7
+    94.249.48.0/20 hits=6
+  /18 networks=38 max_hits=9 n>=2=22 n>=3=18 n>=5=11 n>=10=0
+    91.186.192.0/18 hits=9
+    109.107.192.0/18 hits=9
+    176.29.0.0/18 hits=8
+  /16 networks=32 max_hits=22 n>=2=17 n>=3=14 n>=5=9 n>=10=3
+    176.29.0.0/16 hits=22
+    94.249.0.0/16 hits=12
+    176.28.0.0/16 hits=11
+
+DO (126 observed IPs)
+  /24 networks=118 max_hits=2 n>=2=8 n>=3=0 n>=5=0 n>=10=0
+    179.49.202.0/24 hits=2
+    38.95.86.0/24 hits=2
+    201.229.178.0/24 hits=2
+  /22 networks=110 max_hits=4 n>=2=11 n>=3=3 n>=5=0 n>=10=0
+    38.95.84.0/22 hits=4
+    38.50.164.0/22 hits=4
+    38.224.236.0/22 hits=3
+  /20 networks=102 max_hits=5 n>=2=16 n>=3=5 n>=5=1 n>=10=0
+    38.95.80.0/20 hits=5
+    38.50.160.0/20 hits=4
+    38.156.224.0/20 hits=3
+  /18 networks=81 max_hits=6 n>=2=28 n>=3=11 n>=5=2 n>=10=0
+    201.229.128.0/18 hits=6
+    38.95.64.0/18 hits=5
+    38.50.128.0/18 hits=4
+  /16 networks=48 max_hits=7 n>=2=29 n>=3=21 n>=5=9 n>=10=0
+    179.53.0.0/16 hits=7
+    201.229.0.0/16 hits=7
+    190.167.0.0/16 hits=6
+
+DZ (117 observed IPs)
+  /24 networks=112 max_hits=3 n>=2=3 n>=3=2 n>=5=0 n>=10=0
+    105.235.133.0/24 hits=3
+    105.235.129.0/24 hits=3
+    105.235.138.0/24 hits=2
+  /22 networks=107 max_hits=4 n>=2=6 n>=3=3 n>=5=0 n>=10=0
+    105.235.128.0/22 hits=4
+    105.235.136.0/22 hits=3
+    105.235.132.0/22 hits=3
+  /20 networks=101 max_hits=10 n>=2=6 n>=3=2 n>=5=1 n>=10=1
+    105.235.128.0/20 hits=10
+    154.241.96.0/20 hits=4
+    41.98.144.0/20 hits=2
+  /18 networks=83 max_hits=10 n>=2=20 n>=3=6 n>=5=1 n>=10=1
+    105.235.128.0/18 hits=10
+    154.241.64.0/18 hits=4
+    154.242.192.0/18 hits=3
+  /16 networks=61 max_hits=10 n>=2=19 n>=3=11 n>=5=6 n>=10=1
+    105.235.0.0/16 hits=10
+    154.241.0.0/16 hits=7
+    41.104.0.0/16 hits=7
+
+EC (114 observed IPs)
+  /24 networks=107 max_hits=2 n>=2=7 n>=3=0 n>=5=0 n>=10=0
+    157.100.134.0/24 hits=2
+    45.6.226.0/24 hits=2
+    157.100.110.0/24 hits=2
+  /22 networks=102 max_hits=4 n>=2=10 n>=3=1 n>=5=0 n>=10=0
+    157.100.108.0/22 hits=4
+    179.49.36.0/22 hits=2
+    191.99.16.0/22 hits=2
+  /20 networks=90 max_hits=5 n>=2=16 n>=3=4 n>=5=2 n>=10=0
+    157.100.96.0/20 hits=5
+    157.100.128.0/20 hits=5
+    181.199.32.0/20 hits=3
+  /18 networks=82 max_hits=7 n>=2=12 n>=3=6 n>=5=4 n>=10=0
+    191.99.0.0/18 hits=7
+    157.100.64.0/18 hits=7
+    181.199.0.0/18 hits=5
+  /16 networks=73 max_hits=14 n>=2=15 n>=3=5 n>=5=3 n>=10=1
+    157.100.0.0/16 hits=14
+    191.99.0.0/16 hits=9
+    181.199.0.0/16 hits=5
+
+AO (110 observed IPs)
+  /24 networks=99 max_hits=5 n>=2=8 n>=3=1 n>=5=1 n>=10=0
+    160.242.24.0/24 hits=5
+    154.127.234.0/24 hits=2
+    154.71.188.0/24 hits=2
+  /22 networks=84 max_hits=5 n>=2=14 n>=3=9 n>=5=1 n>=10=0
+    160.242.24.0/22 hits=5
+    129.122.232.0/22 hits=4
+    129.122.220.0/22 hits=3
+  /20 networks=54 max_hits=9 n>=2=28 n>=3=14 n>=5=3 n>=10=0
+    129.122.224.0/20 hits=9
+    129.122.208.0/20 hits=5
+    160.242.16.0/20 hits=5
+  /18 networks=32 max_hits=18 n>=2=21 n>=3=17 n>=5=9 n>=10=1
+    129.122.192.0/18 hits=18
+    129.122.128.0/18 hits=7
+    105.168.0.0/18 hits=7
+  /16 networks=21 max_hits=25 n>=2=16 n>=3=13 n>=5=7 n>=10=3
+    129.122.0.0/16 hits=25
+    105.168.0.0/16 hits=16
+    105.172.0.0/16 hits=11
+
+CG (110 observed IPs)
+  /24 networks=25 max_hits=19 n>=2=16 n>=3=13 n>=5=8 n>=10=3
+    102.129.75.0/24 hits=19
+    197.214.238.0/24 hits=17
+    102.129.81.0/24 hits=13
+  /22 networks=12 max_hits=22 n>=2=7 n>=3=7 n>=5=7 n>=10=5
+    197.214.236.0/22 hits=22
+    102.129.72.0/22 hits=19
+    102.129.80.0/22 hits=18
+  /20 networks=8 max_hits=31 n>=2=5 n>=3=5 n>=5=5 n>=10=5
+    102.141.32.0/20 hits=31
+    197.214.224.0/20 hits=22
+    102.129.80.0/20 hits=19
+  /18 networks=4 max_hits=47 n>=2=4 n>=3=3 n>=5=3 n>=10=3
+    102.141.0.0/18 hits=47
+    102.129.64.0/18 hits=38
+    197.214.192.0/18 hits=23
+  /16 networks=4 max_hits=47 n>=2=4 n>=3=3 n>=5=3 n>=10=3
+    102.141.0.0/16 hits=47
+    102.129.0.0/16 hits=38
+    197.214.0.0/16 hits=23
+
+SE (107 observed IPs)
+  /24 networks=104 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    98.128.228.0/24 hits=2
+    155.4.130.0/24 hits=2
+    83.250.31.0/24 hits=2
+  /22 networks=103 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    98.128.228.0/22 hits=2
+    155.4.128.0/22 hits=2
+    83.250.28.0/22 hits=2
+  /20 networks=98 max_hits=4 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+    94.234.64.0/20 hits=4
+    83.250.16.0/20 hits=2
+    98.128.224.0/20 hits=2
+  /18 networks=89 max_hits=6 n>=2=12 n>=3=3 n>=5=1 n>=10=0
+    94.234.64.0/18 hits=6
+    83.250.0.0/18 hits=3
+    155.4.128.0/18 hits=3
+  /16 networks=70 max_hits=6 n>=2=25 n>=3=9 n>=5=1 n>=10=0
+    94.234.0.0/16 hits=6
+    78.73.0.0/16 hits=3
+    2.248.0.0/16 hits=3
+
+HK (103 observed IPs)
+  /24 networks=99 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+    8.217.213.0/24 hits=3
+    8.210.190.0/24 hits=2
+    65.160.166.0/24 hits=2
+  /22 networks=93 max_hits=4 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+    8.210.188.0/22 hits=4
+    8.217.212.0/22 hits=4
+    150.5.132.0/22 hits=2
+  /20 networks=84 max_hits=7 n>=2=10 n>=3=3 n>=5=2 n>=10=0
+    8.210.176.0/20 hits=7
+    8.217.208.0/20 hits=5
+    47.76.208.0/20 hits=3
+  /18 networks=77 max_hits=10 n>=2=12 n>=3=5 n>=5=2 n>=10=1
+    8.210.128.0/18 hits=10
+    8.217.192.0/18 hits=5
+    8.217.128.0/18 hits=3
+  /16 networks=69 max_hits=10 n>=2=14 n>=3=7 n>=5=2 n>=10=1
+    8.210.0.0/16 hits=10
+    8.217.0.0/16 hits=8
+    47.76.0.0/16 hits=4
+
+AE (102 observed IPs)
+  /24 networks=100 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    83.110.62.0/24 hits=2
+    5.192.69.0/24 hits=2
+    92.97.197.0/24 hits=1
+  /22 networks=91 max_hits=3 n>=2=9 n>=3=2 n>=5=0 n>=10=0
+    5.192.68.0/22 hits=3
+    5.192.92.0/22 hits=3
+    91.72.32.0/22 hits=2
+  /20 networks=85 max_hits=5 n>=2=8 n>=3=4 n>=5=1 n>=10=0
+    5.192.96.0/20 hits=5
+    83.110.160.0/20 hits=4
+    5.192.80.0/20 hits=4
+  /18 networks=69 max_hits=14 n>=2=15 n>=3=4 n>=5=2 n>=10=1
+    5.192.64.0/18 hits=14
+    83.110.128.0/18 hits=6
+    83.110.0.0/18 hits=3
+  /16 networks=47 max_hits=15 n>=2=22 n>=3=10 n>=5=2 n>=10=2
+    5.192.0.0/16 hits=15
+    83.110.0.0/16 hits=11
+    92.96.0.0/16 hits=4
+
+TN (102 observed IPs)
+  /24 networks=102 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    197.2.81.0/24 hits=1
+    102.30.45.0/24 hits=1
+    196.235.61.0/24 hits=1
+  /22 networks=102 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    196.239.152.0/22 hits=1
+    102.153.200.0/22 hits=1
+    196.224.112.0/22 hits=1
+  /20 networks=99 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    196.229.0.0/20 hits=2
+    197.1.64.0/20 hits=2
+    102.158.96.0/20 hits=2
+  /18 networks=88 max_hits=2 n>=2=14 n>=3=0 n>=5=0 n>=10=0
+    196.177.0.0/18 hits=2
+    165.51.64.0/18 hits=2
+    196.187.128.0/18 hits=2
+  /16 networks=69 max_hits=4 n>=2=22 n>=3=9 n>=5=0 n>=10=0
+    41.62.0.0/16 hits=4
+    197.2.0.0/16 hits=4
+    197.0.0.0/16 hits=3
+
+CR (101 observed IPs)
+  /24 networks=80 max_hits=3 n>=2=18 n>=3=3 n>=5=0 n>=10=0
+    186.64.212.0/24 hits=3
+    186.151.101.0/24 hits=3
+    201.191.218.0/24 hits=3
+  /22 networks=67 max_hits=5 n>=2=25 n>=3=7 n>=5=1 n>=10=0
+    186.151.100.0/22 hits=5
+    186.64.212.0/22 hits=3
+    177.93.0.0/22 hits=3
+  /20 networks=47 max_hits=11 n>=2=27 n>=3=10 n>=5=3 n>=10=1
+    186.151.96.0/20 hits=11
+    186.64.208.0/20 hits=6
+    177.93.0.0/20 hits=5
+  /18 networks=37 max_hits=11 n>=2=22 n>=3=12 n>=5=9 n>=10=1
+    186.151.64.0/18 hits=11
+    177.93.0.0/18 hits=7
+    190.171.64.0/18 hits=6
+  /16 networks=30 max_hits=11 n>=2=22 n>=3=12 n>=5=9 n>=10=1
+    186.151.0.0/16 hits=11
+    186.64.0.0/16 hits=8
+    186.15.0.0/16 hits=7
+
+CZ (101 observed IPs)
+  /24 networks=97 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    86.49.249.0/24 hits=2
+    193.179.66.0/24 hits=2
+    193.165.0.0/24 hits=2
+  /22 networks=88 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+    109.164.48.0/22 hits=3
+    86.49.248.0/22 hits=3
+    109.81.112.0/22 hits=3
+  /20 networks=72 max_hits=7 n>=2=14 n>=3=5 n>=5=3 n>=10=0
+    109.81.112.0/20 hits=7
+    86.49.240.0/20 hits=6
+    109.81.80.0/20 hits=5
+  /18 networks=62 max_hits=12 n>=2=15 n>=3=7 n>=5=3 n>=10=1
+    109.81.64.0/18 hits=12
+    86.49.192.0/18 hits=7
+    109.81.0.0/18 hits=5
+  /16 networks=52 max_hits=19 n>=2=18 n>=3=8 n>=5=3 n>=10=1
+    109.81.0.0/16 hits=19
+    86.49.0.0/16 hits=7
+    193.179.0.0/16 hits=5
+
+MD (100 observed IPs)
+  /24 networks=87 max_hits=6 n>=2=7 n>=3=3 n>=5=1 n>=10=0
+    217.19.215.0/24 hits=6
+    80.94.250.0/24 hits=3
+    89.32.141.0/24 hits=3
+  /22 networks=79 max_hits=7 n>=2=12 n>=3=5 n>=5=1 n>=10=0
+    217.19.212.0/22 hits=7
+    92.115.56.0/22 hits=3
+    89.32.140.0/22 hits=3
+  /20 networks=70 max_hits=8 n>=2=19 n>=3=6 n>=5=1 n>=10=0
+    217.19.208.0/20 hits=8
+    89.149.112.0/20 hits=3
+    212.0.208.0/20 hits=3
+  /18 networks=50 max_hits=8 n>=2=25 n>=3=10 n>=5=4 n>=10=0
+    217.19.192.0/18 hits=8
+    89.149.64.0/18 hits=7
+    62.221.64.0/18 hits=6
+  /16 networks=39 max_hits=9 n>=2=20 n>=3=15 n>=5=6 n>=10=0
+    188.237.0.0/16 hits=9
+    217.19.0.0/16 hits=8
+    89.149.0.0/16 hits=7
+
+MY (91 observed IPs)
+  /24 networks=87 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    45.121.20.0/24 hits=2
+    120.140.37.0/24 hits=2
+    113.210.91.0/24 hits=2
+  /22 networks=80 max_hits=2 n>=2=11 n>=3=0 n>=5=0 n>=10=0
+    120.140.36.0/22 hits=2
+    113.210.88.0/22 hits=2
+    45.121.20.0/22 hits=2
+  /20 networks=78 max_hits=3 n>=2=12 n>=3=1 n>=5=0 n>=10=0
+    27.125.240.0/20 hits=3
+    175.143.48.0/20 hits=2
+    115.133.208.0/20 hits=2
+  /18 networks=73 max_hits=3 n>=2=13 n>=3=5 n>=5=0 n>=10=0
+    120.140.0.0/18 hits=3
+    113.210.64.0/18 hits=3
+    27.125.192.0/18 hits=3
+  /16 networks=65 max_hits=3 n>=2=21 n>=3=5 n>=5=0 n>=10=0
+    120.140.0.0/16 hits=3
+    180.75.0.0/16 hits=3
+    115.134.0.0/16 hits=3
+
+CI (90 observed IPs)
+  /24 networks=69 max_hits=6 n>=2=11 n>=3=5 n>=5=1 n>=10=0
+    102.209.223.0/24 hits=6
+    102.67.249.0/24 hits=4
+    102.212.189.0/24 hits=4
+  /22 networks=50 max_hits=14 n>=2=13 n>=3=7 n>=5=4 n>=10=1
+    102.209.220.0/22 hits=14
+    102.212.188.0/22 hits=7
+    102.67.248.0/22 hits=6
+  /20 networks=42 max_hits=14 n>=2=15 n>=3=6 n>=5=3 n>=10=2
+    102.209.208.0/20 hits=14
+    102.67.240.0/20 hits=14
+    102.212.176.0/20 hits=7
+  /18 networks=27 max_hits=16 n>=2=17 n>=3=12 n>=5=3 n>=10=2
+    102.67.192.0/18 hits=16
+    102.209.192.0/18 hits=14
+    102.212.128.0/18 hits=7
+  /16 networks=16 max_hits=16 n>=2=12 n>=3=11 n>=5=7 n>=10=3
+    102.67.0.0/16 hits=16
+    102.209.0.0/16 hits=14
+    160.154.0.0/16 hits=13
+
+KG (90 observed IPs)
+  /24 networks=61 max_hits=5 n>=2=20 n>=3=6 n>=5=1 n>=10=0
+    217.29.24.0/24 hits=5
+    212.112.119.0/24 hits=4
+    46.251.211.0/24 hits=3
+  /22 networks=44 max_hits=6 n>=2=20 n>=3=15 n>=5=4 n>=10=0
+    212.112.116.0/22 hits=6
+    217.29.24.0/22 hits=5
+    185.117.148.0/22 hits=5
+  /20 networks=29 max_hits=9 n>=2=17 n>=3=15 n>=5=8 n>=10=0
+    95.87.64.0/20 hits=9
+    212.112.112.0/20 hits=8
+    89.237.192.0/20 hits=7
+  /18 networks=24 max_hits=12 n>=2=16 n>=3=14 n>=5=7 n>=10=1
+    212.241.0.0/18 hits=12
+    95.87.64.0/18 hits=9
+    212.112.64.0/18 hits=9
+  /16 networks=24 max_hits=12 n>=2=16 n>=3=14 n>=5=7 n>=10=1
+    212.241.0.0/16 hits=12
+    95.87.0.0/16 hits=9
+    212.112.0.0/16 hits=9
+
+AZ (88 observed IPs)
+  /24 networks=76 max_hits=3 n>=2=11 n>=3=1 n>=5=0 n>=10=0
+    212.47.142.0/24 hits=3
+    37.61.114.0/24 hits=2
+    62.217.156.0/24 hits=2
+  /22 networks=57 max_hits=5 n>=2=17 n>=3=8 n>=5=2 n>=10=0
+    212.47.136.0/22 hits=5
+    212.47.140.0/22 hits=5
+    158.181.44.0/22 hits=4
+  /20 networks=43 max_hits=14 n>=2=14 n>=3=7 n>=5=5 n>=10=1
+    212.47.128.0/20 hits=14
+    158.181.32.0/20 hits=7
+    37.61.112.0/20 hits=6
+  /18 networks=41 max_hits=16 n>=2=14 n>=3=7 n>=5=5 n>=10=1
+    212.47.128.0/18 hits=16
+    158.181.0.0/18 hits=7
+    37.61.64.0/18 hits=6
+  /16 networks=39 max_hits=16 n>=2=13 n>=3=8 n>=5=6 n>=10=1
+    212.47.0.0/16 hits=16
+    158.181.0.0/16 hits=7
+    188.253.0.0/16 hits=6
+
+KR (88 observed IPs)
+  /24 networks=88 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    221.155.152.0/24 hits=1
+    61.80.48.0/24 hits=1
+    182.218.89.0/24 hits=1
+  /22 networks=88 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    114.30.200.0/22 hits=1
+    180.228.156.0/22 hits=1
+    221.155.152.0/22 hits=1
+  /20 networks=88 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    115.69.112.0/20 hits=1
+    112.157.64.0/20 hits=1
+    61.80.48.0/20 hits=1
+  /18 networks=88 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    61.43.64.0/18 hits=1
+    121.129.128.0/18 hits=1
+    1.176.0.0/18 hits=1
+  /16 networks=84 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    221.155.0.0/16 hits=2
+    211.245.0.0/16 hits=2
+    163.152.0.0/16 hits=2
+
+LB (88 observed IPs)
+  /24 networks=65 max_hits=8 n>=2=10 n>=3=5 n>=5=2 n>=10=0
+    185.97.92.0/24 hits=8
+    194.246.91.0/24 hits=5
+    185.104.253.0/24 hits=4
+  /22 networks=58 max_hits=13 n>=2=11 n>=3=6 n>=5=2 n>=10=1
+    185.97.92.0/22 hits=13
+    194.246.88.0/22 hits=5
+    185.104.252.0/22 hits=4
+  /20 networks=57 max_hits=13 n>=2=12 n>=3=6 n>=5=2 n>=10=1
+    185.97.80.0/20 hits=13
+    194.246.80.0/20 hits=5
+    185.104.240.0/20 hits=4
+  /18 networks=52 max_hits=13 n>=2=13 n>=3=8 n>=5=2 n>=10=1
+    185.97.64.0/18 hits=13
+    194.246.64.0/18 hits=5
+    213.204.64.0/18 hits=4
+  /16 networks=51 max_hits=13 n>=2=13 n>=3=8 n>=5=3 n>=10=1
+    185.97.0.0/16 hits=13
+    194.246.0.0/16 hits=5
+    185.104.0.0/16 hits=5
+
+QA (85 observed IPs)
+  /24 networks=82 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    212.70.114.0/24 hits=2
+    78.101.185.0/24 hits=2
+    78.101.166.0/24 hits=2
+  /22 networks=75 max_hits=3 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+    212.70.112.0/22 hits=3
+    78.101.184.0/22 hits=3
+    178.152.92.0/22 hits=2
+  /20 networks=54 max_hits=5 n>=2=18 n>=3=10 n>=5=1 n>=10=0
+    212.70.112.0/20 hits=5
+    89.211.80.0/20 hits=4
+    178.152.80.0/20 hits=3
+  /18 networks=31 max_hits=7 n>=2=21 n>=3=15 n>=5=5 n>=10=0
+    212.70.64.0/18 hits=7
+    78.101.128.0/18 hits=6
+    178.152.0.0/18 hits=5
+  /16 networks=14 max_hits=12 n>=2=12 n>=3=10 n>=5=9 n>=10=3
+    37.210.0.0/16 hits=12
+    78.101.0.0/16 hits=11
+    89.211.0.0/16 hits=11
+
+BF (83 observed IPs)
+  /24 networks=70 max_hits=3 n>=2=9 n>=3=4 n>=5=0 n>=10=0
+    41.138.98.0/24 hits=3
+    154.66.162.0/24 hits=3
+    41.138.96.0/24 hits=3
+  /22 networks=56 max_hits=9 n>=2=15 n>=3=5 n>=5=1 n>=10=0
+    41.138.96.0/22 hits=9
+    102.23.28.0/22 hits=4
+    102.23.36.0/22 hits=3
+  /20 networks=38 max_hits=9 n>=2=22 n>=3=9 n>=5=3 n>=10=0
+    41.138.96.0/20 hits=9
+    102.23.32.0/20 hits=6
+    154.66.160.0/20 hits=5
+  /18 networks=18 max_hits=10 n>=2=16 n>=3=14 n>=5=7 n>=10=2
+    102.23.0.0/18 hits=10
+    102.179.128.0/18 hits=10
+    41.138.64.0/18 hits=9
+  /16 networks=9 max_hits=22 n>=2=7 n>=3=6 n>=5=6 n>=10=4
+    102.179.0.0/16 hits=22
+    102.180.0.0/16 hits=21
+    102.178.0.0/16 hits=12
+
+OM (82 observed IPs)
+  /24 networks=79 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+    37.40.237.0/24 hits=3
+    37.40.225.0/24 hits=2
+    85.154.168.0/24 hits=1
+  /22 networks=68 max_hits=5 n>=2=9 n>=3=2 n>=5=1 n>=10=0
+    37.40.236.0/22 hits=5
+    37.40.224.0/22 hits=4
+    5.36.164.0/22 hits=2
+  /20 networks=57 max_hits=10 n>=2=13 n>=3=3 n>=5=2 n>=10=1
+    37.40.224.0/20 hits=10
+    38.253.192.0/20 hits=5
+    5.162.80.0/20 hits=3
+  /18 networks=45 max_hits=10 n>=2=15 n>=3=7 n>=5=3 n>=10=1
+    37.40.192.0/18 hits=10
+    38.253.192.0/18 hits=7
+    5.36.128.0/18 hits=6
+  /16 networks=37 max_hits=12 n>=2=13 n>=3=8 n>=5=5 n>=10=1
+    37.40.0.0/16 hits=12
+    5.36.0.0/16 hits=8
+    38.253.0.0/16 hits=7
+
+SY (76 observed IPs)
+  /24 networks=67 max_hits=6 n>=2=4 n>=3=2 n>=5=1 n>=10=0
+    217.142.25.0/24 hits=6
+    139.28.49.0/24 hits=3
+    85.189.9.0/24 hits=2
+  /22 networks=60 max_hits=6 n>=2=9 n>=3=4 n>=5=1 n>=10=0
+    217.142.24.0/22 hits=6
+    185.200.36.0/22 hits=3
+    139.28.48.0/22 hits=3
+  /20 networks=53 max_hits=6 n>=2=12 n>=3=7 n>=5=1 n>=10=0
+    217.142.16.0/20 hits=6
+    188.133.0.0/20 hits=4
+    85.189.0.0/20 hits=3
+  /18 networks=46 max_hits=7 n>=2=15 n>=3=8 n>=5=2 n>=10=0
+    188.133.0.0/18 hits=7
+    217.142.0.0/18 hits=6
+    185.200.0.0/18 hits=3
+  /16 networks=40 max_hits=9 n>=2=12 n>=3=9 n>=5=4 n>=10=0
+    188.133.0.0/16 hits=9
+    5.0.0.0/16 hits=6
+    217.142.0.0/16 hits=6
+
+LY (74 observed IPs)
+  /24 networks=56 max_hits=5 n>=2=12 n>=3=4 n>=5=1 n>=10=0
+    102.69.11.0/24 hits=5
+    102.211.4.0/24 hits=3
+    38.252.48.0/24 hits=3
+  /22 networks=48 max_hits=6 n>=2=17 n>=3=4 n>=5=2 n>=10=0
+    102.69.8.0/22 hits=6
+    38.252.48.0/22 hits=5
+    102.211.4.0/22 hits=3
+  /20 networks=33 max_hits=6 n>=2=16 n>=3=11 n>=5=4 n>=10=0
+    38.252.48.0/20 hits=6
+    102.69.0.0/20 hits=6
+    41.254.64.0/20 hits=5
+  /18 networks=23 max_hits=11 n>=2=14 n>=3=9 n>=5=5 n>=10=3
+    165.16.0.0/18 hits=11
+    41.254.64.0/18 hits=10
+    38.252.0.0/18 hits=10
+  /16 networks=18 max_hits=13 n>=2=12 n>=3=8 n>=5=6 n>=10=3
+    41.254.0.0/16 hits=13
+    165.16.0.0/16 hits=13
+    38.252.0.0/16 hits=10
+
+UY (72 observed IPs)
+  /24 networks=72 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    167.56.153.0/24 hits=1
+    179.29.69.0/24 hits=1
+    190.135.55.0/24 hits=1
+  /22 networks=72 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    190.133.248.0/22 hits=1
+    179.31.204.0/22 hits=1
+    167.56.236.0/22 hits=1
+  /20 networks=68 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    167.63.240.0/20 hits=2
+    190.135.176.0/20 hits=2
+    190.134.48.0/20 hits=2
+  /18 networks=57 max_hits=3 n>=2=13 n>=3=2 n>=5=0 n>=10=0
+    179.29.64.0/18 hits=3
+    190.134.0.0/18 hits=3
+    167.63.192.0/18 hits=2
+  /16 networks=37 max_hits=8 n>=2=17 n>=3=10 n>=5=2 n>=10=0
+    190.135.0.0/16 hits=8
+    186.53.0.0/16 hits=5
+    179.29.0.0/16 hits=4
+
+PY (69 observed IPs)
+  /24 networks=55 max_hits=4 n>=2=8 n>=3=4 n>=5=0 n>=10=0
+    181.94.232.0/24 hits=4
+    186.158.200.0/24 hits=4
+    181.94.224.0/24 hits=3
+  /22 networks=46 max_hits=8 n>=2=10 n>=3=5 n>=5=1 n>=10=0
+    181.94.224.0/22 hits=8
+    181.94.232.0/22 hits=4
+    181.78.92.0/22 hits=4
+  /20 networks=44 max_hits=13 n>=2=9 n>=3=4 n>=5=1 n>=10=1
+    181.94.224.0/20 hits=13
+    186.158.192.0/20 hits=4
+    181.78.80.0/20 hits=4
+  /18 networks=40 max_hits=13 n>=2=13 n>=3=4 n>=5=1 n>=10=1
+    181.94.192.0/18 hits=13
+    186.158.192.0/18 hits=4
+    181.78.64.0/18 hits=4
+  /16 networks=36 max_hits=13 n>=2=14 n>=3=7 n>=5=1 n>=10=1
+    181.94.0.0/16 hits=13
+    186.158.0.0/16 hits=4
+    181.78.0.0/16 hits=4
+
+IR (68 observed IPs)
+  /24 networks=67 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    217.218.144.0/24 hits=2
+    77.77.106.0/24 hits=1
+    78.38.186.0/24 hits=1
+  /22 networks=65 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+    85.185.32.0/22 hits=3
+    217.218.144.0/22 hits=2
+    46.100.136.0/22 hits=1
+  /20 networks=64 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+    85.185.32.0/20 hits=3
+    77.237.160.0/20 hits=2
+    217.218.144.0/20 hits=2
+  /18 networks=61 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+    85.185.0.0/18 hits=3
+    46.143.0.0/18 hits=2
+    217.218.128.0/18 hits=2
+  /16 networks=58 max_hits=3 n>=2=9 n>=3=1 n>=5=0 n>=10=0
+    85.185.0.0/16 hits=3
+    46.143.0.0/16 hits=2
+    46.100.0.0/16 hits=2
+
+NP (66 observed IPs)
+  /24 networks=46 max_hits=6 n>=2=11 n>=3=5 n>=5=1 n>=10=0
+    103.10.28.0/24 hits=6
+    103.167.229.0/24 hits=4
+    103.134.217.0/24 hits=3
+  /22 networks=40 max_hits=7 n>=2=14 n>=3=6 n>=5=1 n>=10=0
+    103.10.28.0/22 hits=7
+    103.167.228.0/22 hits=4
+    103.129.132.0/22 hits=4
+  /20 networks=38 max_hits=7 n>=2=13 n>=3=7 n>=5=2 n>=10=0
+    103.10.16.0/20 hits=7
+    103.167.224.0/20 hits=6
+    103.129.128.0/20 hits=4
+  /18 networks=38 max_hits=7 n>=2=13 n>=3=7 n>=5=2 n>=10=0
+    103.10.0.0/18 hits=7
+    103.167.192.0/18 hits=6
+    103.129.128.0/18 hits=4
+  /16 networks=38 max_hits=7 n>=2=13 n>=3=7 n>=5=2 n>=10=0
+    103.10.0.0/16 hits=7
+    103.167.0.0/16 hits=6
+    103.129.0.0/16 hits=4
+
+KW (65 observed IPs)
+  /24 networks=62 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    188.236.51.0/24 hits=2
+    37.231.159.0/24 hits=2
+    37.231.255.0/24 hits=2
+  /22 networks=56 max_hits=3 n>=2=8 n>=3=1 n>=5=0 n>=10=0
+    37.231.156.0/22 hits=3
+    188.236.48.0/22 hits=2
+    94.129.76.0/22 hits=2
+  /20 networks=43 max_hits=3 n>=2=17 n>=3=5 n>=5=0 n>=10=0
+    188.70.16.0/20 hits=3
+    37.39.160.0/20 hits=3
+    37.231.80.0/20 hits=3
+  /18 networks=28 max_hits=9 n>=2=15 n>=3=8 n>=5=3 n>=10=0
+    188.70.0.0/18 hits=9
+    188.71.192.0/18 hits=6
+    37.39.128.0/18 hits=5
+  /16 networks=15 max_hits=13 n>=2=10 n>=3=8 n>=5=6 n>=10=1
+    37.231.0.0/16 hits=13
+    188.70.0.0/16 hits=9
+    188.236.0.0/16 hits=9
+
+RS (65 observed IPs)
+  /24 networks=63 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    185.174.211.0/24 hits=2
+    185.67.177.0/24 hits=2
+    95.180.52.0/24 hits=1
+  /22 networks=59 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+    185.179.28.0/22 hits=3
+    87.116.132.0/22 hits=2
+    185.67.176.0/22 hits=2
+  /20 networks=57 max_hits=3 n>=2=7 n>=3=1 n>=5=0 n>=10=0
+    185.179.16.0/20 hits=3
+    185.171.48.0/20 hits=2
+    213.196.96.0/20 hits=2
+  /18 networks=54 max_hits=4 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+    87.116.128.0/18 hits=4
+    185.179.0.0/18 hits=3
+    188.2.64.0/18 hits=2
+  /16 networks=47 max_hits=4 n>=2=11 n>=3=5 n>=5=0 n>=10=0
+    87.116.0.0/16 hits=4
+    188.2.0.0/16 hits=4
+    24.135.0.0/16 hits=3
+
+GH (59 observed IPs)
+  /24 networks=52 max_hits=3 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+    154.160.0.0/24 hits=3
+    154.161.147.0/24 hits=3
+    154.160.2.0/24 hits=2
+  /22 networks=41 max_hits=7 n>=2=8 n>=3=3 n>=5=2 n>=10=0
+    154.160.0.0/22 hits=7
+    154.160.16.0/22 hits=6
+    154.161.144.0/22 hits=3
+  /20 networks=21 max_hits=9 n>=2=14 n>=3=9 n>=5=4 n>=10=0
+    154.160.0.0/20 hits=9
+    154.160.16.0/20 hits=7
+    154.161.144.0/20 hits=5
+  /18 networks=12 max_hits=16 n>=2=6 n>=3=6 n>=5=5 n>=10=3
+    154.160.0.0/18 hits=16
+    154.161.128.0/18 hits=12
+    154.161.0.0/18 hits=10
+  /16 networks=8 max_hits=34 n>=2=3 n>=3=3 n>=5=2 n>=10=2
+    154.161.0.0/16 hits=34
+    154.160.0.0/16 hits=16
+    41.155.0.0/16 hits=4
+
+PS (59 observed IPs)
+  /24 networks=58 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    84.242.54.0/24 hits=2
+    188.161.147.0/24 hits=1
+    103.47.70.0/24 hits=1
+  /22 networks=56 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    213.244.96.0/22 hits=2
+    85.113.116.0/22 hits=2
+    84.242.52.0/22 hits=2
+  /20 networks=52 max_hits=3 n>=2=6 n>=3=1 n>=5=0 n>=10=0
+    85.113.112.0/20 hits=3
+    213.244.96.0/20 hits=2
+    24.42.80.0/20 hits=2
+  /18 networks=44 max_hits=3 n>=2=12 n>=3=3 n>=5=0 n>=10=0
+    24.42.64.0/18 hits=3
+    188.161.192.0/18 hits=3
+    85.113.64.0/18 hits=3
+  /16 networks=42 max_hits=5 n>=2=11 n>=3=4 n>=5=1 n>=10=0
+    188.161.0.0/16 hits=5
+    24.42.0.0/16 hits=3
+    46.60.0.0/16 hits=3
+
+ET (57 observed IPs)
+  /24 networks=39 max_hits=5 n>=2=10 n>=3=5 n>=5=1 n>=10=0
+    196.190.62.0/24 hits=5
+    196.188.126.0/24 hits=4
+    196.189.17.0/24 hits=3
+  /22 networks=33 max_hits=6 n>=2=13 n>=3=6 n>=5=1 n>=10=0
+    196.190.60.0/22 hits=6
+    196.189.16.0/22 hits=4
+    196.188.124.0/22 hits=4
+  /20 networks=25 max_hits=8 n>=2=13 n>=3=7 n>=5=2 n>=10=0
+    196.190.48.0/20 hits=8
+    196.189.16.0/20 hits=7
+    196.189.240.0/20 hits=4
+  /18 networks=18 max_hits=8 n>=2=12 n>=3=10 n>=5=4 n>=10=0
+    196.190.0.0/18 hits=8
+    196.189.0.0/18 hits=7
+    196.189.192.0/18 hits=6
+  /16 networks=7 max_hits=18 n>=2=4 n>=3=4 n>=5=4 n>=10=4
+    196.189.0.0/16 hits=18
+    196.188.0.0/16 hits=13
+    196.190.0.0/16 hits=12
+
+AL (56 observed IPs)
+  /24 networks=51 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    185.85.154.0/24 hits=3
+    141.8.201.0/24 hits=2
+    130.0.26.0/24 hits=2
+  /22 networks=47 max_hits=4 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+    141.98.140.0/22 hits=4
+    185.85.152.0/22 hits=3
+    79.106.208.0/22 hits=2
+  /20 networks=45 max_hits=4 n>=2=7 n>=3=3 n>=5=0 n>=10=0
+    141.98.128.0/20 hits=4
+    79.106.208.0/20 hits=3
+    185.85.144.0/20 hits=3
+  /18 networks=44 max_hits=4 n>=2=8 n>=3=3 n>=5=0 n>=10=0
+    141.98.128.0/18 hits=4
+    79.106.192.0/18 hits=3
+    185.85.128.0/18 hits=3
+  /16 networks=40 max_hits=7 n>=2=8 n>=3=3 n>=5=1 n>=10=0
+    79.106.0.0/16 hits=7
+    141.98.0.0/16 hits=4
+    185.85.0.0/16 hits=3
+
+GE (55 observed IPs)
+  /24 networks=44 max_hits=4 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+    78.40.106.0/24 hits=4
+    212.58.102.0/24 hits=3
+    91.151.136.0/24 hits=2
+  /22 networks=41 max_hits=4 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+    212.58.100.0/22 hits=4
+    78.40.104.0/22 hits=4
+    5.187.8.0/22 hits=2
+  /20 networks=41 max_hits=4 n>=2=10 n>=3=2 n>=5=0 n>=10=0
+    78.40.96.0/20 hits=4
+    212.58.96.0/20 hits=4
+    212.58.112.0/20 hits=2
+  /18 networks=40 max_hits=6 n>=2=9 n>=3=2 n>=5=1 n>=10=0
+    212.58.64.0/18 hits=6
+    78.40.64.0/18 hits=4
+    185.99.0.0/18 hits=2
+  /16 networks=38 max_hits=6 n>=2=11 n>=3=2 n>=5=1 n>=10=0
+    212.58.0.0/16 hits=6
+    78.40.0.0/16 hits=4
+    91.151.0.0/16 hits=2
+
+TG (53 observed IPs)
+  /24 networks=40 max_hits=3 n>=2=10 n>=3=3 n>=5=0 n>=10=0
+    102.64.164.0/24 hits=3
+    102.64.152.0/24 hits=3
+    102.64.162.0/24 hits=3
+  /22 networks=30 max_hits=7 n>=2=7 n>=3=5 n>=5=4 n>=10=0
+    102.64.160.0/22 hits=7
+    102.64.220.0/22 hits=6
+    102.64.164.0/22 hits=5
+  /20 networks=21 max_hits=13 n>=2=8 n>=3=5 n>=5=3 n>=10=1
+    102.64.160.0/20 hits=13
+    102.64.208.0/20 hits=9
+    102.64.144.0/20 hits=5
+  /18 networks=9 max_hits=18 n>=2=8 n>=3=6 n>=5=5 n>=10=1
+    102.64.128.0/18 hits=18
+    102.64.192.0/18 hits=9
+    196.170.64.0/18 hits=8
+  /16 networks=4 max_hits=27 n>=2=4 n>=3=4 n>=5=4 n>=10=2
+    102.64.0.0/16 hits=27
+    196.170.0.0/16 hits=13
+    196.171.0.0/16 hits=8
+
+TZ (53 observed IPs)
+  /24 networks=43 max_hits=4 n>=2=6 n>=3=3 n>=5=0 n>=10=0
+    196.249.122.0/24 hits=4
+    197.186.75.0/24 hits=3
+    41.59.13.0/24 hits=3
+  /22 networks=34 max_hits=6 n>=2=9 n>=3=4 n>=5=1 n>=10=0
+    196.249.120.0/22 hits=6
+    197.186.0.0/22 hits=4
+    41.59.12.0/22 hits=4
+  /20 networks=22 max_hits=8 n>=2=12 n>=3=7 n>=5=3 n>=10=0
+    197.186.0.0/20 hits=8
+    196.249.112.0/20 hits=6
+    197.186.64.0/20 hits=6
+  /18 networks=16 max_hits=13 n>=2=11 n>=3=6 n>=5=3 n>=10=1
+    197.186.0.0/18 hits=13
+    196.249.64.0/18 hits=9
+    197.186.64.0/18 hits=6
+  /16 networks=10 max_hits=19 n>=2=7 n>=3=5 n>=5=4 n>=10=1
+    197.186.0.0/16 hits=19
+    196.249.0.0/16 hits=9
+    41.59.0.0/16 hits=7
+
+LK (52 observed IPs)
+  /24 networks=46 max_hits=4 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    212.104.227.0/24 hits=4
+    112.134.172.0/24 hits=2
+    175.157.109.0/24 hits=2
+  /22 networks=38 max_hits=5 n>=2=11 n>=3=1 n>=5=1 n>=10=0
+    212.104.224.0/22 hits=5
+    112.134.172.0/22 hits=2
+    175.157.140.0/22 hits=2
+  /20 networks=26 max_hits=6 n>=2=12 n>=3=7 n>=5=3 n>=10=0
+    112.134.160.0/20 hits=6
+    212.104.224.0/20 hits=5
+    112.134.144.0/20 hits=5
+  /18 networks=16 max_hits=13 n>=2=9 n>=3=5 n>=5=4 n>=10=1
+    112.134.128.0/18 hits=13
+    175.157.0.0/18 hits=9
+    175.157.64.0/18 hits=6
+  /16 networks=11 max_hits=20 n>=2=5 n>=3=3 n>=5=3 n>=10=2
+    175.157.0.0/16 hits=20
+    112.134.0.0/16 hits=17
+    212.104.0.0/16 hits=5
+
+MN (52 observed IPs)
+  /24 networks=35 max_hits=3 n>=2=13 n>=3=4 n>=5=0 n>=10=0
+    66.181.178.0/24 hits=3
+    66.181.191.0/24 hits=3
+    59.153.115.0/24 hits=3
+  /22 networks=18 max_hits=8 n>=2=12 n>=3=8 n>=5=4 n>=10=0
+    66.181.176.0/22 hits=8
+    59.153.112.0/22 hits=6
+    66.181.180.0/22 hits=6
+  /20 networks=13 max_hits=23 n>=2=8 n>=3=5 n>=5=3 n>=10=1
+    66.181.176.0/20 hits=23
+    59.153.112.0/20 hits=6
+    202.9.32.0/20 hits=5
+  /18 networks=12 max_hits=27 n>=2=7 n>=3=4 n>=5=3 n>=10=1
+    66.181.128.0/18 hits=27
+    59.153.64.0/18 hits=6
+    202.9.0.0/18 hits=5
+  /16 networks=12 max_hits=27 n>=2=7 n>=3=4 n>=5=3 n>=10=1
+    66.181.0.0/16 hits=27
+    59.153.0.0/16 hits=6
+    202.9.0.0/16 hits=5
+
+NZ (47 observed IPs)
+  /24 networks=45 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    203.211.104.0/24 hits=2
+    203.211.110.0/24 hits=2
+    118.92.242.0/24 hits=1
+  /22 networks=42 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    203.211.104.0/22 hits=3
+    203.211.108.0/22 hits=2
+    122.63.64.0/22 hits=2
+  /20 networks=36 max_hits=5 n>=2=7 n>=3=2 n>=5=1 n>=10=0
+    203.211.96.0/20 hits=5
+    122.63.64.0/20 hits=3
+    161.29.240.0/20 hits=2
+  /18 networks=32 max_hits=5 n>=2=9 n>=3=3 n>=5=1 n>=10=0
+    203.211.64.0/18 hits=5
+    122.63.64.0/18 hits=4
+    161.29.192.0/18 hits=3
+  /16 networks=22 max_hits=5 n>=2=12 n>=3=6 n>=5=2 n>=10=0
+    122.63.0.0/16 hits=5
+    203.211.0.0/16 hits=5
+    118.92.0.0/16 hits=4
+
+NO (46 observed IPs)
+  /24 networks=45 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    85.252.83.0/24 hits=2
+    85.166.125.0/24 hits=1
+    80.203.5.0/24 hits=1
+  /22 networks=45 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    85.252.80.0/22 hits=2
+    178.232.28.0/22 hits=1
+    109.247.220.0/22 hits=1
+  /20 networks=40 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+    176.11.0.0/20 hits=3
+    85.252.80.0/20 hits=2
+    83.108.112.0/20 hits=2
+  /18 networks=37 max_hits=3 n>=2=7 n>=3=2 n>=5=0 n>=10=0
+    176.11.0.0/18 hits=3
+    83.108.64.0/18 hits=3
+    81.166.128.0/18 hits=2
+  /16 networks=27 max_hits=4 n>=2=12 n>=3=6 n>=5=0 n>=10=0
+    83.108.0.0/16 hits=4
+    176.11.0.0/16 hits=3
+    84.211.0.0/16 hits=3
+
+SN (42 observed IPs)
+  /24 networks=37 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    196.207.231.0/24 hits=3
+    74.244.85.0/24 hits=2
+    41.214.3.0/24 hits=2
+  /22 networks=36 max_hits=3 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+    196.207.228.0/22 hits=3
+    154.124.132.0/22 hits=3
+    41.214.0.0/22 hits=2
+  /20 networks=31 max_hits=4 n>=2=8 n>=3=2 n>=5=0 n>=10=0
+    196.207.224.0/20 hits=4
+    154.124.128.0/20 hits=3
+    41.208.176.0/20 hits=2
+  /18 networks=18 max_hits=5 n>=2=10 n>=3=8 n>=5=2 n>=10=0
+    196.207.192.0/18 hits=5
+    154.124.128.0/18 hits=5
+    41.214.0.0/18 hits=4
+  /16 networks=10 max_hits=9 n>=2=8 n>=3=7 n>=5=4 n>=10=0
+    154.124.0.0/16 hits=9
+    41.83.0.0/16 hits=8
+    196.207.0.0/16 hits=5
+
+JM (38 observed IPs)
+  /24 networks=27 max_hits=4 n>=2=7 n>=3=3 n>=5=0 n>=10=0
+    207.204.103.0/24 hits=4
+    63.143.124.0/24 hits=3
+    67.230.43.0/24 hits=3
+  /22 networks=24 max_hits=4 n>=2=7 n>=3=5 n>=5=0 n>=10=0
+    173.225.240.0/22 hits=4
+    207.204.100.0/22 hits=4
+    67.230.40.0/22 hits=3
+  /20 networks=20 max_hits=5 n>=2=7 n>=3=6 n>=5=1 n>=10=0
+    207.204.96.0/20 hits=5
+    216.10.208.0/20 hits=4
+    63.143.112.0/20 hits=4
+  /18 networks=19 max_hits=5 n>=2=7 n>=3=6 n>=5=2 n>=10=0
+    207.204.64.0/18 hits=5
+    63.143.64.0/18 hits=5
+    216.10.192.0/18 hits=4
+  /16 networks=15 max_hits=5 n>=2=10 n>=3=7 n>=5=2 n>=10=0
+    207.204.0.0/16 hits=5
+    63.143.0.0/16 hits=5
+    216.10.0.0/16 hits=4
+
+DK (37 observed IPs)
+  /24 networks=35 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    87.49.147.0/24 hits=2
+    87.49.44.0/24 hits=2
+    87.49.146.0/24 hits=1
+  /22 networks=34 max_hits=3 n>=2=2 n>=3=1 n>=5=0 n>=10=0
+    87.49.144.0/22 hits=3
+    87.49.44.0/22 hits=2
+    62.199.24.0/22 hits=1
+  /20 networks=32 max_hits=3 n>=2=4 n>=3=1 n>=5=0 n>=10=0
+    87.49.144.0/20 hits=3
+    87.49.32.0/20 hits=2
+    37.97.0.0/20 hits=2
+  /18 networks=31 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+    87.49.128.0/18 hits=3
+    62.199.0.0/18 hits=2
+    37.97.0.0/18 hits=2
+  /16 networks=28 max_hits=5 n>=2=6 n>=3=1 n>=5=1 n>=10=0
+    87.49.0.0/16 hits=5
+    62.199.0.0/16 hits=2
+    37.97.0.0/16 hits=2
+
+CM (33 observed IPs)
+  /24 networks=18 max_hits=5 n>=2=6 n>=3=5 n>=5=2 n>=10=0
+    143.105.152.0/24 hits=5
+    129.0.60.0/24 hits=5
+    154.72.169.0/24 hits=3
+  /22 networks=16 max_hits=7 n>=2=5 n>=3=4 n>=5=3 n>=10=0
+    154.72.168.0/22 hits=7
+    143.105.152.0/22 hits=5
+    129.0.60.0/22 hits=5
+  /20 networks=14 max_hits=8 n>=2=6 n>=3=4 n>=5=3 n>=10=0
+    154.72.160.0/20 hits=8
+    143.105.144.0/20 hits=5
+    129.0.48.0/20 hits=5
+  /18 networks=12 max_hits=8 n>=2=7 n>=3=5 n>=5=3 n>=10=0
+    154.72.128.0/18 hits=8
+    129.0.0.0/18 hits=5
+    143.105.128.0/18 hits=5
+  /16 networks=7 max_hits=10 n>=2=4 n>=3=4 n>=5=4 n>=10=1
+    129.0.0.0/16 hits=10
+    154.72.0.0/16 hits=8
+    102.244.0.0/16 hits=7
+
+UG (33 observed IPs)
+  /24 networks=23 max_hits=8 n>=2=4 n>=3=1 n>=5=1 n>=10=0
+    102.209.111.0/24 hits=8
+    41.84.200.0/24 hits=2
+    41.210.154.0/24 hits=2
+  /22 networks=17 max_hits=9 n>=2=7 n>=3=2 n>=5=1 n>=10=0
+    102.209.108.0/22 hits=9
+    41.210.152.0/22 hits=4
+    197.239.8.0/22 hits=2
+  /20 networks=11 max_hits=9 n>=2=7 n>=3=5 n>=5=2 n>=10=0
+    102.209.96.0/20 hits=9
+    41.210.144.0/20 hits=6
+    197.239.0.0/20 hits=4
+  /18 networks=11 max_hits=9 n>=2=7 n>=3=5 n>=5=2 n>=10=0
+    102.209.64.0/18 hits=9
+    41.210.128.0/18 hits=6
+    197.239.0.0/18 hits=4
+  /16 networks=10 max_hits=9 n>=2=8 n>=3=5 n>=5=2 n>=10=0
+    102.209.0.0/16 hits=9
+    41.210.0.0/16 hits=6
+    197.239.0.0/16 hits=4
+
+AM (29 observed IPs)
+  /24 networks=28 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    91.103.250.0/24 hits=2
+    62.89.11.0/24 hits=1
+    37.186.66.0/24 hits=1
+  /22 networks=28 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    91.103.248.0/22 hits=2
+    217.113.28.0/22 hits=1
+    194.61.88.0/22 hits=1
+  /20 networks=26 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    195.250.80.0/20 hits=2
+    37.252.64.0/20 hits=2
+    91.103.240.0/20 hits=2
+  /18 networks=24 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+    217.113.0.0/18 hits=2
+    91.103.192.0/18 hits=2
+    37.252.64.0/18 hits=2
+  /16 networks=24 max_hits=2 n>=2=5 n>=3=0 n>=5=0 n>=10=0
+    217.113.0.0/16 hits=2
+    195.250.0.0/16 hits=2
+    37.252.0.0/16 hits=2
+
+NI (28 observed IPs)
+  /24 networks=18 max_hits=5 n>=2=5 n>=3=3 n>=5=1 n>=10=0
+    200.62.78.0/24 hits=5
+    138.97.163.0/24 hits=3
+    186.77.204.0/24 hits=3
+  /22 networks=14 max_hits=5 n>=2=6 n>=3=3 n>=5=2 n>=10=0
+    200.62.76.0/22 hits=5
+    186.77.204.0/22 hits=5
+    138.97.160.0/22 hits=4
+  /20 networks=12 max_hits=7 n>=2=5 n>=3=4 n>=5=2 n>=10=0
+    186.77.192.0/20 hits=7
+    200.62.64.0/20 hits=5
+    138.97.160.0/20 hits=4
+  /18 networks=11 max_hits=7 n>=2=6 n>=3=4 n>=5=2 n>=10=0
+    186.77.192.0/18 hits=7
+    200.62.64.0/18 hits=5
+    138.97.128.0/18 hits=4
+  /16 networks=10 max_hits=9 n>=2=5 n>=3=4 n>=5=2 n>=10=0
+    186.77.0.0/16 hits=9
+    200.62.0.0/16 hits=5
+    138.97.0.0/16 hits=4
+
+BH (24 observed IPs)
+  /24 networks=22 max_hits=3 n>=2=1 n>=3=1 n>=5=0 n>=10=0
+    84.255.184.0/24 hits=3
+    37.131.105.0/24 hits=1
+    109.161.210.0/24 hits=1
+  /22 networks=19 max_hits=4 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+    84.255.184.0/22 hits=4
+    94.76.0.0/22 hits=2
+    37.131.104.0/22 hits=2
+  /20 networks=14 max_hits=4 n>=2=6 n>=3=3 n>=5=0 n>=10=0
+    84.255.176.0/20 hits=4
+    94.76.0.0/20 hits=3
+    77.69.224.0/20 hits=3
+  /18 networks=11 max_hits=4 n>=2=8 n>=3=4 n>=5=0 n>=10=0
+    84.255.128.0/18 hits=4
+    89.148.0.0/18 hits=3
+    94.76.0.0/18 hits=3
+  /16 networks=11 max_hits=4 n>=2=8 n>=3=4 n>=5=0 n>=10=0
+    84.255.0.0/16 hits=4
+    77.69.0.0/16 hits=3
+    94.76.0.0/16 hits=3
+
+BY (24 observed IPs)
+  /24 networks=24 max_hits=1 n>=2=0 n>=3=0 n>=5=0 n>=10=0
+    178.120.2.0/24 hits=1
+    178.124.152.0/24 hits=1
+    46.56.199.0/24 hits=1
+  /22 networks=22 max_hits=2 n>=2=2 n>=3=0 n>=5=0 n>=10=0
+    146.120.32.0/22 hits=2
+    37.212.84.0/22 hits=2
+    178.123.100.0/22 hits=1
+  /20 networks=20 max_hits=3 n>=2=3 n>=3=1 n>=5=0 n>=10=0
+    178.120.0.0/20 hits=3
+    146.120.32.0/20 hits=2
+    37.212.80.0/20 hits=2
+  /18 networks=18 max_hits=3 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+    178.120.0.0/18 hits=3
+    146.120.0.0/18 hits=2
+    37.214.0.0/18 hits=2
+  /16 networks=15 max_hits=3 n>=2=6 n>=3=3 n>=5=0 n>=10=0
+    178.120.0.0/16 hits=3
+    146.120.0.0/16 hits=3
+    37.215.0.0/16 hits=3
+
+MG (23 observed IPs)
+  /24 networks=19 max_hits=2 n>=2=4 n>=3=0 n>=5=0 n>=10=0
+    154.120.161.0/24 hits=2
+    129.222.109.0/24 hits=2
+    41.74.211.0/24 hits=2
+  /22 networks=17 max_hits=3 n>=2=4 n>=3=2 n>=5=0 n>=10=0
+    41.74.208.0/22 hits=3
+    154.120.160.0/22 hits=3
+    154.120.140.0/22 hits=2
+  /20 networks=15 max_hits=3 n>=2=6 n>=3=2 n>=5=0 n>=10=0
+    41.74.208.0/20 hits=3
+    154.120.160.0/20 hits=3
+    154.120.128.0/20 hits=2
+  /18 networks=13 max_hits=5 n>=2=6 n>=3=2 n>=5=1 n>=10=0
+    154.120.128.0/18 hits=5
+    41.74.192.0/18 hits=3
+    129.222.64.0/18 hits=2
+  /16 networks=10 max_hits=5 n>=2=6 n>=3=3 n>=5=2 n>=10=0
+    102.17.0.0/16 hits=5
+    154.120.0.0/16 hits=5
+    41.74.0.0/16 hits=3
+
+XK (21 observed IPs)
+  /24 networks=18 max_hits=2 n>=2=3 n>=3=0 n>=5=0 n>=10=0
+    84.22.38.0/24 hits=2
+    185.67.177.0/24 hits=2
+    147.78.161.0/24 hits=2
+  /22 networks=15 max_hits=2 n>=2=6 n>=3=0 n>=5=0 n>=10=0
+    185.67.176.0/22 hits=2
+    194.169.164.0/22 hits=2
+    84.22.36.0/22 hits=2
+  /20 networks=14 max_hits=4 n>=2=5 n>=3=1 n>=5=0 n>=10=0
+    94.100.48.0/20 hits=4
+    185.67.176.0/20 hits=2
+    147.78.160.0/20 hits=2
+  /18 networks=13 max_hits=4 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+    94.100.0.0/18 hits=4
+    84.22.0.0/18 hits=3
+    185.67.128.0/18 hits=2
+  /16 networks=13 max_hits=4 n>=2=5 n>=3=2 n>=5=0 n>=10=0
+    94.100.0.0/16 hits=4
+    84.22.0.0/16 hits=3
+    185.67.0.0/16 hits=2
+
+MM (15 observed IPs)
+  /24 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    202.165.86.0/24 hits=2
+    45.125.5.0/24 hits=1
+    43.252.81.0/24 hits=1
+  /22 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    202.165.84.0/22 hits=2
+    61.4.68.0/22 hits=1
+    65.18.112.0/22 hits=1
+  /20 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    202.165.80.0/20 hits=2
+    45.199.176.0/20 hits=1
+    45.192.128.0/20 hits=1
+  /18 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    202.165.64.0/18 hits=2
+    43.252.64.0/18 hits=1
+    45.192.128.0/18 hits=1
+  /16 networks=14 max_hits=2 n>=2=1 n>=3=0 n>=5=0 n>=10=0
+    202.165.0.0/16 hits=2
+    43.224.0.0/16 hits=1
+    43.252.0.0/16 hits=1

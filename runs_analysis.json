@@ -1,0 +1,3266 @@
+{
+  "runs": [
+    {
+      "allowed_ips": 171, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 231, 
+      "candidate_subnets": 211, 
+      "check_existing": "0", 
+      "countries": {
+        "AM": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AO": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "AZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BE": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "BF": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BG": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "BJ": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BN": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "CG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CI": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "CM": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "CR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CZ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "DE": {
+          "allowed": 13, 
+          "blocked": 0, 
+          "total": 13
+        }, 
+        "DK": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "DO": {
+          "allowed": 8, 
+          "blocked": 0, 
+          "total": 8
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "EE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "FI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FR": {
+          "allowed": 12, 
+          "blocked": 0, 
+          "total": 12
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 17, 
+          "total": 17
+        }, 
+        "GH": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "GR": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "HK": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "HR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "HU": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "IE": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "IL": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "IR": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 11, 
+          "total": 11
+        }, 
+        "JP": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "KG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KW": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "KZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "LK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "LT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "MA": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "MN": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "MU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "MY": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "NA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NL": {
+          "allowed": 12, 
+          "blocked": 0, 
+          "total": 12
+        }, 
+        "NO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NZ": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "PA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "PE": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "PH": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "PK": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "PS": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "QA": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "RS": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "RW": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SE": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SG": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SY": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "TG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "TN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "TW": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "UA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "UG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 57, 
+          "total": 57
+        }, 
+        "UY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "XK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "ZW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }
+      }, 
+      "date": "2026-08-02T14:56:10Z", 
+      "input_ips": 402, 
+      "min_hits": "1", 
+      "path": "runs/20260802-164111", 
+      "run": "20260802-164111", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 188, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 276, 
+      "candidate_subnets": 262, 
+      "check_existing": "0", 
+      "countries": {
+        "AE": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AL": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AO": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 13, 
+          "total": 13
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "BE": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "BF": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "BG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BJ": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BO": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "BY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "CD": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "CG": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "CH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CI": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "CM": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "CR": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "CY": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "DE": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "DO": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "EE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "FI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FR": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "GA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "GH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "GR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GT": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GY": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HN": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "HR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HU": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "IE": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "IL": {
+          "allowed": 9, 
+          "blocked": 0, 
+          "total": 9
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "IQ": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "IR": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "JO": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "JP": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "KG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KR": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "LA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "LB": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "LK": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "LS": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 8, 
+          "blocked": 0, 
+          "total": 8
+        }, 
+        "MA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "MD": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "MG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "MK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ML": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MN": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "MY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "NA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NG": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "NL": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "NZ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "PA": {
+          "allowed": 8, 
+          "blocked": 0, 
+          "total": 8
+        }, 
+        "PE": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "PH": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "PK": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "PS": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "QA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "RE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "RW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SA": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "SD": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "SK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SL": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SV": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SY": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "TG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "TN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TW": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "TZ": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "UG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 66, 
+          "total": 66
+        }, 
+        "UY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "UZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "XK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 11, 
+          "total": 11
+        }, 
+        "ZM": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "ZW": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }
+      }, 
+      "date": "2026-08-02T15:30:01Z", 
+      "input_ips": 464, 
+      "min_hits": "1", 
+      "path": "runs/20260802-165932", 
+      "run": "20260802-165932", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 149, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 198, 
+      "candidate_subnets": 174, 
+      "check_existing": "0", 
+      "countries": {
+        "AE": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "AG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "AO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "AT": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "BA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BB": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BD": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BE": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "BF": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "BG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "BY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "CD": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CI": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "CM": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "CR": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "CY": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CZ": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "DE": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "DK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "DO": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "EC": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "EE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 13, 
+          "total": 13
+        }, 
+        "FR": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "GA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "GR": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "GT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HU": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "IE": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "IL": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "JP": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "KG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "KH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KZ": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "LK": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "LV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "MD": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "MK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ML": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MN": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "NA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NE": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "NG": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "NL": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "NO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NP": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "PA": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "PE": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "PK": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "PR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "PS": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "QA": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "RE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "RS": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "RW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SA": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SD": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SG": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "TJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "TZ": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "UA": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "UG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 54, 
+          "total": 54
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "XK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "ZW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }
+      }, 
+      "date": "2026-08-02T16:36:32Z", 
+      "input_ips": 347, 
+      "min_hits": "1", 
+      "path": "runs/20260802-181707", 
+      "run": "20260802-181707", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 175, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 325, 
+      "candidate_subnets": 313, 
+      "check_existing": "0", 
+      "countries": {
+        "AE": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "AL": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AM": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "AO": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "AT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 17, 
+          "total": 17
+        }, 
+        "AW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "AZ": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "BA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BE": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "BF": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "BH": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "CD": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CG": {
+          "allowed": 9, 
+          "blocked": 0, 
+          "total": 9
+        }, 
+        "CH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CI": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "CM": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "CR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CZ": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "DE": {
+          "allowed": 9, 
+          "blocked": 0, 
+          "total": 9
+        }, 
+        "DK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "DO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "EC": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "EE": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 14, 
+          "total": 14
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 17, 
+          "total": 17
+        }, 
+        "FI": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "FJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FR": {
+          "allowed": 11, 
+          "blocked": 0, 
+          "total": 11
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 23, 
+          "total": 23
+        }, 
+        "GH": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "GN": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "GR": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "HK": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "HT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HU": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "IE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "IL": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "IR": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "JO": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "JP": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "KG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KR": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KW": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "KZ": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "LA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "LB": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "LK": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "LT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "MD": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "MG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "ML": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MM": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "MN": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MU": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MW": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "MY": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "MZ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NG": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "NL": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "NO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "NZ": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "OM": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "PA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "PE": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "PH": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "QA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "RS": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "SA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "SG": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "SK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SL": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "TJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "TW": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "TZ": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "UA": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "UG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 65, 
+          "total": 65
+        }, 
+        "UZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "XK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }
+      }, 
+      "date": "2026-08-03T09:23:25Z", 
+      "input_ips": 500, 
+      "min_hits": "1", 
+      "path": "runs/20260803-103531", 
+      "run": "20260803-103531", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 157, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 330, 
+      "candidate_subnets": 319, 
+      "check_existing": "0", 
+      "countries": {
+        "AL": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AO": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "AT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 16, 
+          "total": 16
+        }, 
+        "AZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BD": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BE": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "BF": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "BG": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "BJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BO": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "BS": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "CG": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "CN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "CZ": {
+          "allowed": 9, 
+          "blocked": 0, 
+          "total": 9
+        }, 
+        "DE": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "DK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "DM": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "DO": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 15, 
+          "total": 15
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 16, 
+          "total": 16
+        }, 
+        "FI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FR": {
+          "allowed": 9, 
+          "blocked": 0, 
+          "total": 9
+        }, 
+        "GA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 24, 
+          "total": 24
+        }, 
+        "GH": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GR": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "HN": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HR": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "HU": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "IE": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "IL": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 24, 
+          "total": 24
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 21, 
+          "total": 21
+        }, 
+        "JP": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "KH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KR": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "KW": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "LA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "LT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "MD": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MN": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 13, 
+          "total": 13
+        }, 
+        "MY": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "NG": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "NL": {
+          "allowed": 11, 
+          "blocked": 0, 
+          "total": 11
+        }, 
+        "NO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NZ": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "PA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "PE": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "PH": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "PK": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 11, 
+          "total": 11
+        }, 
+        "PR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "PY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "QA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "RS": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "SA": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SE": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "SG": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SV": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "TG": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 17, 
+          "total": 17
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "TT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "TW": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "TZ": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "UA": {
+          "allowed": 0, 
+          "blocked": 9, 
+          "total": 9
+        }, 
+        "UG": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 46, 
+          "total": 46
+        }, 
+        "UZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 11, 
+          "total": 11
+        }, 
+        "XK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "ZW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }
+      }, 
+      "date": "2026-08-03T10:14:56Z", 
+      "input_ips": 487, 
+      "min_hits": "1", 
+      "path": "runs/20260803-112642", 
+      "run": "20260803-112642", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 206, 
+      "apply": "1", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 296, 
+      "candidate_subnets": 294, 
+      "check_existing": "0", 
+      "countries": {
+        "AE": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "AM": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "AO": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "AR": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "AT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "AU": {
+          "allowed": 0, 
+          "blocked": 12, 
+          "total": 12
+        }, 
+        "AZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BB": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BD": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "BE": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "BF": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BG": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "BO": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "BR": {
+          "allowed": 0, 
+          "blocked": 8, 
+          "total": 8
+        }, 
+        "BW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "BY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "CA": {
+          "allowed": 0, 
+          "blocked": 16, 
+          "total": 16
+        }, 
+        "CG": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "CH": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "CI": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "CL": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "CM": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "CO": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "CR": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CV": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "CZ": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "DE": {
+          "allowed": 16, 
+          "blocked": 0, 
+          "total": 16
+        }, 
+        "DK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "DO": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "DZ": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "EC": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "EG": {
+          "allowed": 0, 
+          "blocked": 14, 
+          "total": 14
+        }, 
+        "ES": {
+          "allowed": 0, 
+          "blocked": 19, 
+          "total": 19
+        }, 
+        "FJ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "FR": {
+          "allowed": 14, 
+          "blocked": 0, 
+          "total": 14
+        }, 
+        "GA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "GB": {
+          "allowed": 0, 
+          "blocked": 33, 
+          "total": 33
+        }, 
+        "GH": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "GR": {
+          "allowed": 8, 
+          "blocked": 0, 
+          "total": 8
+        }, 
+        "GY": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "HK": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "HN": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "HU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ID": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "IE": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "IL": {
+          "allowed": 8, 
+          "blocked": 0, 
+          "total": 8
+        }, 
+        "IN": {
+          "allowed": 0, 
+          "blocked": 17, 
+          "total": 17
+        }, 
+        "IR": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "IT": {
+          "allowed": 0, 
+          "blocked": 10, 
+          "total": 10
+        }, 
+        "JO": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "JP": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "KE": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "KH": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "KR": {
+          "allowed": 7, 
+          "blocked": 0, 
+          "total": 7
+        }, 
+        "KW": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "KZ": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "LA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LB": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "LK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "LT": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "LY": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MA": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "MD": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "MG": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "MK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ML": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MM": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "MN": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "MU": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "MX": {
+          "allowed": 0, 
+          "blocked": 14, 
+          "total": 14
+        }, 
+        "MY": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "NA": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "NG": {
+          "allowed": 11, 
+          "blocked": 0, 
+          "total": 11
+        }, 
+        "NL": {
+          "allowed": 10, 
+          "blocked": 0, 
+          "total": 10
+        }, 
+        "NO": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "NZ": {
+          "allowed": 6, 
+          "blocked": 0, 
+          "total": 6
+        }, 
+        "OM": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "PA": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "PE": {
+          "allowed": 4, 
+          "blocked": 0, 
+          "total": 4
+        }, 
+        "PH": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "PK": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "PL": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "PT": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "QA": {
+          "allowed": 3, 
+          "blocked": 0, 
+          "total": 3
+        }, 
+        "RE": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "RO": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "RS": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "RU": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "RW": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SA": {
+          "allowed": 0, 
+          "blocked": 2, 
+          "total": 2
+        }, 
+        "SE": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "SG": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "SI": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SK": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SL": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "SO": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "SY": {
+          "allowed": 0, 
+          "blocked": 3, 
+          "total": 3
+        }, 
+        "TH": {
+          "allowed": 0, 
+          "blocked": 5, 
+          "total": 5
+        }, 
+        "TN": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TR": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "TT": {
+          "allowed": 2, 
+          "blocked": 0, 
+          "total": 2
+        }, 
+        "TW": {
+          "allowed": 5, 
+          "blocked": 0, 
+          "total": 5
+        }, 
+        "TZ": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "UA": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "US": {
+          "allowed": 0, 
+          "blocked": 38, 
+          "total": 38
+        }, 
+        "UZ": {
+          "allowed": 0, 
+          "blocked": 1, 
+          "total": 1
+        }, 
+        "VE": {
+          "allowed": 0, 
+          "blocked": 6, 
+          "total": 6
+        }, 
+        "VN": {
+          "allowed": 0, 
+          "blocked": 7, 
+          "total": 7
+        }, 
+        "XK": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }, 
+        "ZA": {
+          "allowed": 0, 
+          "blocked": 4, 
+          "total": 4
+        }, 
+        "ZM": {
+          "allowed": 1, 
+          "blocked": 0, 
+          "total": 1
+        }
+      }, 
+      "date": "2026-08-03T11:17:41Z", 
+      "input_ips": 502, 
+      "min_hits": "1", 
+      "path": "runs/20260803-122957", 
+      "run": "20260803-122957", 
+      "target_prefix": "24"
+    }, 
+    {
+      "allowed_ips": 0, 
+      "apply": "", 
+      "bad_ufw_rules": 0, 
+      "blocked_candidate_ips": 0, 
+      "candidate_subnets": 0, 
+      "check_existing": "", 
+      "countries": {}, 
+      "date": "", 
+      "input_ips": 506, 
+      "min_hits": "", 
+      "path": "runs/20260803-132225", 
+      "run": "20260803-132225", 
+      "target_prefix": ""
+    }
+  ], 
+  "totals": {
+    "allowed_ip_observations": 1046, 
+    "blocked_candidate_ip_observations": 1656, 
+    "runs": 7, 
+    "unique_ips_seen": 3107
+  }
+}

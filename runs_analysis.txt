@@ -1,0 +1,111 @@
+Run analysis
+============
+
+Run | date | apply | check_existing | input IPs | blocked candidate IPs | allowed IPs | candidate subnets | bad UFW rules
+20260802-164111 | 2026-08-02T14:56:10Z | 1 | 0 | 402 | 231 | 171 | 211 | 0
+20260802-165932 | 2026-08-02T15:30:01Z | 1 | 0 | 464 | 276 | 188 | 262 | 0
+  delta vs previous: new_ips=449 repeated_ips=15
+20260802-181707 | 2026-08-02T16:36:32Z | 1 | 0 | 347 | 198 | 149 | 174 | 0
+  delta vs previous: new_ips=327 repeated_ips=20
+20260803-103531 | 2026-08-03T09:23:25Z | 1 | 0 | 500 | 325 | 175 | 313 | 0
+  delta vs previous: new_ips=488 repeated_ips=12
+20260803-112642 | 2026-08-03T10:14:56Z | 1 | 0 | 487 | 330 | 157 | 319 | 0
+  delta vs previous: new_ips=481 repeated_ips=6
+20260803-122957 | 2026-08-03T11:17:41Z | 1 | 0 | 502 | 296 | 206 | 294 | 0
+  delta vs previous: new_ips=496 repeated_ips=6
+20260803-132225 |  |  |  | 506 | 0 | 0 | 0 | 0
+  delta vs previous: new_ips=502 repeated_ips=4
+
+Top countries by blocked candidate IPs
+--------------------------------------
+US 326
+GB 124
+ES 92
+IN 88
+EG 69
+IT 66
+MX 62
+TH 59
+CL 54
+AU 54
+CA 51
+AR 45
+PL 43
+BR 41
+ID 39
+ZA 38
+VN 35
+CO 31
+PH 25
+PT 24
+RU 23
+VE 22
+UA 21
+RO 19
+KE 15
+TR 14
+DZ 12
+KZ 11
+PK 10
+MY 10
+SA 10
+SY 9
+SE 9
+AE 9
+RS 8
+HK 8
+MA 8
+SG 6
+IR 6
+OM 5
+
+Top countries by allowed/non-target IPs
+---------------------------------------
+DE 64
+FR 62
+NL 49
+JP 39
+NG 36
+IL 31
+CG 30
+BE 29
+GR 29
+PE 27
+DO 27
+TW 26
+AO 24
+HU 21
+IE 21
+PA 20
+LY 20
+BG 19
+CZ 19
+KR 19
+NZ 18
+CI 17
+LK 17
+QA 17
+BO 15
+CR 15
+BF 14
+MN 14
+TZ 13
+GH 12
+MG 12
+KW 11
+CM 11
+TG 11
+MD 10
+DK 10
+KG 9
+UG 8
+NO 7
+XK 7
+
+First vs last
+-------------
+first=20260802-164111 last=20260803-132225
+last_new_vs_first=498
+last_repeated_vs_first=8
+last_still_allowed_vs_first=0
+last_still_block_candidate_vs_first=0

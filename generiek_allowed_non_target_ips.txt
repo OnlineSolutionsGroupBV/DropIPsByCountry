@@ -1,291 +1,103 @@
 148.251.129.80 DE Saxony Falkenstein AS24940 Hetzner Online GmbH
-124.218.128.142 TW Takao Kaohsiung AS9922 New Kaohsiung Broadband LTD.
-81.56.144.132 IT Veneto Padua AS29447 Iliad Italia S.p.A
-102.141.53.17 CG Pointe-Noire Pointe-Noire AS36924 GVA Cote d'Ivoire SAS
-154.118.212.239 AO Luanda Luanda AS37645 Finstar - Sociedade de Investimento e Participacoes S.A
-154.116.76.37 GA Estuaire Libreville AS16058 Gabon Telecom / Office of Posts and Telecommunications of Gabon
-83.53.132.207 ES Castille and León Burgos AS3352 TELEFONICA DE ESPANA S.A.U.
-95.145.58.53 GB England London AS2856 British Telecommunications Limited
-91.164.236.175 FR Île-de-France Soisy-sous-Montmorency AS12322 Free SAS
-185.121.2.140 TJ Dushanbe Dushanbe AS208592 LLC NET SOLUTIONS
-185.240.70.167 IT Emilia-Romagna Ravenna AS62166 Spadhausen SRL Unipersonale
-175.157.47.74 LK Western Province Colombo AS18001 Dialog Axiata PLC.
-104.158.140.222 CA Ontario Brampton AS5769 Videotron Ltee
-181.177.133.170 BO Cochabamba Cochabamba AS27839 Comteco Ltda
-138.84.47.206 PA Panamá Panama City AS14593 Space Exploration Technologies Corporation
-91.191.40.194 BA Federation of B&H Mostar AS35567 DASTO semtel d.o.o.
-176.137.108.67 FR Hauts-de-France Hazebrouck AS5410 Bouygues Telecom SA
-213.177.195.184 ES Castille and León Salamanca AS15704 XTRA TELECOM S.A.
-41.59.13.28 TZ Dar es Salaam Region Dar es Salaam AS33765 TANZANIA TELECOMMUNICATIONS CO. LTD
-160.154.133.143 CI Abidjan Autonomous District Abidjan AS29571 Orange Côte d'Ivoire
-101.57.177.182 IT Piedmont Turin AS210278 Sky Italia srl
-38.250.132.104 PE Tumbes Tumbes AS270068 DESARROLLO DE INFRAESTRUCTURA DE TELECOMUNICACIONES PERU S.A.C. (INFRATEL)
-108.172.7.113 CA British Columbia Vancouver AS852 TELUS Communications Inc.
-58.104.80.123 AU Queensland Mackay AS4804 Microplex PTY LTD
-178.59.143.92 GR Attica Petroúpolis AS3329 Vodafone-panafon Hellenic Telecommunications Company SA
-179.57.50.86 CL Los Lagos Region Puerto Montt AS14117 Telefonica del Sur S.A.
-82.5.144.242 GB England Salford AS5089 Virgin Media Limited
-185.137.141.209 ES Andalusia Nerja AS200845 AVATEL TELECOM, SA
-170.203.209.142 CA Alberta Calgary AS14593 Space Exploration Technologies Corporation
-159.180.113.100 GB England London AS2856 British Telecommunications Limited
-154.161.97.129 GH Ashanti Kumasi AS30986 Scancom Limited
-181.197.139.162 PA Colón Arco Iris AS18809 Cable Onda
-197.239.10.53 UG Central Region Kampala AS37075 Airtel Uganda Limited
-86.124.137.208 RO Timiș County Timişoara AS8708 DIGI ROMANIA S.A.
-62.235.185.253 BE Flanders Wortegem AS5432 Proximus NV
-41.182.214.53 NA Karas Region Keetmanshoop AS36996 Telecom Namibia
-77.78.39.78 BG Shumen Veliki Preslav AS61071 NETBOX LTD
-219.50.177.163 JP Aichi Nagoya AS17676 SoftBank Corp.
-185.114.53.28 HN Cortés Department Santa Cruz de Yojoa AS273054 TELEVISION POR CABLE VIA SATELITE CABLE YOJOA TV, SOCIEDAD DE RESPONSABILIDAD LIMITADA
-83.177.196.171 SE Västra Götaland Gothenburg AS1257 Tele2 Sverige AB
-80.194.162.109 GB England Sutton Coldfield AS5089 Virgin Media Limited
-149.90.108.212 PT Porto Vila Nova de Gaia AS12353 Vodafone Portugal
-78.54.2.46 DE State of Berlin Berlin AS6805 Telefonica Germany GmbH & Co.OHG
-164.52.120.3 JP Tokyo Tokyo AS63199 CDS Global Cloud Co., Ltd
-83.135.191.9 DE North Rhine-Westphalia Moers AS8881 1&1 Versatel GmbH
-102.191.237.240 EG Qalyubia Shubrā al Khaymah AS24835 Vodafone Data
-200.113.196.70 HT Ouest Delmas AS27653 Alpha Communications Network
-176.180.140.188 FR Grand Est Strasbourg AS5410 Bouygues Telecom SA
-142.160.28.195 CA Manitoba Winnipeg AS7122 Bell Canada
-200.12.29.227 CL Araucania Villarrica AS264780 HomeNet LTDA
-41.69.28.175 EG Cairo Cairo AS24835 Vodafone Data
-188.36.203.138 HU Pest County Kiskunlacháza AS5483 Magyar Telekom Plc.
-193.115.127.68 AU South Australia Adelaide AS7545 TPG Telecom Limited
-126.218.10.201 JP Yamaguchi Yamaguchi AS17676 SoftBank Corp.
-95.44.179.61 IE Leinster Swords AS5466 Eircom Limited
-158.148.142.21 IT Lombardy Brescia AS16232 Telecom Italia S.p.A.
-14.202.203.78 AU Western Australia Perth AS7545 TPG Telecom Limited
-193.248.88.74 MF Saint Martin Grand-Case AS3215 Orange S.A.
-86.71.47.156 FR Île-de-France Paris AS15557 Societe Francaise Du Radiotelephone - SFR SA
-151.33.23.66 IT Piedmont Turin AS1267 WIND TRE S.P.A.
-111.238.149.20 JP Saitama Sōka AS2516 KDDI CORPORATION
-206.172.80.78 CA Alberta Calgary AS577 Bell Canada
-90.38.214.227 FR New Aquitaine Poitiers AS3215 Orange S.A.
-181.115.60.5 HN Francisco Morazán Department Tegucigalpa AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
-41.158.128.200 GA Estuaire Libreville AS16058 Gabon Telecom / Office of Posts and Telecommunications of Gabon
-102.86.1.83 UG Central Region Kampala AS37075 Airtel Uganda Limited
-102.209.111.251 UG Central Region Kampala AS329415 Savanna Fibre Limited
-59.127.47.232 TW Taipei Banqiao AS3462 Data Communication Business Group
-88.14.2.71 ES Basque Country Gasteiz / Vitoria AS3352 TELEFONICA DE ESPANA S.A.U.
-190.114.41.70 CL Santiago Metropolitan Santiago AS27901 Pacifico Cable SPA.
-195.213.218.210 GB England London AS6871 Plusnet
-217.64.107.155 ML Bamako Bamako AS21271 Society of Mali's Telecommunications (SOTELMA)
-168.167.81.161 BW Gaborone Gaborone AS14988 Botswana Telecommunications Corporation
-102.43.191.59 EG Kafr el-Sheikh Disūq AS8452 TE-AS
-102.18.157.44 MG Analamanga Antananarivo AS37054 Telecom Malagasy
-154.161.179.140 GH Greater Accra Accra AS30986 Scancom Limited
-181.115.99.73 HN Atlántida Department La Ceiba AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
-186.64.223.79 CR Cartago Province Quebradilla AS52228 Cable Tica
-188.71.195.67 KW Al Farwaniyah Al Farwānīyah AS29357 NATIONAL MOBILE TELECOMMUNICATIONS COMPANY K.S.C.P.
-77.54.224.194 PT Porto Porto AS12353 Vodafone Portugal
-51.175.25.246 NO Østfold Fredrikstad AS29695 Lyse Tele AS
-80.1.90.181 GB England Portsmouth AS5089 Virgin Media Limited
-94.246.156.19 PL Silesia Jaworzno AS33923 ART-COM Sp. z o.o.
-212.104.184.147 ES Castille-La Mancha Las Pedroñeras AS200845 AVATEL TELECOM, SA
-80.5.47.205 GB England Stevenage AS5089 Virgin Media Limited
-154.160.3.207 GH Greater Accra Accra AS30986 Scancom Limited
-137.255.32.155 BJ Atlantique Abomey-Calavi AS328228 SOCIETE BENINOISE D'INFRASTRUCTURES NUMERIQUES
-78.70.37.173 SE Stockholm Stockholm AS3301 Telia Company AB
-46.136.36.158 ES Valencia Valencia AS12430 VODAFONE ESPANA S.A.U.
-141.8.66.252 MT Il-Ħamrun Ħamrun AS12709 Melita Limited
-129.222.59.45 GT Guatemala Guatemala City AS14593 Space Exploration Technologies Corporation
-90.129.197.211 SE Stockholm Kista AS1257 Tele2 Sverige AB
-219.98.12.120 JP Tochigi Kanuma AS2527 Sony Network Communications Inc.
-105.112.183.237 NG Lagos Lagos AS36873 Airtel Networks Limited
-185.74.85.198 PL Lublin Chełm AS60782 Inter Plus Sp. z o.o.
-81.172.69.39 ES Murcia Molina de Segura AS29119 AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL
-174.114.230.133 CA Ontario Gloucester AS812 Rogers Communications Canada Inc.
-109.77.56.164 IE Leinster Dublin AS15502 Vodafone Ireland Limited
-175.157.109.126 LK Western Province Colombo AS18001 Dialog Axiata PLC.
-93.233.172.40 DE Hesse Frankenberg AS3320 Deutsche Telekom AG
-188.71.210.73 KW Al Farwaniyah Al Farwānīyah AS29357 NATIONAL MOBILE TELECOMMUNICATIONS COMPANY K.S.C.P.
-88.27.150.90 ES Madrid Madrid AS3352 TELEFONICA DE ESPANA S.A.U.
-188.26.209.152 ES Madrid Madrid AS57269 DIGI SPAIN TELECOM S.A
-38.252.48.111 LY Tripoli Tripoli AS328539 Giga for Telecommunication and Technology Limited
-190.61.118.161 HN Francisco Morazán Department Tegucigalpa AS52468 UFINET PANAMA S.A.
-31.127.36.42 GB England Scholes AS2856 British Telecommunications Limited
-190.238.105.39 PE Lima Province Lima AS6147 INTEGRATEL PERÚ S.A.A.
-89.211.129.239 QA Baladiyat ar Rayyan Ar Rayyān AS8781 Ooredoo Q.S.C.
-88.180.254.199 FR Provence-Alpes-Côte d'Azur Brignoles AS12322 Free SAS
-77.224.228.168 ES Andalusia Málaga AS12430 VODAFONE ESPANA S.A.U.
-83.23.7.101 PL Kujawsko-Pomorskie Toruń AS5617 Orange Polska Spolka Akcyjna
-77.97.34.223 GB England Walsall AS5089 Virgin Media Limited
-166.114.133.44 BO La Paz Department La Paz AS6568 EMPRESA NACIONAL DE TELECOMUNICACIONES SOCIEDAD ANONIMA
-179.6.6.157 PE Lima Province Lima AS12252 America Movil Peru S.A.C.
-91.56.45.102 DE Hamburg Hamburg AS3320 Deutsche Telekom AG
-185.69.144.145 GB England London AS25135 Vodafone Limited
-90.125.35.39 FR Bourgogne Dijon AS3215 Orange S.A.
-85.85.30.21 GR Attica Koropí AS12338 Euskaltel S.A.
-41.186.133.102 RW Kigali Kigali AS36890 MTN Rwandacell
-176.251.130.66 GB England Bristol AS5607 Sky UK Limited
-86.89.128.22 NL South Holland Schiedam AS1136 KPN B.V.
-102.70.116.22 MW Southern Region Blantyre AS37294 TELEKOM NETWORKS MALAWI LTD
-86.30.192.46 GB England Enfield Town AS5089 Virgin Media Limited
-109.23.173.97 FR Île-de-France Conflans-Sainte-Honorine AS15557 Societe Francaise Du Radiotelephone - SFR SA
-102.67.249.81 CI Abidjan Autonomous District Abidjan AS36924 GVA Cote d'Ivoire SAS
-91.191.21.82 BA Srpska Bijeljina AS35567 DASTO semtel d.o.o.
-82.15.35.248 GB England Harlow AS5089 Virgin Media Limited
-186.15.99.139 CR San José San Isidro AS52228 Cable Tica
-77.98.149.30 GB England Rotherham AS5089 Virgin Media Limited
-179.60.69.18 CL Santiago Metropolitan Maipú AS27901 Pacifico Cable SPA.
-79.51.15.206 IT Veneto Mestre AS3269 Telecom Italia S.p.A.
-197.54.253.176 EG Sharqia Al ‘Āshir min Ramaḑān AS8452 TE-AS
-102.178.226.68 BF Centre Ouagadougou AS37577 Orange Burkina Faso
-78.150.91.34 GB England Woking AS13285 TalkTalk Communications Limited
-93.231.70.16 DE North Rhine-Westphalia Detmold AS3320 Deutsche Telekom AG
-165.16.58.105 LY Jabal al Gharbi Yafran AS37284 Aljeel Aljadeed For Technology
-89.139.123.243 IL Northern District Yoqne‘am ‘Illit AS1680 Cellcom Fixed Line Communication L.P
-151.18.161.202 IT Lombardy Milan AS1267 WIND TRE S.P.A.
-190.59.216.103 TT San Juan/Laventille Laventille AS5639 Telecommunication Services of Trinidad and Tobago
-91.242.114.154 MD Chișinău Municipality Chisinau AS35346 www.eurotelecom.org
-82.59.72.60 IT Tuscany Florence AS3269 Telecom Italia S.p.A.
-118.92.220.42 NZ Auckland Auckland AS9500 One New Zealand Group Limited
-86.142.240.26 GB England Redditch AS2856 British Telecommunications Limited
-54.246.174.239 IE Leinster Dublin AS16509 Amazon.com, Inc.
-154.115.221.20 SO Woqooyi Galbeed Hargeysa AS37473 Telesom
-88.161.132.21 FR Île-de-France Paris AS12322 Free SAS
-185.50.57.75 BA Federation of B&H Živinice AS212572 NEON Solucije d.o.o. Kalesija
-79.146.149.101 ES Madrid Madrid AS3352 TELEFONICA DE ESPANA S.A.U.
-194.118.122.9 AT Lower Austria Pressbaum AS8447 A1 Telekom Austria AG
-49.159.74.197 TW Takao Kaohsiung AS24165 UNION BROADBAND NETWORK
-141.193.149.124 CA Ontario Owen Sound AS32473 Eh!Tel Networks Inc.
-94.112.225.155 CZ South Moravian Kuřim AS16019 Vodafone Czech Republic a.s.
-72.50.63.29 PR San Juan San Juan AS10396 DATACOM CARIBE, INC.
-84.197.86.194 BE Flanders Antwerp AS6848 Telenet BV
-88.175.13.159 FR Hauts-de-France Liancourt AS12322 Free SAS
-85.240.145.190 PT Faro Portimão AS3243 MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.
-47.61.186.40 ES Madrid Madrid AS12430 VODAFONE ESPANA S.A.U.
-190.140.113.37 PA Colón Arco Iris AS18809 Cable Onda
-181.115.63.35 HN Francisco Morazán Department Tegucigalpa AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
-93.44.207.99 IT Lombardy Milan AS12874 Fastweb SpA
-186.4.55.0 CR Alajuela Province Grecia AS262197 MILLICOM CABLE COSTA RICA S.A.
-197.59.189.222 EG Minya Minya AS8452 TE-AS
-81.220.254.109 FR Hauts-de-France Merville AS15557 Societe Francaise Du Radiotelephone - SFR SA
-194.12.38.132 CZ Hradec Králové Region Trutnov AS49985 IP4ISP z.s.p.o
-80.108.44.19 AT Vorarlberg Dornbirn AS8412 T-Mobile Austria GmbH
-197.214.238.242 CG Brazzaville Brazzaville AS37550 Airtel Congo S.A
-31.27.218.17 IT Lazio Rome AS30722 Fastweb SpA
-82.9.102.161 GB Wales Cardiff AS5089 Virgin Media Limited
-81.43.70.180 ES Madrid Madrid AS3352 TELEFONICA DE ESPANA S.A.U.
-191.114.218.119 CL Los Ríos Region La Unión AS7418 TELEFÓNICA CHILE S.A.
-38.250.131.27 PE Lambayeque Lambayeque AS270068 DESARROLLO DE INFRAESTRUCTURA DE TELECOMUNICACIONES PERU S.A.C. (INFRATEL)
-87.172.202.237 DE Bavaria Burglengenfeld AS3320 Deutsche Telekom AG
-194.141.2.1 BG Sofia-Capital Sofia AS6802 Bulgarian Research and Education Network Association (BREN)
-196.170.87.246 TG Maritime Lomé AS24691 TogoTelecom, Togo
-197.214.238.109 CG Brazzaville Brazzaville AS37550 Airtel Congo S.A
-77.25.46.182 DE Lower Saxony Hannover AS3209 Vodafone GmbH
-92.186.18.167 ES Canary Islands Las Palmas de Gran Canaria AS12479 Orange Espagne SA
-98.97.79.233 NG Lagos Lagos AS14593 Space Exploration Technologies Corporation
-109.148.150.66 GB England West Wickham AS2856 British Telecommunications Limited
-5.56.122.5 MD Chișinău Municipality Codru AS8926 Moldtelecom SA
-102.209.221.87 CI Abidjan Autonomous District Abidjan AS29571 Orange Côte d'Ivoire
-194.212.224.69 CZ Ústí nad Labem Region Děčín AS13036 T-Mobile Czech Republic a.s.
-102.16.240.132 MG Analamanga Antananarivo AS37054 Telecom Malagasy
-197.43.0.28 EG Gharbia Tanta AS8452 TE-AS
-85.49.56.200 ES Canary Islands Arrecife AS12479 Orange Espagne SA
-41.73.104.226 ML Bamako Bamako AS30985 Orange Mali SA
-102.23.35.211 BF Centre Ouagadougou AS36924 GVA Cote d'Ivoire SAS
-85.94.123.214 ME Podgorica Podgorica AS8585 Crnogorski Telekom a.d.Podgorica
-186.177.190.161 CR San José San José AS262197 MILLICOM CABLE COSTA RICA S.A.
-147.235.217.188 IL Northern District Nazareth AS6810 "Bezeq"- THE ISRAEL TELECOMMUNICATION CORP. LTD.
-197.214.238.18 CG Brazzaville Brazzaville AS37550 Airtel Congo S.A
-92.139.174.26 FR Pays de la Loire Saint-Nazaire AS3215 Orange S.A.
-190.114.32.87 CL Santiago Metropolitan Santiago AS27901 Pacifico Cable SPA.
-197.32.18.103 EG Dakahlia Al Mansurah AS8452 TE-AS
-79.116.228.119 ES Madrid Madrid AS57269 DIGI SPAIN TELECOM S.A
-86.49.251.58 CZ Prague Prague AS16019 Vodafone Czech Republic a.s.
-41.236.92.86 EG North Sinai Arīsh AS8452 TE-AS
-41.66.127.194 AT State of Vienna Vienna AS51265 Mass Response Service GmbH
-156.197.255.22 EG Dakahlia Al Mansurah AS8452 TE-AS
-179.60.72.202 CL Santiago Metropolitan Santiago AS27901 Pacifico Cable SPA.
-86.209.113.232 FR New Aquitaine Varetz AS3215 Orange S.A.
-41.238.136.26 EG Alexandria Alexandria AS8452 TE-AS
-154.161.159.35 GH Greater Accra Accra AS30986 Scancom Limited
-190.108.204.65 GY Demerara-Mahaica Georgetown AS52253 E-Networks Inc.
-197.58.144.75 EG Qalyubia Al Khuşūş AS8452 TE-AS
-166.114.136.16 BO La Paz Department La Paz AS6568 EMPRESA NACIONAL DE TELECOMUNICACIONES SOCIEDAD ANONIMA
-197.221.251.132 ZW Harare Harare AS37204 Telone PVT Ltd
-77.38.145.216 LV Riga Riga AS20910 SIA BITE Latvija
-102.129.75.44 CG Brazzaville Brazzaville AS37451 CONGO TELECOM
-121.128.84.20 KR Seoul Seoul AS4766 Korea Telecom
-178.153.163.198 QA Baladiyat ad Dawhah Doha AS8781 Ooredoo Q.S.C.
-102.209.111.49 UG Central Region Kampala AS329415 Savanna Fibre Limited
-156.221.150.219 EG Aswan Aswān AS8452 TE-AS
-37.188.152.115 CZ Moravian-Silesian Region Ostrava AS5610 O2 Czech Republic, a.s.
-200.104.169.76 CL Santiago Metropolitan Santiago AS22047 VTR BANDA ANCHA S.A.
-37.65.111.218 FR Occitanie Toulouse AS15557 Societe Francaise Du Radiotelephone - SFR SA
-179.49.113.230 HN Copán Department Copán Ruinas AS262234 ASOCIACION DE SERVICIO DE INTERNET S. DE RL.
-156.45.132.94 CA Ontario Hamilton AS7992 Cogeco Connexion Inc.
-1.42.115.99 AU New South Wales Sydney AS4804 Microplex PTY LTD
-62.4.58.4 ME Tivat Milovići AS43940 Drustvo za telekomunikacije "MTEL" DOO
-45.215.251.204 ZM Lusaka Province Lusaka AS37287 Zain Zambia PLC
-83.57.94.141 ES Canary Islands Santa Cruz de Tenerife AS3352 TELEFONICA DE ESPANA S.A.U.
-197.186.2.229 TZ Dar es Salaam Region Dar es Salaam AS37133 Airtel Tanzania
-217.74.224.224 ZW Harare Harare AS30844 Liquid Telecommunications Ltd
-197.214.239.11 CG Pointe-Noire Pointe-Noire AS37550 Airtel Congo S.A
-84.90.195.179 PT Faro Portimão AS13156 NOWO COMMUNICATIONS, S.A.
-98.97.76.250 NG Lagos Lagos AS14593 Space Exploration Technologies Corporation
-83.194.207.63 FR Grand Est Golbey AS3215 Orange S.A.
-219.249.95.180 KR Busan Busan AS9318 SK Broadband Co Ltd
-186.151.97.175 CR San José San Rafael AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
-82.30.112.137 GB England Borehamwood AS5089 Virgin Media Limited
-82.226.156.221 FR Hauts-de-France Lens AS12322 Free SAS
-141.134.152.16 BE Flanders Deinze AS6848 Telenet BV
-143.246.182.2 GB England London AS214716 WEYRO LTD
-102.64.164.148 TG Maritime Lomé AS36924 GVA Cote d'Ivoire SAS
-89.77.87.56 PL Mazovia Warsaw AS9141 P4 Sp. z o.o.
+86.71.230.63 FR Provence-Alpes-Côte d'Azur Nice AS15557 Societe Francaise Du Radiotelephone - SFR SA
+82.123.161.206 GF Guyane Cayenne AS3215 Orange S.A.
+92.53.30.86 MK Grad Skopje Skopje AS43612 Company for communications services A1 Makedonija DOOEL Skopje
+88.191.102.50 FR Hauts-de-France Faches-Thumesnil AS12322 Free SAS
+102.208.120.47 CD Kinshasa Kinshasa AS36924 GVA Cote d'Ivoire SAS
+102.113.109.1 MU Plaines Wilhems Vacoas AS23889 Mauritius Telecom Ltd
+188.101.45.0 DE Bavaria Munich AS3209 Vodafone GmbH
+79.249.37.46 DE Baden-Wurttemberg Stuttgart AS3320 Deutsche Telekom AG
+161.0.210.113 HN Francisco Morazán Department Tegucigalpa AS20299 Newcom Limited
+178.118.79.117 BE Flanders Roeselare AS6848 Telenet BV
+188.109.47.245 DE Hesse Frankfurt am Main AS3209 Vodafone GmbH
+83.198.78.28 RE Reunion Saint-Denis AS3215 Orange S.A.
+41.243.30.18 CD Kinshasa Kinshasa AS37020 CELTEL DRC
+93.222.58.81 DE Schleswig-Holstein Heide AS3320 Deutsche Telekom AG
+86.213.68.89 FR New Aquitaine Bordeaux AS3215 Orange S.A.
+88.162.204.79 FR Occitanie Bagnols-sur-Cèze AS12322 Free SAS
+45.186.105.247 GT Guatemala Guatemala City AS52468 UFINET PANAMA S.A.
+176.128.238.86 FR Île-de-France Paris AS5410 Bouygues Telecom SA
+201.238.124.88 TT Port of Spain Port of Spain AS27924 AMPLIA COMMUNICATIONS LTD.
+152.53.110.171 AT State of Vienna Vienna AS197540 netcup GmbH
+81.64.226.90 FR Hauts-de-France Creil AS15557 Societe Francaise Du Radiotelephone - SFR SA
+154.67.91.209 RE Reunion Saint-Denis AS21351 Canal + Telecom SAS
+154.119.210.75 GA Estuaire Libreville AS16058 Gabon Telecom / Office of Posts and Telecommunications of Gabon
+62.68.168.252 JE St Helier Saint Helier AS8680 Sure (Guernsey) Limited
+197.249.63.230 MZ Maputo City Maputo AS25139 TVCABO - Comunicacoes Multimedia, Lda
+200.113.238.217 HT Ouest Port-au-Prince AS27653 Alpha Communications Network
+93.187.1.183 JE St Helier Saint Helier AS8681 JT (Jersey) Limited
+89.0.1.14 DE North Rhine-Westphalia Köln AS8422 NetCologne Gesellschaft fur Telekommunikation mbH
+79.252.85.212 DE Saxony Kamenz AS3320 Deutsche Telekom AG
+88.163.146.95 FR Provence-Alpes-Côte d'Azur Saint-Maximin-la-Sainte-Baume AS12322 Free SAS
+92.64.125.65 NL Utrecht Utrecht AS1136 KPN B.V.
+86.33.95.122 HR Zagreb Zagreb AS205714 Telemach Hrvatska d.o.o.
+77.163.15.142 NL North Brabant Someren AS1136 KPN B.V.
+92.129.226.18 FR Rhône-Alpes Chambéry AS3215 Orange S.A.
+81.64.230.5 FR Hauts-de-France Méru AS15557 Societe Francaise Du Radiotelephone - SFR SA
+185.68.78.170 DE Baden-Wurttemberg Leutenbach AS197637 ropa GmbH
+217.64.110.202 ML Bamako Bamako AS21271 Society of Mali's Telecommunications (SOTELMA)
 109.134.6.23 BE Flanders Antwerp AS5432 Proximus NV
-94.234.79.245 SE Södermanland Eskilstuna AS8434 Telenor Sverige AB
-82.63.127.96 IT Lazio Rome AS3269 Telecom Italia S.p.A.
-83.132.61.36 PT Porto Porto AS2860 NOS COMUNICACOES, S.A.
-196.134.124.195 EG Dakahlia Al Mansurah AS36935 Vodafone Data
-185.238.223.7 GB England London AS201838 Community Fibre Limited
-176.141.83.31 FR Occitanie Marsillargues AS5410 Bouygues Telecom SA
-62.45.67.245 NL South Holland The Hague AS15435 DELTA Fiber Nederland B.V.
-143.105.37.169 ZW Harare Harare AS14593 Space Exploration Technologies Corporation
-154.74.176.25 TZ Dodoma Dodoma AS37035 MIC TANZANIA LTD
-154.160.19.20 GH Greater Accra Accra AS30986 Scancom Limited
-102.209.223.67 CI Abidjan Autonomous District Abidjan AS29571 Orange Côte d'Ivoire
-46.102.189.27 IT Sardinia Sassari AS56550 STEL S.R.L.
-190.140.114.54 PA Chiriquí Province David AS18809 Cable Onda
-68.150.44.12 CA Alberta Barrhead AS6327 Shaw Communications
-176.107.105.186 PL Pomerania Nowa Wieś Lęborska AS12741 Netia SA
-82.14.243.73 GB England Camberley AS5089 Virgin Media Limited
-196.171.24.32 TG Maritime Lomé AS24691 TogoTelecom, Togo
-205.217.255.243 DM Saint Andrew Parish Woodford Hill AS11139 Cable & Wireless Dominica
-160.120.39.100 CI Abidjan Autonomous District Abidjan AS29571 Orange Côte d'Ivoire
-170.89.231.87 CA Quebec Saint-Georges AS4540 SOGETEL INC
-75.155.85.112 CA Alberta Edson AS852 TELUS Communications Inc.
-148.101.19.3 DO Nacional Santo Domingo AS6400 Compañía Dominicana de Teléfonos S. A.
-89.245.27.191 DE Lower Saxony Wilhelmshaven AS8881 1&1 Versatel GmbH
-102.178.166.235 BF Hauts-Bassins Bobo-Dioulasso AS37577 Orange Burkina Faso
-109.163.131.44 BA Federation of B&H Sarajevo AS9146 BIHNET Autonomus System
-179.7.180.237 PE Arequipa Arequipa AS12252 America Movil Peru S.A.C.
-202.39.15.115 TW Taiwan Taoyuan AS3462 Data Communication Business Group
-38.253.148.74 PE Lima region San Isidro AS265691 WI-NET TELECOM S.A.C.
-46.210.153.47 IL Tel Aviv Tel Aviv AS1680 Cellcom Fixed Line Communication L.P
-197.221.251.54 ZW Harare Harare AS37204 Telone PVT Ltd
-82.11.99.48 GB England Bedford AS5089 Virgin Media Limited
-197.186.69.17 TZ Dar es Salaam Region Dar es Salaam AS37133 Airtel Tanzania
-82.74.191.245 NL Friesland Blesdijke AS33915 Vodafone Libertel B.V.
-88.162.157.3 FR Île-de-France Saint-Arnoult-en-Yvelines AS12322 Free SAS
-2.157.113.211 IT Lombardy Milan AS24608 WIND TRE S.P.A.
-86.123.73.157 RO Iași County Iaşi AS8708 DIGI ROMANIA S.A.
-190.140.22.85 PA Coclé Los Pollos AS18809 Cable Onda
-77.70.125.192 BG Veliko Tarnovo Veliko Tŭrnovo AS29580 A1 Bulgaria EAD
-85.11.157.52 BG Sofia-Capital Sofia AS25147 Ecoplast EOOD
-81.132.173.157 GB England Wisbech AS2856 British Telecommunications Limited
-158.47.242.13 IT Umbria Perugia AS202098 ENEL S.p.A
-80.187.87.194 DE State of Berlin Berlin AS3320 Deutsche Telekom AG
-196.170.53.97 TG Maritime Lomé AS24691 TogoTelecom, Togo
-80.98.50.178 HU Budapest Budapest AS21334 2Connect Telecommunications Infrastructure & Network Services Ltd.
-95.42.14.200 BG Sofia-Capital Sofia AS8866 Vivacom Bulgaria EAD
-79.117.178.127 ES Andalusia Mairena del Aljarafe AS57269 DIGI SPAIN TELECOM S.A
-102.64.218.204 TG Maritime Lomé AS36924 GVA Cote d'Ivoire SAS
-196.249.122.15 TZ Dar es Salaam Region Dar es Salaam AS327885 Viettel Tanzania PLC
-179.49.202.29 DO Nacional Santo Domingo AS272112 TELECABLE DOMINICANO, S.A.
-102.64.217.65 TG Maritime Lomé AS36924 GVA Cote d'Ivoire SAS
-102.129.81.39 CG Brazzaville Brazzaville AS37451 CONGO TELECOM
-180.177.24.217 TW Taipei Banqiao AS38841 kbro CO. Ltd.
-41.174.145.1 CD Kinshasa Kinshasa AS30844 Liquid Telecommunications Ltd
-209.227.186.137 CA Quebec Montréal AS11814 Distributel Communications Limited
+190.53.248.46 HN Francisco Morazán Department Tegucigalpa AS52262 Telefónica Celular S.A
+80.12.253.222 RE Reunion Saint-Denis AS199140 Orange S.A.
+190.148.49.70 GT Guatemala Guatemala City AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
+91.17.132.248 DE North Rhine-Westphalia Krefeld AS3320 Deutsche Telekom AG
+74.244.197.71 ZW Harare Harare AS14593 Space Exploration Technologies Corporation
+129.222.69.188 SD Khartoum Khartoum AS14593 Space Exploration Technologies Corporation
+58.97.218.95 KH Phnom Penh Phnom Penh AS131178 EZECOM CO., LTD.
+89.188.14.6 NL Flevoland Lelystad AS31477 Duocast B.V.
+93.103.202.38 SI Municipality of Brežice Brežice AS34779 T-2, d.o.o.
+109.175.26.172 BA Federation of B&H Tuzla AS9146 BIHNET Autonomus System
+156.232.57.90 CV Praia Praia AS37517 CABO VERDE TELECOM, S.A
+190.148.49.67 GT Guatemala Guatemala City AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
+90.22.70.175 FR Normandy Argentan AS3215 Orange S.A.
+109.89.179.24 BE Wallonia Mons AS12392 Orange Belgium SA
+201.247.170.212 SV La Libertad Department Santa Tecla AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
+88.180.147.47 FR Brittany Loudéac AS12322 Free SAS
+185.127.211.149 DE Mecklenburg-Vorpommern Sellin AS12693 e.discom Telekommunikation GmbH
+141.8.77.38 MT Saint Paul’s Bay San Pawl il-Baħar AS12709 Melita Limited
+89.200.205.53 NL Flevoland Lelystad AS31477 Duocast B.V.
+41.186.166.155 RW Kigali Kigali AS36890 MTN Rwandacell
+217.16.86.62 MK Grad Skopje Skopje AS16333 Company for communications services A1 Makedonija DOOEL Skopje
+181.115.60.202 HN Francisco Morazán Department Tegucigalpa AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
+93.207.229.23 DE Bavaria Friedberg AS3320 Deutsche Telekom AG
+181.41.123.202 GY Demerara-Mahaica Georgetown AS19863 Guyana Telephone & Telegraph Co.
+139.138.199.139 CY Nicosia Nicosia AS35432 Cablenet Communication Systems plc
+209.212.196.150 MV Kaafu Atoll Hulhumale AS7642 Dhivehi Raajjeyge Gulhun Public Limited Company
+31.16.232.63 DE Lower Saxony Northeim AS3209 Vodafone GmbH
+137.115.3.192 MW Central Region Lilongwe AS37440 Airtel Malawi Ltd
+95.112.163.115 DE Bavaria Munich AS6805 Telefonica Germany GmbH & Co.OHG
+62.228.82.237 CY Nicosia Nicosia AS6866 Cyprus Telecommunications Authority
+176.153.141.177 FR Grand Est Sainte-Croix-aux-Mines AS5410 Bouygues Telecom SA
+190.80.50.173 GY Demerara-Mahaica Georgetown AS19863 Guyana Telephone & Telegraph Co.
+45.117.242.230 FJ Central Nasinu AS45355 Digicel Fiji Limited
+80.240.8.156 LT Vilnius Vilnius AS21412 UAB Cgates
+92.208.173.244 DE Baden-Wurttemberg Stuttgart AS3209 Vodafone GmbH
+79.125.193.77 MK Grad Skopje Skopje AS6821 Makedonski Telekom AD-Skopje
+190.80.12.129 GY Demerara-Mahaica Georgetown AS19863 Guyana Telephone & Telegraph Co.
+197.215.22.239 SL Western Area Freetown AS37164 Orange (SL) Limited
+81.241.164.26 BE Wallonia Charleroi AS5432 Proximus NV
+88.189.246.110 FR Hauts-de-France Ambleny AS12322 Free SAS
+212.52.34.103 LT Panevėžys Panevėžys AS21412 UAB Cgates
+128.79.7.146 FR Hauts-de-France Tourcoing AS5410 Bouygues Telecom SA
+190.61.115.196 SV San Salvador Department San Salvador AS52468 UFINET PANAMA S.A.
+77.71.164.50 MT Saint Paul’s Bay San Pawl il-Baħar AS12709 Melita Limited
+31.164.232.196 CH Bern Lyss AS6730 Sunrise GmbH
+183.182.120.24 LA Champasak Province Pakse AS131267 Star Telecom
+45.215.255.157 ZM Lusaka Province Lusaka AS37287 Zain Zambia PLC
+176.151.169.153 FR Île-de-France Argenteuil AS5410 Bouygues Telecom SA
+109.88.203.74 BE Wallonia Mons AS12392 Orange Belgium SA
+88.176.131.240 FR Provence-Alpes-Côte d'Azur Marseille AS12322 Free SAS
+77.134.34.14 FR Occitanie Toulouse AS15557 Societe Francaise Du Radiotelephone - SFR SA
+41.79.198.12 SO Woqooyi Galbeed Hargeysa AS37425 SomCable
+188.110.82.212 DE Saarland Völklingen AS3209 Vodafone GmbH
+45.173.216.20 GT Guatemala Mixco AS267828 Señal Nacional S.A.
+41.243.30.3 CD Kinshasa Kinshasa AS37020 CELTEL DRC
+80.132.124.30 DE Bavaria Bad Königshofen im Grabfeld AS3320 Deutsche Telekom AG
+93.121.230.67 GP Guadeloupe Les Abymes AS21351 Canal + Telecom SAS
+190.148.126.165 GT Guatemala Guatemala City AS14754 TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA
+94.238.8.229 FR Île-de-France Paris AS5410 Bouygues Telecom SA
+190.150.67.133 SV San Salvador Department San Salvador AS27773 MILLICOM CABLE EL SALVADOR S.A. DE C.V.
+217.149.162.53 AT Styria Graz AS8447 A1 Telekom Austria AG
+84.153.232.130 DE Brandenburg Prenzlau AS3320 Deutsche Telekom AG
+37.25.87.121 MK Grad Skopje Skopje AS6821 Makedonski Telekom AD-Skopje
+185.211.18.159 DE Schleswig-Holstein Schleswig AS197637 ropa GmbH
