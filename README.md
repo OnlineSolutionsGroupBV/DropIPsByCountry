@@ -685,6 +685,32 @@ python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
 If `audit_generiek_subnets.py --fail-on-overlap` exits non-zero, do not apply the
 UFW rules until the overlapping OpenAI/Google/Bing ranges are handled.
 
+## Server-status cron monitor
+
+Run the blocker only when Apache server-status is above a busy-worker threshold:
+
+```bash
+PYTHON=python2 python2 monitor_server_status_blocks.py \
+  --url https://www.nieuwejobs.com/server-status \
+  --threshold 200
+```
+
+The monitor uses a lock directory so overlapping cron runs skip automatically.
+When the threshold is exceeded it saves the response to `last_server_status.txt`
+and `input.txt`, then runs `./run_prepare_generiek_blocks.sh`.
+
+Dry-run test:
+
+```bash
+PYTHON=python2 python2 monitor_server_status_blocks.py --threshold 200 --dry-run
+```
+
+Crontab every 30 minutes:
+
+```cron
+*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --threshold 200 >> monitor_server_status_blocks.log 2>&1
+```
+
 ## 📂 File Structure  
 
 ```
