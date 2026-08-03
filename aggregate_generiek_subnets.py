@@ -8,7 +8,12 @@ import json
 import re
 import sys
 
-from country_policy import DEFAULT_COUNTRY_CODES, effective_country_codes
+from country_policy import (
+    DEFAULT_COUNTRY_CODES,
+    default_country_block_policy,
+    effective_country_codes,
+    is_safe_provider,
+)
 
 try:
     text_type = unicode  # Py2
@@ -136,6 +141,96 @@ def build_subnets_from_geo(geo_data, country_codes, target_prefix, min_hits, sou
     return build_subnets_from_ips(ips, target_prefix, min_hits)
 
 
+def load_country_policy(path, country_codes):
+    policy = default_country_block_policy()
+    allowed = set(country_codes)
+    if not path:
+        return dict((country, policy[country]) for country in policy if country in allowed)
+
+    with open(path, "r") as f:
+        data = json.load(f)
+
+    rows = data.get("countries", []) if isinstance(data, dict) else []
+    for row in rows:
+        country = to_text(row.get("country", "")).upper()
+        if not country or country not in allowed:
+            continue
+        rec = row.get("recommendation", {})
+        if "target_prefix" not in rec:
+            continue
+        policy[country] = {
+            "target_prefix": int(rec.get("target_prefix")),
+            "min_hits": int(rec.get("min_hits", 1)),
+            "reason": rec.get("reason", "country recommendation"),
+        }
+    return dict((country, policy[country]) for country in policy if country in allowed)
+
+
+def load_provider_policy_candidates(path):
+    if not path:
+        return []
+    with open(path, "r") as f:
+        data = json.load(f)
+    rows = data.get("providers", []) if isinstance(data, dict) else []
+    cidrs = []
+    seen = set()
+    for row in rows:
+        rec = row.get("recommendation", {})
+        if rec.get("decision") != "CANDIDATE":
+            continue
+        for cidr in row.get("candidate_cidrs", []):
+            try:
+                net = str(ip_network(cidr, strict=False))
+            except ValueError:
+                continue
+            if net not in seen:
+                cidrs.append(net)
+                seen.add(net)
+    return cidrs
+
+
+def build_subnets_from_geo_policy(geo_data, country_codes, country_policy, source_ips=None, provider_policy_file=None):
+    country_set = set(country_codes)
+    source_ip_set = set(source_ips) if source_ips is not None else None
+    counts = collections.defaultdict(int)
+    policy_by_cidr = {}
+    selected_ips = 0
+
+    for ip, details in geo_data.items():
+        if source_ip_set is not None and ip not in source_ip_set:
+            continue
+        country = geo_country(details)
+        if country not in country_set or country not in country_policy:
+            continue
+        if is_safe_provider(to_text(details.get("org", ""))):
+            continue
+        policy = country_policy[country]
+        prefix = int(policy["target_prefix"])
+        try:
+            addr = ip_address(ip)
+        except ValueError:
+            continue
+        if getattr(addr, "version", 4) != 4:
+            continue
+        network = str(ip_network("%s/%d" % (ip, prefix), strict=False))
+        counts[network] += 1
+        policy_by_cidr[network] = policy
+        selected_ips += 1
+
+    subnets = []
+    for cidr, count in counts.items():
+        policy = policy_by_cidr[cidr]
+        if count >= int(policy.get("min_hits", 1)):
+            subnets.append(cidr)
+
+    for cidr in load_provider_policy_candidates(provider_policy_file):
+        if cidr not in subnets:
+            subnets.append(cidr)
+
+    subnets.sort(key=network_sort_key)
+    return selected_ips, subnets
+
+
 def build_country_report(geo_data, country_codes, source_ips=None):
     country_set = set(country_codes)
     ip_list = list(source_ips) if source_ips is not None else sorted(geo_data.keys())
@@ -243,6 +338,9 @@ def build_parser():
         default=1,
         help="Only output a subnet if at least this many source IPs fall inside it.",
     )
+    parser.add_argument("--policy-mode", action="store_true", help="Use per-country policy/recommendation prefix and min_hits settings")
+    parser.add_argument("--country-policy-file", help="country_prefix_recommendations.json to use in --policy-mode")
+    parser.add_argument("--provider-policy-file", help="provider_subnet_recommendations.json to merge CANDIDATE provider CIDRs in --policy-mode")
     return parser
 
 
@@ -267,13 +365,23 @@ def main():
         if args.filter_ips_file:
             with open(args.filter_ips_file, "r") as f:
                 source_ips = parse_ips_from_text(f.read())
-        selected_ips, subnets = build_subnets_from_geo(
-            geo_data,
-            country_codes,
-            args.target_prefix,
-            args.min_hits,
-            source_ips=source_ips,
-        )
+        if args.policy_mode:
+            country_policy = load_country_policy(args.country_policy_file, country_codes)
+            selected_ips, subnets = build_subnets_from_geo_policy(
+                geo_data,
+                country_codes,
+                country_policy,
+                source_ips=source_ips,
+                provider_policy_file=args.provider_policy_file,
+            )
+        else:
+            selected_ips, subnets = build_subnets_from_geo(
+                geo_data,
+                country_codes,
+                args.target_prefix,
+                args.min_hits,
+                source_ips=source_ips,
+            )
         report = build_country_report(geo_data, country_codes, source_ips=source_ips)
         with open(args.report_output, "w") as f:
             json.dump(report, f, indent=4, sort_keys=True)
@@ -293,7 +401,9 @@ def main():
     print("Selected IPs:", selected_ips)
     print("Generated subnets:", len(subnets))
     print("Source:", args.source)
-    print("Target prefix:", args.target_prefix)
+    print("Policy mode:", "yes" if getattr(args, "policy_mode", False) else "no")
+    if not getattr(args, "policy_mode", False):
+        print("Target prefix:", args.target_prefix)
     print("Output:", args.output)
     if args.source == "geo":
         print("Report:", args.report_output)

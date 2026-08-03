@@ -1,5 +1,7 @@
 from __future__ import print_function
 
+import re
+
 
 DEFAULT_COUNTRY_CODES = [
     "CN", "BR", "IQ", "TR", "UZ", "IN", "SA", "VE", "RU", "KE", "BD",
@@ -14,6 +16,14 @@ DEFAULT_COUNTRY_CODES = [
 ]
 
 PROTECTED_COUNTRY_CODES = ["BE", "DE", "FR", "NL"]
+SAFE_PROVIDER_RE = re.compile(r"Google|Microsoft|OpenAI|Bing", re.I)
+
+
+def default_country_block_policy():
+    policy = {}
+    for code in default_country_codes():
+        policy[code] = {"target_prefix": 24, "min_hits": 1, "reason": "default country policy"}
+    return policy
 
 
 def parse_country_codes(value):
@@ -43,3 +53,9 @@ def default_country_codes_csv():
 
 def protected_country_codes_csv():
     return ",".join(PROTECTED_COUNTRY_CODES)
+
+
+def is_safe_provider(org):
+    if org is None:
+        return False
+    return bool(SAFE_PROVIDER_RE.search(org))

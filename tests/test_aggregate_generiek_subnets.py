@@ -1,4 +1,5 @@
 import unittest
+import json
 import os
 import tempfile
 
@@ -48,6 +49,83 @@ class AggregateGeneriekSubnetsTests(unittest.TestCase):
 
         self.assertEqual(selected, 1)
         self.assertEqual(subnets, ["1.2.3.0/24"])
+
+    def test_build_subnets_from_geo_policy_uses_country_prefix_and_min_hits(self):
+        geo_data = {
+            "10.10.1.1": {"country": "CN", "org": "AS123 Example ISP"},
+            "10.10.2.1": {"country": "CN", "org": "AS123 Example ISP"},
+            "10.10.3.1": {"country": "CN", "org": "AS123 Example ISP"},
+            "20.20.1.1": {"country": "IN", "org": "AS456 Example ISP"},
+        }
+        policy = {
+            "CN": {"target_prefix": 20, "min_hits": 3},
+            "IN": {"target_prefix": 24, "min_hits": 2},
+        }
+
+        selected, subnets = aggregate.build_subnets_from_geo_policy(
+            geo_data,
+            ["CN", "IN"],
+            policy,
+        )
+
+        self.assertEqual(selected, 4)
+        self.assertEqual(subnets, ["10.10.0.0/20"])
+
+    def test_build_subnets_from_geo_policy_skips_safe_providers(self):
+        geo_data = {
+            "66.249.75.1": {"country": "US", "org": "AS15169 Google LLC"},
+            "66.249.75.2": {"country": "US", "org": "AS15169 Google LLC"},
+        }
+        policy = {"US": {"target_prefix": 24, "min_hits": 1}}
+
+        selected, subnets = aggregate.build_subnets_from_geo_policy(geo_data, ["US"], policy)
+
+        self.assertEqual(selected, 0)
+        self.assertEqual(subnets, [])
+
+    def test_load_country_policy_reads_recommendations_json(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            with open(path, "w") as f:
+                json.dump({
+                    "countries": [{
+                        "country": "CN",
+                        "recommendation": {"target_prefix": 20, "min_hits": 3, "reason": "clustered"},
+                    }],
+                }, f)
+
+            policy = aggregate.load_country_policy(path, ["CN", "IN"])
+
+            self.assertEqual(policy["CN"]["target_prefix"], 20)
+            self.assertEqual(policy["CN"]["min_hits"], 3)
+            self.assertEqual(policy["IN"]["target_prefix"], 24)
+        finally:
+            os.unlink(path)
+
+    def test_policy_mode_merges_provider_candidates(self):
+        handle, path = tempfile.mkstemp()
+        os.close(handle)
+        try:
+            with open(path, "w") as f:
+                json.dump({
+                    "providers": [{
+                        "recommendation": {"decision": "CANDIDATE"},
+                        "candidate_cidrs": ["30.30.0.0/20"],
+                    }],
+                }, f)
+
+            selected, subnets = aggregate.build_subnets_from_geo_policy(
+                {},
+                ["CN"],
+                {"CN": {"target_prefix": 24, "min_hits": 1}},
+                provider_policy_file=path,
+            )
+
+            self.assertEqual(selected, 0)
+            self.assertEqual(subnets, ["30.30.0.0/20"])
+        finally:
+            os.unlink(path)
 
     def test_build_country_report_splits_blocked_and_allowed_ips(self):
         geo_data = {

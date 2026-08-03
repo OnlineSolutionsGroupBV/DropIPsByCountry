@@ -551,6 +551,36 @@ This writes:
 The recommendation chooses wider prefixes only when enough observed IPs cluster
 inside that prefix. Distributed traffic stays at `/32`.
 
+Plan updates for existing live UFW rules using the country recommendations:
+
+```bash
+python plan_ufw_country_rule_updates.py \
+  --recommendations country_prefix_recommendations.json \
+  --geo-data geo_data.json
+```
+
+This writes:
+- `ufw_country_update_plan.txt` — readable plan showing existing rules, country
+  evidence, provider statistics, replacement CIDRs, and skipped rules.
+- `ufw_country_update_plan.json` — exact machine-readable delete/add plan.
+
+The planner does not add new countries. It only prepares replacements for
+existing `DENY IN` UFW rules, skips protected countries (`BE`, `DE`, `FR`,
+`NL`), skips mixed-country evidence, and skips CIDRs overlapping the crawler
+allowlist.
+
+Review commands without changing UFW:
+
+```bash
+python apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json
+```
+
+Apply after review:
+
+```bash
+python apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json --sudo --apply
+```
+
 Recommend provider/ASN-specific subnet blocks:
 
 ```bash
@@ -591,6 +621,24 @@ Bulk defaults are intentionally aggressive:
 - `TARGET_PREFIX=24`
 - `MIN_HITS=1`
 
+`run_prepare_generiek_blocks.sh` uses policy mode by default:
+
+```bash
+bash run_prepare_generiek_blocks.sh
+```
+
+In policy mode it refreshes country/provider recommendations from `geo_data.json`
+and aggregates with per-country prefix/min_hits settings. Provider candidates
+from `provider_subnet_recommendations.json` are merged into the output, while
+known safe providers such as Google, Bing/Microsoft, and OpenAI are skipped.
+
+Use legacy one-prefix behavior only when you explicitly want one prefix for the
+whole run:
+
+```bash
+POLICY_MODE=0 TARGET_PREFIX=24 MIN_HITS=1 bash run_prepare_generiek_blocks.sh
+```
+
 Review first with:
 
 ```bash
@@ -603,11 +651,14 @@ Useful variants:
 # Use Python 2 on an old server:
 PYTHON=python2 bash run_prepare_generiek_blocks.sh
 
-# Test only US as /24:
-COUNTRY_CODES=US TARGET_PREFIX=24 bash run_prepare_generiek_blocks.sh
+# Test only US with default policy mode:
+COUNTRY_CODES=US bash run_prepare_generiek_blocks.sh
+
+# Test only US as /24 using legacy one-prefix mode:
+POLICY_MODE=0 COUNTRY_CODES=US TARGET_PREFIX=24 bash run_prepare_generiek_blocks.sh
 
 # Aggressive China-only /16 test, only when at least 10 source IPs hit a subnet:
-COUNTRY_CODES=CN TARGET_PREFIX=16 MIN_HITS=10 bash run_prepare_generiek_blocks.sh
+POLICY_MODE=0 COUNTRY_CODES=CN TARGET_PREFIX=16 MIN_HITS=10 bash run_prepare_generiek_blocks.sh
 
 # Use another input file but still run the standard flow:
 INPUT_FILE=/var/log/nginx/access.log bash run_prepare_generiek_blocks.sh

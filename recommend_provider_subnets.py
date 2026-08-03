@@ -9,7 +9,7 @@ import os
 import re
 import sys
 
-from country_policy import default_country_codes, effective_country_codes
+from country_policy import default_country_codes, effective_country_codes, is_safe_provider
 
 try:
     text_type = unicode  # Py2
@@ -36,9 +36,6 @@ except ImportError:
 
 
 ASN_RE = re.compile(r"\b(AS\d+)\b")
-SAFE_PROVIDER_RE = re.compile(r"Google|Microsoft|OpenAI|Bing", re.I)
-
-
 def parse_country_codes(value):
     if not value:
         return default_country_codes()
@@ -174,7 +171,7 @@ def build_recommendations(geo_data, country_codes, prefixes, min_provider_ips):
     for (country, org), ips in collect_groups(geo_data, country_codes).items():
         stats = stats_for_prefixes(ips, required_prefixes)
         recommendation = choose_recommendation(len(ips), stats, min_provider_ips)
-        if SAFE_PROVIDER_RE.search(org):
+        if is_safe_provider(org):
             recommendation = {
                 "decision": "SKIP_SAFE_PROVIDER",
                 "target_prefix": 32,

@@ -2,6 +2,7 @@
 set -euo pipefail
 
 PYTHON_BIN="${PYTHON:-python}"
+POLICY_MODE="${POLICY_MODE:-1}"
 TARGET_PREFIX="${TARGET_PREFIX:-24}"
 MIN_HITS="${MIN_HITS:-1}"
 COUNTRY_CODES="${COUNTRY_CODES:-$("$PYTHON_BIN" -c 'import country_policy; print(country_policy.default_country_codes_csv())')}"
@@ -28,6 +29,7 @@ write_summary() {
     echo "run_dir=$RUN_DIR"
     echo "date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
     echo "python=$PYTHON_BIN"
+    echo "policy_mode=$POLICY_MODE"
     echo "target_prefix=$TARGET_PREFIX"
     echo "min_hits=$MIN_HITS"
     echo "country_codes=$COUNTRY_CODES"
@@ -72,8 +74,16 @@ AGG_ARGS=(
 if [ "$AGG_SOURCE" = "geo" ]; then
   "$PYTHON_BIN" get_ip_country.py
   AGG_ARGS+=(--input geo_data.json --filter-ips-file output.txt)
+  if [ "$POLICY_MODE" = "1" ]; then
+    "$PYTHON_BIN" recommend_country_prefixes.py --geo-data geo_data.json --country-codes "$COUNTRY_CODES"
+    "$PYTHON_BIN" recommend_provider_subnets.py --geo-data geo_data.json --country-codes "$COUNTRY_CODES"
+    AGG_ARGS+=(--policy-mode --country-policy-file country_prefix_recommendations.json --provider-policy-file provider_subnet_recommendations.json)
+  fi
 elif [ "$AGG_SOURCE" = "ips" ]; then
   AGG_ARGS+=(--input output.txt)
+  if [ "$POLICY_MODE" = "1" ]; then
+    echo "WARNING: POLICY_MODE=1 only applies to AGG_SOURCE=geo. Using legacy prefix mode for raw IP source." >&2
+  fi
 else
   echo "ERROR: AGG_SOURCE must be 'ips' or 'geo'" >&2
   exit 1
@@ -88,6 +98,13 @@ snapshot_if_exists "$OUTPUT_FILE" "$(basename "$OUTPUT_FILE")"
 snapshot_if_exists generiek_country_report.json "generiek_country_report.json"
 snapshot_if_exists generiek_blocked_candidate_ips.txt "generiek_blocked_candidate_ips.txt"
 snapshot_if_exists generiek_allowed_non_target_ips.txt "generiek_allowed_non_target_ips.txt"
+snapshot_if_exists country_prefix_recommendations.txt "country_prefix_recommendations.txt"
+snapshot_if_exists country_prefix_recommendations.json "country_prefix_recommendations.json"
+snapshot_if_exists country_prefix_plan.sh "country_prefix_plan.sh"
+snapshot_if_exists provider_subnet_recommendations.txt "provider_subnet_recommendations.txt"
+snapshot_if_exists provider_dangerous_subnets.txt "provider_dangerous_subnets.txt"
+snapshot_if_exists provider_subnet_recommendations.json "provider_subnet_recommendations.json"
+snapshot_if_exists provider_subnet_candidates.json "provider_subnet_candidates.json"
 "$PYTHON_BIN" cache_crawler_ips.py --cache-dir ip_cache
 snapshot_if_exists ip_cache/allowlist_cidrs.json "allowlist_cidrs.json"
 "$PYTHON_BIN" audit_generiek_subnets.py --input "$OUTPUT_FILE" --allowlist ip_cache/allowlist_cidrs.json --country-codes "$COUNTRY_CODES"
