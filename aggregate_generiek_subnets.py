@@ -189,7 +189,14 @@ def load_provider_policy_candidates(path):
     return cidrs
 
 
-def build_subnets_from_geo_policy(geo_data, country_codes, country_policy, source_ips=None, provider_policy_file=None):
+def build_subnets_from_geo_policy(
+    geo_data,
+    country_codes,
+    country_policy,
+    source_ips=None,
+    provider_policy_file=None,
+    snapshot_min_hits=1,
+):
     country_set = set(country_codes)
     source_ip_set = set(source_ips) if source_ips is not None else None
     counts = collections.defaultdict(int)
@@ -204,7 +211,9 @@ def build_subnets_from_geo_policy(geo_data, country_codes, country_policy, sourc
             continue
         if is_safe_provider(to_text(details.get("org", ""))):
             continue
-        policy = country_policy[country]
+        policy = dict(country_policy[country])
+        if source_ip_set is not None and snapshot_min_hits is not None:
+            policy["min_hits"] = min(int(policy.get("min_hits", 1)), int(snapshot_min_hits))
         prefix = int(policy["target_prefix"])
         try:
             addr = ip_address(ip)
@@ -341,6 +350,12 @@ def build_parser():
     parser.add_argument("--policy-mode", action="store_true", help="Use per-country policy/recommendation prefix and min_hits settings")
     parser.add_argument("--country-policy-file", help="country_prefix_recommendations.json to use in --policy-mode")
     parser.add_argument("--provider-policy-file", help="provider_subnet_recommendations.json to merge CANDIDATE provider CIDRs in --policy-mode")
+    parser.add_argument(
+        "--policy-snapshot-min-hits",
+        type=int,
+        default=1,
+        help="When --policy-mode uses --filter-ips-file, cap policy min_hits to this value for the current snapshot.",
+    )
     return parser
 
 
@@ -373,6 +388,7 @@ def main():
                 country_policy,
                 source_ips=source_ips,
                 provider_policy_file=args.provider_policy_file,
+                snapshot_min_hits=args.policy_snapshot_min_hits,
             )
         else:
             selected_ips, subnets = build_subnets_from_geo(

@@ -3,6 +3,7 @@ set -euo pipefail
 
 PYTHON_BIN="${PYTHON:-python}"
 POLICY_MODE="${POLICY_MODE:-1}"
+MERGE_PROVIDER_CANDIDATES="${MERGE_PROVIDER_CANDIDATES:-0}"
 TARGET_PREFIX="${TARGET_PREFIX:-24}"
 MIN_HITS="${MIN_HITS:-1}"
 COUNTRY_CODES="${COUNTRY_CODES:-$("$PYTHON_BIN" -c 'import country_policy; print(country_policy.default_country_codes_csv())')}"
@@ -30,6 +31,7 @@ write_summary() {
     echo "date=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
     echo "python=$PYTHON_BIN"
     echo "policy_mode=$POLICY_MODE"
+    echo "merge_provider_candidates=$MERGE_PROVIDER_CANDIDATES"
     echo "target_prefix=$TARGET_PREFIX"
     echo "min_hits=$MIN_HITS"
     echo "country_codes=$COUNTRY_CODES"
@@ -77,7 +79,10 @@ if [ "$AGG_SOURCE" = "geo" ]; then
   if [ "$POLICY_MODE" = "1" ]; then
     "$PYTHON_BIN" recommend_country_prefixes.py --geo-data geo_data.json --country-codes "$COUNTRY_CODES"
     "$PYTHON_BIN" recommend_provider_subnets.py --geo-data geo_data.json --country-codes "$COUNTRY_CODES"
-    AGG_ARGS+=(--policy-mode --country-policy-file country_prefix_recommendations.json --provider-policy-file provider_subnet_recommendations.json)
+    AGG_ARGS+=(--policy-mode --country-policy-file country_prefix_recommendations.json)
+    if [ "$MERGE_PROVIDER_CANDIDATES" = "1" ]; then
+      AGG_ARGS+=(--provider-policy-file provider_subnet_recommendations.json)
+    fi
   fi
 elif [ "$AGG_SOURCE" = "ips" ]; then
   AGG_ARGS+=(--input output.txt)

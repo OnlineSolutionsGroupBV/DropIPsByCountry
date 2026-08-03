@@ -628,9 +628,18 @@ bash run_prepare_generiek_blocks.sh
 ```
 
 In policy mode it refreshes country/provider recommendations from `geo_data.json`
-and aggregates with per-country prefix/min_hits settings. Provider candidates
-from `provider_subnet_recommendations.json` are merged into the output, while
-known safe providers such as Google, Bing/Microsoft, and OpenAI are skipped.
+and aggregates the current `input.txt` snapshot with per-country prefix settings.
+For snapshot runs, recommendation `min_hits` is capped to `1`, because each
+server-status snapshot usually contains one unique IP per subnet.
+
+Provider reports are written for review, but provider candidates are not merged
+by default. Merge them explicitly only after reviewing `provider_dangerous_subnets.txt`:
+
+```bash
+MERGE_PROVIDER_CANDIDATES=1 bash run_prepare_generiek_blocks.sh
+```
+
+Known safe providers such as Google, Bing/Microsoft, and OpenAI are skipped.
 
 Use legacy one-prefix behavior only when you explicitly want one prefix for the
 whole run:

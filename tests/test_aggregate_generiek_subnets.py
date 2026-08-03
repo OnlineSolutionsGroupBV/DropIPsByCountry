@@ -71,6 +71,42 @@ class AggregateGeneriekSubnetsTests(unittest.TestCase):
         self.assertEqual(selected, 4)
         self.assertEqual(subnets, ["10.10.0.0/20"])
 
+    def test_build_subnets_from_geo_policy_caps_min_hits_for_current_snapshot(self):
+        geo_data = {
+            "10.10.1.1": {"country": "CN", "org": "AS123 Example ISP"},
+            "10.20.1.1": {"country": "CN", "org": "AS123 Example ISP"},
+        }
+        policy = {"CN": {"target_prefix": 16, "min_hits": 10}}
+
+        selected, subnets = aggregate.build_subnets_from_geo_policy(
+            geo_data,
+            ["CN"],
+            policy,
+            source_ips=["10.10.1.1", "10.20.1.1"],
+            snapshot_min_hits=1,
+        )
+
+        self.assertEqual(selected, 2)
+        self.assertEqual(subnets, ["10.10.0.0/16", "10.20.0.0/16"])
+
+    def test_build_subnets_from_geo_policy_can_keep_recommendation_min_hits(self):
+        geo_data = {
+            "10.10.1.1": {"country": "CN", "org": "AS123 Example ISP"},
+            "10.20.1.1": {"country": "CN", "org": "AS123 Example ISP"},
+        }
+        policy = {"CN": {"target_prefix": 16, "min_hits": 10}}
+
+        selected, subnets = aggregate.build_subnets_from_geo_policy(
+            geo_data,
+            ["CN"],
+            policy,
+            source_ips=["10.10.1.1", "10.20.1.1"],
+            snapshot_min_hits=None,
+        )
+
+        self.assertEqual(selected, 2)
+        self.assertEqual(subnets, [])
+
     def test_build_subnets_from_geo_policy_skips_safe_providers(self):
         geo_data = {
             "66.249.75.1": {"country": "US", "org": "AS15169 Google LLC"},
