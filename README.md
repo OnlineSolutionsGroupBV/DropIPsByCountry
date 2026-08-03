@@ -536,6 +536,45 @@ The report shows input IP counts, blocked/allowed candidate counts, candidate
 subnet counts, top countries, and how many IPs are new or repeated compared with
 previous runs.
 
+Recommend subnet settings per country from `geo_data.json`:
+
+```bash
+python recommend_country_prefixes.py --geo-data geo_data.json
+```
+
+This writes:
+- `country_prefix_recommendations.txt` — per-country `/32`, `/24`, `/20`, `/18`,
+  or `/16` recommendation with evidence.
+- `country_prefix_recommendations.json` — machine-readable recommendations.
+- `country_prefix_plan.sh` — review-first commands using `APPLY=0`.
+
+The recommendation chooses wider prefixes only when enough observed IPs cluster
+inside that prefix. Distributed traffic stays at `/32`.
+
+Recommend provider/ASN-specific subnet blocks:
+
+```bash
+python recommend_provider_subnets.py --geo-data geo_data.json
+```
+
+This writes:
+- `provider_subnet_recommendations.txt` — country + provider/ASN clustering with
+  recommended prefix and evidence.
+- `provider_subnet_recommendations.json` — machine-readable provider report.
+- `provider_subnet_candidates.json` — CIDRs that passed provider-cluster rules.
+
+Review and dry-run:
+
+```bash
+python block_generiek_subnet.py --input provider_subnet_candidates.json --sudo --dry-run
+```
+
+Apply after review:
+
+```bash
+python block_generiek_subnet.py --input provider_subnet_candidates.json --sudo
+```
+
 Use `run_geo_bulk_blocks.sh` when you want to bulk-block from the whole
 `geo_data.json` cache instead of the current `input.txt` snapshot:
 
