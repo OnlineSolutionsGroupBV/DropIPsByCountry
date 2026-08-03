@@ -21,7 +21,14 @@ class CountryPolicyTests(unittest.TestCase):
     def test_default_country_codes_include_recent_attack_sources(self):
         defaults = set(country_policy.default_country_codes())
 
-        for code in ["GB", "US", "ES", "EG", "IT", "IN", "PL", "TH", "AU", "MX", "RO", "CL", "VN", "ID", "CA", "SE", "PT"]:
+        for code in [
+            "GB", "US", "ES", "EG", "IT", "IN", "PL", "TH", "AU", "MX",
+            "RO", "CL", "VN", "ID", "CA", "SE", "PT", "JP", "NG", "IL",
+            "CG", "GR", "PE", "DO", "TW", "AO", "HU", "IE", "PA", "LY",
+            "BG", "CZ", "KR", "NZ", "CI", "LK", "QA", "BO", "CR", "BF",
+            "MN", "TZ", "GH", "MG", "KW", "CM", "TG", "MD", "DK", "KG",
+            "UG", "NO", "XK",
+        ]:
             self.assertIn(code, defaults)
 
     def test_effective_country_codes_removes_protected_overrides(self):

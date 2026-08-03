@@ -7,7 +7,10 @@ DEFAULT_COUNTRY_CODES = [
     "KZ", "AE", "NP", "CO", "JM", "PH", "NI", "SY", "HK", "IR", "PS",
     "OM", "DZ", "SN", "BY", "TN", "GE", "ID", "RS", "AM", "AL", "SG",
     "MM", "ET", "LB", "MY", "VN", "BH", "TH", "US", "GB", "ES", "EG",
-    "IT", "PL", "AU", "RO", "CL", "CA", "SE", "PT",
+    "IT", "PL", "AU", "RO", "CL", "CA", "SE", "PT", "JP", "NG", "IL",
+    "CG", "GR", "PE", "DO", "TW", "AO", "HU", "IE", "PA", "LY", "BG",
+    "CZ", "KR", "NZ", "CI", "LK", "QA", "BO", "CR", "BF", "MN", "TZ",
+    "GH", "MG", "KW", "CM", "TG", "MD", "DK", "KG", "UG", "NO", "XK",
 ]
 
 PROTECTED_COUNTRY_CODES = ["BE", "DE", "FR", "NL"]
