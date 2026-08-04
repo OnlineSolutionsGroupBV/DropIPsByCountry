@@ -1,922 +1,477 @@
-# Drop Crawler IPs By Country
-Recently, there's been an enormous amount of traffic from China, India, and similar countries on our job sites. In most cases, I'm 100% sure this is automated traffic. So, I'm trying to clean things up a bit and configure the UFW firewall to drop requests from those that are making too many requests to our servers.
+# DropIPsByCountry
 
-This way, you can allow regular users from India or China to visit your website while blocking crawlers that overload your site, scrape data, and engage in spam activities that most customers wouldn’t want. Clean traffic is crucial because it also reduces costs—otherwise, you’d end up buying extra servers for load balancing and horizontal scaling. With just a few scripts and some custom logic, you can filter out IP addresses that send excessive requests, redirect them, or issue warnings via the abuse@... mechanism.
+DropIPsByCountry is a pragmatic firewall automation toolkit for mitigating high-volume bot, crawler, and abusive traffic against Apache-hosted websites. It was built for a network of small niche job sites where traffic can suddenly spread across hundreds of client IPs, countries, providers, and subnets.
 
-With minimal dependencies, I will create several scripts where the input.txt  file could be any file, such as a server status retrieved via the internet using wget or a log file from a web server like Apache or Nginx acceslog. 
+The project extracts IP addresses from Apache `/server-status`, access logs, or any text input, enriches them with country/provider data, generates CIDR blocks, audits crawler allowlists, and applies UFW deny rules safely.
 
-So, we parse IP addresses from a string, then in the next script, we check the country using the free service ipinfo.io. The results are then used to update UFW or iptables firewall rules or can be further utilized in a hardware firewall since the output is in JSON format. This JSON can later be read by Python and executed. For configuration, only a token is required to make requests to the external service. Scripts are tested and working on Python 3 / 2.7
+Open-source project:
 
-We manage several websites in different European countries and believe that this approach can save a lot of energy and money by simply restricting HTTPS traffic for aggregators who don’t really need it and are not our target audience.
+https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry
 
+## Recommended Production Flow
 
+The recommended setup is a cron monitor that checks Apache server-status every 30 minutes. When Apache has too many busy workers, it saves the status page as `input.txt` and runs the blocking flow.
 
+### 1. Verify Apache Server Status
 
-# 🚀 IP Blocking Automation for Unwanted Traffic  
-
-## 📌 Overview  
-
-We manage multiple job sites across Europe and have noticed a surge in traffic from certain non-target countries, mainly China (`CN`) and India (`IN`). While some of this traffic is legitimate, much of it consists of **automated bots and scrapers**, consuming bandwidth and increasing infrastructure costs.  
-
-To **optimize server resources**, we implemented a **firewall-based filtering system** that:  
-✅ Extracts IP addresses from logs  
-✅ Identifies the country of each IP using `ipinfo.io`  
-✅ Blocks unwanted IPs using **UFW (Uncomplicated Firewall)**  
-✅ Avoids redundant checks to improve efficiency  
-✅ Saves blocked IPs for tracking and future reference  
-
----
-
-## 🛠️ Installation & Setup  
-
-### 1️⃣ Clone the Repository  
+From the server:
 
 ```bash
-git clone https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry.git
-cd DropIPsByCountry
-pwd
-/home/downloads/DropIPsByCountry
+cd /home/downloads/DropIPsByCountry
+PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
+  --url http://127.0.0.1/server-status \
+  --threshold 200 \
+  --dry-run
 ```
 
-### 2️⃣ Install Dependencies  
-
-Ensure you have Python 2.7 and required libraries installed:
+If you must use HTTPS and the old Python/OpenSSL stack cannot validate the certificate:
 
 ```bash
-pip install requests
-pip install netaddr (if aggregate have to be used )
-```
-
-### 3️⃣ Get an IPInfo API Token  
-
-Sign up for a free API token at [ipinfo.io](https://ipinfo.io/signup) and replace **YOUR_API_TOKEN** in the script.  
-
----
-
-## 📜 How It Works  
-
-### ✅ **Step 1: Extract Unique IPs from Logs**  
-
-The script reads logs from a file (e.g., Apache, Nginx) or an external source:
-
-```bash
-vim input.txt or stream > string from any ... 
-python parse_ips.py 
-```
-
-This extracts unique IPs from **`input.txt`** and saves them for further processing.  
-
----
-
-### ✅ **Step 2: Check Country & Save Data**  
-
-Run the geo-checking script to fetch country details from `ipinfo.io`:  
-
-```bash
-geo_data.json
-python get_ip_country.py
-
-..
-118.120.220.160 {'loc': u'30.6667,104.0667', 'country': u'CN', 'region': u'Sichuan', 'org': u'AS4134 CHINANET-BACKBONE', 'city': u'Chengdu'}
-183.199.95.215 {'loc': u'31.2222,121.4581', 'country': u'CN', 'region': u'Shanghai', 'org': u'AS24547 Hebei Mobile Communication Company Limited', 'city': u'Shanghai'}
-```
-
-This will:  
-- Load IPs from `input.txt`  
-- Query `ipinfo.io` to find the country  
-- Save results in `geo_data.json`  
-
----
-
-## 📊 Logstatistiek (custom access logs)
-
-Met `log_stats.py` kun je een custom access log parsen en per datum opslaan:
-- meest opgevraagde URL’s
-- aantal requests per IP
-- totalen per datum  
-URL’s worden genormaliseerd zonder query parameters (alles na `?` of `#`).
-
-### ✅ Command 1: Parset en bewaart in JSON
-
-```bash
-python3 log_stats.py parse --log /pad/naar/nieuwejobs_custom.log --db log_stats.json
-```
-
-Optioneel meerdere logs:
-```bash
-python3 log_stats.py parse --log /pad/naar/log1.log --log /pad/naar/log2.log --db log_stats.json
-```
-
-### ✅ Command 2: Toon statistiek
-
-```bash
-python3 log_stats.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20
-```
-
-Zonder `--date` zie je welke datums beschikbaar zijn.
-Standaard worden static assets gefilterd. Gebruik `--include-static` om ze toch te tonen.
-Per IP worden ook de top‑URLs getoond (default 5). Pas dit aan met `--per-ip-urls N`.
-
-### 🐍 Python 2 versie
-
-Gebruik `log_stats_py2.py` als je nog op Python 2.7 zit:
-
-```bash
-python2 log_stats_py2.py parse --log /pad/naar/nieuwejobs_custom.log --db log_stats.json
-```
-
-```bash
-python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20
-```
-
-Voor extra opties:
-```bash
-python2 log_stats_py2.py report --db log_stats.json --date 2026-02-01 --top-urls 20 --top-ips 20 --per-ip-urls 5 --include-static
-```
-
-### 📄 Log pattern (voorbeeld)
-
-```
-66.249.64.129 - - [01/Feb/2026:06:25:43 +0100] "GET /job/viewjob/19316704/chargee-bd-et-marketing-junior-hf.html HTTP/1.1" 200 31967 "-" "Mozilla/5.0 ..."
-```
-
----
-
-## 🔒 Blokkeer IPs die /accounts/ misbruiken
-
-Gebruik de logstatistieken om IP’s te blokkeren die veel requests doen naar `/accounts/…` (login/signup/etc).
-
-### ✅ Allowlist voor OpenAI + Google crawlers
-
-Maak eerst de lokale allowlist (cache) met de officiële OpenAI/Google IP‑ranges:
-
-```bash
-python cache_crawler_ips.py --cache-dir ip_cache
-```
-
-Dit maakt o.a. `ip_cache/allowlist_cidrs.json` en wordt gebruikt om deze IP’s **niet** te blokkeren.
-
-### ✅ Dry-run (alleen tonen)
-```bash
-python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200 --dry-run
-```
-
-### ✅ Blokkeren via UFW
-```bash
-python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200
-```
-
-De geblokkeerde IP’s worden bijgehouden in `blocked_accounts_ips.txt` zodat er geen dubbele regels worden toegevoegd.
-
-Je kunt de allowlist expliciet meegeven:
-
-```bash
-python2 block_accounts_abuse.py --db log_stats.json --date 2026-02-01 --min-requests 200 --allowlist ip_cache/allowlist_cidrs.json
-```
-
-Als `ipaddress` ontbreekt op Python 2:
-```bash
-pip install ipaddress
-```
-
----
-
-## 🧹 Opschonen: verwijder verkeerde UFW‑regels (OpenAI/Google/Bing)
-
-Als je eerder IP’s hebt geblokkeerd en die blijken OpenAI, Google of Bing te
-zijn, kun je dit cleanen:
-
-### Python 2 op een oude server
-
-Gebruik dit als de server nog Python 2 gebruikt:
-
-```bash
-bash run_clean_crawlers_py2.sh
-```
-
-Veilig eerst bekijken zonder verwijderen:
-
-```bash
-DRY_RUN=1 bash run_clean_crawlers_py2.sh
-```
-
-De wrapper kiest eerst `$PYTHON2`, daarna `python2`, en valt als laatste terug op `python`.
-Als jouw Python 2 interpreter ergens anders staat:
-
-```bash
-PYTHON2=/usr/bin/python2.7 bash run_clean_crawlers_py2.sh
-```
-
-Voor Python 2 heb je meestal de backport van `ipaddress` nodig:
-
-```bash
-pip install ipaddress
-```
-
-Als `pip` ook expliciet Python 2 moet zijn:
-
-```bash
-python2 -m pip install ipaddress
-```
-
-### Veilige controle zonder verwijderen
-
-Deze stappen bouwen de allowlist, vinden foute regels, en tonen wat verwijderd zou worden:
-
-```bash
-python2 cache_crawler_ips.py --cache-dir ip_cache
-python2 find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
-python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
-```
-
-Als de dry-run klopt, verwijder je de regels:
-
-```bash
-python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
-```
-
-Let op: UFW-regelnummers veranderen na elke delete. `clean_bad_ufw_rules.py` verwijdert daarom van hoog naar laag, zodat de juiste regels worden verwijderd.
-
-### 1) Cache OpenAI/Google/Bing ranges
-```bash
-python cache_crawler_ips.py --cache-dir ip_cache
-```
-
-### 2) Vind verkeerde regels in UFW
-```bash
-python find_bad_ufw_rules.py --allowlist ip_cache/allowlist_cidrs.json --output bad_ufw_rules.json --sudo
-```
-
-### 3) Verwijder de regels
-```bash
-python clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
-```
-
-### ✅ Alles in één keer (wrappers)
-```bash
-DRY_RUN=1 bash run_clean_crawlers_py2.sh
-bash run_clean_crawlers_py2.sh
-```
-
-of
-```bash
-DRY_RUN=1 bash run_clean_crawlers_py3.sh
-bash run_clean_crawlers_py3.sh
-```
-
----
-
-### ✅ **Step 3: Block Unwanted Traffic**  
-
-To block all **China (`CN`) IPs** dynamically using **UFW**:  
-
-```bash
-geo_data.json
-python block_cn_ips.py 
-```
-
-This will:  
-✔ Read previously processed IPs  
-✔ Compare with already blocked IPs  
-✔ Block **new** Chinese IPs using `ufw deny from <IP>`  
-✔ Save blocked IPs in `blocked_cn_ips.txt`  
-
----
-
-### ✅  Block Unwanted Traffic Generic subnets 
-
-`aggregate_generiek_subnets.py` keeps `US` in the default country list. The
-default output is now `/24`, because `/16` can block 65,536 IPs because of one
-source IP in the logs. If you deliberately want the old broader behavior for a
-country batch, run with `--target-prefix 16` and audit it first.
-
-```bash
-python parse_ips.py 
-python get_ip_country.py
-python aggregate_generiek_subnets.py --source geo --filter-ips-file output.txt --target-prefix 24
-python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
-python block_generiek_subnet.py --sudo --dry-run
-python block_generiek_subnet.py --sudo
-```
-
-The geo aggregation writes review files before UFW is touched:
-- `generiek_country_report.json` shows country totals plus blocked, allowed,
-  and missing geo entries.
-- `generiek_blocked_candidate_ips.txt` lists source IPs whose country is in
-  `DEFAULT_COUNTRY_CODES` and can become UFW deny candidates.
-- `generiek_allowed_non_target_ips.txt` lists source IPs whose country is outside
-  `DEFAULT_COUNTRY_CODES`; these must not become UFW deny candidates.
-
-Protected local market countries `BE`, `DE`, `FR`, and `NL` are removed from the
-effective block-country list even if they are accidentally passed in
-`COUNTRY_CODES`.
-
-`block_generiek_subnet.py` reads `aggregated_generiek_subnets.json`, compares those
-subnets with the current live output of `ufw status numbered`, and only inserts
-rules that are not already covered by an existing `DENY IN` rule. This means the
-same repository can be copied to another server and run again without trusting an
-old `blocked_generiek_ips.txt` file from a different machine.
-
-`python block_generiek_subnet.py` works with default parameters, but it is not
-the recommended production command. With no parameters it uses
-`aggregated_generiek_subnets.json` and `blocked_generiek_ips.txt`, does not run
-the crawler overlap check, does not use `--sudo`, and does not dry-run. On many
-servers it will fail because UFW needs root permissions; on a permissive setup it
-may try to add rules immediately.
-
-Use this for review. This checks new candidates and skips crawler allowlist
-overlaps, but does not run the heavier existing-UFW cleanup audit:
-
-```bash
-python block_generiek_subnet.py --sudo --dry-run
-```
-
-Apply only after reviewing the dry-run:
-
-```bash
-python block_generiek_subnet.py --sudo
-```
-
-For local testing without touching live UFW:
-
-```bash
-python block_generiek_subnet.py --ufw-status-file ufw_status_numbered --dry-run
-```
-
-Implementation details:
-- Live UFW is the source of truth for deciding whether a subnet is already blocked.
-- `blocked_generiek_ips.txt` is updated only after a successful UFW insert.
-- `--dry-run` prints the exact `ufw insert 1 deny from ...` commands without changing UFW.
-- Dry-run previews the first 50 planned additions by default; use `--show-all` if
-  you want to print every planned rule.
-- Candidate subnets that overlap the crawler allowlist are skipped and reported,
-  so Google/Bing/OpenAI ranges are not added while the rest can continue.
-- `--check-bad-rules` is for one-time existing-UFW cleanup checks. It runs
-  `find_bad_ufw_rules.py` and stops if existing live UFW rules already block
-  crawler ranges or source IPs outside `--country-codes`.
-- `block_generiek_subnet.py` skips candidate subnets that contain a geo_data
-  source IP outside `--country-codes`, then continues with the remaining safe
-  candidates.
-- `--ufw-status-file ufw_status_numbered` can be used for local testing without
-  calling UFW.
-- `audit_generiek_subnets.py` is read-only and checks generated subnets before
-  UFW is changed. It reports invalid CIDRs, `/16` versus `/24` distribution,
-  broad one-hit subnets, country mismatches, and overlaps with the
-  OpenAI/Google/Bing allowlist.
-
-The allowlist cache includes OpenAI GPTBot, Google crawler ranges, and Bingbot.
-Other crawlers are not protected by this repo unless you add their official
-ranges to `cache_crawler_ips.py`.
-
-Why `US` stays in the default country list:
-- A lot of crawler and cloud traffic comes from US networks, including generic
-  datacenter traffic that is not useful for every EU jobsite.
-- US also contains important shared infrastructure. Google, OpenAI, Bing,
-  Microsoft, AWS, CDN providers, APIs, and real users can all appear there.
-- Because of that, US should normally be generated as `/24`, not `/16`. A `/24`
-  contains 256 IPs; a `/16` contains 65,536 IPs. The smaller range blocks the
-  local noisy network seen in logs without taking out a large shared provider
-  block.
-
-Example for US-only `/24` audit:
-
-```bash
-python aggregate_generiek_subnets.py --country-codes US --target-prefix 24 --output aggregated_us_subnets.json
-python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --input aggregated_us_subnets.json --allowlist ip_cache/allowlist_cidrs.json --country-codes US --fail-on-overlap --fail-on-country-mismatch
-```
-
-When `/16` can still be acceptable:
-- For some countries or provider networks, especially China cloud/provider
-  networks such as Tencent or Alibaba, broad `/16` blocks can be reasonable when
-  your site has no business need for that traffic and logs show repeated abuse.
-- For an EU-focused jobsite, traffic from countries such as China or Russia may
-  have little hiring value. In many roles it is very hard to legally hire someone
-  from those countries into local EU office jobs, so blocking the whole source
-  range can be a business decision, not only a bot/crawler decision.
-- This is project-specific. A jobsite, SaaS app, marketplace, or public API may
-  each have different acceptable traffic. Use the audit output before applying.
-
-Example for a more aggressive China-only `/16` test:
-
-```bash
-python aggregate_generiek_subnets.py --country-codes CN --target-prefix 16 --min-hits 10 --output aggregated_cn_16_subnets.json
-python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --input aggregated_cn_16_subnets.json --allowlist ip_cache/allowlist_cidrs.json --country-codes CN --fail-on-overlap --fail-on-country-mismatch
-python block_generiek_subnet.py --input aggregated_cn_16_subnets.json --country-codes CN --sudo --check-bad-rules --dry-run
-```
-
-If that audit reports OpenAI/Google/Bing overlap, do not apply the `/16` blocks
-until those ranges are removed from the candidate list or the existing UFW rules
-are cleaned.
-
-Recommended full order on each server:
-
-```bash
-vim input.txt
-python parse_ips.py
-python get_ip_country.py
-python aggregate_generiek_subnets.py --source geo --filter-ips-file output.txt --target-prefix 24
-
-# Build crawler allowlist for OpenAI, Google, and Bing:
-python cache_crawler_ips.py --cache-dir ip_cache
-
-# Audit generated blocks before touching UFW:
-python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --country-codes CN,BR,IQ,TR,UZ,IN,SA,VE,RU,KE,BD,AR,JO,PK,MA,ZA,UA,EC,AZ,UY,MX,PY,KZ,AE,NP,CO,JM,PH,NI,SY,HK,IR,PS,OM,DZ,SN,BY,TN,GE,ID,RS,AM,AL,SG,MM,ET,LB,MY,VN,BH,TH,US --fail-on-country-mismatch
-
-# Review planned UFW changes first:
-python block_generiek_subnet.py --sudo --dry-run
-
-# Apply after review:
-python block_generiek_subnet.py --sudo
-```
-
-Run the existing-UFW cleanup audit separately when setting up a server or after a
-firewall incident:
-
-```bash
-bash run_audit_existing_ufw.sh
-```
-
-If the dry-run output is correct:
-
-```bash
-APPLY_CLEAN=1 bash run_audit_existing_ufw.sh
-```
-
-The normal wrapper skips this heavy audit by default. Use `CHECK_EXISTING=1` only
-when you deliberately want the one-time cleanup step included:
-
-```bash
-CHECK_EXISTING=1 APPLY=0 bash run_prepare_generiek_blocks.sh
-```
-
-### Apache multi-site subnet analysis
-
-For servers with multiple small niche jobsites, use the Apache log directory as
-the decision source instead of `/server-status`. The status page only shows live
-workers; access logs show the traffic pattern across all sites and rotated logs.
-
-```bash
-python analyze_apache_subnets.py \
-  --log-dir /var/log/apache2 \
-  --geo-data geo_data.json \
-  --country-codes CN,IN \
-  --prefixes 32,24,16 \
-  --min-requests 100 \
-  --min-unique-ips 3
-```
-
-This writes:
-- `apache_subnet_report.json` — machine-readable full report.
-- `apache_subnet_report.txt` — human review table with `/32`, `/24`, and `/16`
-  options, observed IPs, request counts, countries, sites, and how many IPs each
-  CIDR would block.
-- `apache_subnet_candidates.txt` — only subnets marked `CANDIDATE`; review this
-  before using it as input for any UFW command.
-- `apache_log_ips.txt` — all unique IPs found in the scanned logs.
-- `apache_missing_geo_ips.txt` — IPs that are not present in `geo_data.json` yet;
-  resolve these before trusting country-based decisions.
-
-Decision labels:
-- `CANDIDATE`: all observed IPs in the subnet are target-country IPs and the
-  subnet passes the request and unique-IP thresholds.
-- `LOW_EVIDENCE`: target-country traffic exists, but there is not enough evidence
-  to block the subnet automatically.
-- `REVIEW_NON_TARGET_PRESENT`: the subnet contains at least one observed source
-  IP outside `--country-codes`; do not block it without manual review.
-
-### One-command wrapper
-
-Use `run_prepare_generiek_blocks.sh` when you want the whole preparation flow
-from `input.txt` through audit and UFW apply:
-
-```bash
-bash run_prepare_generiek_blocks.sh
-```
-
-By default this:
-- reads `input.txt`
-- writes parsed IPs to `output.txt`
-- enriches unknown IPs into `geo_data.json`
-- generates `aggregated_generiek_subnets.json` as `/24`
-- caches OpenAI/Google/Bing ranges
-- audits candidate blocks against the allowlist
-- skips crawler allowlist and country-mismatch candidate subnets
-- applies the planned UFW additions when `APPLY=1`
-- saves a run snapshot under `runs/<timestamp>/`
-
-Run a dry-run without applying changes:
-
-```bash
-APPLY=0 bash run_prepare_generiek_blocks.sh
-```
-
-Each run snapshot contains the raw input, parsed IPs, generated subnet JSON,
-country report files, allowlist cache, optional `bad_ufw_rules.json`, and
-`summary.txt`. Use `RUN_DIR=/path/to/dir` or `RUN_ID=name` to choose the snapshot
-location:
-
-```bash
-RUN_ID=incident-20260802 APPLY=0 bash run_prepare_generiek_blocks.sh
-```
-
-Analyze all saved run snapshots:
-
-```bash
-python analyze_runs.py --runs-dir runs
-```
-
-This writes:
-- `runs_analysis.txt` — human-readable trend report.
-- `runs_analysis.json` — machine-readable trend report.
-
-The report shows input IP counts, blocked/allowed candidate counts, candidate
-subnet counts, top countries, and how many IPs are new or repeated compared with
-previous runs.
-
-Recommend subnet settings per country from `geo_data.json`:
-
-```bash
-python recommend_country_prefixes.py --geo-data geo_data.json
-```
-
-This writes:
-- `country_prefix_recommendations.txt` — per-country `/32`, `/24`, `/20`, `/18`,
-  or `/16` recommendation with evidence.
-- `country_prefix_recommendations.json` — machine-readable recommendations.
-- `country_prefix_plan.sh` — review-first commands using `APPLY=0`.
-
-The recommendation chooses wider prefixes only when enough observed IPs cluster
-inside that prefix. Distributed traffic stays at `/32`.
-
-Plan updates for existing live UFW rules using the country recommendations:
-
-```bash
-python plan_ufw_country_rule_updates.py \
-  --recommendations country_prefix_recommendations.json \
-  --geo-data geo_data.json
-```
-
-This writes:
-- `ufw_country_update_plan.txt` — readable plan showing existing rules, country
-  evidence, provider statistics, replacement CIDRs, and skipped rules.
-- `ufw_country_update_plan.json` — exact machine-readable delete/add plan.
-
-The planner does not add new countries. It only prepares replacements for
-existing `DENY IN` UFW rules, skips protected countries (`BE`, `DE`, `FR`,
-`NL`), skips mixed-country evidence, and skips CIDRs overlapping the crawler
-allowlist.
-
-Review commands without changing UFW:
-
-```bash
-python apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json
-```
-
-Apply after review:
-
-```bash
-python apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json --sudo --apply
-```
-
-Recommend provider/ASN-specific subnet blocks:
-
-```bash
-python recommend_provider_subnets.py --geo-data geo_data.json
-```
-
-This writes:
-- `provider_subnet_recommendations.txt` — country + provider/ASN clustering with
-  recommended prefix and evidence.
-- `provider_dangerous_subnets.txt` — readable review list with only providers
-  that produced block candidates, including subnet hits, blocked-IP size,
-  example IPs, and prefix statistics.
-- `provider_subnet_recommendations.json` — machine-readable provider report.
-- `provider_subnet_candidates.json` — CIDRs that passed provider-cluster rules.
-
-Review and dry-run:
-
-```bash
-python block_generiek_subnet.py --input provider_subnet_candidates.json --sudo --dry-run
-```
-
-Apply after review:
-
-```bash
-python block_generiek_subnet.py --input provider_subnet_candidates.json --sudo
-```
-
-Use `run_geo_bulk_blocks.sh` when you want to bulk-block from the whole
-`geo_data.json` cache instead of the current `input.txt` snapshot:
-
-```bash
-bash run_geo_bulk_blocks.sh
-```
-
-Bulk defaults are intentionally aggressive:
-- `APPLY=1`
-- `CHECK_EXISTING=1`
-- `TARGET_PREFIX=24`
-- `MIN_HITS=1`
-
-`run_prepare_generiek_blocks.sh` uses policy mode by default:
-
-```bash
-bash run_prepare_generiek_blocks.sh
-```
-
-In policy mode it refreshes country/provider recommendations from `geo_data.json`
-and aggregates the current `input.txt` snapshot with per-country prefix settings.
-For snapshot runs, recommendation `min_hits` is capped to `1`, because each
-server-status snapshot usually contains one unique IP per subnet.
-
-Provider reports are written for review, but provider candidates are not merged
-by default. Merge them explicitly only after reviewing `provider_dangerous_subnets.txt`:
-
-```bash
-MERGE_PROVIDER_CANDIDATES=1 bash run_prepare_generiek_blocks.sh
-```
-
-Known safe providers such as Google, Bing/Microsoft, and OpenAI are skipped.
-
-Use legacy one-prefix behavior only when you explicitly want one prefix for the
-whole run:
-
-```bash
-POLICY_MODE=0 TARGET_PREFIX=24 MIN_HITS=1 bash run_prepare_generiek_blocks.sh
-```
-
-Review first with:
-
-```bash
-APPLY=0 bash run_geo_bulk_blocks.sh
-```
-
-Useful variants:
-
-```bash
-# Use Python 2 on an old server:
-PYTHON=python2 bash run_prepare_generiek_blocks.sh
-
-# Test only US with default policy mode:
-COUNTRY_CODES=US bash run_prepare_generiek_blocks.sh
-
-# Test only US as /24 using legacy one-prefix mode:
-POLICY_MODE=0 COUNTRY_CODES=US TARGET_PREFIX=24 bash run_prepare_generiek_blocks.sh
-
-# Aggressive China-only /16 test, only when at least 10 source IPs hit a subnet:
-POLICY_MODE=0 COUNTRY_CODES=CN TARGET_PREFIX=16 MIN_HITS=10 bash run_prepare_generiek_blocks.sh
-
-# Use another input file but still run the standard flow:
-INPUT_FILE=/var/log/nginx/access.log bash run_prepare_generiek_blocks.sh
-```
-
-For the old `/16` behavior, test it explicitly:
-
-```bash
-python aggregate_generiek_subnets.py --target-prefix 16
-python cache_crawler_ips.py --cache-dir ip_cache
-python audit_generiek_subnets.py --allowlist ip_cache/allowlist_cidrs.json --fail-on-overlap
-python block_generiek_subnet.py --sudo --check-bad-rules --dry-run
-```
-
-If `audit_generiek_subnets.py --fail-on-overlap` exits non-zero, do not apply the
-UFW rules until the overlapping OpenAI/Google/Bing ranges are handled.
-
-## Server-status cron monitor
-
-Run the blocker only when Apache server-status is above a busy-worker threshold:
-
-```bash
-PYTHON=python2 python2 monitor_server_status_blocks.py \
+PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
   --url https://www.nieuwejobs.com/server-status \
   --threshold 200 \
-  --insecure
+  --insecure \
+  --dry-run
 ```
 
-The monitor uses a lock directory so overlapping cron runs skip automatically.
-When the threshold is exceeded it saves the response to `last_server_status.txt`
-and `input.txt`, then runs `./run_prepare_generiek_blocks.sh`.
+Expected output below threshold:
 
-Dry-run test:
-
-```bash
-PYTHON=python2 python2 monitor_server_status_blocks.py --threshold 200 --insecure --dry-run
+```text
+Busy requests: 44
+Threshold: 200
+Below threshold. No block run.
 ```
 
-If the status endpoint is local and available over plain HTTP, avoid SSL
-entirely:
+### 2. Install The Cron Job
 
-```bash
-PYTHON=python2 python2 monitor_server_status_blocks.py \
-  --url http://127.0.0.1/server-status \
-  --threshold 200
-```
-
-Crontab every 30 minutes:
-
-```cron
-*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --threshold 200 --insecure >> monitor_server_status_blocks.log 2>&1
-```
-
-## 📂 File Structure  
-
-```
-.
-├── input.txt                            # Raw logs with IPs
-├── geo_data.json                        # JSON file storing IP-country mapping
-├── blocked_cn_ips.txt                   # List of already blocked IPs
-├── parse_ips.py                         # Extracts unique IPs from logs
-├── get_ip_country.py                    # Fetches country info from ipinfo.io
-├── block_cn_ips.py                      # Applies firewall rules for unwanted IPs
-├── aggregate_generiek_subnets.py        # Aggregate generic subnet for different counries like CN, IN, RU ... Config here prefix lengths for CIDR
-├── audit_generiek_subnets.py            # Read-only audit for generated subnet risk and crawler allowlist overlap
-├── block_generiek_subnet.py             # Block firewall rules for unwanted IPs
-├── run_prepare_generiek_blocks.sh       # Full input.txt -> audit -> UFW dry-run/apply wrapper
-├── docs/generic-subnet-ufw-plan.md      # Engineering plan for live UFW comparison workflow
-├── tests/test_block_generiek_subnet.py  # Unit tests for UFW parsing and rule planning
-└── README.md                            # This documentation
-```
-
----
-
-## 🔄 Automate with Cron (Linux)  
-
-To run the blocking process automatically, add this to your cron jobs:  
+Edit crontab:
 
 ```bash
 crontab -e
 ```
 
-Add the following line to run the script every **hour**:  
+Preferred local HTTP version:
 
-```bash
-0 * * * * /usr/bin/python /path/to/block_cn_ips.py 
+```cron
+*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --url http://127.0.0.1/server-status --threshold 200 >> monitor_server_status_blocks.log 2>&1
 ```
 
-This will ensure **continuous monitoring and blocking** of unwanted traffic.  
+HTTPS fallback:
 
----
-
-## 🚀 Example: Running the Full Process  
-
-```bash
-python parse_ips.py 
-python get_ip_country.py 
-python block_cn_ips.py 
+```cron
+*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --threshold 200 --insecure >> monitor_server_status_blocks.log 2>&1
 ```
 
----
-
-or you could generate subnets and ban crawlers by subnet 
+Check cron:
 
 ```bash
-python aggregate_cn_subnets.py 
-python block_cn_subnet.py
+crontab -l
+tail -f /home/downloads/DropIPsByCountry/monitor_server_status_blocks.log
 ```
 
-## CIDR Subnet Table
+The monitor uses `.server_status_block.lock`, so overlapping cron runs skip automatically.
 
-When calculating subnets, different prefix lengths affect the number of IP addresses per subnet:
+## Manual Incident Run
 
-| CIDR (subnet) | Number of IPs  | Increase Compared to /24  |
-|--------------|---------------|---------------------------|
-| `/24`        | 256 IPs       | Standard minimum subnet in IPv4 |
-| `/23`        | 512 IPs       | 2× larger than a `/24`    |
-| `/22`        | 1024 IPs      | 4× larger than a `/24`    |
-| `/21`        | 2048 IPs      | 8× larger than a `/24`    |
-| `/20`        | 4096 IPs      | 16× larger than a `/24`   |
-| `/19`        | 8192 IPs      | 32× larger than a `/24`   |
-| `/18`        | 16,384 IPs    | 64× larger than a `/24`   |
-| `/17`        | 32,768 IPs    | 128× larger than a `/24`  |
-| `/16`        | 65,536 IPs    | Usually a full ISP range or organization block |
-
-Compare blocked subnets with access of status logs
-
+If you already saved an Apache server-status response into `input.txt`, run:
 
 ```bash
-ufw status | grep "DENY" | awk '{print $3}' | sort -u > ufw_blocked_subnets.txt
-python parse_ips.py 
-python compare_ips.py
-get_ip_country.py
+cd /home/downloads/DropIPsByCountry
+PYTHON=python2 APPLY=0 ./run_prepare_generiek_blocks.sh
 ```
 
-Check that all crawlers from a particular country no longer appear in access logs or status logs.
+Review:
 
+```bash
+less aggregated_generiek_subnets.json
+less generiek_country_report.json
+less provider_dangerous_subnets.txt
+```
 
+Apply after review:
 
-Frequently used commands
+```bash
+PYTHON=python2 APPLY=1 ./run_prepare_generiek_blocks.sh
+```
+
+## Emergency Broad Blocking
+
+For a very broad distributed request pool, `/24` can be too narrow. In our incident data, almost every active IP came from a different `/24`, so `/24` blocking added many small rules but did not stop the pressure quickly enough.
+
+The emergency option is `/16`:
+
+```bash
+PYTHON=python2 POLICY_MODE=0 TARGET_PREFIX=16 MIN_HITS=1 APPLY=0 ./run_prepare_generiek_blocks.sh
+```
+
+Review first, then apply:
+
+```bash
+PYTHON=python2 POLICY_MODE=0 TARGET_PREFIX=16 MIN_HITS=1 APPLY=1 ./run_prepare_generiek_blocks.sh
+```
+
+Use this carefully. A `/16` contains 65,536 IPv4 addresses. It is effective as an incident response tool, but it is intentionally aggressive.
+
+## Default Policy Mode
+
+`run_prepare_generiek_blocks.sh` uses policy mode by default:
+
+```bash
+PYTHON=python2 ./run_prepare_generiek_blocks.sh
+```
+
+Policy mode:
+
+- parses `input.txt`
+- writes parsed IPs to `output.txt`
+- updates `geo_data.json`
+- refreshes country recommendations
+- refreshes provider recommendations for review
+- aggregates the current snapshot with per-country prefix settings
+- caps recommendation `min_hits` to `1` for server-status snapshots
+- skips known safe providers such as Google, Bing/Microsoft, and OpenAI
+- audits generated CIDRs before applying UFW rules
+- saves a run snapshot under `runs/<timestamp>/`
+
+Provider candidates are not merged by default, because they are based on historical `geo_data.json` and can add old provider ranges that are not present in the current attack snapshot.
+
+Merge provider candidates only after review:
+
+```bash
+PYTHON=python2 MERGE_PROVIDER_CANDIDATES=1 APPLY=0 ./run_prepare_generiek_blocks.sh
+```
+
+## Safety Rules
+
+The default country policy excludes protected local markets:
+
+```text
+BE, DE, FR, NL
+```
+
+The blocker also skips candidate subnets that:
+
+- overlap crawler allowlists
+- contain country mismatches from `geo_data.json`
+- are already covered by existing UFW deny rules
+
+Crawler allowlists include OpenAI, Google, Bing/Microsoft ranges where available.
+
+## Apache Configuration For Server Status
+
+For cron, local access is simplest:
+
+```apache
+<Location /server-status>
+    SetHandler server-status
+    Require local
+</Location>
+```
+
+On older Apache syntax using `mod_access_compat`, allow the local server IPs explicitly:
+
+```apache
+<Location /server-status>
+    SetHandler server-status
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.1 ::1 148.251.129.80
+</Location>
+```
+
+Reload Apache:
+
+```bash
+apachectl configtest
+service apache2 reload
+```
+
+Test:
+
+```bash
+curl http://127.0.0.1/server-status -H 'Host: www.nieuwejobs.com' | head
+```
+
+## What The Main Files Mean
+
+- `input.txt`: raw source text, usually Apache `/server-status` or logs.
+- `output.txt`: parsed IP addresses from `input.txt`.
+- `geo_data.json`: unique IP to country/provider cache.
+- `aggregated_generiek_subnets.json`: CIDRs generated for blocking.
+- `generiek_country_report.json`: country statistics for the current run.
+- `generiek_blocked_candidate_ips.txt`: source IPs selected for blocking.
+- `generiek_allowed_non_target_ips.txt`: source IPs not selected for blocking.
+- `provider_dangerous_subnets.txt`: human-readable provider/ASN review list.
+- `blocked_generiek_ips.txt`: tracking file for successfully inserted blocks.
+- `runs/<timestamp>/`: full run snapshots for later analysis.
+
+## Initial Setup
+
+Clone:
+
+```bash
+git clone https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry.git
+cd DropIPsByCountry
+```
+
+Install Python dependencies if needed:
+
+```bash
+python2 -m pip install ipaddress
+```
+
+Configure the IPInfo token in `get_ip_country.py`.
+
+## Core Commands
+
+Parse IPs:
+
+```bash
+python2 parse_ips.py
+```
+
+Update geo cache:
+
+```bash
+python2 get_ip_country.py
+```
+
+Build crawler allowlist:
+
+```bash
+python2 cache_crawler_ips.py --cache-dir ip_cache
+```
+
+Audit generated subnets:
+
+```bash
+python2 audit_generiek_subnets.py \
+  --input aggregated_generiek_subnets.json \
+  --allowlist ip_cache/allowlist_cidrs.json
+```
+
+Dry-run UFW additions:
+
+```bash
+python2 block_generiek_subnet.py --sudo --dry-run
+```
+
+Apply UFW additions:
+
+```bash
+python2 block_generiek_subnet.py --sudo
+```
+
+Use a saved UFW snapshot for local testing:
+
+```bash
+python3 block_generiek_subnet.py \
+  --input aggregated_generiek_subnets.json \
+  --ufw-status-file ufw_status_numbered \
+  --dry-run
+```
+
+## Existing UFW Audit And Cleanup
+
+Run this when setting up a server or after a firewall incident:
+
+```bash
+bash run_audit_existing_ufw.sh
+```
+
+Apply cleanup after review:
+
+```bash
+APPLY_CLEAN=1 bash run_audit_existing_ufw.sh
+```
+
+Manual steps:
+
+```bash
+python2 cache_crawler_ips.py --cache-dir ip_cache
+python2 find_bad_ufw_rules.py \
+  --allowlist ip_cache/allowlist_cidrs.json \
+  --output bad_ufw_rules.json \
+  --sudo
+python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo --dry-run
+python2 clean_bad_ufw_rules.py --input bad_ufw_rules.json --sudo
+```
+
+`clean_bad_ufw_rules.py` deletes rules from high rule number to low rule number so UFW renumbering does not delete the wrong rule.
+
+## Country Recommendations
+
+Generate per-country prefix recommendations:
+
+```bash
+python2 recommend_country_prefixes.py --geo-data geo_data.json
+```
+
+Outputs:
+
+- `country_prefix_recommendations.txt`
+- `country_prefix_recommendations.json`
+- `country_prefix_plan.sh`
+
+The recommendation engine chooses wider prefixes only when enough historical IPs cluster inside that prefix. During current server-status snapshot blocking, `run_prepare_generiek_blocks.sh` caps `min_hits` to `1`, because a live snapshot often has one unique IP per subnet.
+
+## Provider / ASN Recommendations
+
+Generate provider-specific recommendations:
+
+```bash
+python2 recommend_provider_subnets.py --geo-data geo_data.json
+```
+
+Outputs:
+
+- `provider_subnet_recommendations.txt`
+- `provider_dangerous_subnets.txt`
+- `provider_subnet_recommendations.json`
+- `provider_subnet_candidates.json`
+
+Review first:
+
+```bash
+less provider_dangerous_subnets.txt
+```
+
+Apply provider candidate CIDRs only when you deliberately want broader historical provider blocking:
+
+```bash
+python2 block_generiek_subnet.py \
+  --input provider_subnet_candidates.json \
+  --sudo \
+  --dry-run
+```
+
+## Updating Existing UFW Rules From Country Recommendations
+
+Create a replacement plan for existing live UFW deny rules:
+
+```bash
+python2 plan_ufw_country_rule_updates.py \
+  --recommendations country_prefix_recommendations.json \
+  --geo-data geo_data.json \
+  --sudo
+```
+
+Review:
+
+```bash
+less ufw_country_update_plan.txt
+```
+
+Dry-run apply commands:
+
+```bash
+python2 apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json --sudo
+```
+
+Apply:
+
+```bash
+python2 apply_ufw_country_rule_updates.py --plan ufw_country_update_plan.json --sudo --apply
+```
+
+The planner does not add new countries. It only prepares replacements for existing `DENY IN` rules and skips protected countries, mixed-country evidence, and crawler allowlist overlaps.
+
+## Apache Log Analysis
+
+For multi-site servers, Apache access logs are often a better decision source than one live `/server-status` snapshot.
+
+```bash
+python2 analyze_apache_subnets.py \
+  --log-dir /var/log/apache2 \
+  --geo-data geo_data.json \
+  --prefixes 32,24,20,16 \
+  --min-requests 100 \
+  --min-unique-ips 3
+```
+
+Outputs:
+
+- `apache_subnet_report.json`
+- `apache_subnet_report.txt`
+- `apache_subnet_candidates.txt`
+- `apache_log_ips.txt`
+- `apache_missing_geo_ips.txt`
+
+Decision labels:
+
+- `CANDIDATE`: subnet passes thresholds and contains only target-country evidence.
+- `LOW_EVIDENCE`: traffic exists, but not enough evidence to block automatically.
+- `REVIEW_NON_TARGET_PRESENT`: subnet contains non-target evidence and should not be applied blindly.
+
+## Run Snapshot Analysis
+
+Analyze previous runs:
+
+```bash
+python2 analyze_runs.py --runs-dir runs
+```
+
+Outputs:
+
+- `runs_analysis.txt`
+- `runs_analysis.json`
+
+This helps compare input IP counts, generated subnet counts, top countries, and repeated versus new IPs across incidents.
+
+## CIDR Size Reference
+
+| CIDR | IP count | Notes |
+| --- | ---: | --- |
+| `/32` | 1 | One IP |
+| `/24` | 256 | Narrow, often safe but weak against broad pools |
+| `/20` | 4,096 | Medium provider/local range |
+| `/18` | 16,384 | Broad |
+| `/16` | 65,536 | Very broad, useful as emergency brake |
+
+## UFW Notes
+
+UFW rule order matters. First match wins. `block_generiek_subnet.py` inserts deny rules near the top:
+
+```bash
+ufw insert 1 deny from 1.2.3.0/24
+```
+
+Useful inspection commands:
+
 ```bash
 sudo ufw status numbered
-iptables -L -n -v | grep 27.186
+sudo ufw status verbose
 iptables -L -n --line-numbers
-ufw reload
-tcpdump -i any host 27.186.186.103
-netstat -an | grep 27.186
-ufw insert 1 deny from
+iptables-save > iptables.txt
 ```
 
-## 🛡️ Why This Matters  
+Save firewall snapshots for analysis:
 
-- **Improves Performance** → Less bot traffic = More resources for real users.  
-- **Reduces Costs** → No bandwidth wasted on scrapers.  
-- **Lowers Energy Use** → Blocking at the **firewall level** saves CPU resources.  
-- **Scalable** → Can be automated with **cron jobs** or integrated into **hardware firewalls**.  
-
-### 🌍 **Efficient, Smart, and Cost-Effective Traffic Management!**  
-
----
-
-## 📞 Contact  
-
-Feel free to contribute or reach out for questions!  
-
-
-https://ats.work/ | https://onlinesolutionsgroup.website/
-
-Blog post about it. 
-https://www.webdeveloper.today/2025/03/optimizing-server-resources-by-blocking.html 
-
-
-# How UFW Rules Work
-
-UFW (Uncomplicated Firewall) is a user-friendly interface for managing firewall rules on Linux systems. It simplifies the use of iptables by allowing administrators to define rules in a more readable and structured manner.
-
-## Understanding UFW Rule Processing
-- **Order Matters**: UFW processes rules in the order they appear, from top to bottom.
-- **First Match Wins**: Once a packet matches a rule, subsequent rules are ignored.
-- **Default Policies**: UFW has default policies that apply when no rule matches.
-
-### Rule Types:
-- `ALLOW IN` → Allows incoming traffic.
-- `DENY IN` → Blocks incoming traffic.
-- `ALLOW OUT` → Allows outgoing traffic.
-- `DENY OUT` → Blocks outgoing traffic.
-
-## Example of a Correct Rule Order
-Let's say we want to block all traffic from `27.186.0.0/16`, but still allow HTTPS (port 443) for everyone else.
-
-### 1️⃣ Deny all traffic from the subnet BEFORE allowing 443:
 ```bash
-sudo ufw insert 1 deny from 27.186.0.0/16
+sudo ufw status numbered > ufw_status_numbered
+sudo ufw status verbose > ufw_status_verbose
+sudo iptables-save > iptables.txt
 ```
-This ensures that traffic from this subnet is dropped before reaching any allow rules.
 
-### 2️⃣ Allow traffic on HTTPS (port 443) for everyone:
+## Legacy Country-Specific Scripts
+
+Older scripts such as `block_cn_ips.py`, `aggregate_cn_subnets.py`, and `block_cn_subnet.py` are still present for historical compatibility. The recommended production path is now:
+
 ```bash
-sudo ufw allow in 443
+monitor_server_status_blocks.py
+run_prepare_generiek_blocks.sh
+aggregate_generiek_subnets.py
+block_generiek_subnet.py
 ```
 
-### 3️⃣ Allow standard HTTP (port 80) traffic for everyone:
-```bash
-sudo ufw allow in 80/tcp
-```
+## Contact
 
-### 4️⃣ Allow outgoing web traffic (useful for servers contacting the internet):
-```bash
-sudo ufw allow out 80/tcp
-sudo ufw allow out 443/tcp
-```
+Project:
 
-### 5️⃣ Check the rules to ensure the correct order:
-```bash
-sudo ufw status numbered
-```
-The output should look like this:
-```csharp
-[1] Anywhere                   DENY IN     27.186.0.0/16
-[2] 443                        ALLOW IN    Anywhere
-[3] 80/tcp                     ALLOW IN    Anywhere
-[4] 80/tcp                     ALLOW OUT   Anywhere (out)
-[5] 443/tcp                    ALLOW OUT   Anywhere (out)
-```
-🚀 Now, any traffic from `27.186.0.0/16` is blocked before reaching port `443`, ensuring effective filtering.
+https://github.com/OnlineSolutionsGroupBV/DropIPsByCountry
 
-## How to Confirm the Rules Are Working
+Company links:
 
-### 1️⃣ Check active network connections:
-```bash
-sudo netstat -an | grep 27.186
-```
-✅ If you see no active connections, the rule is working.
+https://ats.work/
 
-### 2️⃣ Monitor traffic from this subnet in real-time:
-```bash
-sudo tcpdump -i any host 27.186.186.103
-```
-✅ If you see no output, the IP is blocked.
-
-### 3️⃣ Ensure UFW is correctly applying the rules:
-```bash
-sudo ufw reload
-```
-✅ This makes sure all rules are properly applied.
-
-## Summary
-📌 **Key Takeaways:**
-- UFW processes rules in order (**first match applies**).
-- **Block unwanted traffic BEFORE allowing good traffic**.
-- Always check the order of rules with `sudo ufw status numbered`.
-- Use `tcpdump` or `netstat` to verify if a blocked IP still has access.
+https://onlinesolutionsgroup.website/
