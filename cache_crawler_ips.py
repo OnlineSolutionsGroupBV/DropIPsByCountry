@@ -4,6 +4,8 @@ import argparse
 import json
 import os
 import re
+import ssl
+import sys
 import time
 try:
     import ipaddress as _ip
@@ -31,10 +33,11 @@ except ImportError:
 
 try:
     # Py3
-    from urllib.request import Request, urlopen
+    from urllib.request import HTTPSHandler, Request, build_opener, urlopen
+    from urllib.error import URLError
 except ImportError:
     # Py2
-    from urllib2 import Request, urlopen
+    from urllib2 import HTTPSHandler, Request, URLError, build_opener, urlopen
 
 
 SOURCES = {
@@ -59,7 +62,13 @@ except NameError:
 
 def fetch_json(url):
     req = Request(url, headers={"User-Agent": "DropIPsByCountry/1.0"})
-    resp = urlopen(req, timeout=30)
+    try:
+        resp = urlopen(req, timeout=30)
+    except URLError as exc:
+        if not is_certificate_verify_error(exc):
+            raise
+        resp = urlopen_without_certificate_check(req, timeout=30)
+        print("WARNING: certificate verification failed for %s; retried without SSL verification" % url, file=sys.stderr)
     try:
         data = resp.read()
     finally:
@@ -70,6 +79,21 @@ def fetch_json(url):
     if isinstance(data, bytes):
         data = data.decode("utf-8")
     return json.loads(data)
+
+
+def is_certificate_verify_error(exc):
+    return "CERTIFICATE_VERIFY_FAILED" in str(exc) or "certificate verify failed" in str(exc).lower()
+
+
+def urlopen_without_certificate_check(req, timeout):
+    if not hasattr(ssl, "_create_unverified_context"):
+        raise RuntimeError("Python SSL module cannot create an unverified HTTPS context")
+    context = ssl._create_unverified_context()
+    try:
+        return urlopen(req, timeout=timeout, context=context)
+    except TypeError:
+        opener = build_opener(HTTPSHandler(context=context))
+        return opener.open(req, timeout=timeout)
 
 
 def _to_text(value):
