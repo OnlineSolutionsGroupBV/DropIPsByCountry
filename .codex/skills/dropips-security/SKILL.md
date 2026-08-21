@@ -32,6 +32,12 @@ Prepare generic blocks from `input.txt`:
 PYTHON=python2 APPLY=0 ./run_prepare_generiek_blocks.sh
 ```
 
+Fast path preview from `input.txt`:
+
+```bash
+PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+```
+
 Emergency broad snapshot review:
 
 ```bash
@@ -44,13 +50,16 @@ Only apply after reviewing:
 - `generiek_country_report.json`
 - `provider_dangerous_subnets.txt`
 - `ip_cache/allowlist_cidrs.json`
+- `runs/<timestamp>/user.rules.preview` when using fast UFW apply
 
 ## Safety Boundaries
 
 - Protected local markets are `BE`, `DE`, `FR`, and `NL` by default.
 - Do not add blocks that overlap crawler allowlists for Google, Bing/Microsoft, or OpenAI.
 - Do not widen prefixes based only on historical provider data unless the user asks for that risk.
-- Do not run destructive commands such as UFW apply/delete, `rm`, or git reset without explicit approval.
+- Do not run destructive commands such as UFW apply/delete, direct `user.rules` replacement, `rm`, or git reset without explicit approval.
+- For fast UFW apply, inspect the preview and verify new deny rules are before port 80/443 allow rules.
+- Fast UFW `APPLY=1` must run as root, for example with `sudo env PYTHON=python2 APPLY=1 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh`.
 - If SSL fails under Python 2, prefer local HTTP for server-status. Use `--insecure` only when the endpoint is trusted.
 
 ## Validation
@@ -64,7 +73,7 @@ python3 -m unittest discover -s tests
 For syntax compatibility checks:
 
 ```bash
-python3 -m py_compile monitor_server_status_blocks.py cache_crawler_ips.py
+python3 -m py_compile monitor_server_status_blocks.py cache_crawler_ips.py fast_geo_lookup.py fast_apply_ufw_user_rules.py
 ```
 
 If Python 2 is available, also run the changed script with `/usr/bin/python2` in dry-run mode.

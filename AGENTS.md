@@ -24,6 +24,12 @@ PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
 PYTHON=python2 APPLY=0 ./run_prepare_generiek_blocks.sh
 ```
 
+Fast opt-in incident workflow:
+
+```bash
+PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+```
+
 For emergency broad blocking, review first:
 
 ```bash
@@ -41,12 +47,15 @@ Only switch to `APPLY=1` after reviewing generated subnets and explaining the bl
 - `provider_dangerous_subnets.txt`: broader provider candidates for review.
 - `ip_cache/allowlist_cidrs.json`: crawler allowlist.
 - `runs/<timestamp>/`: run snapshots.
+- `runs/<timestamp>/user.rules.preview`: fast UFW preview when `APPLY=0` and `FAST_UFW_APPLY=1`.
 
 ## Security Guardrails
 
 - Protected local markets are `BE`, `DE`, `FR`, and `NL`.
 - Avoid blocks overlapping Google, Bing/Microsoft, or OpenAI crawler allowlists.
 - Do not apply or delete UFW rules without explicit approval.
+- Fast UFW apply edits `user.rules` directly; inspect preview and ensure deny rules remain before 80/443 allow rules.
+- Fast UFW `APPLY=1` must run as root, for example with `sudo env PYTHON=python2 APPLY=1 ...`.
 - Prefer local HTTP for `/server-status`; use `--insecure` only for trusted endpoints when old Python/OpenSSL cannot validate HTTPS.
 - Broad `/16` blocking is an incident tool, not a normal default.
 

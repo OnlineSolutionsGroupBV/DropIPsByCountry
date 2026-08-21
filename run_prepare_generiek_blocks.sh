@@ -13,6 +13,12 @@ OUTPUT_FILE="${OUTPUT_FILE:-aggregated_generiek_subnets.json}"
 APPLY="${APPLY:-1}"
 CHECK_EXISTING="${CHECK_EXISTING:-0}"
 SUDO_FLAG="${SUDO_FLAG:---sudo}"
+FAST_GEO_LOOKUP="${FAST_GEO_LOOKUP:-0}"
+FAST_GEO_RANGES="${FAST_GEO_RANGES:-data/fast_geo_ranges.tsv}"
+FAST_GEO_WRITE_UNKNOWN="${FAST_GEO_WRITE_UNKNOWN:-0}"
+SKIP_GEO_FETCH="${SKIP_GEO_FETCH:-0}"
+FAST_UFW_APPLY="${FAST_UFW_APPLY:-0}"
+UFW_USER_RULES="${UFW_USER_RULES:-}"
 RUN_ID="${RUN_ID:-$(date +%Y%m%d-%H%M%S)}"
 RUN_DIR="${RUN_DIR:-runs/$RUN_ID}"
 
@@ -41,6 +47,11 @@ write_summary() {
     echo "apply=$APPLY"
     echo "check_existing=$CHECK_EXISTING"
     echo "sudo_flag=$SUDO_FLAG"
+    echo "fast_geo_lookup=$FAST_GEO_LOOKUP"
+    echo "fast_geo_ranges=$FAST_GEO_RANGES"
+    echo "skip_geo_fetch=$SKIP_GEO_FETCH"
+    echo "fast_ufw_apply=$FAST_UFW_APPLY"
+    echo "ufw_user_rules=$UFW_USER_RULES"
     if [ -f output.txt ]; then
       echo "parsed_ip_lines=$(wc -l < output.txt | tr -d ' ')"
     fi
@@ -66,6 +77,19 @@ fi
 snapshot_if_exists input.txt "input_effective.txt"
 snapshot_if_exists output.txt "output_ips.txt"
 
+if [ "$FAST_GEO_LOOKUP" = "1" ]; then
+  FAST_GEO_ARGS=(
+    --input output.txt
+    --geo-data geo_data.json
+    --ranges "$FAST_GEO_RANGES"
+  )
+  if [ "$FAST_GEO_WRITE_UNKNOWN" = "1" ]; then
+    FAST_GEO_ARGS+=(--write-unknown)
+  fi
+  "$PYTHON_BIN" fast_geo_lookup.py "${FAST_GEO_ARGS[@]}"
+  snapshot_if_exists geo_data.json "geo_data_after_fast_lookup.json"
+fi
+
 AGG_ARGS=(
   --source "$AGG_SOURCE"
   --target-prefix "$TARGET_PREFIX"
@@ -74,7 +98,11 @@ AGG_ARGS=(
 )
 
 if [ "$AGG_SOURCE" = "geo" ]; then
-  "$PYTHON_BIN" get_ip_country.py
+  if [ "$SKIP_GEO_FETCH" = "1" ]; then
+    echo "Skipping get_ip_country.py because SKIP_GEO_FETCH=1."
+  else
+    "$PYTHON_BIN" get_ip_country.py
+  fi
   AGG_ARGS+=(--input geo_data.json --filter-ips-file output.txt)
   if [ "$POLICY_MODE" = "1" ]; then
     "$PYTHON_BIN" recommend_country_prefixes.py --geo-data geo_data.json --country-codes "$COUNTRY_CODES"
@@ -142,7 +170,37 @@ if [ -n "$SUDO_FLAG" ]; then
   BLOCK_ARGS+=($SUDO_FLAG)
 fi
 
-"$PYTHON_BIN" block_generiek_subnet.py "${BLOCK_ARGS[@]}"
+if [ "$FAST_UFW_APPLY" = "1" ]; then
+  if [ -z "$UFW_USER_RULES" ]; then
+    if [ -f /lib/ufw/user.rules ]; then
+      UFW_USER_RULES="/lib/ufw/user.rules"
+    elif [ -f /etc/ufw/user.rules ]; then
+      UFW_USER_RULES="/etc/ufw/user.rules"
+    else
+      echo "ERROR: FAST_UFW_APPLY=1 but UFW_USER_RULES was not set and no default user.rules file was found." >&2
+      exit 1
+    fi
+  fi
+  FAST_UFW_ARGS=(
+    --input "$OUTPUT_FILE"
+    --user-rules "$UFW_USER_RULES"
+    --blocked-file blocked_generiek_ips.txt
+    --allowlist ip_cache/allowlist_cidrs.json
+    --geo-data geo_data.json
+    --country-codes "$COUNTRY_CODES"
+  )
+  if [ -n "$SUDO_FLAG" ]; then
+    FAST_UFW_ARGS+=(--sudo)
+  fi
+  if [ "$APPLY" = "1" ]; then
+    FAST_UFW_ARGS+=(--apply --reload)
+  else
+    FAST_UFW_ARGS+=(--dry-run --output-preview "$RUN_DIR/user.rules.preview")
+  fi
+  "$PYTHON_BIN" fast_apply_ufw_user_rules.py "${FAST_UFW_ARGS[@]}"
+else
+  "$PYTHON_BIN" block_generiek_subnet.py "${BLOCK_ARGS[@]}"
+fi
 write_summary
 
 if [ "$APPLY" != "1" ]; then

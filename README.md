@@ -94,6 +94,68 @@ Apply after review:
 PYTHON=python2 APPLY=1 ./run_prepare_generiek_blocks.sh
 ```
 
+## Fast Manual Incident Run
+
+The fast path is opt-in. It keeps `geo_data.json` as the shared country/provider cache, but avoids per-IP API calls and per-rule `ufw insert` calls.
+
+Build or refresh the local country range artifact first:
+
+```bash
+cd /home/downloads/DropIPsByCountry
+SOURCE_CSV=/path/to/ipinfo_lite.csv PYTHON=python2 ./refresh_fast_geo_data.sh
+```
+
+Or download IPinfo Lite directly when `IPINFO_TOKEN` is available:
+
+```bash
+IPINFO_TOKEN=... PYTHON=python2 ./refresh_fast_geo_data.sh
+```
+
+Fast geo lookup only, then old safe UFW apply path:
+
+```bash
+PYTHON=python2 APPLY=0 ./run_prepare_generiek_blocks_fast_geo.sh
+```
+
+Fast geo lookup plus fast `user.rules` batch apply preview:
+
+```bash
+PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+```
+
+Review:
+
+```bash
+less aggregated_generiek_subnets.json
+less generiek_country_report.json
+less runs/$(ls -1 runs | tail -1)/user.rules.preview
+```
+
+Apply only after review:
+
+```bash
+sudo env PYTHON=python2 APPLY=1 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+```
+
+The fast UFW apply command writes a timestamped backup before replacing `user.rules`. It then runs one `ufw reload` instead of hundreds of `ufw insert` commands.
+Because it edits `user.rules` directly, the apply command must run as root. Dry-runs do not need write access unless you write the preview into a protected directory.
+
+Rollback example:
+
+```bash
+sudo env python2 restore_ufw_user_rules_backup.py \
+  --backup /lib/ufw/user.rules.backup-YYYYMMDD-HHMMSS \
+  --user-rules /lib/ufw/user.rules \
+  --apply \
+  --reload
+```
+
+Compare local range country lookup against existing `geo_data.json` before switching production workflow:
+
+```bash
+python2 compare_geo_lookup.py --input output.txt --geo-data geo_data.json --ranges data/fast_geo_ranges.tsv --sample 100
+```
+
 ## Emergency Broad Blocking
 
 For a very broad distributed request pool, `/24` can be too narrow. In our incident data, almost every active IP came from a different `/24`, so `/24` blocking added many small rules but did not stop the pressure quickly enough.
