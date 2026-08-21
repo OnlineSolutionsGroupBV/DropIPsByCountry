@@ -39,7 +39,7 @@ Fast path preview from `input.txt`:
 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
 
-The fast-all wrapper fetches live `server-status` into `input.txt` by default using `SERVER_STATUS_URL=http://127.0.0.1/server-status` and `SERVER_STATUS_HOST=www.nieuwejobs.com`. Set `FETCH_SERVER_STATUS=0` when intentionally analyzing a saved `input.txt`.
+The fast-all wrapper fetches live `server-status` into `input.txt` by default using `SERVER_STATUS_URL=http://127.0.0.1/server-status` and `SERVER_STATUS_HOST=www.nieuwejobs.com`. It also restarts Apache by default for manual incident runs. Set `FETCH_SERVER_STATUS=0` and `RESTART_APACHE=0` when intentionally analyzing a saved `input.txt`.
 
 Emergency broad snapshot review:
 

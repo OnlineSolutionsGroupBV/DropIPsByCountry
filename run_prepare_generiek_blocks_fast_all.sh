@@ -11,6 +11,8 @@ FETCH_SERVER_STATUS="${FETCH_SERVER_STATUS:-1}"
 SERVER_STATUS_URL="${SERVER_STATUS_URL:-http://127.0.0.1/server-status}"
 SERVER_STATUS_HOST="${SERVER_STATUS_HOST:-www.nieuwejobs.com}"
 CURL_BIN="${CURL_BIN:-curl}"
+RESTART_APACHE="${RESTART_APACHE:-1}"
+APACHE_RESTART_CMD="${APACHE_RESTART_CMD:-service apache2 restart}"
 
 if [ "$FETCH_SERVER_STATUS" = "1" ]; then
   tmp_status="${INPUT_FILE}.tmp-$$"
@@ -20,3 +22,8 @@ if [ "$FETCH_SERVER_STATUS" = "1" ]; then
 fi
 
 ./run_prepare_generiek_blocks.sh
+
+if [ "$RESTART_APACHE" = "1" ]; then
+  echo "Restarting Apache with: $APACHE_RESTART_CMD"
+  $APACHE_RESTART_CMD
+fi

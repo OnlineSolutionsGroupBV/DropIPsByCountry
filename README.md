@@ -140,13 +140,16 @@ PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek
 FETCH_SERVER_STATUS=1
 SERVER_STATUS_URL=http://127.0.0.1/server-status
 SERVER_STATUS_HOST=www.nieuwejobs.com
+RESTART_APACHE=1
 ```
 
 To analyze an already saved `input.txt`, disable the fetch:
 
 ```bash
-FETCH_SERVER_STATUS=0 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+FETCH_SERVER_STATUS=0 RESTART_APACHE=0 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
+
+The Apache restart is intentional for manual incident runs, because UFW does not kill already established connections. Set `RESTART_APACHE=0` for previews or non-incident analysis.
 
 For a live incident via the monitor threshold gate:
 

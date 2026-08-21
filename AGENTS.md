@@ -32,6 +32,7 @@ PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek
 ```
 
 `run_prepare_generiek_blocks_fast_all.sh` fetches live `server-status` into `input.txt` by default. Use `FETCH_SERVER_STATUS=0` when intentionally analyzing an already saved input file.
+It also restarts Apache by default for manual incident runs; use `RESTART_APACHE=0` for previews or analysis.
 
 For emergency broad blocking, review first:
 
