@@ -7,6 +7,7 @@ import os
 import time
 
 from local_ip_country import atomic_write_json, cidr_to_range, range_row_to_tsv, to_text
+from local_ip_country import ipv4_to_int
 
 
 def clean(value):
@@ -26,14 +27,24 @@ def build_ranges(input_path, output_path, meta_path=None, limit=0):
         for row in reader:
             loaded += 1
             network = clean(row.get("network"))
-            if not network:
+            start_ip = clean(row.get("start_ip"))
+            end_ip = clean(row.get("end_ip"))
+            if not network and not (start_ip and end_ip):
                 skipped_invalid += 1
                 continue
-            if ":" in network:
+            if (network and ":" in network) or (start_ip and ":" in start_ip) or (end_ip and ":" in end_ip):
                 skipped_ipv6 += 1
                 continue
             try:
-                start_int, end_int = cidr_to_range(network)
+                if network:
+                    start_int, end_int = cidr_to_range(network)
+                    output_network = network
+                else:
+                    start_int = ipv4_to_int(start_ip)
+                    end_int = ipv4_to_int(end_ip)
+                    if end_int < start_int:
+                        raise ValueError("end before start")
+                    output_network = "%s-%s" % (start_ip, end_ip)
             except Exception:
                 skipped_invalid += 1
                 continue
@@ -43,7 +54,7 @@ def build_ranges(input_path, output_path, meta_path=None, limit=0):
                 "country": clean(row.get("country_code")).upper()[:2] or clean(row.get("country")).upper()[:2] or "Unknown",
                 "asn": clean(row.get("asn"))[:40],
                 "as_name": clean(row.get("as_name"))[:255],
-                "network": network,
+                "network": output_network,
             })
             if limit and len(rows) >= limit:
                 break

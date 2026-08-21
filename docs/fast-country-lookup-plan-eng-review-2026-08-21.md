@@ -404,7 +404,7 @@ python2 build_fast_geo_ranges.py \
 
 Responsibilities:
 
-- read IPinfo Lite style CSV: `network,country,country_code,continent,continent_code,asn,as_name,as_domain`
+- read IPinfo Lite style CSV with either `network,country,country_code,...` or `start_ip,end_ip,country,...`
 - skip IPv6 in phase 1
 - convert IPv4 CIDRs to integer ranges
 - write sorted ranges by `start_int`

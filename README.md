@@ -105,6 +105,8 @@ cd /home/downloads/DropIPsByCountry
 SOURCE_CSV=/path/to/ipinfo_lite.csv PYTHON=python2 ./refresh_fast_geo_data.sh
 ```
 
+Supported CSV inputs are IPinfo `network,...` exports and IPinfo `start_ip,end_ip,country,...` exports.
+
 Or download IPinfo Lite directly when `IPINFO_TOKEN` is available:
 
 ```bash

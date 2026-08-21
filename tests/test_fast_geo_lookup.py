@@ -72,6 +72,22 @@ class FastGeoLookupTests(unittest.TestCase):
         self.assertEqual(data["1.1.1.1"]["country"], "AU")
         self.assertEqual(data["123.201.10.20"]["source"], "local_range")
 
+    def test_build_ranges_accepts_start_end_ip_csv(self):
+        csv_path = self.path("country_asn.csv")
+        ranges_path = self.path("ranges.tsv")
+        with open(csv_path, "w") as f:
+            f.write("start_ip,end_ip,country,country_name,continent,continent_name,asn,as_name,as_domain\n")
+            f.write('1.1.1.0,1.1.1.255,AU,Australia,OC,Oceania,AS13335,"Cloudflare, Inc.",cloudflare.com\n')
+
+        meta = builder.build_ranges(csv_path, ranges_path, self.path("ranges.meta.json"))
+        starts, ranges = local_geo.load_ranges(ranges_path)
+        row = local_geo.lookup_ip("1.1.1.1", starts, ranges)
+
+        self.assertEqual(meta["ipv4_ranges"], 1)
+        self.assertEqual(row["country"], "AU")
+        self.assertEqual(row["asn"], "AS13335")
+        self.assertEqual(row["network"], "1.1.1.0-1.1.1.255")
+
 
 if __name__ == "__main__":
     unittest.main()
