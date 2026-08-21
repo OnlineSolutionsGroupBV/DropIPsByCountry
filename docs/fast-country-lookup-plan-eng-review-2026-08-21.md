@@ -526,6 +526,8 @@ Old servers with broken CA/OpenSSL can use explicit insecure curl mode:
 CURL_INSECURE=1 IPINFO_TOKEN=... ./refresh_fast_geo_data.sh
 ```
 
+Default behavior: reuse `data/country_asn.csv` when it is at least 1 MB and not older than 24 hours, then rebuild the compact TSV from that local file. Use `FORCE_DOWNLOAD=1` when a fresh download is required.
+
 Responsibilities:
 
 - download source CSV into `data/`

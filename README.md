@@ -119,6 +119,8 @@ If the server has an old CA/OpenSSL setup and `curl` fails certificate verificat
 CURL_INSECURE=1 IPINFO_TOKEN=... PYTHON=python2 ./refresh_fast_geo_data.sh
 ```
 
+By default the refresh command reuses `data/country_asn.csv` when it is at least 1 MB and not older than 24 hours, then rebuilds `data/fast_geo_ranges.tsv` from that local file. Use `FORCE_DOWNLOAD=1` to force a fresh IPinfo download.
+
 Fast geo lookup only, then old safe UFW apply path:
 
 ```bash

@@ -2,12 +2,16 @@
 from __future__ import print_function
 
 import argparse
+import codecs
 import csv
 import os
+import sys
 import time
 
 from local_ip_country import atomic_write_json, cidr_to_range, range_row_to_tsv, to_text
 from local_ip_country import ipv4_to_int
+
+PY2 = sys.version_info[0] == 2
 
 
 def clean(value):
@@ -16,13 +20,19 @@ def clean(value):
     return to_text(value).strip()
 
 
+def open_csv_input(path):
+    if PY2:
+        return open(path, "rb")
+    return open(path, "r", newline="", encoding="utf-8")
+
+
 def build_ranges(input_path, output_path, meta_path=None, limit=0):
     rows = []
     loaded = 0
     skipped_ipv6 = 0
     skipped_invalid = 0
 
-    with open(input_path, "r") as handle:
+    with open_csv_input(input_path) as handle:
         reader = csv.DictReader(handle)
         for row in reader:
             loaded += 1
@@ -72,7 +82,7 @@ def build_ranges(input_path, output_path, meta_path=None, limit=0):
         raise RuntimeError("no IPv4 ranges built from %s" % input_path)
 
     tmp_path = "%s.tmp-%s" % (output_path, os.getpid())
-    with open(tmp_path, "w") as out:
+    with codecs.open(tmp_path, "w", "utf-8") as out:
         out.write("# start_int\tend_int\tcountry\tasn\tas_name\tnetwork\n")
         for row in rows:
             out.write(range_row_to_tsv(row) + "\n")
