@@ -82,6 +82,10 @@ def write_text(path, content):
         f.write(content.encode("utf-8"))
 
 
+def current_run_timestamp():
+    return time.strftime("%Y-%m-%d %H:%M:%S %Z")
+
+
 def run_prepare(script, python_bin, apply, extra_env):
     env = os.environ.copy()
     env["PYTHON"] = python_bin
@@ -118,6 +122,7 @@ def build_parser():
 
 def main_with_args(argv):
     args = build_parser().parse_args(argv)
+    print("Started at:", current_run_timestamp())
     locked = acquire_lock(args.lock_dir, args.stale_lock_seconds)
     if not locked:
         print("Another monitor run is active. Skipping.")

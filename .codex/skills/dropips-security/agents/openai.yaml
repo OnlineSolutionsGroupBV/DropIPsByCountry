@@ -1,0 +1,7 @@
+interface:
+  display_name: "DropIPs Security"
+  short_description: "Safe firewall incident workflow"
+  default_prompt: "Use $dropips-security to review a DropIPsByCountry security incident and choose a safe dry-run workflow."
+
+policy:
+  allow_implicit_invocation: true

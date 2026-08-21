@@ -3,6 +3,10 @@ import shutil
 import sys
 import tempfile
 import unittest
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT not in sys.path:
@@ -35,6 +39,34 @@ class MonitorServerStatusBlocksTests(unittest.TestCase):
 
         monitor.release_lock(lock_dir)
         self.assertFalse(os.path.exists(lock_dir))
+
+    def test_main_prints_start_timestamp(self):
+        status = os.path.join(self.tmpdir, "status.txt")
+        input_file = os.path.join(self.tmpdir, "input.txt")
+        snapshot = os.path.join(self.tmpdir, "snapshot.txt")
+        lock_dir = os.path.join(self.tmpdir, "lock")
+        with open(status, "w") as f:
+            f.write("149 requests currently being processed, 56 idle workers")
+
+        original_timestamp = monitor.current_run_timestamp
+        original_stdout = sys.stdout
+        output = StringIO()
+        monitor.current_run_timestamp = lambda: "2026-08-21 12:34:56 CEST"
+        sys.stdout = output
+        try:
+            rc = monitor.main_with_args([
+                "--status-file", status,
+                "--threshold", "200",
+                "--input-file", input_file,
+                "--snapshot-file", snapshot,
+                "--lock-dir", lock_dir,
+            ])
+        finally:
+            monitor.current_run_timestamp = original_timestamp
+            sys.stdout = original_stdout
+
+        self.assertEqual(rc, 0)
+        self.assertIn("Started at: 2026-08-21 12:34:56 CEST", output.getvalue())
 
     def test_main_below_threshold_does_not_run_prepare(self):
         status = os.path.join(self.tmpdir, "status.txt")
