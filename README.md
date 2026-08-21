@@ -167,6 +167,32 @@ sudo env PYTHON=python2 \
   --apply
 ```
 
+For a live incident loop that keeps checking every 5 minutes and reruns the fast-all flow while Apache has more than 100 busy workers:
+
+```bash
+sudo env PYTHON=python2 \
+  /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --sleep-seconds 300 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --user-rules /lib/ufw/user.rules
+```
+
+The loop runs with `POLICY_MODE=0`, `TARGET_PREFIX=16`, `MIN_HITS=1`, `APPLY=1`, `PYTHON=python2`, `UFW_USER_RULES=/lib/ufw/user.rules`, and `FAST_UFW_BACKUP=0` by default. Test once without applying:
+
+```bash
+PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --once \
+  --dry-run
+```
+
+If HTTPS is required and the old Python/OpenSSL stack cannot validate the certificate, add `--insecure` only for a trusted endpoint.
+
 `run_prepare_generiek_blocks.sh` refuses to continue when parsing finds zero IPs. Use `ALLOW_EMPTY_INPUT=1` only for an intentional empty dry-run.
 
 Review:
@@ -183,7 +209,7 @@ Apply only after review:
 sudo env PYTHON=python2 APPLY=1 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
 
-The fast UFW apply command writes a timestamped backup before replacing `user.rules`. It then runs one `ufw reload` instead of hundreds of `ufw insert` commands.
+The fast UFW apply command writes a timestamped backup before replacing `user.rules` unless `FAST_UFW_BACKUP=0` or `--no-backup` is used. The fast-all wrapper disables these backups by default to avoid accumulating many `/lib/ufw/user.rules.backup-*` files during incident loops. It then runs one `ufw reload` instead of hundreds of `ufw insert` commands.
 Because it edits `user.rules` directly, the apply command must run as root. Dry-runs do not need write access unless you write the preview into a protected directory.
 
 Rollback example:

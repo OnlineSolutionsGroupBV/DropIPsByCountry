@@ -77,17 +77,21 @@ def write_preview(path, content):
         f.write(content)
 
 
-def atomic_replace_with_backup(path, content):
+def atomic_replace_with_backup(path, content, make_backup=True):
     directory = os.path.dirname(os.path.abspath(path))
     basename = os.path.basename(path)
     timestamp = time.strftime("%Y%m%d-%H%M%S")
-    backup_path = os.path.join(directory, "%s.backup-%s" % (basename, timestamp))
+    backup_path = None
+    if make_backup:
+        backup_path = os.path.join(directory, "%s.backup-%s" % (basename, timestamp))
     tmp_path = os.path.join(directory, "%s.tmp-%s" % (basename, os.getpid()))
 
     with open(tmp_path, "w") as f:
         f.write(content)
-    validate_user_rules_text(open(tmp_path, "r").read())
-    shutil.copy2(path, backup_path)
+    with open(tmp_path, "r") as f:
+        validate_user_rules_text(f.read())
+    if make_backup:
+        shutil.copy2(path, backup_path)
     os.rename(tmp_path, path)
     return backup_path
 
@@ -179,6 +183,7 @@ def build_parser():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--reload", action="store_true")
     parser.add_argument("--no-reload", action="store_true")
+    parser.add_argument("--no-backup", action="store_true", help="Replace user.rules without writing a timestamped backup")
     parser.add_argument("--sudo", action="store_true", help="Use sudo for ufw reload/status only; file writes still require permissions")
     parser.add_argument("--output-preview", default="")
     return parser
@@ -207,9 +212,12 @@ def main():
             print("No new deny blocks to add. No UFW files changed.")
             return 0
 
-        backup_path = atomic_replace_with_backup(args.user_rules, plan["new_text"])
+        backup_path = atomic_replace_with_backup(args.user_rules, plan["new_text"], make_backup=not args.no_backup)
         print("Replaced:", args.user_rules)
-        print("Backup:", backup_path)
+        if backup_path:
+            print("Backup:", backup_path)
+        else:
+            print("Backup skipped (--no-backup).")
         blocker.append_tracking_file(args.blocked_file, plan["cidrs_to_add"])
 
         should_reload = args.reload and not args.no_reload

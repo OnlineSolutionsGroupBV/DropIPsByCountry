@@ -63,6 +63,35 @@ COMMIT
 
         self.assertEqual(new_text, original)
 
+    def test_atomic_replace_with_backup_writes_backup_by_default(self):
+        path = os.path.join(self.tmpdir, "user.rules")
+        original = self.user_rules_text()
+        replacement = original.replace("111.42.0.0/16", "123.201.0.0/16")
+        with open(path, "w") as f:
+            f.write(original)
+
+        backup_path = fast_ufw.atomic_replace_with_backup(path, replacement)
+
+        self.assertTrue(os.path.exists(backup_path))
+        with open(backup_path, "r") as f:
+            self.assertEqual(f.read(), original)
+        with open(path, "r") as f:
+            self.assertEqual(f.read(), replacement)
+
+    def test_atomic_replace_with_backup_can_skip_backup(self):
+        path = os.path.join(self.tmpdir, "user.rules")
+        original = self.user_rules_text()
+        replacement = original.replace("111.42.0.0/16", "123.201.0.0/16")
+        with open(path, "w") as f:
+            f.write(original)
+
+        backup_path = fast_ufw.atomic_replace_with_backup(path, replacement, make_backup=False)
+
+        self.assertIsNone(backup_path)
+        self.assertEqual(os.listdir(self.tmpdir), ["user.rules"])
+        with open(path, "r") as f:
+            self.assertEqual(f.read(), replacement)
+
 
 if __name__ == "__main__":
     unittest.main()

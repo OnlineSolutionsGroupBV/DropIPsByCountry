@@ -33,6 +33,19 @@ PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek
 
 `run_prepare_generiek_blocks_fast_all.sh` fetches live `server-status` into `input.txt` by default. Use `FETCH_SERVER_STATUS=0` when intentionally analyzing an already saved input file.
 It also restarts Apache by default for manual incident runs; use `RESTART_APACHE=0` for previews or analysis.
+The fast-all wrapper sets `FAST_UFW_BACKUP=0` by default so a repeated incident loop does not fill `/lib/ufw` with timestamped `user.rules.backup-*` files. Use `FAST_UFW_BACKUP=1` only when a backup is required for that run.
+
+Continuous fast incident loop:
+
+```bash
+sudo env PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --sleep-seconds 300 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --user-rules /lib/ufw/user.rules
+```
 
 For emergency broad blocking, review first:
 

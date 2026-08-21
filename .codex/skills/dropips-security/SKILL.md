@@ -40,6 +40,19 @@ PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek
 ```
 
 The fast-all wrapper fetches live `server-status` into `input.txt` by default using `SERVER_STATUS_URL=http://127.0.0.1/server-status` and `SERVER_STATUS_HOST=www.nieuwejobs.com`. It also restarts Apache by default for manual incident runs. Set `FETCH_SERVER_STATUS=0` and `RESTART_APACHE=0` when intentionally analyzing a saved `input.txt`.
+The fast-all wrapper disables timestamped `user.rules` backups by default with `FAST_UFW_BACKUP=0` so repeated incident loops do not fill `/lib/ufw`. Set `FAST_UFW_BACKUP=1` when a specific apply needs a backup.
+
+Continuous fast incident loop:
+
+```bash
+sudo env PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --sleep-seconds 300 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --user-rules /lib/ufw/user.rules
+```
 
 Emergency broad snapshot review:
 
@@ -78,7 +91,7 @@ python3 -m unittest discover -s tests
 For syntax compatibility checks:
 
 ```bash
-python3 -m py_compile monitor_server_status_blocks.py cache_crawler_ips.py fast_geo_lookup.py fast_apply_ufw_user_rules.py
+python3 -m py_compile monitor_server_status_blocks.py monitor_fast_all_loop.py cache_crawler_ips.py fast_geo_lookup.py fast_apply_ufw_user_rules.py
 ```
 
 If Python 2 is available, also run the changed script with `/usr/bin/python2` in dry-run mode.

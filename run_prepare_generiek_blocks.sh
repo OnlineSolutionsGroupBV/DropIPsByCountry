@@ -18,6 +18,7 @@ FAST_GEO_RANGES="${FAST_GEO_RANGES:-data/fast_geo_ranges.tsv}"
 FAST_GEO_WRITE_UNKNOWN="${FAST_GEO_WRITE_UNKNOWN:-0}"
 SKIP_GEO_FETCH="${SKIP_GEO_FETCH:-0}"
 FAST_UFW_APPLY="${FAST_UFW_APPLY:-0}"
+FAST_UFW_BACKUP="${FAST_UFW_BACKUP:-1}"
 UFW_USER_RULES="${UFW_USER_RULES:-}"
 ALLOW_EMPTY_INPUT="${ALLOW_EMPTY_INPUT:-0}"
 RUN_ID="${RUN_ID:-$(date +%Y%m%d-%H%M%S)}"
@@ -52,6 +53,7 @@ write_summary() {
     echo "fast_geo_ranges=$FAST_GEO_RANGES"
     echo "skip_geo_fetch=$SKIP_GEO_FETCH"
     echo "fast_ufw_apply=$FAST_UFW_APPLY"
+    echo "fast_ufw_backup=$FAST_UFW_BACKUP"
     echo "ufw_user_rules=$UFW_USER_RULES"
     if [ -f output.txt ]; then
       echo "parsed_ip_lines=$(wc -l < output.txt | tr -d ' ')"
@@ -201,6 +203,9 @@ if [ "$FAST_UFW_APPLY" = "1" ]; then
   )
   if [ -n "$SUDO_FLAG" ]; then
     FAST_UFW_ARGS+=(--sudo)
+  fi
+  if [ "$FAST_UFW_BACKUP" = "0" ]; then
+    FAST_UFW_ARGS+=(--no-backup)
   fi
   if [ "$APPLY" = "1" ]; then
     FAST_UFW_ARGS+=(--apply --reload)
