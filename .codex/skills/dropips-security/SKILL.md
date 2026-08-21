@@ -22,6 +22,7 @@ Monitor Apache load:
 ```bash
 PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
   --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
   --threshold 200 \
   --dry-run
 ```
@@ -37,6 +38,8 @@ Fast path preview from `input.txt`:
 ```bash
 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
+
+The fast-all wrapper fetches live `server-status` into `input.txt` by default using `SERVER_STATUS_URL=http://127.0.0.1/server-status` and `SERVER_STATUS_HOST=www.nieuwejobs.com`. Set `FETCH_SERVER_STATUS=0` when intentionally analyzing a saved `input.txt`.
 
 Emergency broad snapshot review:
 
@@ -61,6 +64,8 @@ Only apply after reviewing:
 - For fast UFW apply, inspect the preview and verify new deny rules are before port 80/443 allow rules.
 - Fast UFW `APPLY=1` must run as root, for example with `sudo env PYTHON=python2 APPLY=1 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh`.
 - If SSL fails under Python 2, prefer local HTTP for server-status. Use `--insecure` only when the endpoint is trusted.
+- For Apache name-based vhosts, include `--host-header www.nieuwejobs.com` with the local `127.0.0.1` status URL.
+- A production incident run with `0` parsed IPs is a failed input capture; do not continue unless `ALLOW_EMPTY_INPUT=1` is explicitly set for testing.
 
 ## Validation
 

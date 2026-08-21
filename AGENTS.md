@@ -16,6 +16,7 @@ Prefer read-only or dry-run commands first:
 ```bash
 PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
   --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
   --threshold 200 \
   --dry-run
 ```
@@ -29,6 +30,8 @@ Fast opt-in incident workflow:
 ```bash
 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
+
+`run_prepare_generiek_blocks_fast_all.sh` fetches live `server-status` into `input.txt` by default. Use `FETCH_SERVER_STATUS=0` when intentionally analyzing an already saved input file.
 
 For emergency broad blocking, review first:
 
@@ -57,6 +60,8 @@ Only switch to `APPLY=1` after reviewing generated subnets and explaining the bl
 - Fast UFW apply edits `user.rules` directly; inspect preview and ensure deny rules remain before 80/443 allow rules.
 - Fast UFW `APPLY=1` must run as root, for example with `sudo env PYTHON=python2 APPLY=1 ...`.
 - Prefer local HTTP for `/server-status`; use `--insecure` only for trusted endpoints when old Python/OpenSSL cannot validate HTTPS.
+- For name-based Apache vhosts, pass `--host-header www.nieuwejobs.com` when fetching `http://127.0.0.1/server-status`.
+- Treat `0` parsed IPs as a failed incident input unless `ALLOW_EMPTY_INPUT=1` was set deliberately for testing.
 - Broad `/16` blocking is an incident tool, not a normal default.
 
 ## Validation

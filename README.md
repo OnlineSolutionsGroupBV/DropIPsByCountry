@@ -20,6 +20,7 @@ From the server:
 cd /home/downloads/DropIPsByCountry
 PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py \
   --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
   --threshold 200 \
   --dry-run
 ```
@@ -53,7 +54,7 @@ crontab -e
 Preferred local HTTP version:
 
 ```cron
-*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --url http://127.0.0.1/server-status --threshold 200 >> monitor_server_status_blocks.log 2>&1
+*/30 * * * * cd /home/downloads/DropIPsByCountry && PYTHON=python2 /usr/bin/python2 monitor_server_status_blocks.py --url http://127.0.0.1/server-status --host-header www.nieuwejobs.com --threshold 200 >> monitor_server_status_blocks.log 2>&1
 ```
 
 HTTPS fallback:
@@ -132,6 +133,38 @@ Fast geo lookup plus fast `user.rules` batch apply preview:
 ```bash
 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
 ```
+
+`run_prepare_generiek_blocks_fast_all.sh` fetches live Apache server-status into `input.txt` by default before parsing. Defaults:
+
+```text
+FETCH_SERVER_STATUS=1
+SERVER_STATUS_URL=http://127.0.0.1/server-status
+SERVER_STATUS_HOST=www.nieuwejobs.com
+```
+
+To analyze an already saved `input.txt`, disable the fetch:
+
+```bash
+FETCH_SERVER_STATUS=0 PYTHON=python2 APPLY=0 UFW_USER_RULES=/lib/ufw/user.rules ./run_prepare_generiek_blocks_fast_all.sh
+```
+
+For a live incident via the monitor threshold gate:
+
+```bash
+sudo env PYTHON=python2 \
+  /usr/bin/python2 monitor_server_status_blocks.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 200 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --env POLICY_MODE=0 \
+  --env TARGET_PREFIX=16 \
+  --env MIN_HITS=1 \
+  --env UFW_USER_RULES=/lib/ufw/user.rules \
+  --apply
+```
+
+`run_prepare_generiek_blocks.sh` refuses to continue when parsing finds zero IPs. Use `ALLOW_EMPTY_INPUT=1` only for an intentional empty dry-run.
 
 Review:
 

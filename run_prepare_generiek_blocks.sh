@@ -19,6 +19,7 @@ FAST_GEO_WRITE_UNKNOWN="${FAST_GEO_WRITE_UNKNOWN:-0}"
 SKIP_GEO_FETCH="${SKIP_GEO_FETCH:-0}"
 FAST_UFW_APPLY="${FAST_UFW_APPLY:-0}"
 UFW_USER_RULES="${UFW_USER_RULES:-}"
+ALLOW_EMPTY_INPUT="${ALLOW_EMPTY_INPUT:-0}"
 RUN_ID="${RUN_ID:-$(date +%Y%m%d-%H%M%S)}"
 RUN_DIR="${RUN_DIR:-runs/$RUN_ID}"
 
@@ -74,6 +75,15 @@ if [ "$INPUT_FILE" != "input.txt" ]; then
 fi
 
 "$PYTHON_BIN" parse_ips.py
+PARSED_IP_LINES=$(wc -l < output.txt | tr -d ' ')
+if [ "$PARSED_IP_LINES" -eq 0 ] && [ "$ALLOW_EMPTY_INPUT" != "1" ]; then
+  snapshot_if_exists input.txt "input_effective.txt"
+  snapshot_if_exists output.txt "output_ips.txt"
+  write_summary
+  echo "ERROR: parsed 0 IPs from $INPUT_FILE. Refusing to continue with an empty block plan." >&2
+  echo "Set ALLOW_EMPTY_INPUT=1 only for an intentional empty dry-run." >&2
+  exit 2
+fi
 snapshot_if_exists input.txt "input_effective.txt"
 snapshot_if_exists output.txt "output_ips.txt"
 

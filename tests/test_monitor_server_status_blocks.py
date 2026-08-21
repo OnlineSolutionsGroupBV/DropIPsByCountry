@@ -31,6 +31,12 @@ class MonitorServerStatusBlocksTests(unittest.TestCase):
     def test_parse_busy_requests_returns_none_when_missing(self):
         self.assertIsNone(monitor.parse_busy_requests("Server status unavailable"))
 
+    def test_parse_headers_accepts_host_header(self):
+        headers = monitor.parse_headers(["Host: www.nieuwejobs.com"])
+
+        self.assertEqual(headers["Host"], "www.nieuwejobs.com")
+        self.assertEqual(headers["User-Agent"], "DropIPsByCountry-monitor/1.0")
+
     def test_lock_prevents_second_run(self):
         lock_dir = os.path.join(self.tmpdir, "lock")
 
@@ -138,8 +144,8 @@ class MonitorServerStatusBlocksTests(unittest.TestCase):
         original_run = monitor.run_prepare
         calls = []
 
-        def fake_fetch(url, timeout, insecure=False):
-            calls.append((url, timeout, insecure))
+        def fake_fetch(url, timeout, insecure=False, headers=None):
+            calls.append((url, timeout, insecure, headers))
             return "149 requests currently being processed, 56 idle workers"
 
         monitor.fetch_url = fake_fetch
@@ -158,7 +164,50 @@ class MonitorServerStatusBlocksTests(unittest.TestCase):
             monitor.run_prepare = original_run
 
         self.assertEqual(rc, 0)
-        self.assertEqual(calls, [("https://example.test/server-status", 30, True)])
+        self.assertEqual(calls, [(
+            "https://example.test/server-status",
+            30,
+            True,
+            {"User-Agent": "DropIPsByCountry-monitor/1.0"},
+        )])
+
+    def test_main_passes_host_header_to_fetch_url(self):
+        input_file = os.path.join(self.tmpdir, "input.txt")
+        snapshot = os.path.join(self.tmpdir, "snapshot.txt")
+        lock_dir = os.path.join(self.tmpdir, "lock")
+        original_fetch = monitor.fetch_url
+        original_run = monitor.run_prepare
+        calls = []
+
+        def fake_fetch(url, timeout, insecure=False, headers=None):
+            calls.append((url, timeout, insecure, headers))
+            return "149 requests currently being processed, 56 idle workers"
+
+        monitor.fetch_url = fake_fetch
+        monitor.run_prepare = lambda *args: None
+        try:
+            rc = monitor.main_with_args([
+                "--url", "http://127.0.0.1/server-status",
+                "--threshold", "200",
+                "--input-file", input_file,
+                "--snapshot-file", snapshot,
+                "--lock-dir", lock_dir,
+                "--host-header", "www.nieuwejobs.com",
+            ])
+        finally:
+            monitor.fetch_url = original_fetch
+            monitor.run_prepare = original_run
+
+        self.assertEqual(rc, 0)
+        self.assertEqual(calls, [(
+            "http://127.0.0.1/server-status",
+            30,
+            False,
+            {
+                "User-Agent": "DropIPsByCountry-monitor/1.0",
+                "Host": "www.nieuwejobs.com",
+            },
+        )])
 
 
 if __name__ == "__main__":

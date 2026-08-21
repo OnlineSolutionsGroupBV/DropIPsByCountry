@@ -43,8 +43,22 @@ def insecure_ssl_context():
     return None
 
 
-def fetch_url(url, timeout, insecure=False):
-    request = Request(url, headers={"User-Agent": "DropIPsByCountry-monitor/1.0"})
+def parse_headers(values):
+    headers = {"User-Agent": "DropIPsByCountry-monitor/1.0"}
+    for value in values or []:
+        if ":" not in value:
+            raise RuntimeError("invalid --header value, expected 'Name: value': %s" % value)
+        name, header_value = value.split(":", 1)
+        name = name.strip()
+        header_value = header_value.strip()
+        if not name:
+            raise RuntimeError("invalid --header value, empty header name: %s" % value)
+        headers[name] = header_value
+    return headers
+
+
+def fetch_url(url, timeout, insecure=False, headers=None):
+    request = Request(url, headers=headers or {"User-Agent": "DropIPsByCountry-monitor/1.0"})
     context = insecure_ssl_context() if insecure else None
     if context is not None:
         response = urlopen(request, timeout=timeout, context=context)
@@ -111,6 +125,8 @@ def build_parser():
     parser.add_argument("--stale-lock-seconds", type=int, default=7200)
     parser.add_argument("--timeout", type=int, default=30)
     parser.add_argument("--insecure", action="store_true", help="Disable SSL certificate verification for local/self-signed server-status checks")
+    parser.add_argument("--header", action="append", default=[], help="HTTP header for server-status fetch, for example 'Host: www.example.com'")
+    parser.add_argument("--host-header", help="Shortcut for --header 'Host: ...' when fetching a local vhost URL")
     parser.add_argument("--script", default="./run_prepare_generiek_blocks.sh")
     parser.add_argument("--python-bin", default=os.environ.get("PYTHON", "python2"))
     parser.add_argument("--apply", action="store_true", help="Run blocker with APPLY=1. This is the default unless --dry-run is used.")
@@ -133,7 +149,10 @@ def main_with_args(argv):
             with open(args.status_file, "rb") as f:
                 status = to_text(f.read())
         else:
-            status = fetch_url(args.url, args.timeout, insecure=args.insecure)
+            headers = list(args.header)
+            if args.host_header:
+                headers.append("Host: %s" % args.host_header)
+            status = fetch_url(args.url, args.timeout, insecure=args.insecure, headers=parse_headers(headers))
         busy = parse_busy_requests(status)
         if busy is None:
             raise RuntimeError("could not parse busy request count from server-status")
