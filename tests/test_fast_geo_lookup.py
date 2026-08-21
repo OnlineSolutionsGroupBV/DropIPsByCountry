@@ -77,7 +77,7 @@ class FastGeoLookupTests(unittest.TestCase):
         ranges_path = self.path("ranges.tsv")
         with open(csv_path, "w") as f:
             f.write("start_ip,end_ip,country,country_name,continent,continent_name,asn,as_name,as_domain\n")
-            f.write('1.1.1.0,1.1.1.255,AU,Australia,OC,Oceania,AS13335,"Cloudflare, Inc.",cloudflare.com\n')
+            f.write('1.1.1.0,1.1.1.255,AU,Australia,OC,Oceania,AS13335,"Malaga Network",example.test\n')
 
         meta = builder.build_ranges(csv_path, ranges_path, self.path("ranges.meta.json"))
         starts, ranges = local_geo.load_ranges(ranges_path)
@@ -87,6 +87,20 @@ class FastGeoLookupTests(unittest.TestCase):
         self.assertEqual(row["country"], "AU")
         self.assertEqual(row["asn"], "AS13335")
         self.assertEqual(row["network"], "1.1.1.0-1.1.1.255")
+
+    def test_build_ranges_writes_utf8_as_names(self):
+        csv_path = self.path("country_asn_utf8.csv")
+        ranges_path = self.path("ranges.tsv")
+        with open(csv_path, "wb") as f:
+            f.write(b"start_ip,end_ip,country,country_name,continent,continent_name,asn,as_name,as_domain\n")
+            f.write(b'2.2.2.0,2.2.2.255,ES,Spain,EU,Europe,AS64500,"M\xc3\xa1laga Mu\xc3\xb1oz Network",example.test\n')
+
+        builder.build_ranges(csv_path, ranges_path, self.path("ranges.meta.json"))
+        starts, ranges = local_geo.load_ranges(ranges_path)
+        row = local_geo.lookup_ip("2.2.2.2", starts, ranges)
+
+        self.assertEqual(row["country"], "ES")
+        self.assertEqual(row["as_name"], u"M\xe1laga Mu\xf1oz Network")
 
 
 if __name__ == "__main__":
