@@ -520,6 +520,12 @@ Example:
 IPINFO_TOKEN=... ./refresh_fast_geo_data.sh
 ```
 
+Old servers with broken CA/OpenSSL can use explicit insecure curl mode:
+
+```bash
+CURL_INSECURE=1 IPINFO_TOKEN=... ./refresh_fast_geo_data.sh
+```
+
 Responsibilities:
 
 - download source CSV into `data/`

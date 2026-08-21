@@ -111,6 +111,12 @@ Or download IPinfo Lite directly when `IPINFO_TOKEN` is available:
 IPINFO_TOKEN=... PYTHON=python2 ./refresh_fast_geo_data.sh
 ```
 
+If the server has an old CA/OpenSSL setup and `curl` fails certificate verification, use the explicit insecure download fallback:
+
+```bash
+CURL_INSECURE=1 IPINFO_TOKEN=... PYTHON=python2 ./refresh_fast_geo_data.sh
+```
+
 Fast geo lookup only, then old safe UFW apply path:
 
 ```bash

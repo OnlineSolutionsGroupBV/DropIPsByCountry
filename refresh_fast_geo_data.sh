@@ -6,12 +6,17 @@ DATA_DIR="${DATA_DIR:-data}"
 SOURCE_CSV="${SOURCE_CSV:-$DATA_DIR/country_asn.csv}"
 OUTPUT="${FAST_GEO_RANGES:-$DATA_DIR/fast_geo_ranges.tsv}"
 TOKEN="${IPINFO_TOKEN:-}"
+CURL_INSECURE="${CURL_INSECURE:-0}"
 
 mkdir -p "$DATA_DIR"
 
 if [ -n "$TOKEN" ]; then
   TMP_GZ="$SOURCE_CSV.gz.tmp"
-  curl -L "https://ipinfo.io/data/free/country_asn.csv.gz?token=$TOKEN" -o "$TMP_GZ"
+  CURL_ARGS=(-L)
+  if [ "$CURL_INSECURE" = "1" ]; then
+    CURL_ARGS+=(-k)
+  fi
+  curl "${CURL_ARGS[@]}" "https://ipinfo.io/data/free/country_asn.csv.gz?token=$TOKEN" -o "$TMP_GZ"
   gzip -dc "$TMP_GZ" > "$SOURCE_CSV.tmp"
   mv "$SOURCE_CSV.tmp" "$SOURCE_CSV"
   rm -f "$TMP_GZ"
