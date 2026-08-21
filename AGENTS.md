@@ -47,6 +47,17 @@ sudo env PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
   --user-rules /lib/ufw/user.rules
 ```
 
+Use this loop only for active extreme overload, not as the normal cron default. It checks `server-status` every 300 seconds, and when busy workers exceed the threshold it runs the fast-all cycle with these defaults:
+
+- `POLICY_MODE=0`
+- `TARGET_PREFIX=16`
+- `MIN_HITS=1`
+- `APPLY=1`
+- `FAST_UFW_BACKUP=0`
+- `UFW_USER_RULES=/lib/ufw/user.rules`
+
+The fast-all cycle fetches the live status page again, uses local fast geo data, edits `user.rules` once, reloads UFW once, and restarts Apache to drop existing overloaded worker connections. For a safe one-shot test use `--once --dry-run`.
+
 For emergency broad blocking, review first:
 
 ```bash

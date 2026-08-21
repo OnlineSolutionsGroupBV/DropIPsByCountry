@@ -1079,3 +1079,44 @@ This pairs with fast geo lookup to remove both slow parts:
 old: API per unknown IP + UFW insert per CIDR
 new: local range lookup + one UFW file rewrite + one reload
 ```
+
+## Operational Addendum: Extreme Attack Loop
+
+The production-proven emergency mode is now a continuous fast loop around the fast-all wrapper. Use it only during an active extreme overload where Apache remains saturated and one-shot blocking does not stabilize the server.
+
+Safe one-shot test:
+
+```bash
+PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --once \
+  --dry-run
+```
+
+Live emergency loop:
+
+```bash
+sudo env PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --sleep-seconds 300 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --user-rules /lib/ufw/user.rules
+```
+
+Default incident settings used by the loop:
+
+- `POLICY_MODE=0`
+- `TARGET_PREFIX=16`
+- `MIN_HITS=1`
+- `APPLY=1`
+- `PYTHON=python2`
+- `UFW_USER_RULES=/lib/ufw/user.rules`
+- `FAST_UFW_BACKUP=0`
+
+The loop checks Apache `server-status`; if busy workers are above the threshold, it runs `run_prepare_generiek_blocks_fast_all.sh`. That wrapper fetches fresh status input, performs local fast geo lookup, generates broad emergency candidates, edits `user.rules` once, reloads UFW once, and restarts Apache. The Apache restart matters because UFW does not terminate already established overloaded worker connections.
+
+Backups are disabled by default for this loop to prevent repeated `/lib/ufw/user.rules.backup-*` accumulation during an attack. Set `FAST_UFW_BACKUP=1` only when a specific emergency run needs a timestamped backup.

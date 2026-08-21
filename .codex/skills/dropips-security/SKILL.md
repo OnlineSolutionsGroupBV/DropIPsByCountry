@@ -54,6 +54,19 @@ sudo env PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
   --user-rules /lib/ufw/user.rules
 ```
 
+Use the loop only for an active extreme overload where one-shot blocking does not stabilize Apache. The loop checks `server-status`, and when busy workers exceed the threshold it runs the fast-all cycle with `POLICY_MODE=0`, `TARGET_PREFIX=16`, `MIN_HITS=1`, `APPLY=1`, `FAST_UFW_BACKUP=0`, and `UFW_USER_RULES=/lib/ufw/user.rules`. The fast-all cycle fetches fresh status input, uses local fast geo data, edits UFW `user.rules` once, reloads UFW once, and restarts Apache to clear already established overloaded connections.
+
+Safe one-shot test:
+
+```bash
+PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --once \
+  --dry-run
+```
+
 Emergency broad snapshot review:
 
 ```bash

@@ -167,9 +167,37 @@ sudo env PYTHON=python2 \
   --apply
 ```
 
-For a live incident loop that keeps checking every 5 minutes and reruns the fast-all flow while Apache has more than 100 busy workers:
+### Extreme Attack Loop
+
+Use this mode only during an active, severe overload where Apache stays saturated and a one-shot block run is not enough. The loop repeatedly checks Apache `server-status`; when busy workers are above the threshold, it starts the fast incident cycle:
+
+1. fetch live `server-status` into `input.txt`
+2. parse current client IPs
+3. resolve countries/providers from the local `data/fast_geo_ranges.tsv` artifact
+4. generate aggressive `/16` candidates with `POLICY_MODE=0`, `TARGET_PREFIX=16`, `MIN_HITS=1`
+5. batch-edit `/lib/ufw/user.rules` once instead of running hundreds of `ufw insert` commands
+6. reload UFW once
+7. restart Apache to drop already established overloaded worker connections
+8. wait 5 minutes and check again
+
+This is the fastest built-in response path for a rotating distributed attack. It trades precision for speed, so keep the crawler allowlist and country-mismatch safeguards enabled and review the run snapshots after the server stabilizes.
+
+Test the loop once without applying firewall changes:
 
 ```bash
+cd /home/downloads/DropIPsByCountry
+PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+  --url http://127.0.0.1/server-status \
+  --host-header www.nieuwejobs.com \
+  --threshold 100 \
+  --once \
+  --dry-run
+```
+
+Live emergency command:
+
+```bash
+cd /home/downloads/DropIPsByCountry
 sudo env PYTHON=python2 \
   /usr/bin/python2 monitor_fast_all_loop.py \
   --url http://127.0.0.1/server-status \
@@ -180,16 +208,21 @@ sudo env PYTHON=python2 \
   --user-rules /lib/ufw/user.rules
 ```
 
-The loop runs with `POLICY_MODE=0`, `TARGET_PREFIX=16`, `MIN_HITS=1`, `APPLY=1`, `PYTHON=python2`, `UFW_USER_RULES=/lib/ufw/user.rules`, and `FAST_UFW_BACKUP=0` by default. Test once without applying:
+Run it under `screen`, `tmux`, or `nohup` when the SSH session may disconnect:
 
 ```bash
-PYTHON=python2 /usr/bin/python2 monitor_fast_all_loop.py \
+cd /home/downloads/DropIPsByCountry
+sudo env PYTHON=python2 nohup /usr/bin/python2 monitor_fast_all_loop.py \
   --url http://127.0.0.1/server-status \
   --host-header www.nieuwejobs.com \
   --threshold 100 \
-  --once \
-  --dry-run
+  --sleep-seconds 300 \
+  --script ./run_prepare_generiek_blocks_fast_all.sh \
+  --user-rules /lib/ufw/user.rules \
+  >> monitor_fast_all_loop.log 2>&1 &
 ```
+
+The loop runs with `POLICY_MODE=0`, `TARGET_PREFIX=16`, `MIN_HITS=1`, `APPLY=1`, `PYTHON=python2`, `UFW_USER_RULES=/lib/ufw/user.rules`, and `FAST_UFW_BACKUP=0` by default.
 
 If HTTPS is required and the old Python/OpenSSL stack cannot validate the certificate, add `--insecure` only for a trusted endpoint.
 
